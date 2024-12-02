@@ -114,7 +114,7 @@ $\quad$ 2.在后面可以发现的是,我们总可以选取合适的$X$和$\omeg
 >
 > $$X=y,\ \omega_0(p)=1\ for\ every\ p$$
 >
-> $$\ |r_d|\le 1\ \ if\ \mu(d)\neq 0$$
+> $$|r_d|\le 1\ \ if\ \mu(d)\neq 0$$
 
 简略推导如下:
 
@@ -122,7 +122,11 @@ $\quad$ 因为有:
 
 $$\displaystyle{|\mathscr{A}_d|=\\left|\\left\\{m:\frac{x-y}{d}<m\le \frac{x}{d}\\right\\}\\right|=\frac{y}{d}+\theta},\ \ |\theta|\le 1$$
 
-$\quad$ 于是便可得到$X,\ \omega_0(d)$以及$r_d$.<span style="float: right">$\square$</span>
+$\quad$ 于是便可得到$X,\ \omega_0(d)$以及$r_d$.
+
+$\quad$ 与此同时,为了保证$X>1$,我们需要有$1<y\le x$. <span style="float: right">$\square$</span>
+
+$\ $
 
 其中需要注意的是,后续中(例子5以及例子6)会有一个符号$\vartheta$,其和$\theta$有一些区别,主要为:
 
@@ -156,12 +160,51 @@ $\quad$ 于是得出:
 
 $$\omega_0(d) = \\left\\{ \begin{matrix} 0 & if\ (d,k) \not\mid l \\\\ (d,k) & if\ (d,k) | l \end{matrix} \\right.$$
 
-$\quad$ 从而得到结论.<span style="float: right">$\square$</span>
+$\quad$ 与此同时,为了保证$X>1$,我们需要有$1 \le k < y \le x$. <span style="float: right">$\square$</span>
 
-1231254135
+$\ $
 
-$omega_0(d)$
+至此仍然是牛刀小试,下面开始才是真正的考验.
 
+<center>
+<img src="/image/notes-about-sieve-methods-3/T1.jpg" width="30%">
+</center>
+
+###### 例子3
+
+> 假设$F$是一个$g$次的整系数多项式:
+>
+> $$\mathscr{A}=\\{ F(n):x-y<n\le x \\}$$
+> 
+> 记$\rho(d)=\rho_F(d)$为$F \equiv 0\ \textrm{mod}\ d$的解数(由初等数论的知识可知其为积性函数).
+>
+> 则可得到的是:
+>
+> $$X = y,\ \omega_0(d) = \rho(d)\ if\ \mu(d) \neq 0$$
+>
+> $$|r_d| \le \omega_0(d)\ \ if\ \mu(d)\neq 0$$
+
+简略推导如下:
+
+$\quad$ 将讨论$F(n)$的数量转换为对$n$数量的讨论,于是有:
+
+$$\displaystyle{ |\mathscr{A}_d| = \\left| \\left\\{ n:x-y < n \le x,\ F(n) \equiv 0\ \textrm{mod}\ d \\right\\} \\right| = \rho(d) \\left( \frac{y}{d} + \theta \\right) },\ |\theta| \le 1$$
+
+$\quad$ 与此同时,为了保证$X>1$,我们需要有$1 < y \le x$. <span style="float: right">$\square$</span>
+
+$\ $
+
+值得注意的是,根据Lagrange定理,$\rho(p)=p$或者$\rho(p) \le g$,也即:
+
+$$\rho(p) \le g,\ if \rho(p) < p$$
+
+此外还有一些比较奇妙的性质:
+
+$$\sum_{p < x} \rho(p) \sim k\dfrac{x}{\log x}$$
+
+以及:
+
+$$\sum_{p < x}\dfrac{\rho(p)}{p}\log p = k\log x+O_F(1)$$
 
 #### 参考资料
 
