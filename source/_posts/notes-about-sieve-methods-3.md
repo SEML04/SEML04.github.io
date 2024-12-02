@@ -158,9 +158,9 @@ $$\omega_0(d) = \\left\\{ \begin{matrix} 0 & if\ (d,k) \not\mid l \\\\ (d,k) & i
 
 $\quad$ 从而得到结论.<span style="float: right">$\square$</span>
 
+1231254135
 
-
-
+$omega_0(d)$
 
 
 #### 参考资料
