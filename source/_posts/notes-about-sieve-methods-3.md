@@ -456,6 +456,33 @@ $$\rho_1^*(d) = \rho_1\\left(\frac{d}{(d,k)}\\right)$$
 
 $$\rho_1(d) \le \rho(d) \le g^{\upsilon(d)}$$
 
+终于!要开始进入新的一节了!其实熬过了这一节那六个『简单』的例子,接下来的内容可以说是相当友好的了.主要就是根据实际情况,我们需要对前面的符号进行一点点的调整,具体就是:$\omega_0(d) \to \omega(d)$,以及$r_d \to R_d$.但是在调整之前,对Sifting Set也还有几句话需要提及.
+
+<center> <img src="/image/notes-about-sieve-methods-3/T3.jpg" width="30%"> </center>
+
+#### Sifting Set & Sifting Function
+
+那么,下面正式进入新的一节的内容!(终于不用处理一堆一堆的同余式了!!!🥳)
+
+##### 关于Sifting Set的一些补充
+
+在筛法中,常常会给出一个足够大的正整数$K$,为了减少无效计算,提高筛法的效率,Sifting set $\mathfrak{P}$往往不会选择全体素数,而一般会取:
+
+$$\mathfrak{P} = \mathfrak{P}_K := \\{ p : p \not\mid K \\}$$
+
+而全体素数的集合往往记作$\mathfrak{P}_1$,而为了简便,定义Sifting set在全体素数中的补集为$\overline{\mathfrak{P}}$,即:
+
+$$\overline{\mathfrak{P}} = \mathfrak{P}_1 \setminus \mathfrak{P} $$
+
+接下来,对于任意实数$z \ge 2$,我们定义:
+
+$$P(z) := \prod_{\substack{p < z \\\\ p \in \mathfrak{P}}}$$
+
+而$P(z)$的重要性在于,对于$a \in \mathscr{A}$,如果$(a, P(z)) > 1$,那么$a$就将被筛掉;但如果$(a, P(z)) = 1$,那么$a$就在尺度为$z$的筛法下存活了下来.这个在开头便有提到,同时看二潘『哥德巴赫猜想』引言中的例子就有了更深的了解,因此不再展开了.
+
+对于特殊的问题,Sifting set也会有点特殊.比如考虑素因子都是$4k+1$形的数,则可令$\mathfrak{P}' = \\{ p : p = 4k+3 \\}$.
+
+
 
 #### 参考资料
 
