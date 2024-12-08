@@ -324,6 +324,8 @@ $$\displaystyle{ |\mathscr{A}_d| = \\left\\{
     \end{matrix}
 \\right. } \tag{3.2.5.2}$$
 
+$\quad$ 其中$0 \le \vartheta \le 1$.
+
 $\ \ $ **Step 2(重头戏):**
 
 $\quad$ 接着便是处理上述讨论中跳过的$(a,d)=1$且$(b,d)=1$,也就是${(ab,d)=1}$的情况.
@@ -395,13 +397,64 @@ $$\rho_1^*(d)  = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, m \equiv l\ \textrm{mod
 >
 > $$X = \frac{\textrm{li}(x)}{\varphi(k)}$$
 >
-> $$\omega_0(d) = \rho_1^*(d) \varphi((k,d)) \frac{d}{\varphi(d)}$$
+> $$\omega_0(d) = \rho_1^*(d) \varphi((d,k)) \frac{d}{\varphi(d)}$$
 >
-> 同时利用(3.2.5.4)还可以得到:
->
-> $$|r_d| \le \rho(d)\\{ E(x,[k,d]) + 1 \\}$$
+> $$|r_d| \le \rho(d)\\{ E(x,[d,k]) + 1 \\}$$
 
+简略推导如下:
 
+$\quad$ 仍然设$\mu(d) \neq 0$,则有:
+
+$$\begin{align}
+    |\mathscr{A}\_d| 
+    & = |\\{ p : p \le x, p \equiv l\ \textrm{mod}\ k, F(p) \equiv 0\ \textrm{mod}\ d \\}| \\\\ 
+    & = \sum_{\substack{m = 1 \\\\ F(m) \equiv 0\ \textrm{mod}\ d}}^d |\\{ p : p \le x, p \equiv l\ \textrm{mod}\ k, p \equiv m\ \textrm{mod}\ d \\}|
+\end{align}$$
+
+$\quad$ 接下来就是对这$\rho(d)$项进行分析,将摸鱼的项给剔除掉.这里和例5中的讨论方式差不多:
+
+$\qquad$ 1. 考虑同余式$p \equiv m\ \textrm{mod}\ d$,有$(m,d) \mid p$.
+
+$\qquad\quad\ \ $ 因此在$(m,d) > 1$时,此时对应的项则至多为$1$.鉴定为:摸鱼项!
+
+$\qquad$ 2. 其次仍然是CRT的使用,它告诉我们的是,$\\{ p : p \le x, p \equiv l\ \textrm{mod}\ k, p \equiv m\ \textrm{mod}\ d \\}$有解 $\Leftrightarrow (d,k) \mid m-l$,即$m \equiv l\ \textrm{mod}\ (d,k)$.
+
+$\qquad\quad\ \ $ 因此若$m \not\mid l\ \textrm{mod}\ (d,k)$,则其对应的项为$0$.鉴定为:拉去小孩那桌!
+
+$\quad$ 因此我们可以得到:
+
+$$|\mathscr{A}\_d| = \sum_{\substack{m = 1 \\\\ (m,d) = 1 \\\\ F(m) \equiv 0\ \textrm{mod}\ d \\\\ m \equiv l\ \textrm{mod}\ (d,k)}}^{d} \pi(x; [d,k], h) + \vartheta \rho(d)$$
+
+$\quad$ 其中$0 \le \vartheta \le 1$,并且$h$是利用CRT得到的,类似与例5中的$l'$.
+
+$\quad$ 因此利用积性函数$\rho_1^*(d)$便可以得到一个简便的形式:
+
+$$|\mathscr{A}_d| \approx \frac{\rho_1^*(d)}{\varphi([d,k])} \textrm{li}(x)$$
+
+$\quad$ 于是便可以得到$X$和$\omega_0(d)$的表达式.同时再利用(3.2.5.4)以及$\rho_1^*(d)$与$\rho(d)$的关系,便可以得到$|r_d|$的估计式,而这个估计式也说明了我们的筛法是有效的. <span style="float: right"> $\square$ </span>
+
+$\ $
+
+可以发现的是,例6的推导过程看着虽然唬人,但其本质还是例5的推导思路.接下来该说的就是推导过程中$\rho_1^*(d)$与$\rho(d)$的关系了.
+
+简而言之(其实都还比较好验证的,可能是经历例5例6磨练后的结果吧):
+
+$\quad$ 对$\rho_1(p)$进行考虑便得到:
+
+$$\rho_1(p) = \\left\\{ 
+    \begin{matrix}
+        \rho(p) & p \not\mid F(0) \\\\
+        \rho(p)-1 & p \mid F(0)
+    \end{matrix}
+\\right.$$
+
+$\quad$ 对于$\mu(d) \neq 0$的$d$,利用$\rho_1(d)$的积性便可以得到了.并且还可以得到下面的关系:
+
+$$\rho_1^*(d) = \rho_1\\left(\frac{d}{(d,k)}\\right)$$
+
+模仿在例4中的操作,在$\mu(d) \neq 0$且$\rho(p) < p$的条件下,可得到:
+
+$$\rho_1(d) \le \rho(d) \le g^{\upsilon(d)}$$
 
 
 #### 参考资料
