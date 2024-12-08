@@ -383,7 +383,7 @@ $$\rho(d) = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d\\}| \tag{3.2.6.1}$$
 
 $$\rho_1(d) = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, (m,d) = 1\\}| \tag{3.2.6.2}$$
 
-接着,再要求(3.2.6.2)中的解还要像$\mathscr{A}$有类似的结构,即模$(d,k)$下与$l$同余(当然,此处的$k$和$l$需要提前给定),那么这样就得到了$\color{red}\rho_1^*(d)$,即:
+接着,再要求(3.2.6.2)中的解还要像$\mathscr{A}$有类似的结构,即模$(d,k)$下与$l$同余(当然,此处的$k$和$l$是根据$\mathscr{A}$已经提前给定了),那么这样就得到了$\color{red}\rho_1^*(d)$,即:
 
 $$\rho_1^*(d)  = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, m \equiv l\ \textrm{mod}\ (d,k), (m,d) = 1\\}| \tag{3.2.6.3} $$
 
