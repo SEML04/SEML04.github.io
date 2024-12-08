@@ -5,9 +5,9 @@ date: 2024-10-22 12:00:52
 categories:
     - 丢番图逼近
 tags:
-    - number theory
-    - Diophantine approximation
-    - continued fractions
+    - Number Theory
+    - Diophantine Approximation
+    - Continued Fractions
 ---
 
 #### 引言

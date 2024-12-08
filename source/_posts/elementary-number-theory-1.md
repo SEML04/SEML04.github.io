@@ -5,7 +5,7 @@ date: 2024-11-20 00:31:57
 categories:
     - 初等数论
 tags:
-    - Elementary number theory
+    - Elementary Number Theory
     - CRT
 ---
 

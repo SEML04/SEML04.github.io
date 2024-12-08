@@ -5,8 +5,8 @@ date: 2024-11-07 21:40:01
 categories:
     - 有趣应用
 tags:
-    - algorithm
-    - algebra
+    - Algorithm
+    - Algebra
 ---
 
 #### 引言

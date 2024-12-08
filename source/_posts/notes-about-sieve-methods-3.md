@@ -5,9 +5,9 @@ date: 2024-11-23 23:54:43
 categories:
     - 筛法
 tags:
-    - Sieve methods
-    - The sieve of Erathosthenes-Legendre
-    - Sifting function
+    - Sieve Methods
+    - Sieve of Erathosthenes-Legendre
+    - Sifting Function
 ---
 
 #### 引言
@@ -245,9 +245,9 @@ $\quad$ 由于没有fixed divisor,因此在$p > g$的情况下,总有:$\rho(p) \
 
 $\quad$ 与此同时,单看$\\{ n : a_i n + b_i \equiv 0\ \textrm{mod}\ p\\}$可知,在$p \not\mid a_i$的情况下有唯一解.
 
-$\quad$ 因此当$\mathbf{p \not\mid a_1a_2\cdots a_g}$时,可以得到的是$F_0(n) \equiv 0\ \textrm{mod}\ q$有$g$个的根(计入重数).
+$\quad$ 因此当$\color{red}{p \not\mid a_1a_2\cdots a_g}$时,可以得到的是$F_0(n) \equiv 0\ \textrm{mod}\ q$有$g$个的根(计入重数).
 
-$\quad$ 而要求$\mathbf{p \not\mid E}$,则可以保证有$g$个各不相同的根,并且几乎所有的素数都是满足这个条件的(这也是为什么引入判别式$E$,而不是仅仅声明无重根的原因).
+$\quad$ 而要求$\color{red}{p \not\mid E}$,则可以保证有$g$个各不相同的根,并且几乎所有的素数都是满足这个条件的(这也是为什么引入判别式$E$,而不是仅仅声明无重根的原因).
 
 $\quad$ 详细写出我们便得到有:
 
@@ -269,6 +269,10 @@ $\quad$ 而$r_d$就是例3中所给. <span style="float: right"> $\square$ </spa
 >
 > $$\mathscr{A}=\\{ ap+b : p \le x, p \equiv l\ \textrm{mod}\ k \\}$$
 >
+> 其中还需要满足:
+>
+> $$(l,k) = 1,\ ab \neq 0,\ (a,b)=1,\ 2 \mid ab$$
+>
 > 则可以得到的是:
 >
 > $$X = \dfrac{\textrm{li}(x)}{\varphi(k)}$$
@@ -287,11 +291,115 @@ $\quad$ 而$r_d$就是例3中所给. <span style="float: right"> $\square$ </spa
     \end{matrix} 
 \\right.}$$
 >
-> 其中$l'$将在推导中给出.
+> 其中$l'$将在推导中给出具体含义.
 
 简略推导如下:
 
+$\quad$ 设$\mu(d) = 1$,则有:
 
+$$\displaystyle{ |\mathscr{A}_d| = \\{ p : p \le x, p \equiv l\ \textrm{mod}\ k, ap+b \equiv 0\ \textrm{mod}\ d \\} }$$
+
+$\quad$ 因此此时需要对两个同余式进行考虑,那么我们就需要尝试使用**CRT**来处理,但在此之前,我们得需要考虑条件.
+
+$\ \ $ **Step 1(简单情况):**
+
+$\quad$ 首先对$ap+b \equiv 0\ \textrm{mod}\ d$进行处理,其有解的**必要**条件是$(a,d) \mid b$.此处不是充要条件,因为解要求是素数.
+
+$\quad$ 但是还有条件$(a,b)=1$.因此可知:
+
+$\qquad$ 1. 若$(a,d) > 1$,则此时$(a, d) \not\mid b$,因此$ap+b \equiv 0\ \textrm{mod}\ d$也必然没有解.
+
+$\qquad$ 2. 若$(a,d) = 1$,则此时$ap+b \equiv 0\ \textrm{mod}\ d$也可以表示为:
+
+$$\color{red}{p = -a^{-1}b\ \textbf{mod}\ d} \tag{3.2.5.1}$$
+
+$\qquad\quad\ \ $ 于是$(b, d) \mid q$.因此当$(b, d) > 1$时,那么此时$p$也就至多$\upsilon(d)$个(更精细地,应该是至多一个).
+
+$\quad$ 因此我们得到了以下两种简单情况下$|\mathscr{A}_d|$的估计:
+
+$$\displaystyle{ |\mathscr{A}_d| = \\left\\{
+    \begin{matrix}
+        \vartheta\upsilon(b) & (a,d) = 1\ and\ (b,d) > 1 \\\\
+        0 & (a,d) > 1
+    \end{matrix}
+\\right. } \tag{3.2.5.2}$$
+
+$\ \ $ **Step 2(重头戏):**
+
+$\quad$ 接着便是处理上述讨论中跳过的$(a,d)=1$且$(b,d)=1$,也就是${(ab,d)=1}$的情况.
+
+$\quad$ 通过将$ap+b \equiv 0\ \textrm{mod}\ d$化为(5.1),这下我们就可以心安理得地使用CRT了.
+
+$\quad$ 而CRT便告诉我们,$q \equiv l\ \textrm{mod}\ k,\ q \equiv -a^{-1}b\ \textrm{mod}\ d$有解 $\Leftrightarrow (d,k) \mid l + a^{-1}b$,即$(d,k) \mid al+b$.
+
+$\quad$ 因此在$\color{red}(ab,d)=1,\ (d,k) \mid al+b$的情况下,可以得到:
+
+$$\displaystyle{ |\mathscr{A}_d| = |\\{ p : p \le x, p \equiv l'\ \textrm{mod}\ [d,k] \\}| = \pi(x, [d,k], l') \sim \frac{1}{[d,k]}\textrm{li}(x) }$$
+
+$$\displaystyle{ \begin{align} 
+    |\mathscr{A}_d| 
+    & = |\\{ p : p \le x, p \equiv l'\ \textrm{mod}\ [d,k] \\}| \\\\
+    & = \pi(x, [d,k], l') \\\\
+    & \sim \frac{1}{\varphi([d,k])}\textrm{li}(x) \\\\
+    & = \frac{1}{d} \frac{d}{\varphi(d)} \varphi((d,k)) \frac{\textrm{li}(x)}{\varphi(k)} \tag{3.2.5.3}
+\end{align} } $$
+
+$\ \ $ **Step 3(总结):**
+
+$\quad$ 此时根据(3.2.5.1)和(3.2.5.3)和定义,便可以给出$X,\ \omega_0(d)$以及$r_d$的表达式.并且,要让$X > 1$,那么对$x$的要求为:$\varphi(k) < \textrm{li}(x)$. <span style="float: right"> $\square$ </span>
+
+$\ $
+
+但是现在还没有结束!我们还可以考虑一下例5的特殊情况,也就是$(abk, d) = 1$的情况.此时有:
+
+$$\omega_0(d) = \frac{d}{\varphi(d)}$$
+
+$$r_d = \pi(x; dk, l') - \frac{1}{dk}\textrm{li}(x)$$
+
+前面也说过,只有$r_d$尽可能的小,那么我们的筛法才算有效.那么对于上面选取出来的$X$和$\omega_0(d)$,我们的筛法是不是有效的呢?
+
+现在定义一个**误差上界**:
+
+$$E(x,q) = \mathop{\textrm{max}}\limits_{\substack{2 \le y \le x}}\ \mathop{\textrm{max}}\limits_{\substack{1 \le l' \le q \\\\ (l', q)=1}} \\left| \pi(y; q, l') - \frac{1}{\varphi(q)}\textrm{li}(y) \\right| \tag{3.2.5.4}$$
+
+
+这东西到底特殊在哪呢,竟然能独享尊号(3.2.5.4)?原因在于:
+
+$$|r_d| \le E(x, dk)$$
+
+并且在第三章中,引理3.3便会告诉我们:$E(x,q)$相对于$q$而言,就是很小的.这个就告诉了我们以上的筛法是有效的,这可就太重要了!
+
+###### 例子6
+
+接下来再对例5进行推广!将$\mathscr{A}$中的$ap+b$换成$F(p)$(~~开始窒息~~).
+
+其中$F$是次数为$g$的整系数多项式,$\color{red}\rho(d)$的定义也与例3一致,即:
+
+$$\rho(d) = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d\\}| \tag{3.2.6.1}$$
+
+但在推导过程中,会出现两个与$\rho$相关的函数,为了推导过程的简洁,先将定义摆放至此,进一步的性质将放在推导结束后的部分.
+
+如果要求(3.2.6.1)中的解还必须和$d$互素,这样就得到了$\color{red}\rho_1(d)$,即:
+
+$$\rho_1(d) = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, (m,d) = 1\\}| \tag{3.2.6.2}$$
+
+接着,再要求(3.2.6.2)中的解还要像$\mathscr{A}$有类似的结构,即模$(d,k)$下与$l$同余(当然,此处的$k$和$l$需要提前给定),那么这样就得到了$\color{red}\rho_1^*(d)$,即:
+
+$$\rho_1^*(d)  = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, m \equiv l\ \textrm{mod}\ (d,k), (m,d) = 1\\}| \tag{3.2.6.3} $$
+
+> 假设:
+>
+> $$\mathscr{A}=\\{ F(p) : p \le x, p \equiv l\ \textrm{mod}\ k \\}\ where\ (l,k) = 1$$
+>
+> 则可得到的是:
+>
+> $$X = \frac{\textrm{li}(x)}{\varphi(k)}$$
+>
+> $$\omega_0(d) = \rho_1^*(d) \varphi((k,d)) \frac{d}{\varphi(d)}$$
+>
+> 同时利用(3.2.5.4)还可以得到:
+>
+> $$|r_d| \le \rho(d)\\{ E(x,[k,d]) + 1 \\}$$
 
 
 

@@ -5,7 +5,7 @@ date: 2024-11-1 22:31:46
 categories:
     - 筛法
 tags:
-    - sieve methods
+    - Sieve Methods
     - Schinzel's Hypotheses H & H_N
     - Prime Twins Conjecture
     - Goldbach's Conjecture

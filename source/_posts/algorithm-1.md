@@ -5,8 +5,8 @@ date: 2024-11-06 21:40:01
 categories:
     - 有趣应用
 tags:
-    - algorithm
-    - character
+    - Algorithm
+    - Character
 ---
 
 #### 引言

@@ -5,10 +5,10 @@ date: 2024-10-25 23:29:24
 categories:
     - 丢番图逼近
 tags:
-    - number theory
-    - algebraic number theory
-    - continued fractions
-    - Pell equation
+    - Number Theory
+    - Algebraic Number Theory
+    - Continued Fractions
+    - Pell Equation
 ---
 
 #### 引言

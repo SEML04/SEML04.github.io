@@ -5,10 +5,10 @@ date: 2024-11-03 00:41:46
 categories:
     - 筛法
 tags:
-    - sieve methods
+    - Sieve Methods
     - Goldbach's Conjecture
-    - character
-    - Gauss sum
+    - Character
+    - Gauss Sum
 ---
 
 #### 引言
