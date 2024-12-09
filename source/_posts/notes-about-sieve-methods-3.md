@@ -462,11 +462,13 @@ $$\rho_1(d) \le \rho(d) \le g^{\upsilon(d)}$$
 
 #### Sifting Set & Sifting Function
 
+在筛法中,最重要的就是要***减少无效计算,提高筛法的效率***,而以下很多处理乍一感觉是『多此一举』,『徒增难度』的,但是从实际操作上来说,我们为了更准确的结果,而不得不舍弃一些易操作性.
+
 那么,下面正式进入新的一节的内容!(终于不用处理一堆一堆的同余式了!!!🥳)
 
 ##### 关于Sifting Set的一些补充
 
-在筛法中,常常会给出一个足够大的正整数$K$,为了减少无效计算,提高筛法的效率,Sifting set $\mathfrak{P}$往往不会选择全体素数,而一般会取:
+在筛法中,常常会给出一个足够大的正整数$K$,那么Sifting set $\mathfrak{P}$往往不会选择全体素数,而一般会取:
 
 $$\mathfrak{P} = \mathfrak{P}_K := \\{ p : p \not\mid K \\}$$
 
@@ -481,6 +483,36 @@ $$P(z) := \prod_{\substack{p < z \\\\ p \in \mathfrak{P}}}$$
 而$P(z)$的重要性在于,对于$a \in \mathscr{A}$,如果$(a, P(z)) > 1$,那么$a$就将被筛掉;但如果$(a, P(z)) = 1$,那么$a$就在尺度为$z$的筛法下存活了下来.这个在开头便有提到,同时看二潘『哥德巴赫猜想』引言中的例子就有了更深的了解,因此不再展开了.
 
 对于特殊的问题,Sifting set也会有点特殊.比如考虑素因子都是$4k+1$形的数,则可令$\mathfrak{P}' = \\{ p : p = 4k+3 \\}$.
+
+##### 对Sifting function的一些修改
+
+其实Sifting function在很前边就已经出镜过了,即:
+
+$$S(\mathscr{A}; \mathfrak{P}, z) := \\{ a : a \in \mathscr{A}, (a, P(z)) = 1 \\} \tag{4.2.1}$$
+
+同时,在第三节中,已经能够看到$\mathscr{A}_d$的重要性了(有时$|\mathscr{A}|$还得通过$\mathscr{A}_d$来获取信息),因此还有:
+
+$$S(\mathscr{A}_d; \mathfrak{P}, z) := \\{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \\} \tag{4.2.2}$$
+
+这里将(4.2.2)单独写一行,是为了强调其条件,那就是:
+
+$$\mu(d) \neq 0, (d, P(z)) = 1, (d, \overline{\mathfrak{P}}) = 1$$
+
+$\ $
+
+对某些问题而言,我们可能得对Sifting function做一些修改,使得我们能够得到更精细的结论.例如以与孪生素数猜想相近的一个例子:
+
+$$S(\\{ n(n+2) : n \le x \\}; \mathfrak{P}\_1, z) := \\left|\\left\\{ n(n+2) : n \le x, \\left(n(n+2), \prod_{p < z}p\\right) = 1 \\right\\}\\right|$$
+
+利用这个Sifting function,实际上也只能得到类似于『$a + b \le 5$』的这样的结论.但是,如果将它的表达形式稍作修改:
+
+$$S(\\{ p + 2 : p \le x \\}; \mathfrak{P}\_1, z) := \\left|\\left\\{ p : z-2 \le p \le x, p + 2 = p' \\right\\}\\right|$$
+
+那么这样我们就能进一步得到更精细的结果,类似于『$1 + 3$』这样的结论,这无疑是很重要的成果.
+
+$\ $
+
+以及在引入$S(\mathscr{A}_d; \mathfrak{P}, z)$后,我们也需要进一步对$\omega_0(d)$和$r_d$做一定的调整了,而修改后便记作$\omega(d)$和$R_d$.
 
 
 
