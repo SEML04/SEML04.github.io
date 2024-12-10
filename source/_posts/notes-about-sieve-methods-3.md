@@ -24,6 +24,14 @@ tags:
 
 #### 前置(但不简单)的一些知识点
 
+放在最前面的前面,是***关于常数的一些默认的规定***:
+
+<center> 
+$A,A_i(\ge 1)$是与$X$和$z$无关的常数 
+
+$B_i,C_i$则会是与$A_i,\kappa,\alpha$(后续会知道的,因为我现在也不知道)相关的常数
+</center>
+
 筛法筛法,当然得有一个被筛集合,以及一个筛子,和描述筛子大小的一个量.因此我们有以下符号来进行描述(数学符号定义属性大爆发):
 
 > 被筛集合是关于整数的有限集合,即Sifted Sequence,记作$\mathscr{A}$;
@@ -362,7 +370,9 @@ $$r_d = \pi(x; dk, l') - \frac{1}{dk}\textrm{li}(x)$$
 
 现在定义一个**误差上界**:
 
-$$E(x,q) = \mathop{\textrm{max}}\limits_{\substack{2 \le y \le x}}\ \mathop{\textrm{max}}\limits_{\substack{1 \le l' \le q \\\\ (l', q)=1}} \\left| \pi(y; q, l') - \frac{1}{\varphi(q)}\textrm{li}(y) \\right| \tag{3.2.5.4}$$
+> 定义:
+> 
+> $$E(x,q) = \mathop{\textrm{max}}\limits_{\substack{2 \le y \le x}}\ \mathop{\textrm{max}}\limits_{\substack{1 \le l' \le q \\\\ (l', q)=1}} \\left| \pi(y; q, l') - \frac{1}{\varphi(q)}\textrm{li}(y) \\right| \tag{3.2.5.4}$$
 
 
 这东西到底特殊在哪呢,竟然能独享尊号(3.2.5.4)?原因在于:
@@ -439,18 +449,13 @@ $\ $
 
 简而言之(其实都还比较好验证的,可能是经历例5例6磨练后的结果吧):
 
-$\quad$ 对$\rho_1(p)$进行考虑便得到:
-
-$$\rho_1(p) = \\left\\{ 
-    \begin{matrix}
-        \rho(p) & p \not\mid F(0) \\\\
-        \rho(p)-1 & p \mid F(0)
-    \end{matrix}
-\\right.$$
-
-$\quad$ 对于$\mu(d) \neq 0$的$d$,利用$\rho_1(d)$的积性便可以得到了.并且还可以得到下面的关系:
-
-$$\rho_1^*(d) = \rho_1\\left(\frac{d}{(d,k)}\\right)$$
+> 对$\rho_1(p)$进行考虑便得到:
+>
+> $$\rho_1(p) = \\left\\{     \begin{matrix}        \rho(p) & p \not\mid F(0) \\\\        \rho(p)-1 & p \mid F(0)    \end{matrix}\\right.$$
+>
+> 对于$\mu(d) \neq 0$的$d$,利用$\rho_1(d)$的积性便可以得到了.并且还可以得到下面的关系:
+>
+> $$\rho_1^*(d) = \rho_1\\left(\frac{d}{(d,k)}\\right)$$
 
 模仿在例4中的操作,在$\mu(d) \neq 0$且$\rho(p) < p$的条件下,可得到:
 
@@ -484,21 +489,23 @@ $$P(z) := \prod_{\substack{p < z \\\\ p \in \mathfrak{P}}}$$
 
 对于特殊的问题,Sifting set也会有点特殊.比如考虑素因子都是$4k+1$形的数,则可令$\mathfrak{P}' = \\{ p : p = 4k+3 \\}$.
 
-##### 对Sifting function的一些修改
+##### 对Sifting Function的一些修改
+
+###### Sifting Function再出现!
 
 其实Sifting function在很前边就已经出镜过了,即:
 
-$$S(\mathscr{A}; \mathfrak{P}, z) := \\{ a : a \in \mathscr{A}, (a, P(z)) = 1 \\} \tag{4.2.1}$$
+$$S(\mathscr{A}; \mathfrak{P}, z) := \\{ a : a \in \mathscr{A}, (a, P(z)) = 1 \\} \tag{4.2.1.1}$$
 
 同时,在第三节中,已经能够看到$\mathscr{A}_d$的重要性了(有时$|\mathscr{A}|$还得通过$\mathscr{A}_d$来获取信息),因此还有:
 
-$$S(\mathscr{A}_d; \mathfrak{P}, z) := \\{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \\} \tag{4.2.2}$$
+$$S(\mathscr{A}_d; \mathfrak{P}, z) := \\{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \\} \tag{4.2.1.2}$$
 
 这里将(4.2.2)单独写一行,是为了强调其条件,那就是:
 
 $$\mu(d) \neq 0, (d, P(z)) = 1, (d, \overline{\mathfrak{P}}) = 1$$
 
-$\ $
+###### 根据问题修改Sifting Function
 
 对某些问题而言,我们可能得对Sifting function做一些修改,使得我们能够得到更精细的结论.例如以与孪生素数猜想相近的一个例子:
 
@@ -510,9 +517,86 @@ $$S(\\{ p + 2 : p \le x \\}; \mathfrak{P}\_1, z) := \\left|\\left\\{ p : z-2 \le
 
 那么这样我们就能进一步得到更精细的结果,类似于『$1 + 3$』这样的结论,这无疑是很重要的成果.
 
-$\ $
+###### Sifting Function新符号的引入
 
-以及在引入$S(\mathscr{A}_d; \mathfrak{P}, z)$后,我们也需要进一步对$\omega_0(d)$和$r_d$做一定的调整了,而修改后便记作$\omega(d)$和$R_d$.
+以及在引入$S(\mathscr{A}_d; \mathfrak{P}, z)$后,我们也需要进一步对$\omega_0(d)$和$r_d$做一定的调整了,修改后记作$\omega(d)$和$R_d$,其中对$\omega_0(d)$的修改是比较容易的:
+
+$$\omega(p) = \\left\\{ 
+    \begin{matrix}
+        \omega_0(p) & p \in \mathfrak{P} \\\\
+        0 & p \in \overline{\mathfrak{P}}
+    \end{matrix}
+\\right.$$
+
+并且令$\omega(1) = 1$,于是对于$\mu(d) \neq 0$而言,得到:
+
+$$\omega(d) = \prod_{p \mid d}\omega(d)$$
+
+那么$r_d$也得跟着改变,在$\mu(d) \neq 0$的情况下,其定义仍然是:
+
+$$R_d := |\mathscr{A}_d| - \frac{\omega(d)}{d} X$$
+
+因此可知发现的是,在$(d, \overline{\mathfrak{P}}) > 1$的情况下,$R_d$并不代表余项,此时其值就是$|\mathscr{A}_d|$.但是在筛法的过程中,这个往往并不会纳入考虑的范畴,因此对实际操作而言,反而还会提高效率.因为引入$\omega(d)$后就不需要注意$(d, \overline{\mathfrak{P}}) = 1$的这个条件了.
+
+###### 一些很重要的条件
+
+现在我们还需要对$\omega(d)$和$R_d$提一定的要求,***而这些条件在后续会不断出现!***
+
+首先是对于某个合适的常数$A_1$有以下这个很基本的条件:
+
+> 假设:
+>
+> <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;">$0 \le \dfrac{\omega(p)}{p} \le 1 - \dfrac{1}{A_1}$</span>  <span style="float: right;">$(\Omega_1)$</span></div>
+>
+> 变形后就是更常见的形式:
+>
+> <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;">$1 \le \dfrac{1}{1-(\omega(p)/p)} \le A_1$</span>  <span style="float: right;">$(\Omega_1)$</span></div>
+
+条件$(\Omega_1)$的作用便是控制$\omega(d)$的构造,限制余项的增长.当然这个条件一般也只要求对足够大的素数都成立即可.
+
+在Legendre对$\pi(x)$的估计式中,还有以下两个很强的条件:
+
+> 假设:
+>
+> <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;">$\omega(p) \le A_0$</span>  <span style="float: right;">$(\Omega_0)$</span></div>
+>
+> 以及在$\mu(d) \neq 0$,并且$(d,\overline{\mathfrak{P}}) = 1$的情况下,假设:
+>
+> <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;">$|R_d| \le \omega(d)$</span>  <span style="float: right;">$(R)$</span></div>
+
+容易知道的是,$(\Omega_0)$是比$(\Omega_1)$更强的条件.并且条件(R)实际上也是对余项进行了控制.
+
+###### 定义一些常用的结构式
+
+本节的最后一块内容,也是一个铺垫性的工作,那就是对后续将会频繁出现的式子,我们索性给它们一个固定的符号,其实也是为了后面表述的简单而不得不做的事了(数学符号定义属性大爆发第二集):
+
+> 定义$W(z)$:
+>
+> $$W(z) := \prod_{p < z}\\left( 1 - \frac{\omega(p)}{p} \\right) \tag{4.2.5.1}$$
+>
+> 同样的在$\mu(d) \neq 0$时,定义$g(d)$:
+>
+> $$g(d) := \frac{\omega(d)}{d \prod\limits_{p \mid d}(1 - (\omega(p) / p))} \tag{4.2.5.2}$$
+
+很明显,$W(z)$以及$g(d)$将会和$(\Omega_1)$等条件息息相关.因此$g(d)$也会频频出现,因此也还有一些关于$g(d)$的式子常常出现.
+
+> 定义$G(z)$:
+>
+> $$G(z) := \sum_{d < z} \mu^2(d) g(d) \tag{4.2.5.3}$$
+>
+> 定义$G(x,z)$:
+>
+> $$G(x,z) := \sum_{\substack{d < x \\\\ d | P(z)}} g(d) \tag{4.2.5.4}$$
+
+容易知道,在$z \ge x$时,$G(x,z) = G(x)$.因此更特殊地有:$G(z,z) = G(z)$.
+
+最后还有一个关于素数的重要乘积式:
+
+> 定义$V(z)$:
+>
+> $$V(z) := \prod_{p < z}\\left( 1-\frac{1}{p} \\right) \tag{4.2.5.5}$$
+
+#### Sieve of Erathosthenes-Legendre
 
 
 
