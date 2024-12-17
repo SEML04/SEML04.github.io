@@ -1,7 +1,7 @@
 ---
 title: 筛法读书笔记(Sieve Methods by Halberstam) -- 筛函数与一些经典筛法例子
 mathjax: true
-date: 2024-11-23 23:54:43
+date: 2024-12-2 23:54:43
 categories:
     - 筛法
 tags:
