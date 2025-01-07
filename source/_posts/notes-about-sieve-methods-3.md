@@ -93,11 +93,11 @@ Gauss的这个渐近公式,在本书中直接作为定理使用(虽然这个本�
 而我们***最主要的想法***就是:
 
 <center>
-用$\color{red}X(>1)$去接近$|\mathscr{A}|$
+用$\color[RGB]{230,51,51}X(>1)$去接近$|\mathscr{A}|$
 
-而对于$|\mathscr{A}_d|$,我们利用<span style="color: red">积性函数</span>$\color{red}\omega_0(d)$去接近
+而对于$|\mathscr{A}_d|$,我们利用<span style="color: rgb(230,51,51)">积性函数</span>$\color[RGB]{230,51,51}\omega_0(d)$去接近
 
-具体而言就是$|\mathscr{A}_d|$差不多为$\dfrac{w_0(d)}{d}X$,此时便需要有$\color{red}\mu(d)\neq 0$
+具体而言就是$|\mathscr{A}_d|$差不多为$\dfrac{w_0(d)}{d}X$,此时便需要有$\color[RGB]{230,51,51}\mu(d)\neq 0$
 
 再记误差为$r_d:=|\mathscr{A}_d|-\dfrac{w_0(d)}{d}X,\ if\ \mu(d)\neq 0$,因此$r_d$越小,说明拟合程度也就越好
 </center>
@@ -253,9 +253,9 @@ $\quad$ 由于没有fixed divisor,因此在$p > g$的情况下,总有:$\rho(p) \
 
 $\quad$ 与此同时,单看$\\{ n : a_i n + b_i \equiv 0\ \textrm{mod}\ p\\}$可知,在$p \not\mid a_i$的情况下有唯一解.
 
-$\quad$ 因此当$\color{red}{p \not\mid a_1a_2\cdots a_g}$时,可以得到的是$F_0(n) \equiv 0\ \textrm{mod}\ q$有$g$个的根(计入重数).
+$\quad$ 因此当$\color[RGB]{230,51,51}{p \not\mid a_1a_2\cdots a_g}$时,可以得到的是$F_0(n) \equiv 0\ \textrm{mod}\ q$有$g$个的根(计入重数).
 
-$\quad$ 而要求$\color{red}{p \not\mid E}$,则可以保证有$g$个各不相同的根,并且几乎所有的素数都是满足这个条件的(这也是为什么引入判别式$E$,而不是仅仅声明无重根的原因).
+$\quad$ 而要求$\color[RGB]{230,51,51}{p \not\mid E}$,则可以保证有$g$个各不相同的根,并且几乎所有的素数都是满足这个条件的(这也是为什么引入判别式$E$,而不是仅仅声明无重根的原因).
 
 $\quad$ 详细写出我们便得到有:
 
@@ -319,7 +319,7 @@ $\qquad$ 1. 若$(a,d) > 1$,则此时$(a, d) \not\mid b$,因此$ap+b \equiv 0\ \t
 
 $\qquad$ 2. 若$(a,d) = 1$,则此时$ap+b \equiv 0\ \textrm{mod}\ d$也可以表示为:
 
-$$\color{red}{p = -a^{-1}b\ \textbf{mod}\ d} \tag{3.2.5.1}$$
+$$\color[RGB]{230,51,51}{p = -a^{-1}b\ \textbf{mod}\ d} \tag{3.2.5.1}$$
 
 $\qquad\quad\ \ $ 于是$(b, d) \mid q$.因此当$(b, d) > 1$时,那么此时$p$也就至多$\upsilon(d)$个(更精细地,应该是至多一个).
 
@@ -342,7 +342,7 @@ $\quad$ 通过将$ap+b \equiv 0\ \textrm{mod}\ d$化为(5.1),这下我们就可�
 
 $\quad$ 而CRT便告诉我们,$q \equiv l\ \textrm{mod}\ k,\ q \equiv -a^{-1}b\ \textrm{mod}\ d$有解 $\Leftrightarrow (d,k) \mid l + a^{-1}b$,即$(d,k) \mid al+b$.
 
-$\quad$ 因此在$\color{red}(ab,d)=1,\ (d,k) \mid al+b$的情况下,可以得到:
+$\quad$ 因此在$\color[RGB]{230,51,51}(ab,d)=1,\ (d,k) \mid al+b$的情况下,可以得到:
 
 $$\displaystyle{ |\mathscr{A}_d| = |\\{ p : p \le x, p \equiv l'\ \textrm{mod}\ [d,k] \\}| = \pi(x, [d,k], l') \sim \frac{1}{[d,k]}\textrm{li}(x) }$$
 
@@ -385,17 +385,17 @@ $$|r_d| \le E(x, dk)$$
 
 接下来再对例5进行推广!将$\mathscr{A}$中的$ap+b$换成$F(p)$(~~开始窒息~~).
 
-其中$F$是次数为$g$的整系数多项式,$\color{red}\rho(d)$的定义也与例3一致,即:
+其中$F$是次数为$g$的整系数多项式,$\color[RGB]{230,51,51}\rho(d)$的定义也与例3一致,即:
 
 $$\rho(d) = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d\\}| \tag{3.2.6.1}$$
 
 但在推导过程中,会出现两个与$\rho$相关的函数,为了推导过程的简洁,先将定义摆放至此,进一步的性质将放在推导结束后的部分.
 
-如果要求(3.2.6.1)中的解还必须和$d$互素,这样就得到了$\color{red}\rho_1(d)$,即:
+如果要求(3.2.6.1)中的解还必须和$d$互素,这样就得到了$\color[RGB]{230,51,51}\rho_1(d)$,即:
 
 $$\rho_1(d) = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, (m,d) = 1\\}| \tag{3.2.6.2}$$
 
-接着,再要求(3.2.6.2)中的解还要像$\mathscr{A}$有类似的结构,即模$(d,k)$下与$l$同余(当然,此处的$k$和$l$是根据$\mathscr{A}$已经提前给定了),那么这样就得到了$\color{red}\rho_1^*(d)$,即:
+接着,再要求(3.2.6.2)中的解还要像$\mathscr{A}$有类似的结构,即模$(d,k)$下与$l$同余(当然,此处的$k$和$l$是根据$\mathscr{A}$已经提前给定了),那么这样就得到了$\color[RGB]{230,51,51}\rho_1^*(d)$,即:
 
 $$\rho_1^*(d)  = |\\{m : F(m) \equiv 0\ \textrm{mod}\ d, m \equiv l\ \textrm{mod}\ (d,k), (m,d) = 1\\}| \tag{3.2.6.3} $$
 
