@@ -61,7 +61,7 @@ $\ell(D) = \dim L(D)$,其中$L(D) = \{\phi \in K(F)^* : \textrm{div} \phi + D \g
 
 $$\ell(D)-\ell(K-D)=\deg(D)-g+1.$$
 
-而在层论的帮助下,利用Serre对偶,便可进一步解释公式左侧两项的意义:$\ell(K-D)$是作为第一层上同调的维数,$\ell(D)$则是玲姐同调群的维数.于是可以用同调群的形式来表达Riemann-Roch定理:
+而在层论的帮助下,利用Serre对偶,便可进一步解释公式左侧两项的意义:$\ell(K-D)$是作为第一层上同调的维数,$\ell(D)$则是零阶同调群的维数.于是可以用同调群的形式来表达Riemann-Roch定理:
 
 $$\dim H^0(X, \mathcal{O}_{-D}) - \dim H^0(X, \Omega_D) = 1 - g + \deg D.$$
 
