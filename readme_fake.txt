@@ -1,6 +1,6 @@
 git checkout source
 
-git add ./*
+git add .
 
 git commit -m "name"
 
