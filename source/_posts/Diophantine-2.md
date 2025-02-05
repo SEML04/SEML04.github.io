@@ -44,7 +44,7 @@ $$\sigma_i:K=\mathbb{Q}(\gamma)\to\mathbb{Q}(\gamma_i)\hookrightarrow\mathbb{C}$
 
 因此,若$\gamma_i$为实(复)数,则称$\sigma_i$为实(复)嵌入.
 
-回到Pell方程$x^2-dy^2=\pm 1$,我们考虑实二次域$K=\mathbb{Q}(\sqrt{d})$,因此Pell方程的有理整数解即为$\mathcal{O}_K$中范数为$\pm 1$的元素.而根据Dirichlet单位定理可知,实二次域的单位群$U_K=\\{\pm \varepsilon^n | n\in\mathbb{Z}\\}$(因为秩为$1$),其中$\varepsilon$也被称作$K$的基本单位(一般取大于$1$的那个,毕竟只差正负号而已).
+回到Pell方程$x^2-dy^2=\pm 1$,我们考虑实二次域$K=\mathbb{Q}(\sqrt{d})$,因此Pell方程的有理整数解即为$\mathcal{O}_K$中范数为$\pm 1$的元素.而根据Dirichlet单位定理可知,实二次域的单位群$U_K=\{\pm \varepsilon^n | n\in\mathbb{Z}\}$(因为秩为$1$),其中$\varepsilon$也被称作$K$的基本单位(一般取大于$1$的那个,毕竟只差正负号而已).
 
 由于$\mathcal{O}_{\mathbb{Q}(\sqrt{d})}$的结构与$d$有着直接的关系,因此以下需要对不同的$d$来讨论Pell方程的解的结构.
 
@@ -58,13 +58,13 @@ $$\sigma_i:K=\mathbb{Q}(\gamma)\to\mathbb{Q}(\gamma_i)\hookrightarrow\mathbb{C}$
 >
 > $\quad$ a. $x^2-dy^2=-1$不存在有理整数解.
 >
-> $\quad$ b. $x^2-dy^2=1$的有理整数解为$\\{(\pm a_n,\pm b_n) | n\in \mathbb{Z}\\}$.
+> $\quad$ b. $x^2-dy^2=1$的有理整数解为$\{(\pm a_n,\pm b_n) | n\in \mathbb{Z}\}$.
 >
 > (2) 如果$N(\varepsilon)=-1$:
 >
-> $\quad$ a. $x^2-dy^2=-1$的有理整数解为$\\{(\pm a_{2n+1},\pm b_{2n+1}) | n\in \mathbb{Z}\\}$.
+> $\quad$ a. $x^2-dy^2=-1$的有理整数解为$\{(\pm a_{2n+1},\pm b_{2n+1}) | n\in \mathbb{Z}\}$.
 >
-> $\quad$ b. $x^2-dy^2=1$的有理整数解为$\\{(\pm a_{2n},\pm b_{2n}) | n\in \mathbb{Z}\\}$.
+> $\quad$ b. $x^2-dy^2=1$的有理整数解为$\{(\pm a_{2n},\pm b_{2n}) | n\in \mathbb{Z}\}$.
 
 当然对于另一种情况也是类似的考虑,只不过需要多转一个弯而已,比起其他代数里面的"一个弯",这个简直可以说是友好至极了🤠.
 
@@ -82,13 +82,13 @@ $$\sigma_i:K=\mathbb{Q}(\gamma)\to\mathbb{Q}(\gamma_i)\hookrightarrow\mathbb{C}$
 >
 > $\quad$ a. $x^2-dy^2=-4$不存在有理整数解.
 >
-> $\quad$ b. $x^2-dy^2=4$的有理整数解为$\\{(\pm a_n,\pm b_n) | n\in \mathbb{Z}\\}$.
+> $\quad$ b. $x^2-dy^2=4$的有理整数解为$\{(\pm a_n,\pm b_n) | n\in \mathbb{Z}\}$.
 >
 > (2) 如果$N(\varepsilon)=-1$:
 >
-> $\quad$ a. $x^2-dy^2=-4$的有理整数解为$\\{(\pm a_{2n+1},\pm b_{2n+1}) | n\in \mathbb{Z}\\}$.
+> $\quad$ a. $x^2-dy^2=-4$的有理整数解为$\{(\pm a_{2n+1},\pm b_{2n+1}) | n\in \mathbb{Z}\}$.
 >
-> $\quad$ b. $x^2-dy^2=4$的有理整数解为$\\{(\pm a_{2n},\pm b_{2n}) | n\in \mathbb{Z}\\}$.
+> $\quad$ b. $x^2-dy^2=4$的有理整数解为$\{(\pm a_{2n},\pm b_{2n}) | n\in \mathbb{Z}\}$.
 
 可以发现的是,该引理和定理2是高度相似的,也只有$a_n$和$b_n$构造方式上的一点点不同(而其他地方我甚至都是把定理2直接copy过来的).
 
@@ -102,29 +102,29 @@ $$\sigma_i:K=\mathbb{Q}(\gamma)\to\mathbb{Q}(\gamma_i)\hookrightarrow\mathbb{C}$
 >
 > $\quad$ $b_1$. 如果$a\equiv b\equiv 0\ (\textrm{mod}\ 2)$,则:
 >
-> <center>$x^2-dy^2=1$的有理整数解为$\{(\pm\dfrac{1}{2} a_n,\pm\dfrac{1}{2} b_n) | n\in \mathbb{Z}\}$</center>
+> <center>$x^2-dy^2=1$的有理整数解为$\left\{\left(\pm\dfrac{1}{2} a_n,\pm\dfrac{1}{2} b_n\right) | n\in \mathbb{Z}\right\}$</center>
 >
 > $\quad$ $b_2$. 如果$a\equiv b\equiv 1\ (\textrm{mod}\ 2)$,则:
 >
-> <center>$x^2-dy^2=1$的有理整数解为$\{(\pm\dfrac{1}{2} a_{3n},\pm\dfrac{1}{2} b_{3n}) | n\in \mathbb{Z}\}$</center>
+> <center>$x^2-dy^2=1$的有理整数解为$\left\{\left(\pm\dfrac{1}{2} a_{3n},\pm\dfrac{1}{2} b_{3n}\right) | n\in \mathbb{Z}\right\}$</center>
 >
 > (2) 如果$N(\varepsilon)=-1$:
 >
 > $\quad$ $a_1$. 如果$a\equiv b\equiv 0\ (\textrm{mod}\ 2)$,则:
 >
-> <center>$x^2-dy^2=-1$的有理整数解为$\{(\pm\dfrac{1}{2} a_{2n+1},\pm\dfrac{1}{2} b_{2n+1}) | n\in \mathbb{Z}\}$</center>
+> <center>$x^2-dy^2=-1$的有理整数解为$\left\{\left(\pm\dfrac{1}{2} a_{2n+1},\pm\dfrac{1}{2} b_{2n+1}\right) | n\in \mathbb{Z}\right\}$</center>
 >
 > $\quad$ $a_2$. 如果$a\equiv b\equiv 1\ (\textrm{mod}\ 2)$,则:
 >
-> <center>$x^2-dy^2=-1$的有理整数解为$\{(\pm\dfrac{1}{2} a_{6n+3},\pm\dfrac{1}{2} b_{6n+3}) | n\in \mathbb{Z}\}$</center>
+> <center>$x^2-dy^2=-1$的有理整数解为$\left\{\left(\pm\dfrac{1}{2} a_{6n+3},\pm\dfrac{1}{2} b_{6n+3}\right) | n\in \mathbb{Z}\right\}$</center>
 >
 > $\quad$ $b_1$. 如果$a\equiv b\equiv 0\ (\textrm{mod}\ 2)$,则:
 >
-> <center>$x^2-dy^2=1$的有理整数解为$\{(\pm\dfrac{1}{2} a_{2n},\pm\dfrac{1}{2} b_{2n}) | n\in \mathbb{Z}\}$</center>
+> <center>$x^2-dy^2=1$的有理整数解为$\left\{\left(\pm\dfrac{1}{2} a_{2n},\pm\dfrac{1}{2} b_{2n}\right) | n\in \mathbb{Z}\right\}$</center>
 >
 > $\quad$ $b_2$. 如果$a\equiv b\equiv 1\ (\textrm{mod}\ 2)$,则:
 >
-> <center>$x^2-dy^2=1$的有理整数解为$\{(\pm\dfrac{1}{2} a_{6n},\pm\dfrac{1}{2} b_{6n}) | n\in \mathbb{Z}\}$</center>
+> <center>$x^2-dy^2=1$的有理整数解为$\left\{\left(\pm\dfrac{1}{2} a_{6n},\pm\dfrac{1}{2} b_{6n}\right) | n\in \mathbb{Z}\right\}$</center>
 
 这个定理看上去比较吓人,但实际上也确实比较吓人了.其中$3n$的操作实际上就是将$1/2$消去,从而得到有理整数解.其实如果对代数数论的概念比较熟悉之后,以上两个定理都还是比较容易理解的了.
 
@@ -168,7 +168,7 @@ $$P_{k+1}=a_k Q_k - P_k^2$$
 
 $$Q_{k+1} = \dfrac{D-P_k^2}{Q_k}+a_k^2Q_k-2a_kP_k$$
 
-~~但是看这推导式,不如不看.~~总之在最后计算基本单位的时候,我们也只是用到了连分数展开的第一个循环而已,因此手撕就差不多够了,即使是61这个数(Fermat自己说是比较人性化的选了个比较小的数).
+(~~但是看这推导式,不如不看.~~)总之在最后计算基本单位的时候,我们也只是用到了连分数展开的第一个循环而已,因此手撕就差不多够了,即使是61这个数(Fermat自己说是比较人性化的选了个比较小的数).
 
 例如:
 

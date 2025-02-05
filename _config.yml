@@ -3,26 +3,33 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Anon Chihaya的数学小窝
-subtitle: '主页'
+title: Chihaya Anon的数学小窝!!!
+subtitle: ''
 description: "这里是Anon的数学小窝
-  <br>
   <br>不定时发布Anon的抄书笔记
-  <br>
   <br>也有可能是Anon的抄论文笔记"
-keywords: 
-author: Anon Chihaya的数学小窝
-language: zh_cn
+keywords:
+author: Chihaya Anon
+language: zh-CN
 timezone: ''
+categories: blog
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+url: http://seml04.github.io
+
+# permalink: :year/:month/:day/:title/
+
+# permalink: post/:abbrlink.html # post为自定义前缀
+# abbrlink:
+ 	  #alg: crc32   #算法： crc16(default) and crc32
+ 	  #rep: hex     #进制： dec(default) and hex
+
+
+# permalink_defaults:
+# pretty_urls:
+#   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+#   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -48,12 +55,31 @@ post_asset_folder: false
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
+
+# syntax_highlighter: highlight.js
+# highlight:
+#   auto_detect: false
+#   line_number: true
+#   line_threshold: 0
+#   tab_replace: ""
+#   exclude_languages:
+#     - example
+#   wrap: true
+#   hljs: false
+# prismjs:
+#   preprocess: true
+#   line_number: true
+#   line_threshold: 0
+#   tab_replace: ""
+
 highlight:
+  enable: false
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
-  hljs: true
+  hljs: false
+
 prismjs:
   preprocess: true
   line_number: true
@@ -72,6 +98,10 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
+
+custom_file_path:
+  bodyEnd: source/_data/body-end.swig
+  style: source/_data/styles.styl
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -100,39 +130,260 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: arknights
+# theme: landscape
+# theme: milk
+theme: butterfly
+
+
+# theme_config:
+#   menus:
+#     首页: /
+#     # 月度报告: /categories/
+#     # 标签: /tags/
+#     关于: /about/
+#   favicon: '/favicon.png'
+#   footers:
+#     '&copy; Tinkink': 'https:/github.com/paitsai'
+#   google_analytics:
+#     tracking_id: G-XXXXXXXXX
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:seml04/seml04.github.io.git
-  branch: main 
+    type: git # 不要使用github
+    repo: git@github.com:seml04/seml04.github.io.git 
+    branch: main # 默认master分支
+    message: update myblog by Mr.Xau   # 自动部署commit备注，可不填
 
+# Mathjax数学公式
+# mathjax: true
+
+# Katex数学公式(allpost设置为false时只有头部设置math:true的文章才开启)
+katex:
+  enable: true
+  allpost: true
+  copy_tex: true
+
+
+#  npm audit fix --force
+# MathJax
 mathjax:
-  tags: none
-  single_dollars: true
-  cjk_width: 0.9
-  normal_width: 0.6
-  append_css: true
+  tags: none # or 'ams' or 'all'
+  single_dollars: true # enable single dollar signs as in-line math delimiters
+  cjk_width: 0.9 # relative CJK char width
+  normal_width: 0.6 # relative normal (monospace) width
+  append_css: true # add CSS to pages rendered by MathJax
+  every_page: false # if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter
+  packages: # extra packages to load
+  extension_options: {}
+    # you can put your extension options here
+
+
+
+
+# ## moc3
+# OhMyLive2d:
+#   enable: true
+#   CDN: https://registry.npmmirror.com/oh-my-live2d/latest/files
+#   option:
+#     source: ''
+#     mobileShow: true # 手机端是否展示
+#     sayHello: false
+#     transitionTime: 1000
+#     models:
+#       - scale: 1.2
+#         path: https://model.oml2d.com/kp31/model.json #/live2d-models/kewei_4/kewei_4.model3.json
+#         x: 0
+#         'y': 0
+#         stageStyle:
+#           backgroundColor: 'rgba(0, 0, 0, 0)'
+#           width: auto
+#           height: auto
+#     tips:
+#       style:
+#         width: 230
+#         height: 120
+#         offsetX: 0
+#         offsetY: 90
+#       idleTips:
+#         interval: 15000
+#         # remote: false # 自定义
+#         remote: |
+#           function() {
+#             return new Promise((resolve, reject) => {
+#               $.ajax({
+#                 type: 'get',
+#                 url: 'https://v1.hitokoto.cn?c=i',
+#                 dataType: 'json',
+#                 success: res => {
+#                  // console.log(res);
+#                   resolve({text: res.hitokoto});
+#                 }
+#               });
+#             });
+#           }
+
+
+
+
+
+
+# OhMyLive2d:
+#   enable: false
+#   CDN: https://registry.npmmirror.com/oh-my-live2d/latest/files
+#   # CDN: https://registry.npmmirror.com/oh-my-live2d/0.13/files/dist/index.min.js
+#   option:
+#     # importType: 'cubism2' #  导入类型, 默认使用全量导入: complete , 可选值: complete, cubism2, cubism5
+#     libraryUrls: # 自定义 Cubism SDK 外部资源地址
+#       complete: https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/complete.js
+#       cubism2: https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism2.js
+#       cubism5: https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism5.js
+#     # menus:
+#     # items: |
+#     #   (defaultItems)=>{
+#     #    return [
+#     #      ...defaultItems,
+#     #      {
+#     #        id: 'github',
+#     #        icon: 'github-fill',
+#     #        title: '我的github',
+#     #        onClick: ()=>window.open('https://github.com/hacxy')
+#     #      }
+#     #    ]
+#     #   }
+
+#     # items:
+#     #   - id: 'github'
+#     #     icon: 'github-fill'
+#     #     title: '我的github'
+#     #     onClick: ()=>window.open('https://github.com/hacxy')
+
+#     mobileDisplay: true # 是否在移动端显示
+#     models: #https://model.oml2d.com/HK416-2-normal/model.json
+#       - path: https://paitsai168.sbs/img/kewei_4/kewei_4.model3.json #https://model.oml2d.com/kp31/model.json
+#         mobilePosition: [-10, 23] # 移动端时模型在舞台中的位置。 默认值: [0,0] [横坐标, 纵坐标]
+#         mobileScale: 0.1 # 移动端时模型的缩放比例 默认值: 0.1
+#         mobileStageStyle: # 移动端时舞台的样式
+#           width: 150
+#           height: 166
+#         motionPreloadStrategy: IDLE # 动作预加载策略 默认值: IDLE 可选值: ALL | IDLE | NONE
+#         position: [0, 0] # 模型在舞台中的位置。 默认值: [0,0] [横坐标, 纵坐标]
+#         scale: 1.2 # 模型的缩放比例 默认值: 0.1
+#         # showHitAreaFrames: false # 是否显示点击区域 默认值: false
+#         stageStyle:
+#           width: 250
+#           height: 250
+    
+#     parentElement: document.body #为组件提供一个父元素，如果未指定则默认挂载到 body 中
+#     primaryColor: 'var(--btn-bg)' # 主题色 支持变量
+#     sayHello: true # 是否在初始化阶段打印项目信息
+#     tips:
+#       style:
+#         width: 230
+#         height: 120
+#         left: calc(50% - 20px)
+#         top: -100px
+#       mobileStyle:
+#         width: 180
+#         height: 80
+#         left: calc(50% - 30px)
+#         top: -100px
+#       idleTips:
+#         interval: 15000
+#         # message:
+#         #   - 你好呀~
+#         #   - 欢迎来到我的小站~
+#         # 自定义提示语 需要 引入 axios 库 ,也可以使用其他方法
+#         message: |
+#           function(){
+#             return axios.get('https://v1.hitokoto.cn?c=i')
+#               .then(function (response) {
+#                 return response.data.hitokoto ;
+#               })
+#               .catch(function (error) {
+#                 console.error(error);
+#               });
+#           }
+#         # wordTheDay: true
+#         # 自定义  https://v1.hitokoto.cn  数据
+#         # wordTheDay: |
+#         #   function(wordTheDayData){
+#         #     return `${wordTheDayData.hitokoto}    by.${wordTheDayData.from}`;
+#         #   }
+#   # then: |
+#   #   (oml2d)=>{
+#   #      setTimeout(() => {
+#   #     oml2d.tipsMessage('hello world', 3000, 10);
+#   #   }, 8000);
+#   #   }
 
 live2d:
-  enable: true  # 是否启动
-  scriptFrom: local # 默认
-  pluginRootPath: live2dw/  # 插件在站点上的根目录(相对路径)
-  pluginJsPath: lib/  # 脚本文件相对与插件根目录路径
-  pluginModelPath: assets/  # 模型文件相对与插件根目录路径
-  tagMode: false  # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
-  debug: false  # 调试, 是否在控制台输出日志
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: true
   model:
-    use: live2d-widget-model-koharu  ## 模型文件
+    use: kewei_4
+    # use: hemin_3
+    # use: live2d-widget-model-koharu
   display:
-    position: left # 定位方向 left right top bottom
-    width: 150  # 小人宽度
-    height: 300 #  小人高度
-    # hOffset: -15  # 向 偏移
-    # vOffset: -15  # 像 偏移
+    position: left
+    width: 150
+    height: 300
   mobile:
-    show: true  # 手机端是否显示
+    show: true
   react:
-    opacity: 0.7  # 模型透明度
+    opacity: 0.85
+
+
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
+back2top:
+    enable: true
+    sidebar: true
+    scrollpercent: true
+
+# Ice Kano Plus_in
+# Hexo Github Canlendar
+# Author: Ice Kano
+# Modify: Lete乐特
+
+# butterfly
+# hexo-github-canlendar
+# 贡献度热力图插件 https://github.com/Barry-Flynn/hexo-github-calendar
+githubcalendar:
+  enable: true        # 是否启用本插件
+  enable_page: /      # 要生效的页面，如 / 首页，/about/ 介绍页等
+  user: seml04      # GitHub 用户名
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  githubcalendar_html: '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>'
+  pc_minheight: 280px
+  mobile_minheight: 0px
+  # 贡献统计的梯度色卡值，可自行调整
+  color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']"
+  # 推荐填写你自建的API接口，公用api随时可能会失效
+  # api: https://github-calendar-api.meta-code.top/api
+  api: https://githubcalendarapi.shiguang666.eu.org/api
+  # 推荐下载后使用本地文件
+  calendar_js: https://cdn.jsdelivr.net/gh/barry-flynn/hexo-github-calendar/hexo_githubcalendar.js # 在线文件，容易加载失败
+  # calendar_js: /js/githubcalendar.js # 本地文件，请下载到主题文件夹的source目录下
+  plus_style: ""
+
+
+markdown:
+ plugins:
+   - plugin:
+     name: '@neilsustc/markdown-it-katex'
+     options:
+       strict: false

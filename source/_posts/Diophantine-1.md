@@ -30,15 +30,15 @@ tags:
 
 $\quad$ 首先我们已经知道有:
 
-$$0<|\frac{355}{113}-\pi|<2.668\times10^{-7}$$
+$$0<\left|\frac{355}{113}-\pi\right|<2.668\times10^{-7}$$
 
 $\quad$ 如果$\frac{p}{q}$比$\frac{355}{113}$更接近$\pi$,其中假设$p,q$为互素的正数,那么应该也有:
 
-$$0<|\frac{p}{q}-\pi|<2.668\times10^{-7}$$
+$$0<\left|\frac{p}{q}-\pi\right|<2.668\times10^{-7}$$
 
 $\quad$ 从而由绝对值不等式:
 
-$$0<|\frac{355}{113}-\frac{p}{q}|=|\frac{355q-113p}{113q}|<2\times2.668\times10^{-7}$$
+$$0<\left|\frac{355}{113}-\frac{p}{q}\right|=\left|\frac{355q-113p}{113q}\right|<2\times2.668\times10^{-7}$$
 
 $\quad$ 由于$p$和$q$都是正整数,故$|355q-113p|$为正整数,必然是有$1\le |355q-113p|$的.故而有:
 
@@ -62,22 +62,24 @@ $\quad$现在试着证明一下,在分母小于50的所有分数里,$\frac{22}{7
 
 我们写出$\pi$的连分数形式:
 
-$$\begin{equation}
+$$\begin{equation*}
   x = 3 + \cfrac{1}{7 
           + \cfrac{1}{15 
           + \cfrac{1}{1 
           + \cfrac{1}{292
           + \cfrac{1}{\cdots} } } } }
-\end{equation}$$
+\end{equation*}$$
 
 因此我们可以这么按照上面的格式来定义连分数,并且为了简单起见,我们用一个新的符号来表示:
 
-> **定义1:** $[a_0;a_1,a_2,a_3,\cdots]=
-\begin{equation}
+> **定义1:** 记
+> $$\begin{equation*}
+    [a_0;a_1,a_2,a_3,\cdots]:=
     a_0 + \cfrac{1}{a_1 
           + \cfrac{1}{a_2 
           + \cfrac{1}{a_3 + \cfrac{1}{\cdots} } } }
-\end{equation}$,其中$a_0$可以为任意整数,而$a_1,a_2,\cdots$则要求为大于等于$1$的正整数.
+\end{equation*},$$
+> 其中$a_0$可以为任意整数,而$a_1,a_2,\cdots$则要求为大于等于$1$的正整数.
 
 当然有限项也是可行的,并且由朴素的数学逻辑思维可知,当里面为有限项时,其对应的值为一个分数,也就是有理数.以下我们给出几个例子(有限项的例子大家可以自己试一试,对这个符号更熟悉一些):
 
@@ -119,11 +121,11 @@ $$\alpha=2+\frac{1}{\alpha}=[2;\alpha]$$
 
 $\quad$ 将右侧的$\alpha$用一次上述的等式,即得到
 
-$$\alpha=
-\begin{equation}
-    2 + \cfrac{1}{2 
-      + \cfrac{1}{\alpha}}
-\end{equation}=[2;2,\alpha]$$
+$$
+\begin{equation*}
+    \alpha=2 + \cfrac{1}{2 
+      + \cfrac{1}{\alpha}}=[2;2,\alpha]
+\end{equation*}$$
 
 $\quad$ 再重复将上面的$\alpha$换成等式右侧后,我们最后得到了例子2里的格式,即
 

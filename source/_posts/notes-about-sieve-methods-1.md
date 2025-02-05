@@ -68,13 +68,13 @@ $\quad$ 易知$2$是$(x+1)(x+2)$的一个fixed prime divisor,即使$2$不整除$
 >
 > $\quad$ where $h_i=\deg F_i$, and
 >
-> $$C(F_1,\\cdots,F_g)=\\prod\\limits_p \\left\\{\\left(1-\\dfrac{1}{p}\\right)^{-g}\\left(1-\\dfrac{\\rho(p)}{p}\\right) \\right\\}$$
+> $$C(F_1,\cdots,F_g)=\prod\limits_p \left\{\left(1-\dfrac{1}{p}\right)^{-g}\left(1-\dfrac{\rho(p)}{p}\right) \right\}$$
 > 
 > $\quad$ and $\rho(p)$ is the number of solutions of
 >
 > $$F_1(n)F_2(n)\cdots F_g(n)\equiv 0\mod{p}$$
 
-实际上,上述里的$C(F_1,\\cdots,F_g)$和国际数学家大会上对James Maynard工作的介绍里边的$\mathfrak{S}(F_1,\\cdots,F_g)$是一码事.
+实际上,上述里的$C(F_1,\cdots,F_g)$和国际数学家大会上对James Maynard工作的介绍里边的$\mathfrak{S}(F_1,\cdots,F_g)$是一码事.
 
 对$H_N$的定量估计式则形式上有一些不同,它没有了积分式,但整体结构还是相似的,~~其实就是写成了离散的形式,不相似就出大问题了~~:
 
@@ -82,11 +82,11 @@ $\quad$ 易知$2$是$(x+1)(x+2)$的一个fixed prime divisor,即使$2$不整除$
 >
 > $\quad$ Let X=X(N) be the number of $n$ such that $N-G(n)>0$, and $Q_1(F_1,\cdots,F_g;G;N)$ be the number of $n$ in Hypothesis $H_N$. Then
 >
-> $$\begin{align}
+> $$\begin{align*}
     Q_1(F_1,\cdots,F_g;G;& N) =
-    \dfrac{X}{\log^{g+1} X}(h_0h_1\cdots h_g)^{-1}\\{1+o(1)\\} \\\\
-    & \\prod\\limits_p \\left\\{\\left(1-\\dfrac{1}{p}\\right)^{-g-1}\\left(1-\\dfrac{\\omega(p)}{p}\\right) \\right\\},\ N\to\infty
-\end{align}$$
+    \dfrac{X}{\log^{g+1} X}(h_0h_1\cdots h_g)^{-1}\{1+o(1)\} \\
+    & \prod\limits_p \left\{\left(1-\dfrac{1}{p}\right)^{-g-1}\left(1-\dfrac{\omega(p)}{p}\right) \right\},\ N\to\infty
+\end{align*}$$
 >
 > $\quad$ where $h_0 = \deg G$, and $\omega(p)$ is the number of solutions of
 >
@@ -180,7 +180,7 @@ $H_N$猜想是哥德巴赫猜想的推广,事实上有:
 >
 > In Chapter 9, 10 and 11:
 >
-> $\quad$ $(p+2)(p+6)(p+8)=P_14$ for infinitely many primes $p$.
+> $\quad$ $(p+2)(p+6)(p+8)=p_{14}$ for infinitely many primes $p$.
 
 引入almost prime的概念后,以及以上的这些重要结论,我们对『Schinzel的两个猜想正确』的把握越来越大(当然也是一种Bayes估计的方法论).以及对于素数猜想,目前也有新的强有力的工具,例如圆法和密率,其中维诺格拉多夫便用圆法与三角和证明了三素数定理(1937).并且在此书出版后,筛法仍然有一些惊艳的结果产生,但是却并没有机会出现在此书中,还是有一些遗憾的.例如:张益唐确定了有无穷对素数,其差小于7000万(2013),以及后续一系列的工作,其中也包括了2022年Fields奖得主James Maynard的工作.但是这也是好事,至少这还说明筛法仍有具有活力,并且仍然有着强大的威力.~~而我也有了一个可以写的论文方向~~
 

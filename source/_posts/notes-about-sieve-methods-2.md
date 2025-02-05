@@ -13,7 +13,7 @@ tags:
 
 #### 引言
 
-这一篇博客将记录一些我读**『哥德巴赫猜想』第一章内容**的一些知识点.大概可能应该只是抄一些定理命题(~~数学类博客的通病~~),以及一些自己的片面见解,(~~但是有可能会出错~~).但是如果在后面的学习中发现有错误或者是新的领悟,我还是会在这边做补充修改的.不会直接修改,而是保留我原来的想法.
+这一篇博客将记录一些我读『哥德巴赫猜想』第一章内容的一些知识点.大概可能应该只是抄一些定理命题(~~数学类博客的通病~~),以及一些自己的片面见解,(~~但是有可能会出错~~).但是如果在后面的学习中发现有错误或者是新的领悟,我还是会在这边做补充修改的.不会直接修改,而是保留我原来的想法.
 
 本文的主要参考资料为: ***哥德巴赫猜想,第二版 by 潘承洞 & 潘承彪***
 
@@ -25,7 +25,7 @@ tags:
 
 此处直接给出模$q$特征的表达式,详细的推导过程见参考资料[2].但是定义还是得写一遍:
 
-> **定义1:** 设$q\ge 1$,而$\chi(n)$是定义在$\mathbb{Z}$上的不恒为$0$的算术函数.则称$\chi(n)$为模$\ q\ $的**Dirichlet特征**,记作$\chi_q$或者$\chi(n;q)$或者$\chi\ \textrm{mod}\ q$,如果满足以下条件:
+> **定义1:** 设$q\ge 1$,而$\chi(n)$是定义在$\mathbb{Z}$上的不恒为$0$的算术函数.则称$\chi(n)$为模$q$的**Dirichlet特征**,记作$\chi_q$或者$\chi(n;q)$或者$\chi\ \textrm{mod}\ q$,如果满足以下条件:
 >
 > $\quad$ (1) $\chi(n)=0$,若$(n,q)>1$;
 >
@@ -49,13 +49,13 @@ tags:
 >
 > $$\rho: (\mathbb{Z}/q\mathbb{Z})^* \to \mathbb{C}^*$$
 >
-> $\quad$ 因此我们将$\rho$周期延拓到$\mathbb{Z}$上,并且在未定义的地方令其值等于$0$.则我们其实便得到了一个模$\ q\ $的Dirichlet特征.而反过来每一个Dirichlet特征都可以对应一个$(\mathbb{Z}/q\mathbb{Z})^*$上的representation.
+> $\quad$ 因此我们将$\rho$周期延拓到$\mathbb{Z}$上,并且在未定义的地方令其值等于$0$.则我们其实便得到了一个模$q$的Dirichlet特征.而反过来每一个Dirichlet特征都可以对应一个$(\mathbb{Z}/q\mathbb{Z})^*$上的representation.
 
-最后,在以上的铺垫后,其实便也可以得到了$\chi$具体的表达式.先记: $c_{-1}= \\left\\{\\begin{align} & 1, & l=1,\\\\ & 2, & l\\ge 2,\\end{align}\\right.$ $\ c_0= \\left\\{\\begin{align} & 1, & l=1,\\\\ & 2^{l-2}, & l\\ge 2,\\end{align}\\right.$ $c_j=\varphi(p_j^{l_j})$.以及$\gamma$为循环群中的阶.则:
+最后,在以上的铺垫后,其实便也可以得到了$\chi$具体的表达式.先记: $c_{-1}= \left\{\begin{array}{ll} 1, & l=1,\\ 2, & l\ge 2,\end{array}\right.$ $\ c_0= \left\{\begin{array}{ll}  1, & l=1,\\  2^{l-2}, & l\ge 2,\end{array}\right.$ $c_j=\varphi(p_j^{l_j})$.以及$\gamma$为循环群中的阶.则:
 
 > **定义2:** 若$q=2^l p_1^{l_1} \cdots p_s^{l_s}$,则***模$q$特征的表达式***为:
 >
-> $$\chi(n;q)= \\left\\{\\begin{align} & \textrm{e}\left\(\dfrac{m_{-1}\gamma_{-1}}{c_{-1}}\right\) \textrm{e}\left\(\dfrac{m_0\gamma_0}{c_0}\right\) \cdots \textrm{e}\left\(\dfrac{m_s\gamma_s}{c_s}\right\) & (n,q)=1\ \\\\ & 0 & (n,q)>1\ \\end{align}\\right.$$
+> $$\chi(n;q)= \left\{\begin{array}{lll} & \textrm{e}\left(\dfrac{m_{-1}\gamma_{-1}}{c_{-1}}\right) \textrm{e}\left(\dfrac{m_0\gamma_0}{c_0}\right) \cdots \textrm{e}\left(\dfrac{m_s\gamma_s}{c_s}\right) & (n,q)=1\ \\ & 0 & (n,q)>1\ \end{array}\right.$$
 >
 > $\quad$ 其中$\textrm{e}(z)=\textrm{e}^{2\pi i\cdot z}$,而$m_j\ (j=-1,0,\cdots,s)$是可以任意取值的整数.
 
@@ -67,7 +67,7 @@ tags:
 
 > **定义3(主特征):** 称$\chi_q$是主特征,记作$\chi_q^0$,即:
 >
-> $$\chi_q^0(n)= \\left\\{\\begin{align} & 1, & (n,q)=1,\\\\ & 0, & (n,q)>1.\\end{align}\\right.$$
+> $$\chi_q^0(n)= \left\{\begin{align*} & 1, & (n,q)=1,\\ & 0, & (n,q)>1.\end{align*}\right.$$
 
 主特征这个东西看上去很简单,感觉并不会有什么有意思的东西(一开始我也是这么认为的),但是在原特征和Gauss sum中,它的作用也是不平凡的.以及它还是**连接模$q$既约剩余类和模$q$全体特征的桥梁**.
 
@@ -117,19 +117,19 @@ $$p|q_1 \Rightarrow p|q^*,\ q_1|q,\ (q/q_1, q^*)=1$$
 
 > **定理1:** 设$q\ge 1$,$\chi$是一个模$q$的特征.则:
 >
-> $$\sum_{n\ \textrm{mod}\ q}'\chi(n) = \\left\\{\\begin{align} & \varphi(q), & \chi=\chi^0\ \textrm{mod}\ q, \\\\ & 0, & \chi\neq\chi^0\ \textrm{mod}\ q. \\end{align}\\right.$$
+> $$\sum_{n\ \textrm{mod}\ q}'\chi(n) = \left\{\begin{align*} & \varphi(q), & \chi=\chi^0\ \textrm{mod}\ q, \\ & 0, & \chi\neq\chi^0\ \textrm{mod}\ q. \end{align*}\right.$$
 >
-> $\quad$ 其中,$\displaystyle{\sum_{n\ \textrm{mod}\ q}'}$表示的含义是$\\displaystyle{\\sum_{\\substack{n=1 \\\\ (n,q)=1}}^q}$.
+> $\quad$ 其中,$\displaystyle{\sum_{n\ \textrm{mod}\ q}'}$表示的含义是$\displaystyle{\sum_{\substack{n=1 \\ (n,q)=1}}^q}$.
 
 以下定理更是在Dirichlet定理的证明中发挥重要作用:
 
 > **定理2:** 设$q\ge 1$,则:
 >
-> $$\sum_{\chi\ \textrm{mod}\ q}\chi(n) = \\left\\{\\begin{align} & \varphi(q), & n\equiv 1\ \textrm{mod}\ q, \\\\ & 0, & n\not\equiv 1\ \textrm{mod}\ q. \\end{align}\\right.$$
+> $$\sum_{\chi\ \textrm{mod}\ q}\chi(n) = \left\{\begin{align*} & \varphi(q), & n\equiv 1\ \textrm{mod}\ q, \\ & 0, & n\not\equiv 1\ \textrm{mod}\ q. \end{align*}\right.$$
 >
 > $\quad$ 以及可以有以下更一般的推论:
 >
-> $$\sum_{\chi\ \textrm{mod}\ q}\overline{\chi}(a)\chi(n) = \\left\\{\\begin{align} & \varphi(q), & n\equiv a\ \textrm{mod}\ q, \\\\ & 0, & n\not\equiv a\ \textrm{mod}\ q. \\end{align}\\right.$$
+> $$\sum_{\chi\ \textrm{mod}\ q}\overline{\chi}(a)\chi(n) = \left\{\begin{align*} & \varphi(q), & n\equiv a\ \textrm{mod}\ q, \\ & 0, & n\not\equiv a\ \textrm{mod}\ q. \end{align*}\right.$$
 
 #### Gauss sum以及两种特殊情况
 
@@ -137,7 +137,7 @@ $$p|q_1 \Rightarrow p|q^*,\ q_1|q,\ (q/q_1, q^*)=1$$
 
 > **定义5(Gauss sum):** 设$\chi(n)$是模$q$的特征,$m$为一个整数,称
 >
-> $$G_{\chi}(m)=\sum_{h=1}^q \chi(h)\textrm{e}\\left(\dfrac{mh}{q}\\right)$$
+> $$G_{\chi}(m)=\sum_{h=1}^q \chi(h)\textrm{e}\left(\dfrac{mh}{q}\right)$$
 >
 > $\quad$ 为**关于特征$\chi$的Gauss sum**.
 
@@ -163,24 +163,24 @@ $$p|q_1 \Rightarrow p|q^*,\ q_1|q,\ (q/q_1, q^*)=1$$
 
 当考虑主特征的Gauss sum,即$G_{\chi_q^0}$的时候,我们便得到了**Gauss sum的第一种特殊形式,简记为$C_q(m)$**.即:
 
-$$C_q(m)=\sum_{\substack{h=1 \\\\ (h,q)=1}}^q \textrm{e}\\left(\dfrac{mh}{q}\\right)$$
+$$C_q(m)=\sum_{\substack{h=1 \\ (h,q)=1}}^q \textrm{e}\left(\dfrac{mh}{q}\right)$$
 
 $C_q(m)$是关于$q$的积性函数,即$C_{q_1 q_2}(m)=C_{q_1}(m)C_{q_2}(m)$,以及对于$C_q(m)$有如下结论:
 
 > **定理5:** 若$p$是素数,$l\ge 1$,则:
 >
-> $$C_{q^l}(m)=\\left\\{\begin{align} & p^l-p^{l-1}, & p^l|m, \\\\
-& -p^{l-1}, & p^{l-1}||m, \\\\
-& 0, & p^{l-1}\not\mid m, \\\\
-\end{align}\\right.$$
+> $$C_{q^l}(m)=\left\{\begin{align*} & p^l-p^{l-1}, & p^l|m, \\
+& -p^{l-1}, & p^{l-1}||m, \\
+& 0, & p^{l-1}\not\mid m, \\
+\end{align*}\right.$$
 >
 > $\quad$ 容易验证其就等于:
 >
-> $$C_{p^l}(m)=\mu\\left(\dfrac{p^l}{(m,p^l)}\\right)\varphi(p^l)\varphi^{-1}\\left(\dfrac{p^l}{(m,p^l)}\\right)$$
+> $$C_{p^l}(m)=\mu\left(\dfrac{p^l}{(m,p^l)}\right)\varphi(p^l)\varphi^{-1}\left(\dfrac{p^l}{(m,p^l)}\right)$$
 >
 > $\quad$ 其中$\mu$是Mobius函数.在由于$C_q,\ \varphi,\ \mu$积性的性质,便可得到一般情况下的结论:
 >
-> $$C_{q}(m)=\mu\\left(\dfrac{q}{(m,q)}\\right)\varphi(q)\varphi^{-1}\\left(\dfrac{q}{(m,q)}\\right)$$
+> $$C_{q}(m)=\mu\left(\dfrac{q}{(m,q)}\right)\varphi(q)\varphi^{-1}\left(\dfrac{q}{(m,q)}\right)$$
 
 当考虑$(m,q)=1$时,上述的结论更简单易记,因此便得到下面的推论:
 
@@ -194,7 +194,7 @@ $C_q(m)$是关于$q$的积性函数,即$C_{q_1 q_2}(m)=C_{q_1}(m)C_{q_2}(m)$,以
 
 其次,当我们让$m=1$时,这便得到了**Gauss sum的第二种特殊形式,简记为$\tau(\chi)$**,即:
 
-$$\tau(\chi)=\sum_{h=1}^q \chi(h)\textrm{e}\\left(\dfrac{h}{q}\\right)$$
+$$\tau(\chi)=\sum_{h=1}^q \chi(h)\textrm{e}\left(\dfrac{h}{q}\right)$$
 
 接下来的三个定理将说明原特征的重要意义,以及$\tau(\chi^*)$的中心地位.
 
@@ -202,12 +202,12 @@ $$\tau(\chi)=\sum_{h=1}^q \chi(h)\textrm{e}\\left(\dfrac{h}{q}\\right)$$
 
 > **定理6:** 若$\chi_q \Leftrightarrow \chi_{q^*}^*$,则
 >
-> $$\tau(\chi)=\chi^* \\left(\dfrac{q}{q^*}\\right) \mu \\left(\dfrac{q}{q^*}\\right) \tau(\chi^*)$$
+> $$\tau(\chi)=\chi^* \left(\dfrac{q}{q^*}\right) \mu \left(\dfrac{q}{q^*}\right) \tau(\chi^*)$$
 
 正如前面对定理4的说明一样,可以知道的是$\tau(\chi)=\chi_{q^*}^*(q_2)\mu(q_2)\tau(\chi_{q_1})$,接着再证明原特征的一个性质即可.
 
-$$\tau(\chi_{q_1})=\\left\\{\begin{align} & \tau(\chi_{q^*}^*), & q_1=q^*, \\\\
-& 0, & q_1\neq q^*. \end{align}\\right.$$
+$$\tau(\chi_{q_1})=\left\{\begin{align*} & \tau(\chi_{q^*}^*), & q_1=q^*, \\
+& 0, & q_1\neq q^*. \end{align*}\right.$$
 
 而接下来的两个定理,都是***围绕定理3的(4)展开***的,也就是问:如果$(m,q)>1$,那么还有$G_{\chi}(m)=\overline{\chi}(m)\tau(\chi)$成立吗?这样我们就只需要考虑$\tau(\chi)$的性质了.
 
@@ -225,7 +225,7 @@ $$\tau(\chi_{q_1})=\\left\\{\begin{align} & \tau(\chi_{q^*}^*), & q_1=q^*, \\\\
 >
 > $\quad$ 若$q^\ast=\dfrac{q_1}{(m,q_1)}$,则
 >
-> $$G_{\chi}(m) = \overline{\chi}^\ast\\left(\dfrac{m}{(m,q)}\\right) \chi^\ast\\left(\dfrac{m}{q^\ast(m,q)}\\right) \mu\\left(\dfrac{m}{q^\ast(m,q)}\\right) \varphi(q) \varphi^{-1}\\left(\dfrac{m}{(m,q)}\\right) \tau(\chi^\ast)$$
+> $$G_{\chi}(m) = \overline{\chi}^\ast\left(\dfrac{m}{(m,q)}\right) \chi^\ast\left(\dfrac{m}{q^\ast(m,q)}\right) \mu\left(\dfrac{m}{q^\ast(m,q)}\right) \varphi(q) \varphi^{-1}\left(\dfrac{m}{(m,q)}\right) \tau(\chi^\ast)$$
 >
 > $\quad$ 若$q^\ast\neq\dfrac{q_1}{(m,q_1)}$,则
 >
@@ -233,7 +233,7 @@ $$\tau(\chi_{q_1})=\\left\\{\begin{align} & \tau(\chi_{q^*}^*), & q_1=q^*, \\\\
 
 如果想把$q^\ast=\dfrac{q_1}{(m,q_1)}$时的情况写地简单一点,即一个稍微短一点的中间式,那也是可以的(虽然也看不出有简单到哪里去🤣).即有:
 
-$$G_\chi(m) = \chi^\ast(q_2)C_{q_2}(m) \cdot \dfrac{q_1}{q*}\overline{\chi}^\ast\\left(\dfrac{m}{(m,q_1)}\\right)\tau(\chi^\ast)$$
+$$G_\chi(m) = \chi^\ast(q_2)C_{q_2}(m) \cdot \dfrac{q_1}{q*}\overline{\chi}^\ast\left(\dfrac{m}{(m,q_1)}\right)\tau(\chi^\ast)$$
 
 显然根据上面三个定理,我们也已经能够发现在$\chi$为原特征时,研究$\tau(\chi)$的重要意义.而我们也还是有以下的一个定理,稍微展示了$\tau(\chi)$的结构.
 

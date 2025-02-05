@@ -21,7 +21,7 @@ GPY的这篇论文刊登在*Annals of Mathematics*,因此该论文的含金量�
 
 我们介绍了一种方法,用于证明存在一些彼此之间非常接近的素数.这种方法依赖于算术级数中素数的分布水平.在Elliott-Halberstam猜想成立的假设下,我们证明了存在无穷多组相差16或者更小的素数.即使是在更弱的猜想成立,也意味着存在无穷多组相差有界的素数.而无条件地,我们证明存在有比平均间隙的任意小倍数更接近的连续素数,也就是:
 
-$$\liminf_{n \to infty} \frac{p_{n+1} - p_n}{\log p_n} = 0.$$
+$$\liminf_{n \to \infty} \frac{p_{n+1} - p_n}{\log p_n} = 0.$$
 
 最后的结果将在后续的论文中得到显著地改进.
 
@@ -31,26 +31,20 @@ $$\liminf_{n \to infty} \frac{p_{n+1} - p_n}{\log p_n} = 0.$$
 
 我们方法中所需要的关于素数的信息,现在通常被称为*算术级数中素数的分布水平*(*the level of distribution of primes in arithmetic progressions*).设
 
-<!-- $$\theta(n) = \left\{
+$$\theta(n) = \left\{
     \begin{array}{ll}
         \log n & \text{if } n \text{ prime,} \\
         0 & \text{otherwise,}
     \end{array}
-\right.\tag{1.1}$$ -->
-
-$$\\theta(n) = \\left\\{\\begin{array}{ll}\\log n & \\text{if } n \\text{ prime,} \\\\0 & \\text{otherwise,}\\end{array}\\right. \\tag{1.1}$$
+\right.\tag{1.1}$$
 
 并且考虑计数函数
 
-<!-- $$\theta(N;q,a) = \sum_{\substack{n \le N \\ n \equiv a(\text{mod }q) }}\theta(n).\tag{1.2}$$ -->
-
-$$\\theta(N;q,a) = \\sum_{\\substack{n \\le N \\\\ n \\equiv a(\\text{mod }q) }}\\theta(n).\\tag{1.2}$$
+$$\theta(N;q,a) = \sum_{\substack{n \le N \\ n \equiv a(\text{mod }q) }}\theta(n).\tag{1.2}$$
 
 Bombieri-Vinogradov定理指出,对于任意$A>0$,都存在一个$B=B(A)$,使得对于$Q = N^{\frac{1}{2}}(\log N)^{-B}$,有
 
-<!-- $$\sum_{q \le Q} \max_{\substack{a \\ (a,q)=1}}\left| \theta(N;q,a) - \frac{N}{\phi(q)} \right| \ll \frac{N}{(\log N)^A}.\tag{1.3}$$ -->
-
-$$\\sum_{q \\le Q} \\max_{\\substack{a \\\\ (a,q)=1}}\\left| \\theta(N;q,a) - \\frac{N}{\\phi(q)} \\right| \\ll \\frac{N}{(\\log N)^A}.\\tag{1.3}$$
+$$\sum_{q \le Q} \max_{\substack{a \\ (a,q)=1}}\left| \theta(N;q,a) - \frac{N}{\phi(q)} \right| \ll \frac{N}{(\log N)^A}.\tag{1.3}$$
 
 我们称素数的分布水平为$\vartheta$,如果$(1.3)$对于任意$A>0$以及任意的$\epsilon>0$成立,其中
 
@@ -62,7 +56,7 @@ Elliott和Halberstam[5]猜测素数的分布水平为$1$.根据Bombieri-Vinograd
 
 $$(n+h_1, n+h_2, \cdots, n+h_k),\tag{1.5}$$
 
-其中$\mathcal{H} = \\{h_1, h_2, \cdots, h_k\\}$是由不同的非负整数组成的集合.如果元组中的每一个元素都是素数,则称其为*素元组*(*prime tuple*).现让$n$遍历所有自然数,我们希望知道$(1.5)$中是素元组的频率是多少.例如,考虑$\mathcal{H} = \\{0, 1\\}$和元组$(n, n+1)$.如果$n = 2$,则得到了一个素元组$(2,3)$.而这也是这种形式下的唯一的素元组,因为当$n > 2$时,$n$与$n+1$中必有一个是大于$2$的偶数.另一方面,如果$\mathcal{H} = \\{0, 2\\}$,则我们预期存在有无穷多个形式为$(n,n+2)$的素元组,而这就是孪生素数猜想.一般而言,若对于任意的素数$p$,$h_i$永远不会占据以$p$为模数的所有剩余类,则元组$(1.5)$中有超过$n$个的素元组.这对于大于$k$的素数$p$,条件是显然成立的,于是我们只需去检查那些小的素数是否满足条件.如果我们用$\nu_p(\mathcal{H})$表示所有$h_i$在模$p$意义下占据的不同剩余类的个数,于是我们可以避免$p$整除$(1.5)$中的某些部分,方法是要求
+其中$\mathcal{H} = \{h_1, h_2, \cdots, h_k\}$是由不同的非负整数组成的集合.如果元组中的每一个元素都是素数,则称其为*素元组*(*prime tuple*).现让$n$遍历所有自然数,我们希望知道$(1.5)$中是素元组的频率是多少.例如,考虑$\mathcal{H} = \{0, 1\}$和元组$(n, n+1)$.如果$n = 2$,则得到了一个素元组$(2,3)$.而这也是这种形式下的唯一的素元组,因为当$n > 2$时,$n$与$n+1$中必有一个是大于$2$的偶数.另一方面,如果$\mathcal{H} = \{0, 2\}$,则我们预期存在有无穷多个形式为$(n,n+2)$的素元组,而这就是孪生素数猜想.一般而言,若对于任意的素数$p$,$h_i$永远不会占据以$p$为模数的所有剩余类,则元组$(1.5)$中有超过$n$个的素元组.这对于大于$k$的素数$p$,条件是显然成立的,于是我们只需去检查那些小的素数是否满足条件.如果我们用$\nu_p(\mathcal{H})$表示所有$h_i$在模$p$意义下占据的不同剩余类的个数,于是我们可以避免$p$整除$(1.5)$中的某些部分,方法是要求
 
 $$\nu_p(\mathcal{H}) < p\text{ for all primes }p.\tag{1.6}$$
 
