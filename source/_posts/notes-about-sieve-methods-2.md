@@ -55,7 +55,7 @@ tags:
 
 > **定义2:** 若$q=2^l p_1^{l_1} \cdots p_s^{l_s}$,则***模$q$特征的表达式***为:
 >
-> $$\chi(n;q)= \left\{\begin{array}{lll} & \textrm{e}\left(\dfrac{m_{-1}\gamma_{-1}}{c_{-1}}\right) \textrm{e}\left(\dfrac{m_0\gamma_0}{c_0}\right) \cdots \textrm{e}\left(\dfrac{m_s\gamma_s}{c_s}\right) & (n,q)=1\ \\ & 0 & (n,q)>1\ \end{array}\right.$$
+> $$\chi(n;q)= \left\{\begin{array}{ll}  \textrm{e}\left(\dfrac{m_{-1}\gamma_{-1}}{c_{-1}}\right) \textrm{e}\left(\dfrac{m_0\gamma_0}{c_0}\right) \cdots \textrm{e}\left(\dfrac{m_s\gamma_s}{c_s}\right) & (n,q)=1\ \\  0 & (n,q)>1\ \end{array}\right.$$
 >
 > $\quad$ 其中$\textrm{e}(z)=\textrm{e}^{2\pi i\cdot z}$,而$m_j\ (j=-1,0,\cdots,s)$是可以任意取值的整数.
 
@@ -117,9 +117,9 @@ $$p|q_1 \Rightarrow p|q^*,\ q_1|q,\ (q/q_1, q^*)=1$$
 
 > **定理1:** 设$q\ge 1$,$\chi$是一个模$q$的特征.则:
 >
-> $$\sum_{n\ \textrm{mod}\ q}'\chi(n) = \left\{\begin{align*} & \varphi(q), & \chi=\chi^0\ \textrm{mod}\ q, \\ & 0, & \chi\neq\chi^0\ \textrm{mod}\ q. \end{align*}\right.$$
+> $${\sum_{n\ \textrm{mod}\ q}}'\chi(n) = \left\{\begin{align*} & \varphi(q), & \chi=\chi^0\ \textrm{mod}\ q, \\ & 0, & \chi\neq\chi^0\ \textrm{mod}\ q. \end{align*}\right.$$
 >
-> $\quad$ 其中,$\displaystyle{\sum_{n\ \textrm{mod}\ q}'}$表示的含义是$\displaystyle{\sum_{\substack{n=1 \\ (n,q)=1}}^q}$.
+> $\quad$ 其中,${\sum\limits_{n\ \textrm{mod}\ q}}'$表示的含义是$\sum\limits_{\substack{n=1 \\ (n,q)=1}}^q$.
 
 以下定理更是在Dirichlet定理的证明中发挥重要作用:
 
