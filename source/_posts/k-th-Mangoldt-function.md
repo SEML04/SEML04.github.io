@@ -25,7 +25,7 @@ tags:
 
 最常见到的Mangoldt函数就是1st Mangoldt函数,用Dirichlet卷积表示出来就是:
 
-$$\Lambda_1(n) = \mu(n) * \log(n) = \sum_{d \mid n} \mu(d) \log\left(\dfrac{n}{d} \right). \tag{1}$$
+$$\Lambda_1(n) = \mu(n) * \log(n) = \sum_{d \mid n} \mu(d) \log\left(\dfrac{n}{d} \right). \ (1)$$
 
 当$n = p_1^{r_1} p_2^{r_2} \cdots p_s^{r_s}$时,其$\Lambda_1(n)$具体的值可以写出来:
 
@@ -34,7 +34,7 @@ $$\Lambda_1(n) = \left\{
         \log p_1 & \textrm{if}\ n = p_1^{r_1} \\ 
         0 & \textrm{if}\ s > 1
     \end{array}
- \right. \tag{2}$$
+ \right. \ (2)$$
 
 也就是:当$n$只有一个素因子的时候,$\Lambda_1(n) \neq 0$,而对于其余的$n$,$\Lambda_1(n) = 0$.因此便能限制一个数的素因子个数了.接下来将给出一个证明,其想法也可以用在k-th Mangoldt函数的讨论中.
 
@@ -74,7 +74,7 @@ $\quad$ 综上便可得到结论. <span style = "float: right"> $\square$ </span
 
 现在对(1)进行推广,便能得到k-th Mangoldt函数:
 
-$$\Lambda_k(n) = \mu(n) * \log^k (n) = \sum_{d \mid n} \mu(d) \log^k \left( \dfrac{n}{d} \right). \tag{3}$$
+$$\Lambda_k(n) = \mu(n) * \log^k (n) = \sum_{d \mid n} \mu(d) \log^k \left( \dfrac{n}{d} \right). \ (3)$$
 
 而它也有限制一个数素因子个数的作用,并且相较之下更加灵活.其有以下的结论:
 
@@ -82,7 +82,7 @@ $$\Lambda_k(n) \left\{ \begin{array}{lll}
     \neq 0 & & \textrm{if}\ s < k \\
     = k!\log p_1 \cdots \log p_s & & \textrm{if}\ s = k \\
     = 0 & & \textrm{if}\ s > k  
-\end{array} \right. \tag{4}$$
+\end{array} \right. \ (4)$$
 
 因此可以知道的是,当$n$的素因子个数大于$k$的时候,它就不能够通过$\Lambda_k(n)$的探测,当且仅当$n$的素因子个数小于等于$k$的时候,$\Lambda_k(n)$才得以保留.其中当$s = k$时,结果才容易直接写出,而$s < k$的时候,表达式也是能推出来的,但是就会稍微有一点点复杂了,这个在下面的证明过程中也能看到.
 
@@ -140,7 +140,7 @@ $$\Lambda_R(n; \mathcal{H}) := \frac{1}{k!}\sum_{\substack{d|P_{\mathcal{H}}(n) 
 
 最后再对其稍微放宽一些要求,也就是允许$n+h_i$中可以有almost prime,但是也不能要求太宽,于是让$P(\mathcal{H})$至多有$k+l$个素因子,其中$0 \le l \le k$,于是得到了GPY权函数:
 
-$$\Lambda_R(n; \mathcal{H}, l) := \frac{1}{(k+l)!}\sum_{\substack{d|P_{\mathcal{H}}(n) \\ d \le R}} \mu(d) \log^{k+l} \frac{R}{d}. \tag{5}$$
+$$\Lambda_R(n; \mathcal{H}, l) := \frac{1}{(k+l)!}\sum_{\substack{d|P_{\mathcal{H}}(n) \\ d \le R}} \mu(d) \log^{k+l} \frac{R}{d}. \ (5)$$
 
 而GPY权函数对素数间隙分布问题的研究可以说意义非凡,后面的Maynard-Tao权函数也是进一步推广了该权函数,从而绕过张益唐方法中对众多的组合式进行估计,从而对素数分布的间隙有了进一步的探究.
 

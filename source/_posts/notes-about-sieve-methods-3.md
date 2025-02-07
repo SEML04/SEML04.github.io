@@ -319,7 +319,7 @@ $\qquad$ 1. 若$(a,d) > 1$,则此时$(a, d) \nmid b$,因此$ap+b \equiv 0\ \text
 
 $\qquad$ 2. 若$(a,d) = 1$,则此时$ap+b \equiv 0\ \textrm{mod}\ d$也可以表示为:
 
-$$\color{red}{p = -a^{-1}b\ \textbf{mod}\ d} \tag{3.2.5.1}$$
+$$\color{red}{p = -a^{-1}b\ \textbf{mod}\ d} \ (3.2.5.1)$$
 
 $\qquad\quad\ \ $ 于是$(b, d) \mid q$.因此当$(b, d) > 1$时,那么此时$p$也就至多$\upsilon(d)$个(更精细地,应该是至多一个).
 
@@ -330,7 +330,7 @@ $$\displaystyle{ |\mathscr{A}_d| = \left\{
         \vartheta\upsilon(b) & (a,d) = 1\ and\ (b,d) > 1 \\
         0 & (a,d) > 1
     \end{matrix}
-\right. } \tag{3.2.5.2}$$
+\right. } \ (3.2.5.2$$
 
 $\quad$ 其中$0 \le \vartheta \le 1$.
 
@@ -351,7 +351,7 @@ $$\displaystyle{ \begin{align*}
     & = |\{ p : p \le x, p \equiv l'\ \textrm{mod}\ [d,k] \}| \\
     & = \pi(x, [d,k], l') \\
     & \sim \frac{1}{\varphi([d,k])}\textrm{li}(x) \\
-    & = \frac{1}{d} \frac{d}{\varphi(d)} \varphi((d,k)) \frac{\textrm{li}(x)}{\varphi(k)} \tag{3.2.5.3}
+    & = \frac{1}{d} \frac{d}{\varphi(d)} \varphi((d,k)) \frac{\textrm{li}(x)}{\varphi(k)} \ (3.2.5.3)
 \end{align*} } $$
 
 $\ \ $ **Step 3(总结):**
@@ -372,7 +372,7 @@ $$r_d = \pi(x; dk, l') - \frac{1}{dk}\textrm{li}(x)$$
 
 > 定义:
 > 
-> $$E(x,q) = \mathop{\textrm{max}}\limits_{\substack{2 \le y \le x}}\ \mathop{\textrm{max}}\limits_{\substack{1 \le l' \le q \\ (l', q)=1}} \left| \pi(y; q, l') - \frac{1}{\varphi(q)}\textrm{li}(y) \right| \tag{3.2.5.4}$$
+> $$E(x,q) = \mathop{\textrm{max}}\limits_{\substack{2 \le y \le x}}\ \mathop{\textrm{max}}\limits_{\substack{1 \le l' \le q \\ (l', q)=1}} \left| \pi(y; q, l') - \frac{1}{\varphi(q)}\textrm{li}(y) \right| \ (3.2.5.4)$$
 
 
 这东西到底特殊在哪呢,竟然能独享尊号(3.2.5.4)?原因在于:
@@ -387,17 +387,17 @@ $$|r_d| \le E(x, dk)$$
 
 其中$F$是次数为$g$的整系数多项式,$\color{red}\rho(d)$的定义也与例3一致,即:
 
-$$\rho(d) = |\{m : F(m) \equiv 0\ \textrm{mod}\ d\}| \tag{3.2.6.1}$$
+$$\rho(d) = |\{m : F(m) \equiv 0\ \textrm{mod}\ d\}| \ (3.2.6.1)$$
 
 但在推导过程中,会出现两个与$\rho$相关的函数,为了推导过程的简洁,先将定义摆放至此,进一步的性质将放在推导结束后的部分.
 
 如果要求(3.2.6.1)中的解还必须和$d$互素,这样就得到了$\color{red}\rho_1(d)$,即:
 
-$$\rho_1(d) = |\{m : F(m) \equiv 0\ \textrm{mod}\ d, (m,d) = 1\}| \tag{3.2.6.2}$$
+$$\rho_1(d) = |\{m : F(m) \equiv 0\ \textrm{mod}\ d, (m,d) = 1\}| \ (3.2.6.2)$$
 
 接着,再要求(3.2.6.2)中的解还要像$\mathscr{A}$有类似的结构,即模$(d,k)$下与$l$同余(当然,此处的$k$和$l$是根据$\mathscr{A}$已经提前给定了),那么这样就得到了$\color{red}\rho_1^*(d)$,即:
 
-$$\rho_1^*(d)  = |\{m : F(m) \equiv 0\ \textrm{mod}\ d, m \equiv l\ \textrm{mod}\ (d,k), (m,d) = 1\}| \tag{3.2.6.3} $$
+$$\rho_1^*(d)  = |\{m : F(m) \equiv 0\ \textrm{mod}\ d, m \equiv l\ \textrm{mod}\ (d,k), (m,d) = 1\}| \ (3.2.6.3) $$
 
 > 假设:
 >
@@ -495,11 +495,11 @@ $$P(z) := \prod_{\substack{p < z \\ p \in \mathfrak{P}}} p$$
 
 其实Sifting function在很前边就已经出镜过了,即:
 
-$$S(\mathscr{A}; \mathfrak{P}, z) := \{ a : a \in \mathscr{A}, (a, P(z)) = 1 \} \tag{4.2.1.1}$$
+$$S(\mathscr{A}; \mathfrak{P}, z) := \{ a : a \in \mathscr{A}, (a, P(z)) = 1 \} \ (4.2.1.1)$$
 
 同时,在第三节中,已经能够看到$\mathscr{A}_d$的重要性了(有时$|\mathscr{A}|$还得通过$\mathscr{A}_d$来获取信息),因此还有:
 
-$$S(\mathscr{A}_d; \mathfrak{P}, z) := \{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \} \tag{4.2.1.2}$$
+$$S(\mathscr{A}_d; \mathfrak{P}, z) := \{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \} \ (4.2.1.2)$$
 
 这里将(4.2.2)单独写一行,是为了强调其条件,那就是:
 
@@ -578,7 +578,7 @@ $$\begin{align*}
     & = \prod_{p \mid P(z)}(1 + A_0) \\ 
     & \le (1 + A_0)^{\pi(z)} \\
     & \le (1 + A_0)^z
-\end{align*} \tag{4.2.4.1}$$
+\end{align*} \ (4.2.4.1)$$
 
 而这个估计式在最后一节中就会用到,这也就是为什么Erathosthenes筛法基本无效的原因了.
 
@@ -588,21 +588,21 @@ $$\begin{align*}
 
 > 定义$W(z)$:
 >
-> $$W(z) := \prod_{p < z}\left( 1 - \frac{\omega(p)}{p} \right) \tag{4.2.5.1}$$
+> $$W(z) := \prod_{p < z}\left( 1 - \frac{\omega(p)}{p} \right) \ (4.2.5.1)$$
 >
 > 同样的在$\mu(d) \neq 0$时,定义$g(d)$:
 >
-> $$g(d) := \frac{\omega(d)}{d \prod\limits_{p \mid d}(1 - (\omega(p) / p))} \tag{4.2.5.2}$$
+> $$g(d) := \frac{\omega(d)}{d \prod\limits_{p \mid d}(1 - (\omega(p) / p))} \ (4.2.5.2)$$
 
 很明显,$W(z)$以及$g(d)$将会和$(\Omega_1)$等条件息息相关.因此$g(d)$也会频频出现,因此也还有一些关于$g(d)$的式子常常出现.
 
 > 定义$G(z)$:
 >
-> $$G(z) := \sum_{d < z} \mu^2(d) g(d) \tag{4.2.5.3}$$
+> $$G(z) := \sum_{d < z} \mu^2(d) g(d) \ (4.2.5.3)$$
 >
 > 定义$G(x,z)$:
 >
-> $$G(x,z) := \sum_{\substack{d < x \\ d | P(z)}} g(d) \tag{4.2.5.4}$$
+> $$G(x,z) := \sum_{\substack{d < x \\ d | P(z)}} g(d) \ (4.2.5.4)$$
 
 容易知道,在$z \ge x$时,$G(x,z) = G(x)$.因此更特殊地有:$G(z,z) = G(z)$.
 
@@ -610,7 +610,7 @@ $$\begin{align*}
 
 > 定义$V(z)$:
 >
-> $$V(z) := \prod_{p < z}\left( 1-\frac{1}{p} \right) \tag{4.2.5.5}$$
+> $$V(z) := \prod_{p < z}\left( 1-\frac{1}{p} \right) \ (4.2.5.5)$$
 
 #### Sieve of Erathosthenes-Legendre
 

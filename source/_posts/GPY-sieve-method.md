@@ -36,29 +36,29 @@ $$\theta(n) = \left\{
         \log n & \text{if } n \text{ prime,} \\
         0 & \text{otherwise,}
     \end{array}
-\right.\tag{1.1}$$
+\right.\ (1.1)$$
 
 并且考虑计数函数
 
-$$\theta(N;q,a) = \sum_{\substack{n \le N \\ n \equiv a(\text{mod }q) }}\theta(n).\tag{1.2}$$
+$$\theta(N;q,a) = \sum_{\substack{n \le N \\ n \equiv a(\text{mod }q) }}\theta(n).\ (1.2)$$
 
 Bombieri-Vinogradov定理指出,对于任意$A>0$,都存在一个$B=B(A)$,使得对于$Q = N^{\frac{1}{2}}(\log N)^{-B}$,有
 
-$$\sum_{q \le Q} \max_{\substack{a \\ (a,q)=1}}\left| \theta(N;q,a) - \frac{N}{\phi(q)} \right| \ll \frac{N}{(\log N)^A}.\tag{1.3}$$
+$$\sum_{q \le Q} \max_{\substack{a \\ (a,q)=1}}\left| \theta(N;q,a) - \frac{N}{\phi(q)} \right| \ll \frac{N}{(\log N)^A}.\ (1.3)$$
 
 我们称素数的分布水平为$\vartheta$,如果$(1.3)$对于任意$A>0$以及任意的$\epsilon>0$成立,其中
 
-$$Q = N^{\vartheta - \epsilon}.\tag{1.4}$$
+$$Q = N^{\vartheta - \epsilon}.\ (1.4)$$
 
 Elliott和Halberstam[5]猜测素数的分布水平为$1$.根据Bombieri-Vinogradov定理,已知的是素数的分布水平为$1/2$.
 
 令$n$为自然数,并且考虑$k$元组
 
-$$(n+h_1, n+h_2, \cdots, n+h_k),\tag{1.5}$$
+$$(n+h_1, n+h_2, \cdots, n+h_k),\ (1.5)$$
 
 其中$\mathcal{H} = \{h_1, h_2, \cdots, h_k\}$是由不同的非负整数组成的集合.如果元组中的每一个元素都是素数,则称其为*素元组*(*prime tuple*).现让$n$遍历所有自然数,我们希望知道$(1.5)$中是素元组的频率是多少.例如,考虑$\mathcal{H} = \{0, 1\}$和元组$(n, n+1)$.如果$n = 2$,则得到了一个素元组$(2,3)$.而这也是这种形式下的唯一的素元组,因为当$n > 2$时,$n$与$n+1$中必有一个是大于$2$的偶数.另一方面,如果$\mathcal{H} = \{0, 2\}$,则我们预期存在有无穷多个形式为$(n,n+2)$的素元组,而这就是孪生素数猜想.一般而言,若对于任意的素数$p$,$h_i$永远不会占据以$p$为模数的所有剩余类,则元组$(1.5)$中有超过$n$个的素元组.这对于大于$k$的素数$p$,条件是显然成立的,于是我们只需去检查那些小的素数是否满足条件.如果我们用$\nu_p(\mathcal{H})$表示所有$h_i$在模$p$意义下占据的不同剩余类的个数,于是我们可以避免$p$整除$(1.5)$中的某些部分,方法是要求
 
-$$\nu_p(\mathcal{H}) < p\text{ for all primes }p.\tag{1.6}$$
+$$\nu_p(\mathcal{H}) < p\text{ for all primes }p.\ (1.6)$$
 
 如果这个条件成立,我们称$\mathcal{H}$是*可容许的*(*admissible*),并且将对应于$\mathcal{H}$的元组$(1.5)$称为*可容许的元组*(*admissible tuple*).长期以来,一直猜想有可容许的元组中存在无穷个素元组.我们的第一个结论就是朝着证实这一猜想的第一步.
 
@@ -66,19 +66,19 @@ $$\nu_p(\mathcal{H}) < p\text{ for all primes }p.\tag{1.6}$$
 
 由于$6$元组$(n, n+4, n+6, n+10, n+12, n+16)$是可容许的,在Elliott-Halberstam猜想下则意味着有
 
-$$\liminf_{n \to \infty}(p_{n+1} - p_n) \le 16,\tag{1.7}$$
+$$\liminf_{n \to \infty}(p_{n+1} - p_n) \le 16,\ (1.7)$$
 
 其中$p_n$表示的是第$n$个素数.这意味着,对于无数多个$n$,有$p_{n+1} - p_n \le 16$.无条件的,我们证明了一个关于连续素数之间间隙的长期猜想.
 
 > **定理2.** 我们有
 >
-> $$E_1 := \liminf_{n \to \infty}\frac{p_{n+1}-p_n}{\log p_n} = 0.\tag{1.8}$$
+> $$E_1 := \liminf_{n \to \infty}\frac{p_{n+1}-p_n}{\log p_n} = 0.\ (1.8)$$
 
 关于这个结论的讨论由来已有,我们将简要地介绍一下.不等式$E_1 \le 1$是素数定理的一个平凡的结论.第一个形如$E_1 < 1$的结论是1926年由Hardy和Littlewood[17]证明的,他们在广义Riemann猜想(GRH)的假设下得出$E_1 \le 2/3$.仍然是在GEH假设下,Rankin[25]将结果改进为$E_1 \le \frac{3}{5}$.第一个无条件的估计结果是Erdős[7]于1940年证明的,他使用Brun筛法证明存在有一个可明确计算的常数$c$,使得$E_1 < 1-c$,但Erdős并没有明确给出$c$的值.在1954年,Ricci[26]将Erdős的结论改进为:$E_1 \le 15/16$.在1965年Bombieri和Davenport[2]改进并无条件化了Hardy和Littlewood的方法,用Bombieri-Vinogradov定理替代了GRH,从而得到了$E_1 \le 1/2$.他们还结合Erdős的方法,得到了$E_1 \le 0.4665\cdots$.他们的结果不久被Pilt'ai[24]细化为$E_1 \le 0.4571\cdots$,被Uchiyama[31]细化为$E_1 \le 0.4542\cdots$,而Huxley[19][20]细化至$E_1 \le 0.4425\cdots$,最终于1984年得到$E_1 \le 0.4393\cdots[21]$.在1988年Maier[22]使用他的矩阵方法改进了Huxley的结果为$E_1 \le \textrm{e}^{-\gamma}\cdot 0.4425\cdots = 0.2484\cdots$,其中$\gamma$为Euler常数.Maier方法本身可得到$E_1 \le \textrm{e}^{-\gamma} = 0.5614\cdots$.最近由Goldston和Yildirim[12]的方法,不需要结合其他方法可以得到的结果为$E_1 \le 1/4$.
 
 在本系列的后续一篇论文中,我们将证明一个定量的结果
 
-$$\liminf_{n \to \infty}\frac{p_{n+1} - p_n}{(\log p_n)^{\frac{1}{2}}(\log\log p_n)^2} < \infty.\tag{1.9}$$
+$$\liminf_{n \to \infty}\frac{p_{n+1} - p_n}{(\log p_n)^{\frac{1}{2}}(\log\log p_n)^2} < \infty.\ (1.9)$$
 
 虽然定理1是一个引人注目的新结果,但它也反映了我们当前方法的局限性.这些局限性是否真实存在或者是够可以克服是进一步研究的关键问题.我们重点关注的是以下四个问题:
 
@@ -92,29 +92,29 @@ $$\liminf_{n \to \infty}\frac{p_{n+1} - p_n}{(\log p_n)^{\frac{1}{2}}(\log\log p
 
 我们方法的局限性在于我们并不能很成功的找出超过两个很接近的素数,这一点也在问题3中指出了.但是,我们能够改进早期的结果,尤其是[12]中的最新结果.对于任意$r \ge 1$,令
 
-$$E_r = \liminf_{n \to \infty} \dfrac{p_{n+r}-p_n}{\log p_n}. \tag{1.10}$$
+$$E_r = \liminf_{n \to \infty} \dfrac{p_{n+r}-p_n}{\log p_n}. \ (1.10)$$
 
 Bombieri和Davenport[2]证明了$E_r \le r - 1/2$.后来Huxley[19, 20]将这个上界改进为$E_r \le r - 5/8 + o(1/r)$,而Goldston和Yildirim[12]则改进为$E_r \le (\sqrt{r}-1/2)^2$,Maier[22]则将其改进为$E_r \le \text{e}^{-\gamma} (r - 5/8 + o(1/r))$.而在证明定理2的过程中,我们还将证明,在假设素数具有分布水平$\vartheta$时:
 
-$$E_r \le \max(r - 2\vartheta, 0), \tag{1.11}$$
+$$E_r \le \max(r - 2\vartheta, 0), \ (1.11)$$
 
 因此无条件的,我们能够得到有$E_r \le r - 1$.然而,通过一些更复杂的论断,我们将证明以下结论:
 
 > **定理3.** 假设素数具有分布水平$\vartheta$.那么对任意$r \ge 2$,
 >
-> $$E_r \le (\sqrt{r} - \sqrt{2\vartheta})^2. \tag{1.12}$$
+> $$E_r \le (\sqrt{r} - \sqrt{2\vartheta})^2. \ (1.12)$$
 >
 > 特别的,我们得到无条件下,对任意$r \ge 1$,
 >
-> $$E_r \le (\sqrt{r} - 1)^2. \tag{1.13}$$
+> $$E_r \le (\sqrt{r} - 1)^2. \ (1.13)$$
 
 从(1.11)或(1.12)中,我们可以看到,在Elliott-Halberstam猜想下意味着有
 
-$$E_2 = \liminf_{n \to \infty} \frac{p_{n+2} - p_n}{\log p_n} = 0. \tag{1.14}$$
+$$E_2 = \liminf_{n \to \infty} \frac{p_{n+2} - p_n}{\log p_n} = 0. \ (1.14)$$
 
 我们注意到,如果我们将本文的思路与Maier的矩阵方法[22]结合起来,我们期望(1.12)可以被一个更强的不等式取代
 
-$$E_r \le \text{e}^{-gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \tag{1.15}$$
+$$E_r \le \text{e}^{-gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \ (1.15)$$
 
 虽然这是我们关于这个主题系列的第一篇论文,但是还有另外两篇论文与本文互相支撑.第一篇论文[14]是与Motohashi共同撰写的,对定理1和定理2的证明进行了简化.第二篇论文[13]与Graham共同撰写,利用筛法证明了定理1和定理2,并且提供了*几乎素数元组*(*almost prime tuples*)的应用.
 
@@ -128,33 +128,33 @@ $$E_r \le \text{e}^{-gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \tag{1.15}$$
 
 令
 
-$$\mathcal{H} = \{h_1, h_2, \cdots, h_k\},\text{其中} 1 \le h_1, h_2, \cdots, h_k \le h \text{是各不相同的整数}. \tag{2.1}$$
+$$\mathcal{H} = \{h_1, h_2, \cdots, h_k\},\text{其中} 1 \le h_1, h_2, \cdots, h_k \le h \text{是各不相同的整数}. \ (2.1)$$
 
 并且令$\nu_p(\mathcal{H})$表示$\mathcal{H}$中元素在模$p$剩余类中所占据的不同剩余类的个数.对于无平方因子的整数$d$,我们可以通过积性将其拓展至$\nu_d{H}$.我们记
 
-$$\mathfrak{S}(\mathcal{H}) := \prod_p \left( 1-\frac{1}{p} \right)^{-k}\left( 1-\frac{\nu_p(\mathcal{H})}{p} \right). \tag{2.2}$$
+$$\mathfrak{S}(\mathcal{H}) := \prod_p \left( 1-\frac{1}{p} \right)^{-k}\left( 1-\frac{\nu_p(\mathcal{H})}{p} \right). \ (2.2)$$
 
 由于当$p>h$时,总有$\nu_p(\mathcal{H})=k$,因此我们可知上述定义的乘积式是绝对收敛的,并且$\mathfrak{S}(\mathcal{H}) \neq 0$当且仅当$\mathcal{H}$是可接受的,其定义在(1.6)中.Hardy和Littlewood推测有一个关于素元组$(n+h_1, n+h_2, \cdots, n+h_k)$个数的渐近公式,其中$1 \le n \le N, N \to \infty$.令$\Lambda(n)$表示von Mangoldt函数,其在$n = p^m, m > 1$时取值为$\log p$,其余时候取值为$0$.我们定义
 
-$$\Lambda(n; \mathcal{H}) := \Lambda(n+h_1) \Lambda(n+h_2) \cdots \Lambda(n+h_k) \tag{2.3}$$
+$$\Lambda(n; \mathcal{H}) := \Lambda(n+h_1) \Lambda(n+h_2) \cdots \Lambda(n+h_k) \ (2.3)$$
 
 并且用这个函数来探测素元组和具有素数幂的元组,后者能在应用中被进一步去除.Hardy-Littlewood素元组猜想可表述为
 
-$$\sum_{n \le N} \Lambda(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)), N \to \infty. \tag{2.4}$$
+$$\sum_{n \le N} \Lambda(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)), N \to \infty. \ (2.4)$$
 
 可以注意到,当$\mathcal{H}$不是可接受的时,这个猜想显然为真.而这个猜想除了对于1-元组,此时就是素数定理的情况,其余情况下该猜想均未得到证实.
 
 第一作者和第三作者自1999年起一直研究的是用*短除数和*(*short divisor sum*)来计算(2.3)中的近似值,并且将其结果用于素数问题中.$\Lambda(n)$的最简单的近似公式是基于基本公式
 
-$$\Lambda(n) = \sum_{d|n}\mu(d)\log \frac{n}{d}, \tag{2.5}$$
+$$\Lambda(n) = \sum_{d|n}\mu(d)\log \frac{n}{d}, \ (2.5)$$
 
 其可以用一个平滑截断除数和
 
-$$\Lambda_R(n) = \sum_{\substack{d | n \\ d \le R}}\mu(d) \log \frac{R}{d}. \tag{2.6}$$
+$$\Lambda_R(n) = \sum_{\substack{d | n \\ d \le R}}\mu(d) \log \frac{R}{d}. \ (2.6)$$
 
 因此,$\Lambda(n; \mathcal{H})$的近似值可以由以下公式给出:
 
-$$\Lambda_R(n+h_1)\Lambda_R(n+h_2)\cdots\Lambda_R(n+h_k). \tag{2.7}$$
+$$\Lambda_R(n+h_1)\Lambda_R(n+h_2)\cdots\Lambda_R(n+h_k). \ (2.7)$$
 
 在[12]中,Goldston和Yildirim应用(2.7)来检测素数之间的小间隙,并证明
 
@@ -166,19 +166,19 @@ $$E_1 = \liminf_{n \to \infty} \left( \frac{p_{n+1} - p_n}{\log p_n} \right) \le
 
 结合(1.5)中的元组,我们可以考虑多项式
 
-$$P_\mathcal{H}(n) = (n+h_1)(n+h_2)\cdots(n+h_k). \tag{2.8}$$
+$$P_\mathcal{H}(n) = (n+h_1)(n+h_2)\cdots(n+h_k). \ (2.8)$$
 
 如果元组(1.5)是素元组,那么$P_\mathcal{H}(n)$恰好有$k$个素因子.为了探测到这个性质,我们利用第$k$个广义von Mangoldt函数
 
-$$\Lambda_k(n) = \sum_{d|n} \mu(d)\left( \log \frac{n}{d} \right)^k, \tag{2.9}$$
+$$\Lambda_k(n) = \sum_{d|n} \mu(d)\left( \log \frac{n}{d} \right)^k, \ (2.9)$$
 
 如果$n$有超过$k$个不同的素因子,其取值便是$0$.这样,我们的素元组探测函数就是
 
-$$\Lambda_k(n; \mathcal{H}) := \frac{1}{k!}\Lambda_k(P_\mathcal{H}(n)). \tag{2.10}$$
+$$\Lambda_k(n; \mathcal{H}) := \frac{1}{k!}\Lambda_k(P_\mathcal{H}(n)). \ (2.10)$$
 
 其中$1/k!$是归一化因子,能简化我们的结果.正如我们将在第5节将看到的,这个近似结果表明了一个Hardy-Littlewood型猜想
 
-$$\sum_{n \le N}\Lambda_k(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)). \tag{2.11}$$
+$$\sum_{n \le N}\Lambda_k(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)). \ (2.11)$$
 
 这是Bateman-Horn猜想[1]的一个特例,而Bateman-Horn猜想是Schinzel猜想[27]的定量形式.(2.4)和(2.11)之间没有太大的区别,但它们的近似值却不太一样.
 
@@ -188,13 +188,13 @@ $$\sum_{\substack{d|n \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^k$$
 
 并定义
 
-$$\Lambda_R(n; \mathcal{H}) = \frac{1}{k!} \sum_{\substack{d | P_\mathcal{H}(n) \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^k. \tag{2.12}$$
+$$\Lambda_R(n; \mathcal{H}) = \frac{1}{k!} \sum_{\substack{d | P_\mathcal{H}(n) \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^k. (2.12)$$
 
 然而,正如我们将在下一节中看到的,这种近似不足以证明定理1和定理2.
 
 第二个简单但是关键的想法是,不要只近似素元组,而是应该近似组分中具有很多素数的元组.因此,我们考虑的是$P_\mathcal{H}(n)$具有$k+\ell$或者更少个不同素因子时的情况,其中$0 \le \ell \le k$,并且定义
 
-$$\Lambda_R(n; \mathcal{H}, \ell) = \frac{1}{(k+\ell)!} \sum_{\substack{d | P_\mathcal{H}(n) \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^{k+\ell}, \tag{2.13}$$
+$$\Lambda_R(n; \mathcal{H}, \ell) = \frac{1}{(k+\ell)!} \sum_{\substack{d | P_\mathcal{H}(n) \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^{k+\ell}, \ (2.13)$$
 
 其中$|\mathcal{H}| = k$.在第4节中,我们将准确地给出一种度量来衡量一个函数探测元组中素数的好坏,然后便是在这种度量下,当$k,\ell \to \infty,\ell = o(k)$时,这种近似方法在探测元组中素数的度量比(2.12)(此时就是$\ell = 0$的情况)好两倍,而后者又比(2.7)好两倍.这种改进让我们能够无条件的证明定理2.此外它还允许定理1中所需要的分布水平为大于1/2的任意一个数.
 
