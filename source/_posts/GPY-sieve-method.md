@@ -143,3 +143,85 @@ $$\Lambda(n; \mathcal{H}) := \Lambda(n+h_1) \Lambda(n+h_2) \cdots \Lambda(n+h_k)
 $$\sum_{n \le N} \Lambda(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)), N \to \infty. \tag{2.4}$$
 
 可以注意到,当$\mathcal{H}$不是可接受的时,这个猜想显然为真.而这个猜想除了对于1-元组,此时就是素数定理的情况,其余情况下该猜想均未得到证实.
+
+第一作者和第三作者自1999年起一直研究的是用*短除数和*(*short divisor sum*)来计算(2.3)中的近似值,并且将其结果用于素数问题中.$\Lambda(n)$的最简单的近似公式是基于基本公式
+
+$$\Lambda(n) = \sum_{d|n}\mu(d)\log \frac{n}{d}, \tag{2.5}$$
+
+其可以用一个平滑截断除数和
+
+$$\Lambda_R(n) = \sum_{\substack{d | n \\ d \le R}}\mu(d) \log \frac{R}{d}. \tag{2.6}$$
+
+因此,$\Lambda(n; \mathcal{H})$的近似值可以由以下公式给出:
+
+$$\Lambda_R(n+h_1)\Lambda_R(n+h_2)\cdots\Lambda_R(n+h_k). \tag{2.7}$$
+
+在[12]中,Goldston和Yildirim应用(2.7)来检测素数之间的小间隙,并证明
+
+$$E_1 = \liminf_{n \to \infty} \left( \frac{p_{n+1} - p_n}{\log p_n} \right) \le \frac{1}{4}.$$
+
+在这项工作中,他们意识到,对于某些应用对素元组可能存在有一些更好的近似方法,但是他们设计来的近似方法并不太成功.最近,现在的作者能够得到这样一种近似方法,并能将其应用于素数之间的小间隙问题中.
+
+我们新的近似方法的另案来自于Heath-Brown[18]的一篇关于几乎素数元组的论文.他的结果本身就是Selberg1951年的证明(见[28],p.233-245)的推广,即多项式$n(n+2)$最多有五个不同的素因数,因此对于元组$(n,n+2)$也是一样.不仅我们的近似方法源自于这些论文,而且时候看来,Granville和Soundararajan用于证明定理1和2的论证也与这些论文中的方法本质上是相同的.
+
+结合(1.5)中的元组,我们可以考虑多项式
+
+$$P_\mathcal{H}(n) = (n+h_1)(n+h_2)\cdots(n+h_k). \tag{2.8}$$
+
+如果元组(1.5)是素元组,那么$P_\mathcal{H}(n)$恰好有$k$个素因子.为了探测到这个性质,我们利用第$k$个广义von Mangoldt函数
+
+$$\Lambda_k(n) = \sum_{d|n} \mu(d)\left( \log \frac{n}{d} \right)^k, \tag{2.9}$$
+
+如果$n$有超过$k$个不同的素因子,其取值便是$0$.这样,我们的素元组探测函数就是
+
+$$\Lambda_k(n; \mathcal{H}) := \frac{1}{k!}\Lambda_k(P_\mathcal{H}(n)). \tag{2.10}$$
+
+其中$1/k!$是归一化因子,能简化我们的结果.正如我们将在第5节将看到的,这个近似结果表明了一个Hardy-Littlewood型猜想
+
+$$\sum_{n \le N}\Lambda_k(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)). \tag{2.11}$$
+
+这是Bateman-Horn猜想[1]的一个特例,而Bateman-Horn猜想是Schinzel猜想[27]的定量形式.(2.4)和(2.11)之间没有太大的区别,但它们的近似值却不太一样.
+
+与(2.6)类似(当$k=1$时),我们通过平滑化以及截断除数和
+
+$$\sum_{\substack{d|n \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^k$$
+
+并定义
+
+$$\Lambda_R(n; \mathcal{H}) = \frac{1}{k!} \sum_{\substack{d | P_\mathcal{H}(n) \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^k. \tag{2.12}$$
+
+然而,正如我们将在下一节中看到的,这种近似不足以证明定理1和定理2.
+
+第二个简单但是关键的想法是,不要只近似素元组,而是应该近似组分中具有很多素数的元组.因此,我们考虑的是$P_\mathcal{H}(n)$具有$k+\ell$或者更少个不同素因子时的情况,其中$0 \le \ell \le k$,并且定义
+
+$$\Lambda_R(n; \mathcal{H}, \ell) = \frac{1}{(k+\ell)!} \sum_{\substack{d | P_\mathcal{H}(n) \\ d \le R}} \mu(d) \left( \log \frac{R}{d} \right)^{k+\ell}, \tag{2.13}$$
+
+其中$|\mathcal{H}| = k$.在第4节中,我们将准确地给出一种度量来衡量一个函数探测元组中素数的好坏,然后便是在这种度量下,当$k,\ell \to \infty,\ell = o(k)$时,这种近似方法在探测元组中素数的度量比(2.12)(此时就是$\ell = 0$的情况)好两倍,而后者又比(2.7)好两倍.这种改进让我们能够无条件的证明定理2.此外它还允许定理1中所需要的分布水平为大于1/2的任意一个数.
+
+(2.12)与(2.13)较之于(2.7)的优势如下.如果在(2.12)和(2.13)中,我们限制$d$的所有的素因子都大于$h$,则条件$d | P_\mathcal{H}(n)$则意味着我们可以唯一分解$d = d_1d_2\cdots d_k$,并且$d_i | n + h_i, 1 \le i \le k$,且$d_i$两两互素,于是$d_1 d_2 \cdots d_k \le R$.在应用于素数间隙时,我们要求$R \le N^{\frac{1}{4}-\epsilon}$.另一方面,展开后,(2.7)变为在$d_i | n + h_i, 1 \le i \le k$,其中$d_1 \le R, d_2 \le R, \cdots, d_k \le R$上的求和.而这应用于素数间隙问题中则要求$R^k \le N^{\frac{1}{4}-\epsilon}$.因此,(2.7)对除数的要求有着更加严格的限制.另外一个技术优势是,一次截断而不是$k$次截断简化了我们的计算.
+
+我们对$\Lambda_R(n; \mathcal{H}, \ell)$的主要结果总结为以下两个命题.假设$\mathcal{H}_1$和$\mathcal{H}_2$分别是$k_1$个$k_2$个不同的小于$h$的非负整数的集合.我们始终假设这些集合中至少一个是非空的.设$M = k_1 + k_2 + \ell_1 + \ell_2$.
+
+> **命题1.** 令$\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2$,$|\mathcal{H_i}| = k_i$,并且$r = |\mathcal{H_1} \cap \mathcal{H_2}|$.如果$R \ll N^{\frac{1}{2}} (\log N)^{-4M}$,以及对任意$C > 0$有$h \le R^C$,那么当$R,N \to \infty$时我们有
+> 
+> $$\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2) = \binom{\ell_1 + \ell_2}{\ell_1} \frac{(\log R)^{r + \ell_1 + \ell_2}}{(r + \ell_1 + \ell_2)!} (\mathfrak{S}(\mathcal{H}) + o_M(1))N.\ (2.14)$$
+
+> **命题2.** 令$\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2$,$|\mathcal{H_i}| = k_i$,并且$r = |\mathcal{H_1} \cap \mathcal{H_2}|$,$1 \le h_0 \le h$,以及$\mathcal{H}^0 = \mathcal{H} \cup {h_0}$.如果对于一个充分大的正常数$B(M)$有$R \ll_M N^{\frac{1}{4}(\log N)^{-B(M)}}$,以及$h \le R$,那么我们有
+>
+> $$\begin{array}{l}\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2)\theta(n+h_0) \\
+    =\left\{ \begin{array}{ll} 
+        \binom{\ell_1+\ell_2}{\ell_1} \dfrac{(\log R)^{r + \ell_1 + \ell_2}}{(r+\ell_1+\ell_2)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \not\in \mathcal{H}, \\
+        \binom{\ell_1+\ell_2+1}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \text{ and } h_0 \not\in \mathcal{H}_2, \\
+        \binom{\ell_1+\ell_2+2}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \cap \mathcal{H}_2, \\ 
+    \end{array} \right.
+\end{array}\ (2.15)$$
+>
+> 假设素数具有分布水平$\vartheta > 1/2$,也就是(1.3)和(1.4)成立,我们可以选择,对于任意$\epsilon > 0$,$R \ll_M N^{\frac{\vartheta}{2} - \epsilon}$,以及$h \le R^\epsilon$.
+
+注:通过重新标记变量,我们可以得到$h_0 \in \mathcal{H}_2 \text{ and } h_0 \not\in \mathcal{H}_1$的情况.
+
+命题1和2可以通过多种方式得到加强.我们将证明误差项$o_M(1)$可以被一系列低阶项和一个素数定理类型的误差项所取代.此外,我们可以将结果统一为$M$作为$N$和$R$的显函数,同时让$M \to \infty$.这将在后续的论文中得到证明,并用于(1.9)的证明.
+
+# 翻译结束!
+
+翻译工作到此打住!后续的内容就不再一句一句翻译了,而是以其他的阅读笔记的形式出现!马上进行下一份工作!!!

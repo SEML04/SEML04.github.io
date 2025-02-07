@@ -1194,7 +1194,7 @@ CDN:
 
 businesscard:
   enable: true #总开关
-  QR_code: /img/xuanjuanxin.gif #加群二维码
+  QR_code: /img/anon.gif #加群二维码
   master: Anon Chihaya #群主ID
   group: 114514 #QQ群号
   created: 09/18/2024 #建群时间
