@@ -124,3 +124,22 @@ $$E_r \le \text{e}^{-gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \tag{1.15}$$
 
 本文所用的想法是经过多年发展而来的.我们感谢许多人,但无法一一提及.不过我们要感谢A. Balog, E. Bombieri, T. H. Chan, J. B. Conrey, P. Deift, D. Farmer, K. Ford, J. Friedlander, A. Granville, C. Hughes, D. R. Heath-Brown, A. Ledoan, H. L. Montgomery, Sz. Gy. Revesz, P. Sarnak, and K. Soundararajan.
 
+# 二. 近似素元组
+
+令
+
+$$\mathcal{H} = \{h_1, h_2, \cdots, h_k\},\text{其中} 1 \le h_1, h_2, \cdots, h_k \le h \text{是各不相同的整数}. \tag{2.1}$$
+
+并且令$\nu_p(\mathcal{H})$表示$\mathcal{H}$中元素在模$p$剩余类中所占据的不同剩余类的个数.对于无平方因子的整数$d$,我们可以通过积性将其拓展至$\nu_d{H}$.我们记
+
+$$\mathfrak{S}(\mathcal{H}) := \prod_p \left( 1-\frac{1}{p} \right)^{-k}\left( 1-\frac{\nu_p(\mathcal{H})}{p} \right). \tag{2.2}$$
+
+由于当$p>h$时,总有$\nu_p(\mathcal{H})=k$,因此我们可知上述定义的乘积式是绝对收敛的,并且$\mathfrak{S}(\mathcal{H}) \neq 0$当且仅当$\mathcal{H}$是可接受的,其定义在(1.6)中.Hardy和Littlewood推测有一个关于素元组$(n+h_1, n+h_2, \cdots, n+h_k)$个数的渐近公式,其中$1 \le n \le N, N \to \infty$.令$\Lambda(n)$表示von Mangoldt函数,其在$n = p^m, m > 1$时取值为$\log p$,其余时候取值为$0$.我们定义
+
+$$\Lambda(n; \mathcal{H}) := \Lambda(n+h_1) \Lambda(n+h_2) \cdots \Lambda(n+h_k) \tag{2.3}$$
+
+并且用这个函数来探测素元组和具有素数幂的元组,后者能在应用中被进一步去除.Hardy-Littlewood素元组猜想可表述为
+
+$$\sum_{n \le N} \Lambda(n; \mathcal{H}) = N(\mathfrak{S}(\mathcal{H}) + o(1)), N \to \infty. \tag{2.4}$$
+
+可以注意到,当$\mathcal{H}$不是可接受的时,这个猜想显然为真.而这个猜想除了对于1-元组,此时就是素数定理的情况,其余情况下该猜想均未得到证实.
