@@ -1219,10 +1219,10 @@ businesscard:
   QR_code: /img/anon.gif #加群二维码
   master: Anon Chihaya #群主ID
   group: 114514 #QQ群号
-  created: 09/18/2024 #建群时间
+  created: 10/22/2024 #建群时间
   front: Welcome to Anon's blog #卡面正面描述语
   back1: math-4-anon.top #背面从上到下四行文字内容自定义
-  back2: <a href="https://www.bilibili.com/video/BV1UT42167xb">https://pixiv.com</a>
+  back2: <a href="https://www.bilibili.com/video/BV1UT42167xb">点我点我!!!</a>
   back3: Use this card to join the candyhome and participate in a pleasant discussion together.
   back4: Welcome to Anon's candyhome, wish you a nice day.
 
