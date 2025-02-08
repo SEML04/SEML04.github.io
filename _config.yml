@@ -153,7 +153,7 @@ deploy:
     type: git # 不要使用github
     repo: git@github.com:seml04/seml04.github.io.git 
     branch: main # 默认master分支
-    message: update myblog by Mr.Xau   # 自动部署commit备注，可不填
+    message: update myblog by Chihaya Anon   # 自动部署commit备注，可不填
 
 # Mathjax数学公式
 # mathjax: true
