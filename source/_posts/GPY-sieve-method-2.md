@@ -25,19 +25,19 @@ tags:
 
 > **命题1.** 令$\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2$,$|\mathcal{H_i}| = k_i$,并且$r = |\mathcal{H_1} \cap \mathcal{H_2}|$.如果$R \ll N^{\frac{1}{2}} (\log N)^{-4M}$,以及对任意$C > 0$有$h \le R^C$,那么当$R,N \to \infty$时我们有
 > 
-> $$\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2) = \binom{\ell_1 + \ell_2}{\ell_1} \frac{(\log R)^{r + \ell_1 + \ell_2}}{(r + \ell_1 + \ell_2)!} (\mathfrak{S}(\mathcal{H}) + o_M(1))N.\ (2.14)$$
+> $$\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2) = \dbinom{\ell_1 + \ell_2}{\ell_1} \frac{(\log R)^{r + \ell_1 + \ell_2}}{(r + \ell_1 + \ell_2)!} (\mathfrak{S}(\mathcal{H}) + o_M(1))N.\ (2.14)$$
 
 > **命题2.** 令$\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2$,$|\mathcal{H_i}| = k_i$,并且$r = |\mathcal{H_1} \cap \mathcal{H_2}|$,$1 \le h_0 \le h$,以及$\mathcal{H}^0 = \mathcal{H} \cup {h_0}$.如果对于一个充分大的正常数$B(M)$有$R \ll_M N^{\frac{1}{4}(\log N)^{-B(M)}}$,以及$h \le R$,那么我们有
 >
 > $$\begin{array}{l}\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2)\theta(n+h_0) \\
     =\left\{ \begin{array}{ll} 
-        \binom{\ell_1+\ell_2}{\ell_1} \dfrac{(\log R)^{r + \ell_1 + \ell_2}}{(r+\ell_1+\ell_2)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \not\in \mathcal{H}, \\
-        \binom{\ell_1+\ell_2+1}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \text{ and } h_0 \not\in \mathcal{H}_2, \\
-        \binom{\ell_1+\ell_2+2}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \cap \mathcal{H}_2, \\ 
+        \dbinom{\ell_1+\ell_2}{\ell_1} \dfrac{(\log R)^{r + \ell_1 + \ell_2}}{(r+\ell_1+\ell_2)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \not\in \mathcal{H}, \\
+        \dbinom{\ell_1+\ell_2+1}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \text{ and } h_0 \not\in \mathcal{H}_2, \\
+        \dbinom{\ell_1+\ell_2+2}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \cap \mathcal{H}_2. \\ 
     \end{array} \right.
 \end{array}\ (2.15)$$
->
-> 假设素数具有分布水平$\vartheta > 1/2$,也就是(1.3)和(1.4)成立,我们可以选择,对于任意$\epsilon > 0$,$R \ll_M N^{\frac{\vartheta}{2} - \epsilon}$,以及$h \le R^\epsilon$.
+
+其中,$\theta$函数的定义见(1.1).
 
 然后就是我们将要证明的两个定理.
 
@@ -50,3 +50,48 @@ tags:
 以上就是本文最最关键的成果.并且其证明方式也与Maynard的证明思路很相似.
 
 #### 定理的证明
+
+当$\ell \ge 0$,$\mathcal{H}_k = \{ h_1, h_2, \cdots, h_k \}$,$1 \le h_1, h_2, \cdots, h_k \le h \le R$时,根据命题1,取$R \ll N^{\frac{1}{2}}(\log N)^{-B(M)}$和$R,N \to \infty$,有
+
+$$\sum_{n \le N}\Lambda_R(n; \mathcal{H}_k, \ell)^2 \sim \frac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k) N(\log R)^{k+2\ell}. \ (3.1)$$
+
+而对于任意$h_i \in \mathcal{H}_k$,由命题2可知,对于$R \ll N^{\frac{\vartheta}{2} - \epsilon}$和$R,N \to \infty$,
+
+$$\sum_{n \le N}\Lambda_R(n, \mathcal{H}_k, \ell)^2 \theta(n + h_i) \sim \frac{2}{(k+2\ell+1)!} \dbinom{2\ell+1}{\ell} \mathfrak{S}(\mathcal{H}_k) N(\log R)^{k+2\ell+1}. \ (3.2)$$
+
+于是取$R = N^{\frac{\vartheta}{2} - \epsilon}$,便可得到:
+
+$$\begin{array}{ll}
+    S & := \sum_{n=N+1}^{2N} \left( \sum_{i=1}^k \theta(n+h_i)-\log 3N \right)\Lambda_R(n;\mathcal{H}_k,\ell)^2 \\
+    \\
+    & \sim k\dfrac{2}{(k+2\ell+1)!}\dbinom{2\ell+1}{\ell}\mathfrak{S}(\mathcal{H}_k)N(\log R)^{k+2\ell+1} \\
+    \\
+    & \quad -\log 3N \dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell}\mathfrak{S}(\mathcal{H}_k)N(\log R)^{k+2\ell} \\
+    \\
+    & \sim \left( \dfrac{2k}{k+2\ell+1} \dfrac{2\ell+1}{\ell+1} \log R - \log 3N \right)\dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell}\mathfrak{S}(\mathcal{H}_k)N(\log R)^{k+2\ell}.
+\end{array}\ (3.3)$$
+
+注意,其中$\sum_{i=1}^k \theta(n+h_i) - \log 3N$十分重要,如果$S > 0$,我们便可知道的是,在元组$\mathcal{H}_k$中至少包含有两个素数.将$R = N^{\frac{\vartheta}{2} - \epsilon}$代入,此时便有:
+
+$$\dfrac{k}{k+2\ell+1}\dfrac{2\ell+1}{\ell+1}\vartheta > 1.\ (3.4)$$
+
+其中$k,\ell \to \infty$且$\ell = o(k)$.因此上述不等式左侧即为$2\vartheta$.因此当$\vartheta > 1/2$时,我们便可证明素数的有界间隙,也就证完定理1了.
+
+并且通过(3.4),我们便可以得到不同的$\vartheta$下,使得(3.4)成立的最小的$k$和与之对应的$\ell$,以下$h(k)$是可接受的$k$元组的最短长度:
+
+|$\vartheta$|$k$|$\ell$|$h(k)$|
+|----|----|----|----|
+|$1$|$7$|$1$|$20$|
+|$0.95$|$8$|$1$|$26$|
+|$0.90$|$9$|$1$|$30$|
+|$0.85$|$11$|$1$|$36$|
+|$0.80$|$16$|$1$|$60$|
+|$0.75$|$21$|$2$|$84$|
+|$0.70$|$31$|$2$|$140$|
+|$0.65$|$51$|$3$|$252$|
+|$0.60$|$111$|$5$|$634$|
+|$0.55$|$421$|$10$|$2956^*$|
+
+其中$2956^*$表示的是一个上界,有可能进一步缩小.
+
+我们发现,即使是$\vartheta = 1$,我们也只能得到$k = 7$.其实$k = 6$也是可以得到的,但是需要一些稍微复杂的论断,因此放到最后再来处理.

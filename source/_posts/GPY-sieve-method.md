@@ -33,8 +33,8 @@ $$\liminf_{n \to \infty} \frac{p_{n+1} - p_n}{\log p_n} = 0.$$
 
 $$\theta(n) = \left\{
     \begin{array}{ll}
-        \log n & \text{if } n \text{ prime,} \\
-        0 & \text{otherwise,}
+        \log n & \text{若} n \text{为素数,} \\
+        0 & \text{其余.}
     \end{array}
 \right.\ (1.1)$$
 
@@ -114,7 +114,7 @@ $$E_2 = \liminf_{n \to \infty} \frac{p_{n+2} - p_n}{\log p_n} = 0. \ (1.14)$$
 
 我们注意到,如果我们将本文的思路与Maier的矩阵方法[22]结合起来,我们期望(1.12)可以被一个更强的不等式取代
 
-$$E_r \le \text{e}^{-gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \ (1.15)$$
+$$E_r \le \text{e}^{-\gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \ (1.15)$$
 
 虽然这是我们关于这个主题系列的第一篇论文,但是还有另外两篇论文与本文互相支撑.第一篇论文[14]是与Motohashi共同撰写的,对定理1和定理2的证明进行了简化.第二篇论文[13]与Graham共同撰写,利用筛法证明了定理1和定理2,并且提供了*几乎素数元组*(*almost prime tuples*)的应用.
 
@@ -204,15 +204,15 @@ $$\Lambda_R(n; \mathcal{H}, \ell) = \frac{1}{(k+\ell)!} \sum_{\substack{d | P_\m
 
 > **命题1.** 令$\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2$,$|\mathcal{H_i}| = k_i$,并且$r = |\mathcal{H_1} \cap \mathcal{H_2}|$.如果$R \ll N^{\frac{1}{2}} (\log N)^{-4M}$,以及对任意$C > 0$有$h \le R^C$,那么当$R,N \to \infty$时我们有
 > 
-> $$\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2) = \binom{\ell_1 + \ell_2}{\ell_1} \frac{(\log R)^{r + \ell_1 + \ell_2}}{(r + \ell_1 + \ell_2)!} (\mathfrak{S}(\mathcal{H}) + o_M(1))N.\ (2.14)$$
+> $$\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2) = \dbinom{\ell_1 + \ell_2}{\ell_1} \frac{(\log R)^{r + \ell_1 + \ell_2}}{(r + \ell_1 + \ell_2)!} (\mathfrak{S}(\mathcal{H}) + o_M(1))N.\ (2.14)$$
 
 > **命题2.** 令$\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2$,$|\mathcal{H_i}| = k_i$,并且$r = |\mathcal{H_1} \cap \mathcal{H_2}|$,$1 \le h_0 \le h$,以及$\mathcal{H}^0 = \mathcal{H} \cup {h_0}$.如果对于一个充分大的正常数$B(M)$有$R \ll_M N^{\frac{1}{4}(\log N)^{-B(M)}}$,以及$h \le R$,那么我们有
 >
 > $$\begin{array}{l}\sum_{n \le N} \Lambda_R(n; \mathcal{H}_1, \ell_1)\Lambda_R(n; \mathcal{H}_2, \ell_2)\theta(n+h_0) \\
     =\left\{ \begin{array}{ll} 
-        \binom{\ell_1+\ell_2}{\ell_1} \dfrac{(\log R)^{r + \ell_1 + \ell_2}}{(r+\ell_1+\ell_2)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \not\in \mathcal{H}, \\
-        \binom{\ell_1+\ell_2+1}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \text{ and } h_0 \not\in \mathcal{H}_2, \\
-        \binom{\ell_1+\ell_2+2}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \cap \mathcal{H}_2, \\ 
+        \dbinom{\ell_1+\ell_2}{\ell_1} \dfrac{(\log R)^{r + \ell_1 + \ell_2}}{(r+\ell_1+\ell_2)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \not\in \mathcal{H}, \\
+        \dbinom{\ell_1+\ell_2+1}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \text{ and } h_0 \not\in \mathcal{H}_2, \\
+        \dbinom{\ell_1+\ell_2+2}{\ell_1+1} \dfrac{(\log R)^{r + \ell_1 + \ell_2+1}}{(r+\ell_1+\ell_2+1)!} (\mathfrak{S}(\mathcal{H}^0)+o_M(1))N & \text{if } h_0 \in \mathcal{H}_1 \cap \mathcal{H}_2. \\ 
     \end{array} \right.
 \end{array}\ (2.15)$$
 >
