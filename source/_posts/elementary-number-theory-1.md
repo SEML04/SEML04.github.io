@@ -49,7 +49,7 @@ $\quad$ 因此!证明过程!PASS! <span style="float: right;">$\blacksquare$</sp
 >
 > $\quad$ 一次同余式组
 >
-> $$x\equiv b_1\ \textrm{mod}\ m_1,\ x\equiv b_2\ \textrm{mod}\ m_2 \ (1)$$
+> $$x\equiv b_1\ \textrm{mod}\ m_1,\ x\equiv b_2\ \textrm{mod}\ m_2 \quad (1)$$
 >
 > $\quad$ 可解的**充要条件**是$(m_1,m_2)|b_1-b_2$,且此时对模数$[m_1,m_2]$有唯一解.
 
@@ -67,7 +67,7 @@ $\quad$ 两式相减即有:$d|b_1-b_2$.因此必要性得证.
 
 $\quad$ 假设$d|b_1-b_2$,且(1)前一式的解可写为:$x=b_1+m_1y$,代入后一式有:
 
-$$m_1y \equiv b_2-b_1\ \textrm{mod}\ m_2 \ (1.1)$$
+$$m_1y \equiv b_2-b_1\ \textrm{mod}\ m_2 \quad (1.1)$$
 
 $\quad$ 因此可知上式也有解.故而充分性得证.
 
@@ -149,9 +149,9 @@ $$(a_0m+a_1u_1+\cdots+a_{k-1}u_{k-1})+a_ku_k+b=0$$
 
 $\quad$ 而括号里边可以生成一个理想$(d_1):=(a_1,\cdots,a_{k-1},m)$.因此便可以化为以下两个同余式:
 
-$$a_kx_k+b \equiv 0\ \textrm{mod}\ d_1 \ (2)$$
+$$a_kx_k+b \equiv 0\ \textrm{mod}\ d_1 \quad (2)$$
 
-$$a_1x_1+\cdots+a_{k-1}x_{k-1} \equiv d_1\ \textrm{mod}\ m \ (3)$$
+$$a_1x_1+\cdots+a_{k-1}x_{k-1} \equiv d_1\ \textrm{mod}\ m \quad (3)$$
 
 $\quad$ 而(2)的解数在$\mathbb{Z}/m\mathbb{Z}$中为:$\dfrac{m}{d_1}\cdot(a_k,d_1)$.
 
