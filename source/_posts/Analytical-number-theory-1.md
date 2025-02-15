@@ -16,7 +16,7 @@ tags:
 
 $$\pi_2(x) := |\{ p : p \le x, p + 2 = p' \}| \ll \dfrac{x}{\log^2 x} (\log\log x)^2,$$
 
-其中$p$和$p'$当然都指的是素数,以及在解析数论中,$\ll$并不是远远小于的意思,而是$O$(*Big O Notation*)的意思.
+其中$p$和$p'$当然都指的是素数,以及在解析数论中,$\ll$并不是远远小于的意思,而是*Big O Notation*的意思,其在论文[Variants of the Selberg sieve, and bounded intervals containing many primes](https://link.springer.com/article/10.1186/s40687-014-0012-7)中也有更为严谨详细的定义.
 
 #### 参考资料
 
