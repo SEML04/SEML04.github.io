@@ -691,7 +691,7 @@ $\quad$ 从而得到了Legendre的结果.<span style="float: right"> $\square$ <
 
 #### 参考资料
 
-[1] Halberstam, Richert. Sieve Methods[M]. Dover Publications, 2011. P1-P11.
+[1] Halberstam, Richert. Sieve Methods[M]. Dover Publications, 2011. P12-P36.
 
 [2] 潘承洞, 潘承彪. 哥德巴赫猜想, 第二版[M]. 科学出版社, 2011. P15-P23.
 
