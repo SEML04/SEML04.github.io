@@ -265,4 +265,4 @@ $$G_\chi(m) = \chi^\ast(q_2)C_{q_2}(m) \cdot \dfrac{q_1}{q*}\overline{\chi}^\ast
 
 [2] 潘承洞, 潘承彪. 初等数论, 第三版[M]. 北京大学出版社, 2013. P450-P468.
 
-[3] Dirichlet character. Wikipedia[Z]. https://en.wikipedia.org/wiki/Dirichlet_character. 25 Oct 2024.
+[3] Dirichlet character. Wikipedia[Z]. https://en.wikipedia.org/wiki/Dirichlet_character.

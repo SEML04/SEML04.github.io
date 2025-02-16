@@ -157,8 +157,8 @@ $$\Lambda_R(n; \mathcal{H}, l) := \frac{1}{(k+l)!}\sum_{\substack{d|P_{\mathcal{
 
 #### 参考资料
 
-[1] Von Mangoldt function. Wikipedia[Z]. https://en.wikipedia.org/wiki/Von_Mangoldt_function. 2024.
+[1] Von Mangoldt function. Wikipedia[Z]. https://en.wikipedia.org/wiki/Von_Mangoldt_function.
 
-[2] Dirichlet Convolution. Wikipedia[Z]. https://en.wikipedia.org/wiki/Dirichlet_convolution. 2024.
+[2] Dirichlet Convolution. Wikipedia[Z]. https://en.wikipedia.org/wiki/Dirichlet_convolution.
 
 [3] Goldston D A, Pintz J, Yildirim C Y. Primes in tuples I[J]. Annals of Mathematics, 2009: 819-862.

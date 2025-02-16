@@ -218,8 +218,8 @@ $\quad$ 目前有意思的几个想法都还没启动,可能有些可以让给�
 
 [2] 潘承洞, 潘承彪. 哥德巴赫猜想, 第二版[M]. 科学出版社, 2011. P15-P23.
 
-[3] Schinzel's hypothesis H. Wikipedia[Z]. https://en.wikipedia.org/wiki/Schinzel%27s_hypothesis_H, 23 Aug 2024.
+[3] Schinzel's hypothesis H. Wikipedia[Z]. https://en.wikipedia.org/wiki/Schinzel%27s_hypothesis_H.
 
-[4] Bateman–Horn conjecture. Wikipedia[Z]. https://en.wikipedia.org/wiki/Bateman%E2%80%93Horn_conjecture, 21 May 2023.
+[4] Bateman–Horn conjecture. Wikipedia[Z]. https://en.wikipedia.org/wiki/Bateman%E2%80%93Horn_conjecture.
 
 [5] 潘承洞, 潘承彪. 初等数论, 第三版[M]. 北京大学出版社, 2013. P463-P464.

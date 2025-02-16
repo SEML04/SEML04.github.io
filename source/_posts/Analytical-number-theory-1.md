@@ -156,10 +156,14 @@ $$\sum_{p \le n} \dfrac{\log p}{p} = \log n + O(1).$$
 
 [2] 潘承洞, 潘承彪. 解析数论基础[M]. 哈尔滨工业大学出版社, 2016. P17-P19.
 
-[3] Ege Erdil. Brun's theorem and sieve theory[Z]. https://www.lesswrong.com/posts/aSYvbztFDdG7LBeRz/brun-s-theorem-and-sieve-theory#The_sieve_of_Eratosthenes, 3 Dec 2022.
+[3] Ege Erdil. Brun's theorem and sieve theory[Z]. https://www.lesswrong.com/posts/aSYvbztFDdG7LBeRz/brun-s-theorem-and-sieve-theory#The_sieve_of_Eratosthenes.
 
-[4] 关于素数指标求和的估计. Chatgpt[Z]. https://chatgpt.com/share/67b01f77-4234-800c-9b15-158446dbb868, 15 Feb 2025.
+[4] 关于素数指标求和的估计. Chatgpt[Z]. https://chatgpt.com/share/67b01f77-4234-800c-9b15-158446dbb868.
 
-[5] Mathematics. Stackexchange. Prove that $\displaystyle\sum_{\substack{p \le x \\ p \text{ prime}}} \log p = x + O\left(\dfrac{x}{\log^2 x}\right)$ using Prime Number Theorem[Z]. https://math.stackexchange.com/questions/4340708/prove-that-sum-limits-p-le-x-p-text-prime-log-p-xo-left-fracx-log, 23 Dec 2021.
+[5] Mathematics. Stackexchange. Prove that $\displaystyle\sum_{\substack{p \le x \\ p \text{ prime}}} \log p = x + O\left(\dfrac{x}{\log^2 x}\right)$ using Prime Number Theorem[Z]. https://math.stackexchange.com/questions/4340708/prove-that-sum-limits-p-le-x-p-text-prime-log-p-xo-left-fracx-log.
 
-[6] Wikipedia. Merten's theorem[Z]. https://en.wikipedia.org/wiki/Mertens%27_theorems, 19 Jan 2025.
+[6] Wikipedia. Merten's theorem[Z]. https://en.wikipedia.org/wiki/Mertens%27_theorems.
+
+[7] OEIS. Number of primes < 10^n[Z]. https://oeis.org/A006880.
+
+[8] OEIS. Number of twin prime pairs below 10^n[Z]. https://oeis.org/A007508.

@@ -93,12 +93,12 @@ OK!2025年第一篇文章正式产出!虽然离上一篇文章时间稍微隔了
 
 [4] Gathmann A. Plane Algebraic Curves[Z]. https://agag-gathmann.math.rptu.de/class/curves-2023/curves-2023.pdf. 2023, P61-67.
 
-[5] Wikipedia. Riemann–Roch theorem[Z]. https://en.wikipedia.org/wiki/Riemann%E2%80%93Roch_theorem. 2024.
+[5] Wikipedia. Riemann–Roch theorem[Z]. https://en.wikipedia.org/wiki/Riemann%E2%80%93Roch_theorem.
 
-[6] Wikipedia. Hirzebruch–Riemann–Roch theorem[Z]. https://en.wikipedia.org/wiki/Hirzebruch%E2%80%93Riemann%E2%80%93Roch_theorem. 2023.
+[6] Wikipedia. Hirzebruch–Riemann–Roch theorem[Z]. https://en.wikipedia.org/wiki/Hirzebruch%E2%80%93Riemann%E2%80%93Roch_theorem.
 
-[7] Wikipedia. Brill–Noether theory[Z]. https://en.wikipedia.org/wiki/Brill%E2%80%93Noether_theory. 2023.
+[7] Wikipedia. Brill–Noether theory[Z]. https://en.wikipedia.org/wiki/Brill%E2%80%93Noether_theory.
 
-[8] Wikipedia. Grothendieck–Riemann–Roch theory[Z]. https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem. 2024.
+[8] Wikipedia. Grothendieck–Riemann–Roch theory[Z]. https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem.
 
-[9] Wikipedia. Atiyah–Singer index theorem[Z]. https://en.wikipedia.org/wiki/Atiyah%E2%80%93Singer_index_theorem. 2024.
+[9] Wikipedia. Atiyah–Singer index theorem[Z]. https://en.wikipedia.org/wiki/Atiyah%E2%80%93Singer_index_theorem.
