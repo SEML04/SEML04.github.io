@@ -101,7 +101,7 @@ $$\begin{split}
     \log(n!) & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left\lfloor \dfrac{n}{p^k} \right\rfloor \log p \\ 
     & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left( \dfrac{n}{p^k} + O(1) \right) \log p \\ 
     & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p \\
-    & = \displaystyle\sum_{p \le n} \frac{n}{p} \log p + \sum_{p \le n}\sum_{k = 2}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p
+    & = \displaystyle\sum_{p \le n} \frac{n}{p} \log p + \sum_{p \le n}\sum_{k = 2}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p.
 \end{split} \quad (3.3)$$
 
 其中,当$K(p)<2$时,求和$\sum\limits_{k = 2}^{K(p)}$这项规定为$0$.
@@ -160,13 +160,13 @@ $$\frac{1}{p} \ge \frac{1}{10^{n+1}}.$$
 
 $$\begin{split}
 \displaystyle\sum_{p} \frac{1}{p} & \ge \frac{1}{\log 10} \sum_{n = 1}^{\infty} \left(\frac{10^{n+1}}{n+1} - \frac{10^n}{n}\right) \cdot \frac{1}{10^{n+1}} \\
-& = \frac{1}{10\log 10} \sum_{n = 1}^{\infty} \frac{9n-1}{n(n+1)} = \infty
-\end{split}.$$
+& = \frac{1}{10\log 10} \sum_{n = 1}^{\infty} \frac{9n-1}{n(n+1)} = \infty.
+\end{split}$$
 
 因此我们便证明了所有素数的倒数之和是发散的.最后我们用一个表格来统计$(10^n,10^{n+1}]$间素数的实际数量和我们(4.2)得到的估计数量,而数据参考来自OEIS$^{[7]}$(~~陶哲轩用了也说好👍~~).
 
 <table>
-    <center> $(10^n, 10^{n+1}]$中素数的实际个数与估计个数 </center> 
+    <center> 区间$(10^n, 10^{n+1}]$中素数的实际个数与估计个数 </center> 
     <tr>
         <th> n的取值 </th> 
         <th> 实际个数 </th> 
@@ -225,8 +225,28 @@ $$\begin{split}
 
 因此我们可以看到,我们的估计还是很准确的!
 
+##### 证明
+
+而该定理的另一种证明就是用铺垫已久的分部求和公式.
+
+令$\chi(n)$为素数集合的特征函数,即$\chi(n) = 1$当且仅当$n = p$.
+
+于是根据Merten第一定理(3.1)便有:
+
+$$B(n) := \sum_{1 < k \le n} \frac{\chi(n)\log n}{n} = \sum_{p \le n} \frac{\log p}{p} = \log n + O(1).$$
+
+而在使用分布求和公式中,对于第二项而言,其阶也是$O(1)$,因此便得:
+
+$$\begin{split}
+\sum_{p \le n} \frac{1}{p} & = \frac{1}{2} + \sum_{2 < k \le n} \dfrac{\chi(n)\log n}{n} \frac{1}{\log p} \\
+& = (\log n + O(1))\frac{1}{\log n} + O(1) + \int_{2}^{n} \frac{\log u + O(1)}{u \log^2 u} \textrm{d}u \\ 
+& = \log\log n + O(1).
+\end{split}$$
+
+至此,Merten第二定理也证明完毕.<span style = "float: right">$\square$</span>
+
 <table>
-    <center> $(10^n, 10^{n+1}]$中孪生素数对的实际个数与估计个数 </center> 
+    <center> 区间$(10^n, 10^{n+1}]$中孪生素数对的实际个数与估计个数 </center> 
     <tr>
         <th> n的取值 </th> 
         <th> 实际个数 </th> 
