@@ -144,11 +144,153 @@ $$\sum_{p \le n} \dfrac{\log p}{p} = \log n + O(1).$$
 
 ##### 直观理解
 
-其实思路还是比较明确的,就是用分部求和公式进行运算即可.当然此处和我在第二部分称述的公式有所不同,但实际上也是一样的,乘上一个指示函数$\chi(n)$便可以直接使用了.
+其实思路还是比较明确的,就是用分部求和公式进行运算即可.虽然此处和我在第二部分称述的公式有所不同,但实际上也是一样的,乘上一个指示函数$\chi(n)$便可以直接使用了.
 
-但是对于素数倒数之和发散这个命题而言,我也有一个自己的想法.
+但是对于素数倒数之和发散这个命题而言,也可以用以下放缩的方式去解决.
 
-首先在
+由(2.2)我们可以估计,当$n$比较大的时候,$(10^n, 10^{n+1}]$中的素数个数约为:
+
+$$\pi(10^{n+1}) - \pi(10^n) \approx \frac{10^{n+1}}{(n+1)\log 10} - \frac{10^n}{n\log 10}.\quad (4.2)$$
+
+而在这个区间内的任意一个素数$p$均满足:
+
+$$\frac{1}{p} \ge \frac{1}{10^{n+1}}.$$
+
+于是我们便有:
+
+$$\begin{split}
+\displaystyle\sum_{p} \frac{1}{p} & \ge \frac{1}{\log 10} \sum_{n = 1}^{\infty} \left(\frac{10^{n+1}}{n+1} - \frac{10^n}{n}\right) \cdot \frac{1}{10^{n+1}} \\
+& = \frac{1}{10\log 10} \sum_{n = 1}^{\infty} \frac{9n-1}{n(n+1)} = \infty
+\end{split}.$$
+
+因此我们便证明了所有素数的倒数之和是发散的.最后我们用一个表格来统计$(10^n,10^{n+1}]$间素数的实际数量和我们(4.2)得到的估计数量,而数据参考来自OEIS$^{[7]}$(~~陶哲轩用了也说好👍~~).
+
+<table>
+    <center> $(10^n, 10^{n+1}]$中素数的实际个数与估计个数 </center> 
+    <tr>
+        <th> n的取值 </th> 
+        <th> 实际个数 </th> 
+        <th>估计个数</th> 
+        <th> 误差 </th>
+    </tr>
+    <tr>
+        <td align="center"> $n = 3$ </td>
+        <td align="center"> $1061$ </td>
+        <td align="center"> $940.97$ </td>
+        <td align="center"> $0.1131$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 4$ </td>
+        <td align="center"> $8363$ </td>
+        <td align="center"> $7600.15$ </td>
+        <td align="center"> $0.0912$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 5$ </td>
+        <td align="center"> $68906$ </td>
+        <td align="center"> $63696.52$ </td>
+        <td align="center"> $0.0716$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 6$ </td>
+        <td align="center"> $586081$ </td>
+        <td align="center"> $548038.27$ </td>
+        <td align="center"> $0.0649$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 7$ </td>
+        <td align="center"> $5096876$ </td>
+        <td align="center"> $4808260.34$ </td>
+        <td align="center"> $0.0566$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 8$ </td>
+        <td align="center"> $45086079$ </td>
+        <td align="center"> $42826261.41$ </td>
+        <td align="center"> $0.0501$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 9$ </td>
+        <td align="center"> $404204977$ </td>
+        <td align="center"> $386039539.47$ </td>
+        <td align="center"> $0.0449$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 10$ </td>
+        <td align="center"> $3663002302$ </td>
+        <td align="center"> $3513837171.76$ </td>
+        <td align="center"> $0.0407$ </td>
+    </tr>
+</table>
+
+因此我们可以看到,我们的估计还是很准确的!
+
+<table>
+    <center> $(10^n, 10^{n+1}]$中孪生素数对的实际个数与估计个数 </center> 
+    <tr>
+        <th> n的取值 </th> 
+        <th> 实际个数 </th> 
+        <th> 估计个数 </th> 
+        <th> 相差倍数 </th>
+        <th> 猜测个数 </th>
+    </tr>
+    <tr>
+        <td align="center"> $n = 3$ </td>
+        <td align="center"> $170$ </td>
+        <td align="center"> $302.67$ </td>
+        <td align="center"> $1.8$ </td>
+        <td align="center"> $127.94$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 4$ </td>
+        <td align="center"> $1019$ </td>
+        <td align="center"> $2202.14$ </td>
+        <td align="center"> $2.2$ </td>
+        <td align="center"> $840$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 5$ </td>
+        <td align="center"> $6945$ </td>
+        <td align="center"> $16913.86$ </td>
+        <td align="center"> $2.4$ </td>
+        <td align="center"> $5919.89$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 6$ </td>
+        <td align="center"> $50811$ </td>
+        <td align="center"> $135062.16$ </td>
+        <td align="center"> $2.7$ </td>
+        <td align="center"> $43893.92$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 7$ </td>
+        <td align="center"> $381332$ </td>
+        <td align="center"> $1110321.26$ </td>
+        <td align="center"> $2.9$ </td>
+        <td align="center"> $338201.94$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 8$ </td>
+        <td align="center"> $2984194$ </td>
+        <td align="center"> $9335309.72$ </td>
+        <td align="center"> $3.1$ </td>
+        <td align="center"> $2684660.47$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 9$ </td>
+        <td align="center"> $23988173$ </td>
+        <td align="center"> $79905644.66$ </td>
+        <td align="center"> $3.3$ </td>
+        <td align="center"> $21823071.91$ </td>
+    </tr>
+    <tr>
+        <td align="center"> $n = 10$ </td>
+        <td align="center"> $196963369$ </td>
+        <td align="center"> $693984237.71$ </td>
+        <td align="center"> $3.5$ </td>
+        <td align="center"> $180861470.92$ </td>
+    </tr>
+</table>
 
 #### 参考资料
 
@@ -167,3 +309,5 @@ $$\sum_{p \le n} \dfrac{\log p}{p} = \log n + O(1).$$
 [7] OEIS. Number of primes < 10^n[Z]. https://oeis.org/A006880.
 
 [8] OEIS. Number of twin prime pairs below 10^n[Z]. https://oeis.org/A007508.
+
+[9] Wikipedia. Twin prime[Z]. http://en.wikipedia.org/wiki/Twin_prime.
