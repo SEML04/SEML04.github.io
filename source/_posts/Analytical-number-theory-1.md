@@ -27,7 +27,7 @@ tags:
 >
 > is, at any rate, convergent.$^{[1]}$
 
-但是当我尝试推导的过程中,一些类似的结论和定理也蹦了出来也是花了我好长一段时间才弄明白这些东西.因此不记录下来岂不是大亏?
+但是当我尝试推导的过程中,一些类似的结论和定理也蹦了出来,也是花了我好长一段时间才弄明白这些东西.因此不记录下来岂不是大亏?
 
 #### 承认环节
 
@@ -35,11 +35,13 @@ tags:
 
 首先就是承认上述关于孪生素数计数函数$\pi_2(x)$的估计式:
 
-> $$\pi_2(x) := |\{ p : p \le x, p + 2 = p' \}| \ll \dfrac{x}{\log^2 x} (\log\log x)^2.\quad (2.1)$$
+> $$\pi_2(x) := |\{ p : p \le x, p + 2 = p' \}| = O\left(\dfrac{x}{\log^2 x} (\log\log x)^2\right).\quad (2.1)$$
 
 其次,我们也承认素数定理,并且利用其的一个较弱的估计式:
 
-> $$\pi_(x) = \dfrac{x}{\log x} + o\left(\dfrac{x}{\log x}\right).\quad (2.2)$$
+> $$\pi(x) = \dfrac{x}{\log x} + o\left(\dfrac{x}{\log x}\right).\quad (2.2)$$
+
+实际上,上述两个都有更加精细的估计,但在此按下不表.
 
 以及下述关于$n!$的两个结论.首先是关于$n!$的估计式,也就是Stirling公式:
 
@@ -59,13 +61,13 @@ $$n! \sim \sqrt{2\pi n} \left( \frac{n}{e} \right)^n.$$
 >
 > 设$b(n)(n = 1,2,\cdots)$是一复数列,其和函数$B(u) = \sum\limits_{n \le u} b(n)$,再设$0 \le u_1 < u_2$,$f(n)$是区间$[u_1, u_2]$上的连续可微函数,那么有:
 >
-> $$\sum_{u_1 < n \le u_2} b(n)f(n) = B(u_2)f(u_2) - B(u_1)f(u_1) - \int_{u_1}^{u_2} B(u)f'(u) \textrm{d}u.$$
+> $$\sum_{\color{red}u_1 < n \le u_2} b(n)f(n) = B(u_2)f(u_2) - B(u_1)f(u_1) - \int_{u_1}^{u_2} B(u)f'(u) \textrm{d}u.$$
 
 现在万事具备,准备开始work work!
 
 #### Merten第一定理
 
-现在我们开始证明第一个结论:
+现在我们开始证明第一个结论$^{[6]}$:
 
 > **Merten第一定理:**
 >
@@ -85,7 +87,7 @@ $$n! = \prod_{p \le n} p^{n/p}.$$
 
 $$\log(n!) \approx \sum_{p \le n} \dfrac{n}{p} \log p = n \sum_{p \le n} \dfrac{\log p}{p}.\quad (3.2)$$
 
-于是我们就证得了该定理.而关键的一步就是(3.2)的严格证明了.
+于是我们就证得了该定理.而关键的一步就是需要严格证明(3.2).
 
 ##### 证明
 
@@ -98,10 +100,55 @@ $$\log(n!) \approx \sum_{p \le n} \dfrac{n}{p} \log p = n \sum_{p \le n} \dfrac{
 $$\begin{split}
     \log(n!) & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left\lfloor \dfrac{n}{p^k} \right\rfloor \log p \\ 
     & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left( \dfrac{n}{p^k} + O(1) \right) \log p \\ 
-    & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p
-\end{split}$$
+    & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p \\
+    & = \displaystyle\sum_{p \le n} \frac{n}{p} \log p + \sum_{p \le n}\sum_{k = 2}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p
+\end{split} \quad (3.3)$$
 
+其中,当$K(p)<2$时,求和$\sum\limits_{k = 2}^{K(p)}$这项规定为$0$.
 
+我们关注(3.3)中右侧的第三项,将$K(p)$具体写开来有:
+
+$$\sum_{p \le n}\sum_{k=1}^{K(p)} O(1) \log p \le O(1)\sum_{p \le n} \dfrac{\log n}{\log p} \cdot\log p = \pi(n) O(\log n).$$
+
+再利用(2.2)即可得到上述结果为$O(n)$.
+
+而对于(3.3)中的第二项,我们可以直接将$K(p)$放至$\infty$,然后利用几何级数可得:
+
+$$\sum_{p \le n}\sum_{k = 2}^{K(p)} \dfrac{n}{p^k} \log p \le \sum_{p \le n}\sum_{k = 2}^{\infty} \dfrac{n}{p^k} \log p = n \sum_{p \le n} \dfrac{\log p}{p(p-1)} \le n \sum_{k = 1}^{\infty} \dfrac{\log k}{k(k-1)}.$$
+
+而上述关于$k$的级数是收敛的,因此结果也是$O(n)$.
+
+至此我们彻底得到了$\log(n!)$类似于(3.2)的估计式,并且给出了余项阶的估计:
+
+$$\log(n!) = n \sum_{p \le n} \dfrac{\log p}{p} + O(n).$$
+
+再联立(2.3)便有:
+
+$$n \sum_{p \le n} \dfrac{\log p}{p} = n\log n + O(n).$$
+
+也就是:
+
+$$\sum_{p \le n} \dfrac{\log p}{p} = \log n + O(1).$$
+
+因此我们便证明了Merten第一定理.<span style="float: right"> $\square$ </span>
+
+#### Merten第二定理
+
+接下来我们可以证明第二个结论$^{[6]}$:
+
+> **Merten第二定理:**
+>
+> $$\sum_{p \le n} \frac{1}{p} = \log\log n + O(1).\quad (4.1)$$
+>
+> 换言之,所有的素数的倒数之和是发散的.
+
+##### 直观理解
+
+其实思路还是比较明确的,就是用分部求和公式进行运算即可.当然此处和我在第二部分称述的公式有所不同,但实际上也是一样的,乘上一个指示函数$\chi(n)$便可以直接使用了.
+
+但是对于素数倒数之和发散这个命题而言,我也有一个自己的想法.
+
+首先在
 
 #### 参考资料
 
@@ -113,4 +160,6 @@ $$\begin{split}
 
 [4] 关于素数指标求和的估计. Chatgpt[Z]. https://chatgpt.com/share/67b01f77-4234-800c-9b15-158446dbb868, 15 Feb 2025.
 
-[5] Prove that $\displaystyle\sum_{\substack{p \le x \\ p \text{ prime}}} \log p = x + O\left(\dfrac{x}{\log^2 x}\right)$ using Prime Number Theorem. Mathematics. Stackexchange[Z]. https://math.stackexchange.com/questions/4340708/prove-that-sum-limits-p-le-x-p-text-prime-log-p-xo-left-fracx-log, 23 Dec 2021.
+[5] Mathematics. Stackexchange. Prove that $\displaystyle\sum_{\substack{p \le x \\ p \text{ prime}}} \log p = x + O\left(\dfrac{x}{\log^2 x}\right)$ using Prime Number Theorem[Z]. https://math.stackexchange.com/questions/4340708/prove-that-sum-limits-p-le-x-p-text-prime-log-p-xo-left-fracx-log, 23 Dec 2021.
+
+[6] Wikipedia. Merten's theorem[Z]. https://en.wikipedia.org/wiki/Mertens%27_theorems, 19 Jan 2025.
