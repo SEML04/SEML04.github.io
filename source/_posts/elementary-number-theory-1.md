@@ -6,7 +6,7 @@ categories:
     - 初等数论
 tags:
     - Elementary Number Theory
-    - CRT
+    - Chinese Remainder Theorem
 ---
 
 #### 引言
