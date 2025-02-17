@@ -25,7 +25,7 @@ tags:
 
 > $\quad$ Actually, this estimate was the first result Brun obtained for the prime twin problem. He put it into the striking form, which is an easy consequence of (2.19), that the sum
 >
-> $$\sum_{\substack{p \\ p+2=p'}} \dfrac{1}{p}$$
+> $$\sum_{p,p+2=p'} \dfrac{1}{p}$$
 >
 > is, at any rate, convergent.$^{[1]}$
 
@@ -61,9 +61,9 @@ $$n! \sim \sqrt{2\pi n} \left( \frac{n}{e} \right)^n.$$
 
 > **Abel分部求和法:**
 >
-> 设$b(n)(n = 1,2,\cdots)$是一复数列,其和函数$B(u) = \sum\limits_{n \le u} b(n)$,再设$0 \le u_1 < u_2$,$f(n)$是区间$[u_1, u_2]$上的连续可微函数,那么有:
+> 设$b(n)(n = 1,2,\cdots)$是一复数列,其和函数$S(u) = \sum\limits_{n \le u} b(n)$,再设$0 \le u_1 < u_2$,$f(n)$是区间$[u_1, u_2]$上的连续可微函数,那么有:
 >
-> $$\sum_{\color{red}u_1 < n \le u_2} b(n)f(n) = B(u_2)f(u_2) - B(u_1)f(u_1) - \int_{u_1}^{u_2} B(u)f'(u) \textrm{d}u.$$
+> $$\sum_{\color{red}u_1 < n \le u_2} b(n)f(n) = S(u_2)f(u_2) - S(u_1)f(u_1) - \int_{u_1}^{u_2} S(u)f'(u) \textrm{d}u.$$
 
 现在万事具备,准备开始work work!
 
@@ -103,8 +103,8 @@ $$\begin{split}
     \log(n!) & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left\lfloor \dfrac{n}{p^k} \right\rfloor \log p \\ 
     & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left( \dfrac{n}{p^k} + O(1) \right) \log p \\ 
     & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p \\
-    & = \displaystyle\sum_{p \le n} \frac{n}{p} \log p + \sum_{p \le n}\sum_{k = 2}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p.
-\end{split} \quad (3.3)$$
+    & = \displaystyle\sum_{p \le n} \frac{n}{p} \log p + \sum_{p \le n}\sum_{k = 2}^{K(p)} \dfrac{n}{p^k} \log p + \sum_{p \le n}\sum_{k = 1}^{K(p)} O(1) \log p. \quad (3.3)
+\end{split}$$
 
 其中,当$K(p)<2$时,求和$\sum\limits_{k = 2}^{K(p)}$这项规定为$0$.
 
@@ -146,7 +146,7 @@ $$\sum_{p \le n} \dfrac{\log p}{p} = \log n + O(1).$$
 
 ##### 直观理解
 
-其实思路还是比较明确的,就是用分部求和公式进行运算即可.虽然此处和我在第二部分称述的公式有所不同,但实际上也是一样的,乘上一个指示函数$\chi(n)$便可以直接使用了.
+其实思路还是比较明确的,就是用分部求和公式进行运算即可.虽然此处和我在第二部分称述的公式有所不同,但实际上也是一样的,这在下面的证明中就能看到.
 
 但是对于素数倒数之和发散这个命题而言,也可以用以下放缩的方式去解决.
 
@@ -231,25 +231,112 @@ $$\begin{split}
 
 而该定理的另一种证明就是用铺垫已久的分部求和公式.
 
-令$\chi(n)$为素数集合的特征函数,即$\chi(n) = 1$当且仅当$n = p$.
+令$\chi(n)$为素数集合的特征函数,即:
+
+$$\chi(n) = \left\{\begin{array}{ll}
+    \log p & \text{if } n = p, \\
+    0 & \text{else.}
+\end{array}\right. \quad (4.3)$$
 
 于是根据Merten第一定理(3.1)便有:
 
-$$B(n) := \sum_{1 < k \le n} \frac{\chi(n)\log n}{n} = \sum_{p \le n} \frac{\log p}{p} = \log n + O(1).$$
+$$S_1(n) := \sum_{1 < k \le n} \frac{\chi(k)\log k}{k} = \sum_{p \le n} \frac{\log p}{p} = \log n + O(1).$$
 
-而在使用分布求和公式中,对于第二项而言,其阶也是$O(1)$,因此便得:
+而在使用分布求和公式中,使用公式后得到的$\dfrac{S_1(2)}{\log 2}$,其阶也是$O(1)$,因此便得:
 
 $$\begin{split}
-\sum_{p \le n} \frac{1}{p} & = \frac{1}{2} + \sum_{2 < k \le n} \dfrac{\chi(n)\log n}{n} \frac{1}{\log p} \\
-& = (\log n + O(1))\frac{1}{\log n} + O(1) + \int_{2}^{n} \frac{\log u + O(1)}{u \log^2 u} \textrm{d}u \\ 
-& = \log\log n + O(1).
+    \sum_{p \le n} \frac{1}{p} & = \frac{1}{2} + \sum_{2 < k \le n} \dfrac{\chi(k)\log k}{k} \frac{1}{\log k} \\
+    & = \frac{1}{2} + \frac{S_1(n)}{\log n} - \frac{S_1(2)}{\log 2} + \int_{2}^{n} \frac{S_1(u)}{u \log^2 u} \textrm{d}u \\
+    & = O(1) + (\log n + O(1))\frac{1}{\log n} + \int_{2}^{n} \frac{\log u + O(1)}{u \log^2 u} \textrm{d}u \\ 
+    & = \log\log n + O(1).
 \end{split}$$
 
 至此,Merten第二定理也证明完毕.<span style = "float: right">$\square$</span>
 
 #### Chebyshev第一函数
 
+在解决完Merten第一和二定理后,我们再来看一个形式很像的结构,也就是Chebyshev第一函数$^{[10]}$.
+
+> **Chebyshev第一函数:**
+>
+> $$\vartheta(n) := \sum_{p \le n} \log p = n + o(n). \quad (5.1)$$
+
+##### 直观理解
+
+对于这个定理的余项,实际上可以更精确的估计它的阶为$O\left(\frac{n}{\log^2 n}\right)$.在Math exchange上便有这个部分的解答$^{[5]}$,但是我们需要用到素数定理更精细的余项估计.而这里,我们将从(2.2)这样的一个粗略的素数定理出发,得到上述的结果.
+
+而对于上述结果的证明,实际上我们仍然可以用分布求和公式得到,而这里我们需要引入的只有(4.3)中的特征函数即可.然后利用以下式子即可:
+
+$$S_2(n) := \sum_{1 < k \le n} \chi(k) = \sum_{p \le n} 1 = \pi(x) = \frac{n}{\log n} + o\left( \frac{n}{\log n} \right).\quad (5.2)$$
+
+当意识到要乘上特征函数$\chi(n)$后,这个定理便成了一个普通的练习题了.
+
+而我们也有Chebyshev第二函数$^{[10]}$,而它就是和Mangoldt函数结合在一块,然后有:
+
+$$\Psi(n) := \sum_{k \le n} \Lambda(n) = n + o(n).$$
+
+而其与Chebyshev第一函数也有一定的关系,在此就不再阐述了.
+
+##### 证明
+
+引入(4.3)中的特征函数后,在使用(5.2)有:
+
+$$\begin{split}
+    \vartheta(n) & = \sum_{1 < k \le n} \chi(k)\log k \\
+    & = S_2(n)\log n - \int_{1}^{n} \frac{S_2(u)}{u} \textrm{d}u \\
+    & = \left( \frac{n}{\log n} + o\left( \frac{n}{\log n} \right) \right) \log n - \int_{1}^{n}  \left( \frac{1}{\log u} + o\left( \frac{1}{\log u} \right) \right) \textrm{d} u \\
+    & = n + o(n).
+\end{split}$$
+
+其中右侧积分式的结果$\textrm{li}(n) + o(\textrm{li}(n)) = o(n)$.于是得证. <span style="float: right">$\square$</span>
+
 #### Brun定理
+
+最后就是本篇博客的重点内容,而Brun定理实际上就是(2.1)所数,但我们这里证明的是其推论:
+
+> **Brun定理:**
+>
+> $$\sum_{p,p+2=p'} \frac{1}{p} = O(1). \quad (6.1)$$
+>
+> 换言之也就是所有孪生素数的倒数之和是收敛的.
+
+而这里又有一个Brun常数,其定义为所有孪生素数的倒数之和:
+
+$$B_2 := \sum_{p,p+2=p'} \frac{1}{p} + \frac{1}{p+2} \approx 1.902160583104\cdots.$$
+
+而我们这里只证明在(2.1)成立的前提下,有$\displaystyle\sum_{p,p+2=p'} \frac{1}{p}$收敛.
+
+##### 直观理解
+
+我们模仿(4.1)中发散的证明,可以先切割出区间,然后再通过放缩法尝试证明.
+
+由(2.1)知:
+
+$$\pi_2(n) \ll \dfrac{n}{\log^2 n} (\log\log n)^2 \ll \frac{n}{\log^{3/2} n}. \quad (6.2)$$
+
+在区间$(10^n, 10^{n+1}]$内的素数$p$均满足:
+
+$$\frac{1}{p} \le \frac{1}{10^n}.$$
+
+由于(6.2)并不像(2.2)那样是一个渐近式,因此在$n$比较大的情况下,该区间内的孪生素数对的个数有如下的估计:
+
+$$\pi_2(10^{n+1}) - \pi_2(10^n) \le \frac{10^{n+1}}{((n+1)\log 10)^{3/2}} - \frac{10^{n}}{(n\log 10)^{3/2}}.\quad (6.3)$$
+
+因此利用(6.3),使用放缩法便有:
+
+$$\begin{split}
+    \sum_{p,p+2=p'} \frac{1}{p} & \le \sum_{n = 1}^{\infty} \left( \frac{10^{n+1}}{((n+1)\log 10)^{3/2}} - \frac{10^{n}}{(n\log 10)^{3/2}} \right) \frac{1}{10^n} \\ 
+    & = \frac{1}{(\log 10)^{3/2}} \sum_{n = 1}^{\infty} \left( \frac{10}{(n+1)^{3/2}} - \frac{1}{n^{3/2}} \right) \\
+    & \approx 3.86702\cdots.
+\end{split}$$
+
+于是根据我们的结果,可以得到Brun常数的一个上界为$2 \times 3.86702\cdots = 7.73403\cdots.$
+
+实际上,对于孪生素数对的个数有一个更加精细的估计,那就是:
+
+$$\pi_2(x) = O\left( \frac{x}{\log^2 x} \right)$$
+
+对于这个估计式,在Lesswrong网站上有篇文章$^{[3]}$的分析相当精彩.但是关于$\pi_2(x)$的渐近式仍然还是开放的.
 
 <table>
     <center> 区间$(10^n, 10^{n+1}]$中孪生素数对的实际个数与估计个数 </center> 
@@ -339,3 +426,5 @@ $$\begin{split}
 [9] Wikipedia. Twin prime[Z]. http://en.wikipedia.org/wiki/Twin_prime.
 
 [10] Wikipedia. Chebyshev function[Z]. https://en.wikipedia.org/wiki/Chebyshev_function.
+
+[9] Wikipedia. Brun's theorem[Z]. https://en.wikipedia.org/wiki/Brun%27s_theorem.
