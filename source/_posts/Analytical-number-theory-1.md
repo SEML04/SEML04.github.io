@@ -429,9 +429,25 @@ $$\sum_{p \le n,p+2=p'} \frac{1}{p} \approx \sum_{1 < k \le n} P_n \cdot \frac{1
 
 #### 总结
 
-在LessWrong网站上,Ege Erdil的文章$^{[3]}$对孪生素数的分析极为精彩!不仅讲了Eratosthenes筛法和Brun筛法,以及Brun定理,并且思考的方式和大胆提出猜想的想法也很强!上面关于Brun定理的第二个证明就是从这里借鉴走的.看来还是得多吸收不同的人的想法.
+在LessWrong网站上,Ege Erdil的文章$^{[3]}$对孪生素数的分析极为精彩!(~~深夜里看完之后马上爬起来进行补充!!!~~)文中不仅讲了Eratosthenes筛法和Brun筛法,以及Brun定理,并且思考的方式和大胆提出猜想的想法也很强!
+
+看完之后,感觉对Halberstam上的内容也有了一些新的认识,对其背后的直观想法有了一定的认识,至少知道了这确实可以说是Eratosthenes筛法的最直接最简单的改良.直观猜测和严谨语言之间的这个度,还是很重要的.
+
+然后就是直接复制一下原文的Conclusion,也相当于是贴一下Abstract一样:
+
+> The fundamental nature of the above proof is that we understand the behavior of primes relative to modular congruence classes quite well, at least when the modulus is small compared to the primes in question. We then try to leverage our understanding here into saying something about the distribution of primes in other sets.
+>
+> This is the heart of sieve theory: it's used in cases when you understand the behavior of some objects well in some substructures and you want to "piece that together" to gain a broader understanding of how the objects behave. Here, the substructures are arithmetic progressions or modular congruence classes, and the objects are the prime numbers, but the fundamental ideas of sieve theory may be applied in other domains as well.
+>
+> The Brun sieve itself is a fairly basic sieve that was introduced over a hundred years ago for the exact purpose of proving tight upper bounds on $\pi_2(x)$, though it can also be used for other purposes as a general way to prove upper bounds on various quantities involving primes using combinatorial methods. Today, more sophisticated sieves are able to prove nontrivial lower bounds as well, which is often a more tricky problem than proving upper bounds in sieve theory.
+>
+> For more on sieve theory, you might want to check out the associated tag on Terence Tao's blog. It contains material ranging from introductory to research-level in sophistication.
 
 然后就是规划!虽然应该要把陈氏定理尽快做出来才行,但我目前的想法是先把Halberstam的第二章看完,然后再去看陈景润所使用的Selberg筛法.只能说任务挺重,还得加把劲才行了.😢
+
+<center>
+<img src="/image/Analytical-number-theory-1/T1.gif" width="30%">
+</center>
 
 #### 参考资料
 
@@ -455,4 +471,4 @@ $$\sum_{p \le n,p+2=p'} \frac{1}{p} \approx \sum_{1 < k \le n} P_n \cdot \frac{1
 
 [10] Wikipedia. Chebyshev function[Z]. https://en.wikipedia.org/wiki/Chebyshev_function.
 
-[9] Wikipedia. Brun's theorem[Z]. https://en.wikipedia.org/wiki/Brun%27s_theorem.
+[11] Wikipedia. Brun's theorem[Z]. https://en.wikipedia.org/wiki/Brun%27s_theorem.
