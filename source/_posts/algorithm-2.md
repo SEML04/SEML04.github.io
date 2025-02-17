@@ -25,7 +25,7 @@ tags:
 <img src="/image/algorithm2/Q1.png" width="85%">
 </center>
 
-然后就是!**『著名算法大师』Paitsai**对该问题的简单翻译:
+然后就是!『著名算法大师』Anon Xau对该问题的简单翻译:
 
 > 定义一个$1\to n$的排列$S$(我图中用$A$表示)是简洁的(我图中则是称为美好的),当且仅当$\forall i\in [1,n]$均满足:$S[i]=i$或者$S[S[i]]=i$.
 >
