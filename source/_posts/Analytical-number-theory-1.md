@@ -8,7 +8,9 @@ tags:
     - Prime Number Theorem
     - Analytical Number Theory
     - Estimation Formula
-    - Brun Constant
+    - Merten's Theorem
+    - Chebyshev's Function
+    - Brun's Theorem
 ---
 
 #### 引言
@@ -245,6 +247,10 @@ $$\begin{split}
 
 至此,Merten第二定理也证明完毕.<span style = "float: right">$\square$</span>
 
+#### Chebyshev第一函数
+
+#### Brun定理
+
 <table>
     <center> 区间$(10^n, 10^{n+1}]$中孪生素数对的实际个数与估计个数 </center> 
     <tr>
@@ -331,3 +337,5 @@ $$\begin{split}
 [8] OEIS. Number of twin prime pairs below 10^n[Z]. https://oeis.org/A007508.
 
 [9] Wikipedia. Twin prime[Z]. http://en.wikipedia.org/wiki/Twin_prime.
+
+[10] Wikipedia. Chebyshev function[Z]. https://en.wikipedia.org/wiki/Chebyshev_function.
