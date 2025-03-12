@@ -457,7 +457,7 @@ $$\sum_{p \le n,p+2=p'} \frac{1}{p} \approx \sum_{1 < k \le n} P_n \cdot \frac{1
 
 [3] Ege Erdil. Brun's theorem and sieve theory[Z]. https://www.lesswrong.com/posts/aSYvbztFDdG7LBeRz/brun-s-theorem-and-sieve-theory#The_sieve_of_Eratosthenes.
 
-[4] 关于素数指标求和的估计. Chatgpt[Z]. https://chatgpt.com/share/67b01f77-4234-800c-9b15-158446dbb868.
+[4] Chatgpt. 关于素数指标求和的估计[Z]. https://chatgpt.com/share/67b01f77-4234-800c-9b15-158446dbb868.
 
 [5] Mathematics. Stackexchange. Prove that $\displaystyle\sum_{\substack{p \le x \\ p \text{ prime}}} \log p = x + O\left(\dfrac{x}{\log^2 x}\right)$ using Prime Number Theorem[Z]. https://math.stackexchange.com/questions/4340708/prove-that-sum-limits-p-le-x-p-text-prime-log-p-xo-left-fracx-log.
 
