@@ -48,4 +48,4 @@ tags:
 
 [4] T. Tao. 254A, Supplement 5: The linear sieve and Chen’s theorem (optional)[Z]. https://terrytao.wordpress.com/2015/01/29/254a-supplement-5-the-linear-sieve-and-chens-theorem-optional/.
 
-[5] 知乎. 哥德巴赫猜想（10）——陈景润定理的完整证明[Z]. https://zhuanlan.zhihu.com/p/468288793.
+[5] T. Tao. 254A, Notes 4: Some sieve theory[Z]. https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/.
