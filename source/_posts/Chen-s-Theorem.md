@@ -47,3 +47,5 @@ tags:
 [3] Ntriantafilidis. A quick guide to Chen’s theorem[Z]. https://ntriantafilidis.wordpress.com/2014/09/22/a-quick-guide-to-chens-theorem/.
 
 [4] T. Tao. 254A, Supplement 5: The linear sieve and Chen’s theorem (optional)[Z]. https://terrytao.wordpress.com/2015/01/29/254a-supplement-5-the-linear-sieve-and-chens-theorem-optional/.
+
+[5] 知乎. 哥德巴赫猜想（10）——陈景润定理的完整证明[Z]. https://zhuanlan.zhihu.com/p/468288793.
