@@ -1,5 +1,10 @@
-%局中:
+% 局中:
 <center> 内容居中 </center>
+
+
+
+% 局中公式,末尾加注释
+<div style="display: flex; align*-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;">$0 \le \dfrac{\omega(p)}{p} \le 1 - \dfrac{1}{A_1}$</span>  <span style="float: right;">$(\Omega_1)$</span></div>
 
 
 
