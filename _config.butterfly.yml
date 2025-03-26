@@ -721,7 +721,7 @@ giscus:
   enable: true
   repo: SEML04/comments-of-blog
   repo_id: R_kgDOOO1qBg
-  category_id: DIC_kwDOOO1qBs4Cod5u
+  category_id: DIC_kwDOOO1qBs4Cod5v
   light_theme: light
   dark_theme: dark
   # Available values: en | zh-C
