@@ -2,7 +2,6 @@
 title: about
 date: 2025-02-05 19:26:58
 comments: false
-giscus: false
 ---
 
 Chihaya Anon desu!请多关照!!!
