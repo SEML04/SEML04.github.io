@@ -621,7 +621,7 @@ comments:
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
   use:
-    - giscus
+    # - giscus
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -718,11 +718,14 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
+  enable: true
   repo: SEML04/comments-of-blog
   repo_id: R_kgDOOO1qBg
-  category_id: DIC_kwDOOO1qBs4Cod5u
+  category_id: DIC_kwDOOO1qBs4Cod5v
   light_theme: light
   dark_theme: dark
+  # Available values: en | zh-C
+  lang: zh-C
   js:
   option:
 
