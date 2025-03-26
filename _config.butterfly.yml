@@ -54,7 +54,7 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/sakiko-old.jpg
+favicon: /img/muzimi.gif
 
 avatar:
   img: /img/anon-big_head.gif
@@ -94,7 +94,7 @@ footer_img: false
 footer_bg: transparent
 # Website Background
 # Can set it to color or image url
-background: /img/bk0.jpg
+background: /img/bk9.jpg
 
 cover:
   # Disable the cover or not
@@ -168,7 +168,7 @@ cover:
 # Replace Broken Images
 error_img:
   flink: /img/404.gif
-  post_page: /img/sakiko-old.jpg
+  post_page: /img/muzimi.gif
 
 # A simple 404 page
 error_404:
@@ -717,9 +717,9 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo:
-  repo_id:
-  category_id:
+  repo: SEML04/comments-of-blog
+  repo_id: R_kgDOOO1qBg
+  category_id: DIC_kwDOOO1qBs4Cod5u
   light_theme: light
   dark_theme: dark
   js:
