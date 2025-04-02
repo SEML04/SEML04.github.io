@@ -107,6 +107,41 @@ R(D, x) & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \\
 >
 > $\quad$ 其中$D = x^{\frac{1}{2}}\log^{-B_1}x$.
 
+简要证明:
+
+$\quad$ 设$\lambda = A + 17$,而这个莫名其妙的$\lambda$和推论中的$B$在最后一步的估计中可以确定.
+
+$\quad$ 于是便可以得到
+
+$$\begin{split}
+    \sum_{d \le D} \sim & = \sum_{\substack{d \le D \\ 3^{v(d)} \ge \log^{\lambda} x}} \sim + \sum_{\substack{d \le D \\ 3^{v(d)} < \log^{\lambda} x}} \sim \\
+    \\
+    & \ll \log^{-\lambda} x \sum_{\substack{d \le D \\ 3^{v(d)} \ge \log^{\lambda} x}} \mu^2(d) 3^{2v(d)} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| + \log^{\lambda} x \cdot R(D, x) \\
+    & =: S + T.
+\end{split}$$
+
+$\quad$ 对$T$而言用Bombieri-Vinogradov定理便有
+
+$$T \ll x \log^{-\lambda - B_1 + 15} x = \log^{-A} x.$$
+
+$\quad$ 而在$S$中,记$d(n)$为除数函数,易验证有
+
+$$\mu^2(n) 3^{2 v(n)} \le d^4(n),$$
+
+$\quad$ 以及注意到
+
+$$\max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \le \max_{y \le x} \dfrac{2y}{\varphi(d) \log y} \ll \dfrac{x}{d\log x},$$
+
+$\quad$ 最后结合以下推论
+
+$$\sum_{n \le x} \dfrac{d^r(n)}{n} \ll \log^{2^r} x,$$
+
+$\quad$ 于是有
+
+$$S \ll x \log^{1-\lambda} \sum_{n \le x} \dfrac{d^4(n)}{n} \ll x \log^{-A} x.$$
+
+$\quad$ 于是便可证明推论. <span style="float: right"> $\square$ </span>
+
 #### 参考文献
 
 [1] 潘承洞, 潘承彪. 哥德巴赫猜想, 第二版[M]. 科学出版社, 2011. P197-P220.
