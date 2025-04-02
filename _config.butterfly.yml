@@ -411,7 +411,7 @@ aside:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature
-    runtime_date: 6/7/2023 00:00:00  
+    runtime_date: 10/20/2024 00:00:00  
 
 
 local_search:
