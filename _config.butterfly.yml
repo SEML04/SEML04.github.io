@@ -1393,7 +1393,7 @@ categoryBar:
 
 
 #启用all_minifier
-all_minifier: true
+all_minifier: false
 # html压缩
 html_minifier:
   enable: true

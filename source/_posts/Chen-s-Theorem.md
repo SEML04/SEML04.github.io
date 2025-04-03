@@ -249,7 +249,7 @@ $$\#\{a : (a, P(N)) \neq 1\} \le \#\{p : p | N\} = \nu(N) \ll \log N.$$
 
 $\qquad$ 综上便可以得到(3.1).$\square$
 
-$\quad$ 接下来我们再用定理2中的(2.9),此处可取$\alpha = 1/2, B = 38$,并且可知
+$\quad$ 接下来我们再用定理2中的(2.9),此处可取$\alpha = \dfrac{1}{2}, B = 38$,并且可知
 
 $$W(z) = 2C(N) \frac{\text{e}^{-\gamma}}{\log z} \left( 1 + O\left( \frac{\log\log N}{\log z} \right) \right),$$
 
@@ -330,13 +330,39 @@ $$|\mathscr{A}^{[b]}| = \sum_{a \in \mathscr{A}} \lambda^{(b)}(a) \ge \sum_{\sub
 
 $\qquad$ 然后根据(3.1)中一样的讨论,我们便有
 
-$$\begin{spilt}
+$$\begin{split}
     |\mathscr{A}^{[b]}| & \ge \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \lambda^{(b)}(a) + O(\nu(N)) \\
     \\
     & = \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \mu^2(a) \lambda^{(b)}(a) + \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 \\ \mu(a)}} \lambda^{(b)}(a) + O(\nu(N)).
 \end{split}$$
 
-$\qquad$ 接下来我们再来估计第二项的阶.
+$\qquad$ 接下来我们再来估计第二项的阶.而实际上第二项中即为
+
+$$\#\{ a = p_1^2 p_2 \cdots p_{k} \in \mathscr : k \ge b - 1,\ p_i > N^{\frac{1}{v}},\ p_i \nmid N \}.$$
+
+$\qquad$ 其中$p_i$之间不需要互异.但是当我们将$p_1^2$替换为$p_1$后,元素个数仍然不变,并且后者的$a$均是小于$N^{1 - \frac{1}{v}}$,因为我们除掉了一个大于$N^{\frac{1}{v}}$的数$p_1$.
+
+$\qquad$ 因此我们便得知,第二项为$O(N^{1 - \frac{1}{v}})$,而第三项也可以被其吸收,从而得到了(4.3).$\square$
+
+$\quad$ 与(4.3)类似的,我们可以得到
+
+$$\sum_{\substack{ a \in \mathscr{A} \\ (a, P(N^{\frac{1}{v}})) = 1 }} \left( 1 - \frac{1}{2} \rho_1(a) \right) = \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \mu^2(a) \left( 1 - \frac{1}{2} \rho_1(a) \right) + O(N^{1-\frac{1}{v}}).$$
+
+$\quad$ 于是在
+
+$$\mu^2(a) = 1,\ (a, P(N^{\frac{1}{v}})) = 1,\ (a, N) = 1$$
+
+$\quad$ 的条件下,我们有
+
+$\quad$ (1)若$\nu(a) \le b$,有
+
+$$\lambda^{[b]}(a) = 1 \ge 1 - \frac{1}{2} \rho_1(a),$$
+
+$\quad$ (1)若$\nu(a) \ge b + 1$,则$\rho_1(a) \ge 2$,于是有
+
+$$\lambda^{[b]}(a) = 0 \ge 1 - \frac{1}{2} \rho_1(a).$$
+
+$\quad$ 至此我们便证明了该引理.<span style = "float: right"> $\square$ </span>
 
 #### 参考文献
 
