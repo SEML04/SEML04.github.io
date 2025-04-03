@@ -364,6 +364,26 @@ $$\lambda^{[b]}(a) = 0 \ge 1 - \frac{1}{2} \rho_1(a).$$
 
 $\quad$ 至此我们便证明了该引理.<span style = "float: right"> $\square$ </span>
 
+##### 证明定理"1+3"
+
+有了Kuhn权函数的铺垫后,我们便可以着手证明定理"1+3"了.
+
+> **定理"1+3":**
+>
+> $\quad$ 命题"1+3"成立,且更准确地,我们有
+>
+> $$|\mathscr{A}^{[3]}| > 2.64C(N) \frac{N}{\log^2 N}.$$
+
+**简要证明:**
+
+$\quad$ 在引理1中,我们取$b = 3,\ v = 10$,于是我们有
+
+$$|\mathscr{A}^{[3]}| \ge S(\mathscr{A}; \mathfrak{P}, N^{\frac{1}{10}}) - \frac{1}{2} S_1 + O(N^{\frac{9}{10}}),$$
+
+$\quad$ 其中
+
+$$S_1 = \sum_{\substack{ N^{1/10} \le p_1 < N^{1/3} \\ p_1 \nmid N }} S(\mathscr{A}_{p_1}; \mathfrak{P}, N^{\frac{1}{10}}).$$
+
 #### 参考文献
 
 [1] 潘承洞, 潘承彪. 哥德巴赫猜想, 第二版[M]. 科学出版社, 2011. P197-P220.
