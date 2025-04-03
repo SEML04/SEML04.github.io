@@ -14,6 +14,7 @@
   "dependencies": {
     "@neilsustc/markdown-it-katex": "^1.0.0",
     "hexo": "^7.3.0",
+    "hexo-all-minifier": "^0.5.7",
     "hexo-browsersync": "^0.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-mathjax": "^0.9.0",
