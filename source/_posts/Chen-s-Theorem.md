@@ -109,20 +109,20 @@ R(D, x) & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \\
 >
 > $\quad$ 设$x \ge 2$,对任意的整数$A$,当$B_1 = 2A + 32$时,有
 >
-> $$\sum_{d \le D} \mu^2(d) 3^{v(d)} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \ll x\log^{-A}x, \quad (2.4)$$
+> $$\sum_{d \le D} \mu^2(d) 3^{\nu(d)} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \ll x\log^{-A}x, \quad (2.4)$$
 >
 > $\quad$ 其中$D = x^{\frac{1}{2}}\log^{-B_1}x$.
 
-简要证明:
+**简要证明:**
 
 $\quad$ 设$\lambda = A + 17$,而这个莫名其妙的$\lambda$和推论中的$B$在最后一步的估计中可以确定.
 
 $\quad$ 于是便可以得到
 
 $$\begin{split}
-    \sum_{d \le D} \sim & = \sum_{\substack{d \le D \\ 3^{v(d)} \ge \log^{\lambda} x}} \sim + \sum_{\substack{d \le D \\ 3^{v(d)} < \log^{\lambda} x}} \sim \\
+    \sum_{d \le D} \sim & = \sum_{\substack{d \le D \\ 3^{\nu(d)} \ge \log^{\lambda} x}} \sim + \sum_{\substack{d \le D \\ 3^{\nu(d)} < \log^{\lambda} x}} \sim \\
     \\
-    & \ll \log^{-\lambda} x \sum_{\substack{d \le D \\ 3^{v(d)} \ge \log^{\lambda} x}} \mu^2(d) 3^{2v(d)} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| + \log^{\lambda} x \cdot R(D, x) \\
+    & \ll \log^{-\lambda} x \sum_{\substack{d \le D \\ 3^{\nu(d)} \ge \log^{\lambda} x}} \mu^2(d) 3^{2\nu(d)} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| + \log^{\lambda} x \cdot R(D, x) \\
     \\
     & =: S + T.
 \end{split}$$
@@ -133,7 +133,7 @@ $$T \ll x \log^{-\lambda - B_1 + 15} x = \log^{-A} x.$$
 
 $\quad$ 而在$S$中,记$d(n)$为除数函数,易验证有
 
-$$\mu^2(n) 3^{2 v(n)} \le d^4(n),$$
+$$\mu^2(n) 3^{2 \nu(n)} \le d^4(n),$$
 
 $\quad$ 以及注意到
 
@@ -159,9 +159,9 @@ $\quad$ 于是便可证明推论. <span style="float: right"> $\square$ </span>
 >
 > 在条件$\Omega_1$和$\Omega_2(1)$成立的条件下,设$2 \le z \le X$,则有以下估计
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) \le XW(z)\left\{ F\left( \frac{\log X^2}{\log z} \right) + O\left( \frac{A}{\log^{1/14} X} \right) \right\} + \sum_{\substack{d | P(z) \\ d < X^2}} 3^{v(d)}|r_d|, \quad (2.5)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) \le XW(z)\left\{ F\left( \frac{\log X^2}{\log z} \right) + O\left( \frac{A}{\log^{1/14} X} \right) \right\} + \sum_{\substack{d | P(z) \\ d < X^2}} 3^{\nu(d)}|r_d|, \quad (2.5)$$
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) \ge XW(z)\left\{ f\left( \frac{\log X^2}{\log z} \right) + O\left( \frac{A}{\log^{1/14} X} \right) \right\} - \sum_{\substack{d | P(z) \\ d < X^2}} 3^{v(d)}|r_d|. \quad (2.6)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) \ge XW(z)\left\{ f\left( \frac{\log X^2}{\log z} \right) + O\left( \frac{A}{\log^{1/14} X} \right) \right\} - \sum_{\substack{d | P(z) \\ d < X^2}} 3^{\nu(d)}|r_d|. \quad (2.6)$$
 
 以及确定余项的阶后,可由定理1可推出的一个定理
 
@@ -169,7 +169,7 @@ $\quad$ 于是便可证明推论. <span style="float: right"> $\square$ </span>
 >
 > $\quad$ 在条件$\Omega_1$和$\Omega_2(1)$成立的条件下,设$2 \le z \le X$,若存在$0 < \alpha \le 1$以及$B \ge 0$,使得有
 >
-> $$\sum_{\substack{d \le X^\alpha \log^{-B} X \\ (d, \mathfrak{P}) = 1}} \mu^{2}(d) 3^{v(d)}|r_d| \ll \frac{X}{\log^2 X}, \quad (2.7)$$
+> $$\sum_{\substack{d \le X^\alpha \log^{-B} X \\ (d, \mathfrak{P}) = 1}} \mu^{2}(d) 3^{\nu(d)}|r_d| \ll \frac{X}{\log^2 X}, \quad (2.7)$$
 >
 > $\quad$ 则有以下估计
 >
@@ -203,15 +203,15 @@ $$\left\{ \begin{array}{l}
     f(u) = 2\text{e}^{\gamma} \displaystyle\sum_{\substack{j \ge 2 \\ j \text{ is even}}} \dfrac{1}{j!} \int_{[1, +\infty)^{j-1}} \dfrac{\mathbf{1}_{t_1 + \cdots + t_{j-1} \le s-1}}{t_1 \cdots t_{j-1}} \ \text{d}t_1 \cdots \text{d}t_{j-1}.
 \end{array} \right.$$
 
-其中$\mathbf{1}_S$是集合$S$上的示性函数.并且对于定理1和定理2而言,此处的$F$和$f$已经是最优选择,并且与筛法的奇偶性检验有关,详情可以看Terence Tao的博客$^{4}$.
+其中$\mathbf{1}_S$是集合$S$上的示性函数.并且对于定理1和定理2而言,此处的$F$和$f$已经是最优选择,并且与筛法的奇偶性检验有关,详情可以看Terence Tao的博客$^{[4]}$.
 
 #### 定理"1+4"
 
 我们记
 
-$$\mathscr{A}^{[b]} = \mathscr{A}^{[b]}(N) := \{ a : a \in \mathscr{A}, v(a) \le b \},$$
+$$\mathscr{A}^{[b]} = \mathscr{A}^{[b]}(N) := \{ a : a \in \mathscr{A}, \nu(a) \le b \},$$
 
-其中<span style="color: rgb(230,51,51)">$v(d)$是记重数的</span>(由于之前出现$v(d)$时总有$\mu(d) \neq 0$,因此记不记重数都是一致的,但此处需要特意说明).现在我们便可以证明
+其中<span style="color: rgb(230,51,51)">$\nu(d)$是记重数的</span>(由于之前出现$\nu(d)$时总有$\mu(d) \neq 0$,因此记不记重数都是一致的,但此处需要特意说明).现在我们便可以证明
 
 > **定理"1+4":**
 >
@@ -223,13 +223,13 @@ $$\mathscr{A}^{[b]} = \mathscr{A}^{[b]}(N) := \{ a : a \in \mathscr{A}, v(a) \le
 >
 > $$C(N) = \prod_{p > 2} \left( 1 - \frac{1}{(p-1)^2} \right) \prod_{\substack{p | N \\ p > 2}} \frac{p-1}{p-2}.$$
 
-简要证明:
+**简要证明:**
 
 $\quad$ 我们首先便有
 
 $$|\mathscr{A}^{[b]}| \ge S(\mathscr{A}; \mathfrak{P}, N^{\frac{1}{b+1}}) + O(\log N). \quad (3.1)$$
 
-$\quad$ 而式子(3.1)是基于以下的判断.
+$\quad$ 而式子(3.1)是基于以下的判断:
 
 $\qquad$ 若$(a, P(N^{\frac{1}{b+1}})) = 1$,也就是$a$中的素因子都大于$N^{\frac{1}{b+1}}$,那么自然可知$a \in \mathscr{A}^{[d]}$.
 
@@ -245,9 +245,9 @@ $$d | N - a = p,$$
 
 $\qquad$ 因此只有可能是$(a, P(N)) = p$,即$p | N$.而满足上面条件的$a$的数量为
 
-$$\#\{a : (a, P(N)) \neq 1\} \le \#\{p : p | N\} = v(N) \ll \log N.$$
+$$\#\{a : (a, P(N)) \neq 1\} \le \#\{p : p | N\} = \nu(N) \ll \log N.$$
 
-$\qquad$ 综上便可以得到(3.1).
+$\qquad$ 综上便可以得到(3.1).$\square$
 
 $\quad$ 接下来我们再用定理2中的(2.9),此处可取$\alpha = 1/2, B = 38$,并且可知
 
@@ -299,17 +299,44 @@ $\quad$ 由此我们便证明了命题"1+4". <span style = "float: right"> $\squ
 >
 > $$\rho_1(a) = \sum_{\substack{ p_1 | a, \ p_1 \nmid N \\ N^{1/v} \le p_1 < N^{1/b} }} 1. \quad (4.2)$$
 
-直觉理解:
+**直观理解:**
 
 $\quad$ 在(4.1)中,右侧的求和式的下标中,我们让$a$只有大于$N^{\frac{1}{v}}$的素因子,在这种情况下,$a$当然有可能不在$\mathscr{A}^{[b]}$中,因此我们需要用权函数$(4.2)$"消去"那些臃肿的数(也就是多于$b$个素因子的数).
 
-$\quad$ "消去"的方式就是,让那些臃肿的数的权系数是非负的;而对于那些符合要求的数,我们让它的权系数是正的.这样就能初步满足我们的一些需求了.
+$\quad$ "消去"的方式就是,让那些臃肿的数的权系数是非正的;而对于那些符合要求的数,我们让它的权系数是正的.这样就能初步满足我们的一些需求了.
 
-$\quad$ 并且在这种操作之下,我们实际上允许右侧求和式中至多$b$个素因子的数$a$,它的最小的素因子是可能小于$N^{\frac{1}{b}}$,因为其只需要大于$N^{\frac{1}{v}}$即可.在这种意义下,(4.1)确实要比(3.1)更更加精细化一些.
+$\quad$ 并且在这种操作之下,我们实际上允许右侧求和式中至多$b$个素因子的数$a$,它的最小的素因子是可能小于$N^{\frac{1}{b}}$,因为其只需要大于$N^{\frac{1}{v}}$即可.在这种意义下,(4.1)确实要比(3.1)更加精细化一些.
 
-简要证明:
+**简要证明:**
 
+$\quad$ 为了让证明更加易于理解,我们引入以下示性函数
 
+$$\lambda^{(b)}(a) = \left\{ \begin{array}{ll}
+    1, & \nu(a) \le b, \\
+    0, & \nu(a) > b.
+\end{array} \right.$$
+
+$\quad$ 于是我们有
+
+$$|\mathscr{A}^{[b]}| \ge \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \mu^2(a) \lambda^{(b)}(a) + O(N^{1 - \frac{1}{v}}). \quad (4.3)$$
+
+$\quad$ 通过加入$\mu(a) \neq 1$的条件,我们才能更加方便的判断$\lambda^{(b)}(a)$与$1 - \frac{1}{2} \rho_1(a)$的大小关系.
+
+$\quad$ 而(4.3)式是基于以下的判断:
+
+$\qquad$ 由于$\lambda^{(b)}(a)$的定义,我们可以直接知道的是
+
+$$|\mathscr{A}^{[b]}| = \sum_{a \in \mathscr{A}} \lambda^{(b)}(a) \ge \sum_{\substack{ a \in \mathscr{A} \\ (a, P(N^{\frac{1}{v}})) = 1 }} \lambda^{(b)}(a).$$
+
+$\qquad$ 然后根据(3.1)中一样的讨论,我们便有
+
+$$\begin{spilt}
+    |\mathscr{A}^{[b]}| & \ge \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \lambda^{(b)}(a) + O(\nu(N)) \\
+    \\
+    & = \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \mu^2(a) \lambda^{(b)}(a) + \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 \\ \mu(a)}} \lambda^{(b)}(a) + O(\nu(N)).
+\end{split}$$
+
+$\qquad$ 接下来我们再来估计第二项的阶.
 
 #### 参考文献
 

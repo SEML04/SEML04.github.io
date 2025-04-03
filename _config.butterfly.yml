@@ -1380,10 +1380,50 @@ categoryBar:
       cover: https://npm.elemecdn.com/akilar-candyassets/image/cover6.webp
   custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
 
-# offline config passed to sw-precache.
-service_worker:
-  maximumFileSizeToCacheInBytes: 5242880
-  staticFileGlobs:
-  - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
-  stripPrefix: public
-  verbose: true
+
+
+# # offline config passed to sw-precache.
+# service_worker:
+#   maximumFileSizeToCacheInBytes: 5242880
+#   staticFileGlobs:
+#   - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+#   stripPrefix: public
+#   verbose: true
+
+
+
+#启用all_minifier
+all_minifier: true
+# html压缩
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+
+# css压缩
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+    
+# js压缩
+js_minifier:
+  enable: true
+  mangle: true
+  compress:
+  exclude:
+    - '*.min.js'
+js_concator:
+  enable: false
+  bundle_path: '/js/bundle.js'
+  front: false
+  silent: false
+
+# 图片优化
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
