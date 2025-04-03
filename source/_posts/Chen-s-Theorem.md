@@ -20,17 +20,17 @@ tags:
 >
 > $\quad$ 存在无穷个自然数$n$,使得:
 >
-> $$(n, n+2) = (P_7, P'_7).$$
+> $$(n, n+2) = (\mathscr{P}_7, \mathscr{P}'_7).$$
 >
 > **Brun's sieve:**
 >
 > $\quad$ 存在无穷个素数$p$,使得:
 >
-> $$p+2 = P_7.$$
+> $$p+2 = \mathscr{P}_7.$$
 >
-> $\quad$ 其中$P_7$表示至多$7$个质因子的数.
+> $\quad$ 其中$\mathscr{P}_7$表示至多$7$个质因子的数.
 
-注:后续文中的$\mathscr{A}^{[b]}$表示的是$\mathscr{A}$中所有至多$b$个素因子的数,因此它是一个集合,而上面的$P_b$表示的是一个数,也就是$\mathscr{A}^{[b]}$中的一个元素,因此两者的含义并不相同.
+注:后续文中的$\mathscr{A}^{[b]}$表示的是$\mathscr{A}$中所有至多$b$个素因子的数,因此它是一个集合,而上面的$P=\mathscr{P}_b$表示的是一个数,也就是$\mathscr{A}^{[b]}$中的一个元素,因此两者的含义并不相同.
 
 以及除此之外,我也终于是开启了对Serre的*A Course in Arithmetic*的学习.其实现在学起来比起当时大三的时候要顺利不少,虽然在p-adic一节还是给我整了不少花活,让我花了不少时间去理解.
 
@@ -155,7 +155,7 @@ $\quad$ 于是便可证明推论. <span style="float: right"> $\square$ </span>
 
 紧接着,我们先承认以下线性筛法的结果,也就是
 
-> **定理1(Jurkat-Richert):**
+> **定理1(Jurkat-Richert定理):**
 >
 > 在条件$\Omega_1$和$\Omega_2(1)$成立的条件下,设$2 \le z \le X$,则有以下估计
 >
@@ -435,6 +435,136 @@ $\quad$ 利用软件可计算得到上述数值解约为$4.278$.
 $\quad$ 于是结合(4.4)与(4.5)的数值解的结果,便可证得定理"1+3".<span style = "float: right"> $\square$ </span>
 
 从上面的证明中可以发现的是,加权之后我们需要对更多的部分进行估计,并且余项也变得复杂起来,因此也要小心估计余项,而不能直接舍去.
+
+#### 陈景润定理
+
+最后我们该证明陈景润定理了,而证明的关键便是,陈景润提出了一个新的加权筛法,它能将$p+p_1p_2p_3$形式的数给剔除,从而证得了定理"1+2".首先我们便先了解一下陈景润权函数.
+
+##### 陈景润权函数
+
+> **引理2:**
+>
+> $\quad$ 设$b$是正整数,$v$是正数,且有$v > b \ge 2$,我们有
+>
+> $$|\mathscr{A}^{[b-1]}| \ge \sum_{\substack{ a \in \mathscr{A} \\ (a, P(N^{\frac{1}{v}})) = 1 }} \left( 1 - \frac{1}{2} \rho_1(a) - \frac{1}{2} \rho_2(a) \right) + O\left( N^{1 - \frac{1}{v}} \right), \quad (5.1)$$
+>
+> $\quad$ 其中$\rho_1$便是引理1中的Kuhn权函数,而$\rho_2(a) = 1$当且仅当
+>
+> $$a = p_1 p_2 \cdots p_b, \quad N^{\frac{1}{v}} \le p_1 < N^{\frac{1}{b}} \le p_2 < \cdots < p_b, \quad (a, N) = 1.$$
+
+**直观理解:**
+
+$\quad$ 从$\rho_2$的构造可以知道,我们的想法就是先用$\rho_1$筛掉过于臃肿的数,最后再用$\rho_2$筛掉那些有且仅有$b$个不同素因子的数,从而留下的元素自然便是在$\mathscr{A}^{[b-1]}$中.
+
+$\quad$ 并且引理2的证明也与引理1差不多.略有不同的地方就是在最后(2)处的讨论.
+
+$\quad$ 在此处,若$\nu(a) \ge b$,则必然有$\rho_1(a) \ge 1.$
+
+$\qquad$ (i)若$\rho_1(a) \ge 2$,则肯定有
+
+$$\lambda^{(b-1)}(a) = 0 \ge 1 - \frac{1}{2}\rho_1(a) - \frac{1}{2}\rho_2(a),$$
+
+$\qquad$ (ii)若$\rho_1(a) = 1$,则此时$a$的素因子必各不相同,故有$\rho_2(a) = 1$,从而
+
+$$\lambda^{(b-1)}(a) = 1 - \frac{1}{2}\rho_1(a) - \frac{1}{2}\rho_2(a) = 0.$$
+
+$\quad$ 于是便也能够证得引理2.可以知道的是,在引理2中,我们对$a$的素因子有了更加严格的限制,从而能做出更强的结果.
+
+##### 证明陈景润定理
+
+> **陈景润定理:**
+>
+> $\quad$ 命题"1+2"成立,更准确地,我们有
+>
+> $$|\mathscr{A}^{[2]}| > 0.62 C(N) \frac{N}{\log^2 N}.$$
+
+**简要证明:**
+
+$\quad$ 在引理中,我们仍然取$b = 3,\ v = 10$,并且结合定理"1+3"的结果,我们有
+
+$$|\mathscr{A}^{[2]}| \ge 2.64 (1+o(1)) C(N) \frac{N}{\log^2 N} + O\left(\frac{N}{\log^3 N}\right) - \frac{1}{2} S_2, \quad (5.2)$$
+
+$\quad$ 其中
+
+$$\begin{split}
+    S_2 & = \sum_{\substack{(p_1p_2, N) = 1 \\ N^{\frac{1}{10}} \le p_1 < N^{\frac{1}{3}} \le p_2 < \left(\frac{N}{p_1}\right)^{\frac{1}{2}} }} \sum_{\substack{ a \in \mathscr{A},\ a = p_1p_2p_3 \\ \\ p_2 < p_3,\ p_3 \nmid N }} 1 \\
+    \\
+    & = \sum_{\substack{(p_1p_2, N) = 1 \\ N^{\frac{1}{10}} \le p_1 < N^{\frac{1}{3}} \le p_2 < \left(\frac{N}{p_1}\right)^{\frac{1}{2}} }} \sum_{\substack{ p = N - p_1p_2p_3 \\ \\ p_2 < p_3 < \frac{N}{p_1 p_2}, p_3 \nmid N }} 1.
+\end{split}$$
+
+$\quad$ 于是我们又将$S_2$转化成了求素数$p$的个数的问题,因此我们再构造与之相关的筛函数,再用Selberg上界筛法来进行估计.我们构造如下
+
+$$\mathscr{E} = \left\{ e : e = p_1 p_2, p_1 < N^{\frac{1}{3}} \le p_2 < \left(\frac{N}{p_1}\right)^{\frac{1}{2}}, (p_1 p_2, N)=1 \right\},$$
+
+$$\mathscr{L} = \{ l : l = N - ep, e \in \mathscr{E}, ep \le N \}.$$
+
+$\quad$ 从而$S_2$的大小是不超过$\mathscr{L}$中的素数个数.并且
+
+$$|\mathscr{E}| < N^{\frac{2}{3}},\quad e \ge N^{\frac{13}{30}},\quad \forall e \in \mathscr{E}.$$
+
+$\quad$ 则推出$\mathscr{L}$中不超过$N^{\frac{13}{30}}$的元素个数为$O(N^{\frac{2}{3}})$.于是
+
+$$S_2 \le S(\mathscr{L}; \mathfrak{P}, z) + O(N^{\frac{2}{3}}), \quad z \le N^{\frac{13}{30}}. \quad (5.3)$$
+
+$\quad$ 对于这个筛函数,我们取
+
+$$X = \sum_{e \in \mathscr{E}} \text{li} \frac{N}{e}, \quad \omega(d) = \frac{d}{\varphi(d)} \text{ if } \mu(d) \neq 0,\ (d, N) = 1.$$
+
+$\quad$ 从而取
+
+$$B_1 = 248,\quad z^2 = D = N^{\frac{1}{2}} \log^{-B_1} N,$$
+
+$\quad$ 由Selberg上界筛法便可以得到
+
+$$S(\mathscr{L}; \mathfrak{P}, D^{\frac{1}{2}}) \le 8(1 + o(1)) C(N) \frac{X}{\log N} + R_1 + R_2, \quad (5.4)$$
+
+$\quad$ 我这里直接承认以下对余项的估计(其中$R_1$的估计需要用到稍微推广一点后的Bombieri-Vinogradov定理),即
+
+$$\begin{split}
+    R_1 & = \displaystyle\sum_{\substack{ d \le D \\ (d, N) = 1 }} \mu^2(d) 3^{\nu(d)} \left| \sum_{\substack{ e \in \mathscr{E} \\ (e, d) = 1 }} E(N; e, d, N) \right| \\ 
+    \\
+    & = \displaystyle\sum_{\substack{ d \le D \\ (d, N) = 1 }} \mu^2(d) 3^{\nu(d)} \left| \sum_{\substack{ e \in \mathscr{E} \\ (e, d) = 1 }} \left( \sum_{\substack{ ed \le N \\ ep \equiv N \text{ mod d} }} 1 - \frac{1}{\varphi(d)} \text{li} \frac{N}{e} \right) \right| \\
+    \\
+    & \ll \frac{N}{\log^3 N}. \\
+    \\
+    R_2 & = \sum_{\substack{ d \le D \\ (d, N) = 1 }} \frac{\mu^2(d) 3^{\nu(d)}}{\varphi(d)} \sum_{\substack{ e \in \mathscr{E} \\ (e, d) > 1 }} \text{li} \frac{N}{e} \ll N^{\frac{9}{10} + 3\epsilon}.
+\end{split}$$
+
+$\quad$ 最后再(5.4)中,我们还需要确定$X$,而其结果可以由素数定理表示为
+
+$$\begin{split}
+    X & = (1 + o(1)) \sum_{e \in \mathscr{E}} \frac{N}{e \log \frac{N}{e}} \\
+    \\ 
+    & = (1 + o(1)) \frac{N}{\log N} \int_{1/10}^{1/3} \frac{\log(2 - 3u)}{u(1 - u)} \text{d} u \\
+    \\
+    & \approx 0.491 (1 + o(1)) \frac{N}{\log N}. \quad (5.5)
+\end{split}$$
+
+$\quad$ 最后综合(5.2)-(5.5)便可以证得陈景润定理.<span style = "float: right"> $\square$ </span>
+
+##### 孪生素数猜想版本的陈景润定理
+
+上面关于Goldbach猜想版本的陈景润定理的证明过程几乎可以完全照搬到孪生素数猜想上,唯一的区别在于我们初始筛函数的一些信息需要更改,事实上这个结果也还可以用在很多其他关于素数猜想的弱版本上.而这就是将筛法过程抽象出来的一个优势所在,我只需要验证我更改的这些信息是否满足我证明过程中需要的条件即可.下面就是孪生素数猜想版本的陈景润定理
+
+> **陈景润定理:**
+>
+> $\quad$ 存在无穷多个素数$p$,使得$p+2$至多是两个素数的乘积.
+>
+> $\quad$ 更精确地,我们有
+>
+> $$\sum_{\frac{x}{2} \le n \le x - 2} \Lambda(n) \mathbf{1}_{\mathscr{A}^{[2]}} (n+2) \mathbf{1}_{(n+2, P(x^{1/8})) = 1} \gg \frac{x}{\log x}.$$
+
+上面的版本是Terence Tao博客上$^{[4]}$的版本,或者也可以参考Terence Tao参考的Friedlander-Iwaniec的书,但这本书我还并没有看.👻
+
+#### 总结
+
+GPY的筛法主要是对孪生素数猜想起作用的,其主要想法是对Selberg筛自然的一个权(并不是Kuhn和陈景润后续对Selberg筛法添加的权)进行了一个截断,其成功依赖于对admissible sets的分析,而这种结构更适用于素数间隔问题,而非素数的加法组合.并且GPY筛法同样没有办法绕过奇偶性检验的障碍(这个好像在Polymath的论文中有所介绍),因此GPY筛法在Goldbach猜想并没有直接的应用(根据我浅薄的认知应该是还没有的🥺).因此接下来应该会继续回到孪生素数的研究中.
+
+那么接下来需要更新的内容至少还有一篇Maynard的成果.~~Polymath的变分想法意思有点太变态了,可能就Pass了~~其次我还是想把Halberstam的第二章,也就是引言部分的东西写一点.以及就是对于Serre的GTM 7,内容如果不做点整理和分析的话,感觉会和看筛法圣经一样根本不入脑,因为这些都没有习题啊.但无论是哪个,只能说都是一场硬战了.
+
+<center>
+<img src="/image/chen-s-theorem/T2.gif" width="30%">
+</center>
 
 #### 参考文献
 
