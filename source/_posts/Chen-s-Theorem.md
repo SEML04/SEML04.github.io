@@ -266,7 +266,7 @@ $$\begin{split}
     \\
      & \qquad \qquad \times \left\{ f(\frac{v}{2} - \frac{v\log\log N}{2\log N}) + O(\frac{A v^{1/14}}{\log^{1/14} N}) \right\} \\
     \\
-    & = 2vC(N)\frac{N}{\log^2 N}\text{e}^{-\gamma}f\left( \frac{v}{2} \right)(1 +o(1)),
+    & = 2vC(N)\frac{N}{\log^2 N}\text{e}^{-\gamma}f\left( \frac{v}{2} \right)(1 +o(1)), \quad (3.2)
 \end{split}$$
 
 $\quad$ 其中$v = b + 1$,然后由(2.10)处可得到$f(u)$的一些信息,即有
@@ -354,11 +354,11 @@ $$\mu^2(a) = 1,\ (a, P(N^{\frac{1}{v}})) = 1,\ (a, N) = 1$$
 
 $\quad$ 的条件下,我们有
 
-$\quad$ (1)若$\nu(a) \le b$,有
+$\qquad$ (1)若$\nu(a) \le b$,有
 
 $$\lambda^{[b]}(a) = 1 \ge 1 - \frac{1}{2} \rho_1(a),$$
 
-$\quad$ (1)若$\nu(a) \ge b + 1$,则$\rho_1(a) \ge 2$,于是有
+$\qquad$ (2)若$\nu(a) \ge b + 1$,则$\rho_1(a) \ge 2$,于是有
 
 $$\lambda^{[b]}(a) = 0 \ge 1 - \frac{1}{2} \rho_1(a).$$
 
@@ -382,7 +382,59 @@ $$|\mathscr{A}^{[3]}| \ge S(\mathscr{A}; \mathfrak{P}, N^{\frac{1}{10}}) - \frac
 
 $\quad$ 其中
 
-$$S_1 = \sum_{\substack{ N^{1/10} \le p_1 < N^{1/3} \\ p_1 \nmid N }} S(\mathscr{A}_{p_1}; \mathfrak{P}, N^{\frac{1}{10}}).$$
+$$S_1 = \sum_{\substack{ p_1 \nmid N \\ N^{1/10} \le p_1 < N^{1/3} }} S(\mathscr{A}_{p_1}; \mathfrak{P}, N^{\frac{1}{10}}).$$
+
+$\quad$ 由定理"1+4"的证明中,也就是(3.2),我们得知
+
+$$S(\mathscr{A}; \mathfrak{P}, N^{\frac{1}{10}}) \ge 20C(N) \frac{N}{\log^2 N} \text{e}^{-\gamma} f(5) (1 + o(1)), \quad (4.4)$$
+
+$\quad$ 其中$5\text{e}^{-\gamma} f(5)$是可以算出近似值的,由软件计算出的数值解约为$2.802$.
+
+$\quad$ 紧接着,我们再利用上界筛(2.5)来估计$S_1$中每一项的上界,我们可以得到的是
+
+$$\begin{split}
+    S(\mathscr{A}_{p_1}; \mathfrak{P}, N^{\frac{1}{10}}) & \le 20C(N) \frac{N}{\log^2 N} \frac{\text{e}^{-\gamma}}{p_1} F\left(5 - 10\frac{\log p_1}{\log N}\right) (1 + o(1)) \\
+    \\
+    & \qquad\qquad + \sum_{\substack{d < \xi^2 \\ d | P(N^{1/10})}} 3^{\nu(d)} |r_{p_1 d}|,
+\end{split}$$
+
+$\quad$ 其中
+
+$$\xi^2 = \frac{1}{p_1} N^{\frac{1}{p_1}} \log^{-38} N,\quad N^{\frac{1}{10}} \le p_1 < N^{\frac{1}{3}},\quad p_1 \nmid N.$$
+
+$\quad$ 于是最后得到
+
+$$\begin{split}
+    \displaystyle S_1 \le 20 (1 + o(1)) C(N) & \frac{N}{\log^2 N} \text{e}^{-\gamma} \sum_{\substack{ p_1 \nmid N \\ N^{1/10} \le p_1 < N^{1/3} }} \frac{1}{p_1} F\left(5 - 10\frac{\log p_1}{\log N}\right)  \\
+    \\
+    & + \sum_{d \le N^{\frac{1}{2}}\log^{-38} N } \mu^2(d) 3^{\nu(d)} |r_d|,
+\end{split}$$
+
+$\quad$ 上式中,对余项可以用Bombieri-Vinogradov定理的推论给限制住,以及求和式中的$p_1$可以用素数定理转换为变量$u$,从而将求和式变为积分式.也就是
+
+$$\begin{split}
+    \displaystyle S_1 \le 20 (1 + o(1)) C(N) & \frac{N}{\log^2 N} \text{e}^{-\gamma} \int_{N^{1/10}}^{N^{1/3}} \frac{1}{u\log u} F\left(5 - 10\frac{\log u}{\log N}\right) \text{d}u \\
+    \\
+    & + O\left( \frac{N}{\log^3 N} \right),
+\end{split}$$
+
+$\quad$ 其中由于$N^{\frac{1}{10}} \le u < N^{\frac{1}{3}}$,故
+
+$$\frac{5}{3} < 5 - 10\frac{\log u}{\log N} \le 4,$$
+
+$\quad$ 再结合函数$F$的性质,因此
+
+$$\begin{split}
+    5 \text{e}^{-\gamma} \int_{N^{1/10}}^{N^{1/3}} \frac{1}{u\log u} & F\left(5 - 10\frac{\log u}{\log N}\right) \text{d}u = 2 \int_3^4 \frac{5 \text{d}t}{t(5-t)} \int_2^{t-1} \frac{\log(s-1)}{s} \text{d}s \\
+    \\
+    & \qquad\qquad + 2\log 8. \quad (4.5)
+\end{split}$$
+
+$\quad$ 利用软件可计算得到上述数值解约为$4.278$.
+
+$\quad$ 于是结合(4.4)与(4.5)的数值解的结果,便可证得定理"1+3".<span style = "float: right"> $\square$ </span>
+
+从上面的证明中可以发现的是,加权之后我们需要对更多的部分进行估计,并且余项也变得复杂起来,因此也要小心估计余项,而不能直接舍去.
 
 #### 参考文献
 
