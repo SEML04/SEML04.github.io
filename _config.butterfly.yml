@@ -1427,3 +1427,21 @@ categoryBar:
 #   optimizationLevel: 2
 #   pngquant: false
 #   progressive: false
+
+
+
+# hexo-generator-sitemap
+## https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+  # template: ./sitemap_template.xml
+  rel: true
+  tags: false
+
+# Google Webmaster tools verification.
+# See: https://developers.google.com/search
+google_site_verification: YLwhFberPAEMglxPns-Go4KGLq2zNlANxR4h0tQHg50
+
+# Bing Webmaster tools verification.
+# See: https://www.bing.com/webmasters
+bing_site_verification: 3B1DDC4139178641D1E60BFC7B8E7A9A
