@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://seml04.github.io/googled7f5ab2a1f425205.html</loc>
+    
+    <lastmod>2025-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/2025/04/03/notes-anout-sieve-methods-4/</loc>
     
     <lastmod>2025-04-03</lastmod>
@@ -257,7 +266,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
+    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -265,20 +274,6 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Continued-Fractions/</loc>
-    <lastmod>2025-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
-    <lastmod>2025-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -293,6 +288,20 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Paper-Reading/</loc>
+    <lastmod>2025-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
+    <lastmod>2025-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -369,14 +378,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
+    <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Sifting-Function/</loc>
+    <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -390,14 +399,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
+    <loc>http://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
+    <loc>http://seml04.github.io/tags/Sifting-Function/</loc>
     <lastmod>2025-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
