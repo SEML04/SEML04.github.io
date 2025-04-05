@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@neilsustc/markdown-it-katex": "^1.0.0",
-    "gulp": "^5.0.0",
     "hexo": "^7.3.0",
     "hexo-browsersync": "^0.3.0",
     "hexo-deployer-git": "^4.0.0",
@@ -32,12 +31,5 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "live2d-widget-model-koharu": "^1.0.5"
-  },
-  "devDependencies": {
-    "gulp-clean-css": "^4.3.0",
-    "gulp-fontmin": "^0.7.4",
-    "gulp-html-minifier-terser": "^7.1.0",
-    "gulp-htmlclean": "^2.7.22",
-    "gulp-terser": "^2.1.0"
   }
 }
