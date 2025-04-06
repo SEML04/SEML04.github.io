@@ -550,11 +550,31 @@ $\quad$ 最后综合(5.2)-(5.5)便可以证得陈景润定理.<span style = "flo
 >
 > $\quad$ 存在无穷多个素数$p$,使得$p+2$至多是两个素数的乘积.
 >
-> $\quad$ 更精确地,我们有
+> $\quad$ 事实上,我们有以下更强的结论
 >
-> $$\sum_{\frac{x}{2} \le n \le x - 2} \Lambda(n) \mathbf{1}_{\mathscr{A}^{[2]}} (n+2) \mathbf{1}_{(n+2, P(x^{1/8})) = 1} \gg \frac{x}{\log x}.$$
+> $$\sum_{x/2 \le n \le x - 2} \Lambda(n) \mathbf{1}_{\mathscr{A}^{[2]}} (n+2) \mathbf{1}_{(n+2, P(x^{1/8})) = 1} \gg \frac{x}{\log x},\quad (5.6)$$
+>
+> $\quad$ 用我稍微更熟悉一点的语言,其表示为
+>
+> $$\sum_{\substack{x/2 \le n \le x - 2 \\ n + 2 \in \mathscr{A}^{[2]} \\ (n + 2, P(x^{1/8})) = 1}} \Lambda(n) \gg \frac{x}{\log x}.$$
 
-上面的版本是Terence Tao博客上$^{[4]}$的版本,或者也可以参考Terence Tao参考的Friedlander-Iwaniec的书,但这本书我还并没有看.👻
+上面的版本是Terence Tao博客上$^{[4]}$的版本,或者也可以参考Terence Tao参考的Friedlander-Iwaniec的书,但这本书我还并没有看.😫但我可以简要说明以下上式为什么比陈景润定理更强.
+
+**简要解释:**
+
+$\quad$ 我们直译公式(5.6),实际上是说:存在无穷多个可表示为素数幂的$n$,也就是$n = p^k$,使得$n+2$至多表示为两个素数的乘积,并且素因子都不小于$x^{\frac{1}{8}}$.
+
+$\quad$ 因此我们需要说明,在(5.6)中,$k \ge 2$的求和部分是可以忽略的.也就是要说明
+
+$$\sum_{\substack{n = p^k,\ k \ge 2 \\ x/2 \le n \le x - 2}} \Lambda(n) \mathbf{1}_{\mathscr{A}^{[2]}} (n+2) \mathbf{1}_{(n+2, P(x^{1/8})) = 1} = o(\frac{x}{\log x}),\quad (5.7)$$
+
+$\quad$ 在此处,我们可以知道,若$k \ge 2$,则必然有$p \le \sqrt{x}$,此时$p^{k-1} < x/2 \le p^k \le x-2$,于是$(5.7)$的左侧小于
+
+$$\sum_{p \le \sqrt{x}} \log p = \sqrt{x} + O(1) = o(\frac{x}{\log x}),\quad (5.8)$$
+
+$\quad$ 而$(5.8)$是就是Chebyshev第一函数的结果,其在前面的博客[围绕Brun定理展开的素数指标求和估计式](http://localhost:4000/2025/02/15/Analytical-number-theory-1/)便有介绍.
+
+$\quad$ 于是我们在(5.6)中舍去$k \ge 2$的部分,便可以得到陈景润定理了.<span style = "float: right"> $\square$ </span>
 
 #### 总结
 

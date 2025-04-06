@@ -37,5 +37,5 @@ $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 那么我们就正式开始组合筛法的旅途了!!!
 
 <center>
-<img src="/image/chen-s-theorem/T1.gif" width="30%">
+<img src="/image/notes-about-sieve-methods-4/T1.gif" width="30%">
 </center>
