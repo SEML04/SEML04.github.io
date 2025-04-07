@@ -56,7 +56,7 @@ $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 >
 > $\quad$ 那么筛法问题便是估计
 >
-> $$\sum_{n \in \mathbb{Z}} a_n \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} \quad (1.1)$$
+> $$\sum_{n \in \mathbb{Z}} a_n \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} \quad (2.1)$$
 >
 > $\quad$ 的最优的上下界.
 
@@ -64,13 +64,13 @@ $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 
 > **问题2(对偶筛法问题):**
 >
-> $\quad$ 在问题1可行($(a_n)_{n \in \mathbb{Z}}$存在)的情况下,我们定义一个上界筛为
+> $\quad$ 在问题1可行,也就是$(a_n)_{n \in \mathbb{Z}}$存在的情况下,我们定义一个上界筛为
 >
 > $$\nu^{+} = \sum_{d \in D} \lambda_d^{+} \mathbf{1}_{E_d},$$
 >
 > $\quad$ 其中$\lambda_d^{+} \in \mathbb{R}$,并且满足
 >
-> $$\nu^{+} \ge \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (1.2)$$
+> $$\nu^{+} \ge \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (2.2)$$
 >
 > $\quad$ 类似的,我们也可以定义下界筛为
 >
@@ -78,8 +78,8 @@ $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 >
 > $\quad$ 其中$\lambda_d^{-} \in \mathbb{R}$($\lambda_d^{-}$可以取到负数),并且满足
 >
-> $$\nu^{-} \le \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (1.3)$$
+> $$\nu^{-} \le \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (2.3)$$
 >
-> $\quad$ 于是我们问题1中求(1.1)的最优上下界问题转化为求$\sum_{d \in D} \lambda_d^{+} X_d$的下确界与$\sum_{d \in D} \lambda_d^{-} X_d$的上确界问题.
+> $\quad$ 于是我们问题1中求(2.1)的最优上下界问题转化为求$\sum_{d \in D} \lambda_d^{+} X_d$的下确界与$\sum_{d \in D} \lambda_d^{-} X_d$的上确界问题.
 
 当问题1可行的情况下,问题2中的$\lambda_d^{\pm}$是必然存在的,因为有最平凡的情况,也就是$\lambda_d^{+}(n) = 1$以及$\lambda_d^{-}(n) = 0$.而我们很多的筛法工具,实际上就是对$\lambda_d^{\pm}$有一个不同的选取,而组合筛法,就是$\lambda_d^{\pm}$只取$\{ -1, 0, 1 \}$情况下对应的筛法理论.
