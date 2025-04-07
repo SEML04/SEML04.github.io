@@ -334,20 +334,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Elementary-Number-Theory/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -362,7 +348,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
+    <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -376,14 +369,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
+    <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -398,6 +384,20 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Sifting-Function/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
