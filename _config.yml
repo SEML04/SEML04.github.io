@@ -382,8 +382,16 @@ githubcalendar:
 
 
 markdown:
- plugins:
-   - plugin:
-     name: '@neilsustc/markdown-it-katex'
-     options:
-       strict: false
+  plugins:
+    - plugin:
+      name: '@neilsustc/markdown-it-katex'
+      options:
+        strict: false
+
+
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
