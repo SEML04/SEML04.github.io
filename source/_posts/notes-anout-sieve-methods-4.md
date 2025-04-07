@@ -158,7 +158,7 @@ $$(-1)^{v-1}\sigma_v(d) \le 0,\ \forall d \ge 1,\ d | P(z),$$
 
 $$(-1)^{v-1} \mu(d) (\chi_v(d) - \chi_v(pd)) \ge 0,\quad (2.11)$$
 
-其中$pd | P(z),\ p < q(d)$,再由上一篇博客中的假设
+其中$pd | P(z),\ p < q(d)$,再由上一篇读书笔记中的假设
 
 $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 
@@ -170,4 +170,8 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 >
 > $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|\end{split}.\quad (2.12)$$
 
-于是我们现在的目的便是,在$\sum_{d | P(z)} |\chi_v(d)| |R_d|$充分小的情况下,让$\sum_{d | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d}$尽可能小,而让$\sum_{d | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d}$尽可能大.
+而在$Omega_1$条件下,我们可以得到
+
+$$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),$$
+
+而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.

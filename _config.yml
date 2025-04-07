@@ -392,6 +392,7 @@ markdown:
 
 search:
   path: search.xml
-  field: post
-  format: html
+  field: all # post
+  # format: html
+  content: true
   limit: 10000
