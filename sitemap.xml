@@ -257,7 +257,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
+    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -271,14 +271,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
+    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
+    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -320,6 +320,13 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Character/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Algebra/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -327,7 +334,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Character/</loc>
+    <loc>http://seml04.github.io/tags/Elementary-Number-Theory/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Chinese-Remainder-Theorem/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -348,21 +362,14 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Gauss-Sum/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Elementary-Number-Theory/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Chinese-Remainder-Theorem/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -391,13 +398,6 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Gauss-Sum/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
