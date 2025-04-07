@@ -122,7 +122,7 @@ $$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_
 
 其中$\mathfrak{P}^{(d)} = \{ p : p \in \mathfrak{P}, p \nmid d \}$.
 
-接下来再介绍几个定义.我们定义$q(d)$为$d$<span style="color: rgb(230,51,51)">最小的</span>素因子,并且<span style="color: rgb(230,51,51)">规定$q(1) = \infty$</span>,其次定义
+接下来再介绍几个定义.我们定义$q(d)$为$d$中<span style="color: rgb(230,51,51)">最小的</span>素因子,并且<span style="color: rgb(230,51,51)">规定$q(1) = \infty$</span>,其次定义
 
 $$P_{z_1, z} = \prod_{\substack{p \in \mathfrak{P} \\ z_1 \le p < z}} p = \frac{P(z)}{P(z_1)},\ 2 \le z_1 \le z,$$
 
@@ -140,7 +140,7 @@ $$P_{z_1, z} = \prod_{\substack{p \in \mathfrak{P} \\ z_1 \le p < z}} p = \frac{
 >
 > $\quad$ 而在后边的内容中(不在本章),我们基于(2.10)还会证明以下更强的结论:
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) = S(\mathscr{A}; \mathfrak{P}, z_1) - \sum_{\substack{z_1 \le p < z \\ p \in \mathfrak{P}}} S(\mathscr{A}_p; \mathfrak{P}, p),\ 2 \le z_1 \le z.\quad (2.11)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) = S(\mathscr{A}; \mathfrak{P}, z_1) - \sum_{\substack{z_1 \le p < z \\ p \in \mathfrak{P}}} S(\mathscr{A}_p; \mathfrak{P}, p),\ 2 \le z_1 \le z.$$
 
 可以发现的是,命题3中的三个结论都是将一个大小为$z$的筛变成有限个大小为$p$的筛,筛的大小一下子降了下来,在某种程度上对于余项的控制也更加有利了.并且其还有另外一个很重要的作用,那就是我们能够由$S(\mathscr{A}_p; \mathfrak{P}, p)$的上界筛得到$S(\mathscr{A}; \mathfrak{P}, z)$的下界筛,而这种方法也是极为一种有效并且简便的方法了.
 
@@ -168,7 +168,7 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 >
 > $\quad$ 我们可以得到筛函数的一个上下界为
 >
-> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|\end{split}.\quad (2.12)$$
+> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d| \quad (2.12) \end{split}.$$
 
 而在$Omega_1$条件下,我们可以得到
 
@@ -176,21 +176,21 @@ $$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < 
 
 而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.
 
-于是我们现在的目的就是让
+于是我们<span style="color: rgb(139,0,255)">现在的目的</span>就是让
 
 $$\sum_{d | P(z)} |\chi_v(d)| |R_d| \quad (2.14)$$
 
-充分小的同时,使得
+$\quad$ 充分小的同时,使得
 
-$$|\sum_{1 < \delta | P(z)} \sigma_v(\sigma) g(\sigma)| \quad (2.15)$$
+$$\left|\sum_{1 < \delta | P(z)} \sigma_v(\sigma) g(\sigma) \right| \quad (2.15)$$
 
-也足够小.
+$\quad$ 也足够小.
 
-而且为了得到一个正的下界,我们再要求
+$\quad$ 而且为了得到一个正的下界,我们再要求
 
 $$1 + \sum_{1 < \delta | P(z)} \sigma_2(\delta) g(\delta) > 0. \quad (2.16)$$
 
-而要满足(2.14)-(2.16),尤其是(2.16),是一个相当困难的问题,我们还需要对$\chi_v$提出更多的要求.而当$\chi_v(n)$只能取$\{0, 1\}$时,这种情况下的筛法理论便称之为**组合筛法**.
+而要满足(2.14)-(2.16),尤其是(2.16),是一个相当困难的问题,我们还需要对$\chi_v$提出更多的要求.而当$\chi_v(n)$只能取$\{0, 1\}$时,这种情况下的筛法理论便称之为**组合筛法**.Tao中的$\lambda_d^{\pm}$差不多就是$\mu(d) \chi_v(d)$,因此这两者本质上的内涵与想法是一致的.
 
 ##### 组合筛法的一些细节要点
 
@@ -198,4 +198,31 @@ $$1 + \sum_{1 < \delta | P(z)} \sigma_2(\delta) g(\delta) > 0. \quad (2.16)$$
 
 $$\mathscr{D}_v = \{ d : d | P(z), d < y_v \},$$
 
-其中$y_v$是未知的.实际上,对于Brun筛法而言,我们需要$\mathscr{D}_v$是thin的,用现代筛法的观点来看,我们需要对Eratosthenes-Legendre筛法的权函数--也就是$\mu(d)$,进行截断(这只是我目前的一点认识,可能不对).
+其中$y_v$是未知的.实际上,对于Brun筛法而言,我们需要$\mathscr{D}_v$是thin的,用现代筛法的观点来看,我们需要对Eratosthenes-Legendre筛法的权函数--也就是$\mu(d)$,进行截断(这只是我目前的一点认识,可能不对).此外,$\chi_v$取值为$1$的数应该得落在$\mathscr{D}_v$,但不要求是整个集合.
+
+此外,若有$pd | P(z),\ p < q(d)$,那么$\chi_v(qd)$与$\chi_v(d)$的取值之间还<span style="color: rgb(230,51,51)">需要满足(2.11)的要求</span>.我们将这些条件总结如下:
+
+> **定义5:**
+>
+> $\quad$ 满足以下条件的$\chi_v$能引导出一个组合筛法:
+>
+> $$\chi_v(1) = 1, \quad (2.17)$$
+>
+> $$\chi_v(d) = 1 \text{ or } 0, \text{ if } d | P(z), \quad (2.18)$$
+>
+> $$\chi_v(d) = 1 \Rightarrow \chi_v(t) = 1,\ \forall t | d, d | P(z), \quad (2.19)$$
+>
+> $$\chi_v(d) = 1,\ \mu(d) = (-1)^{v} \Rightarrow \chi_v(pt) = 1,\ \forall pt | P(z), p < q(d). \quad (2.20)$$
+>
+> $\quad$ 并且容易验证的是,(2.17)-(2.20)可以浓缩为以下一个条件式:
+>
+> $$\chi_v(t) - \chi_v(pt) = (-1)^{v-1} \mu(t) \chi_v(t) (1 - \chi_v(pt)).\ \forall pt | P(z), p < q(d). \quad (2.21)$$
+
+我们再定义$p^+$为<span style="color: rgb(230,51,51)">p在$\mathfrak{P}$中的下一个素数</span>,然后我们便可以证得比(2.13)更精细的结果,即在$\Omega_1$的条件下,我们有
+
+$$\begin{split}
+    & \sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} =  W(z) + (-1)^{v-1} \sum_{p < z} \frac{\omega(p) W(p)}{p} \sum_{t | P_{p^+, z}} \frac{\chi_v(t)(1 - \chi_v(pt))}{t} \omega(t).\ (2.22)
+\end{split}$$
+
+现在,我们对(2.22)中的第二部分至少有一个可以研究的手段了.
+
