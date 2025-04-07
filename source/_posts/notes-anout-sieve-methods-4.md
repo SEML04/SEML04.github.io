@@ -88,7 +88,7 @@ $$X_d = \sum_{n \in E_d} a_n = g(d)X + r_d,$$
 >
 > $\quad$ 于是我们问题1中求(2.1)的最优上下界问题转化为求$\sum_{d \in D} \lambda_d^{+} X_d$的下确界与$\sum_{d \in D} \lambda_d^{-} X_d$的上确界问题.
 
-当问题1可行的情况下,问题2中的$\lambda_d^{\pm}$是必然存在的,因为有最平凡的情况,也就是$\lambda_d^{+}(n) = 1$以及$\lambda_d^{-}(n) = 0$.而我们很多的筛法工具,实际上就是对$\lambda_d^{\pm}$有一个不同的选取,而组合筛法,就是$\lambda_d^{\pm}$只取$\{ -1, 0, 1 \}$情况下对应的筛法理论.
+当问题1可行的情况下,问题2中的$\lambda_d^{\pm}$是必然存在的,因为有最平凡的情况,也就是$\lambda_d^{+}(n) = 1$以及$\lambda_d^{-}(n) = 0$.而我们很多的筛法工具,实际上就是对$\lambda_d^{\pm}$有一个不同的选取,而**组合筛法**,就是$\lambda_d^{\pm}$只取$\{ -1, 0, 1 \}$情况下对应的筛法理论.
 
 ##### Halberstam的表述方式
 
@@ -172,6 +172,30 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 
 而在$Omega_1$条件下,我们可以得到
 
-$$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),$$
+$$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),\quad (2.13)$$
 
 而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.
+
+于是我们现在的目的就是让
+
+$$\sum_{d | P(z)} |\chi_v(d)| |R_d| \quad (2.14)$$
+
+充分小的同时,使得
+
+$$|\sum_{1 < \delta | P(z)} \sigma_v(\sigma) g(\sigma)| \quad (2.15)$$
+
+也足够小.
+
+而且为了得到一个正的下界,我们再要求
+
+$$1 + \sum_{1 < \delta | P(z)} \sigma_2(\delta) g(\delta) > 0. \quad (2.16)$$
+
+而要满足(2.14)-(2.16),尤其是(2.16),是一个相当困难的问题,我们还需要对$\chi_v$提出更多的要求.而当$\chi_v(n)$只能取$\{0, 1\}$时,这种情况下的筛法理论便称之为**组合筛法**.
+
+##### 组合筛法的一些细节要点
+
+现在我们来完善一下组合筛法中$\chi_v$还需要满足的一些条件.首先,我们定义
+
+$$\mathscr{D}_v = \{ d : d | P(z), d < y_v \},$$
+
+其中$y_v$是未知的.实际上,对于Brun筛法而言,我们需要$\mathscr{D}_v$是thin的,用现代筛法的观点来看,我们需要对Eratosthenes-Legendre筛法的权函数--也就是$\mu(d)$,进行截断(这只是我目前的一点认识,可能不对).
