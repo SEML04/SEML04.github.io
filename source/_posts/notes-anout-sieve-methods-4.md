@@ -30,7 +30,7 @@ tags:
 
 $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 
-以及在[筛法的顶峰之一 -- 陈景润定理](https://math-4-anon.top/2025/03/12/Chen-s-Theorem/)开头提到的,用Brun's sieve来证明命题"7+7"和"1+7".
+其中$\pi_2(x)$的定义就在前面的博客首段就有介绍,以及在[筛法的顶峰之一 -- 陈景润定理](https://math-4-anon.top/2025/03/12/Chen-s-Theorem/)开头提到的,用Brun's sieve来证明命题"7+7"和"1+7".
 
 当然最重要的还是组合筛法的概念和要点,以及一些重要的条件--其实说的就是你,$\Omega_2(\kappa)$,以及记录一下Rosser's sieve.
 
@@ -168,13 +168,13 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 >
 > $\quad$ 我们可以得到筛函数的一个上下界为
 >
-> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d| \quad (2.12) \end{split}.$$
-
-而在$Omega_1$条件下,我们可以得到
-
-$$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),\quad (2.13)$$
-
-而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.
+> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|. \quad (2.12) \end{split}$$
+>
+> $\quad$ 而在$\Omega_1$条件下,我们可以得到
+>
+> $$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),\quad (2.13)$$
+>
+> $\quad$ 而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.
 
 于是我们<span style="color: rgb(139,0,255)">现在的目的</span>就是让
 
@@ -198,7 +198,7 @@ $$1 + \sum_{1 < \delta | P(z)} \sigma_2(\delta) g(\delta) > 0. \quad (2.16)$$
 
 $$\mathscr{D}_v = \{ d : d | P(z), d < y_v \},$$
 
-其中$y_v$是未知的.实际上,对于Brun筛法而言,我们需要$\mathscr{D}_v$是thin的,用现代筛法的观点来看,我们需要对Eratosthenes-Legendre筛法的权函数--也就是$\mu(d)$,进行截断(这只是我目前的一点认识,可能不对).此外,$\chi_v$取值为$1$的数应该得落在$\mathscr{D}_v$,但不要求是整个集合.
+其中$y_v$是未知的.实际上,对于Brun纯筛法而言,我们需要$\mathscr{D}_v$是thin的,用现代筛法的观点来看,我们需要对Eratosthenes-Legendre筛法的权函数--也就是$\sum_{d \in \mathbb{Z}} \mu(d)$,进行截断(*这只是我目前的一点认识,可能不对*).此外,$\chi_v$取值为$1$的数应该得落在$\mathscr{D}_v$,但不要求是整个集合.
 
 此外,若有$pd | P(z),\ p < q(d)$,那么$\chi_v(qd)$与$\chi_v(d)$的取值之间还<span style="color: rgb(230,51,51)">需要满足(2.11)的要求</span>.我们将这些条件总结如下:
 
@@ -226,3 +226,76 @@ $$\begin{split}
 
 现在,我们对(2.22)中的第二部分至少有一个可以研究的手段了.
 
+#### Brun纯筛法
+
+前面也说了,Brun纯筛法中的$\lambda_d^{\pm}$是在对$\sum_{d \in \mathbb{Z}} \mu(d)$做截断,更具体地,对于$d \in D$,我们定义
+
+$$\lambda_d := \mathbf{1}_{\nu(d) \le k} \mu(d),$$
+
+则可以知道的是,当$k$为偶数的时候上述定义给出了一个上界筛系数,而在$k$为奇数时给出了一个下界筛系数.而$\nu(d) \le k$就是一种截断,它可以在一定程度上让余项的大小不会太大.而这也能说明,为什么Brun筛法是对Eratosthenes筛法最简单最直接的改进了.
+
+而我们用Halberstam的语言来说,我们也就是定义
+
+$$\mathscr{D}^{(r)} := \{ d : d | P(z), \nu(d) \le r - 1 \},\quad (3.1)$$
+
+而$\chi^{(r)}$是$\mathscr{D}^{(r)}$上的示性函数.并且令$\chi_v = \chi^{(2s + v)}$,可以验证其确实满足组合筛法中(2.21)的条件,于是我们可以得到
+
+$$\sum_{\substack{ d | P(z) \\ \nu(d) \le 2s + 1 }} \mu(d) |\mathscr{A}_d| \le S(\mathscr{A}; \mathfrak{P}, z) \le \sum_{\substack{ d | P(z) \\ \nu(d) \le 2s }} \mu(d) |\mathscr{A}_d|, \quad (3.2)$$
+
+或者可以表示为
+
+$$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{\substack{ d | P(z) \\ \nu(d) \le r - 1 }} \mu(d) |\mathscr{A}_d| + \theta \sum_{\substack{ d | P(z) \\ \nu(d) = r }} |\mathscr{A}_d|,\ |\theta| \le 1.\quad (3.3)$$
+
+而我们现在需要就(2.12),(2.13)以及(2.22)的形式,对我们选取的$\chi_v$进行进一步的计算.首先就是极具组合风格的
+
+$$\sigma^{(k)} := \sum_{\substack{ d | n \\ \nu(d) \le k - 1}} \mu(d) = (-1)^{k - 1} \binom{v-1}{k-1},$$
+
+于是得到有
+
+$$|\sigma^{(r)}(n)| \le \binom{\nu(n)}{r},\ \forall n > 1,$$
+
+再利用收敛级数和,暴力放缩,大胆估计等一些**简单**的计算,我们最终得到
+
+> **命题6:**
+>
+> $\quad$ 在\Omega_0,\Omega_1和R的条件下,我们有
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{(A_0A_1/\lambda) \cdot (\log\log z + 1)} \right) \\& + \theta' z^{(A_0A_1/\lambda) \cdot (\log\log z + 1)}, \quad (3.4)\end{split}$$
+>
+> $\quad$ 其中$A_0,\ A_1$是绝对常数,$|\theta|$,$|\theta'| \le 1$,且
+>
+> $$0 < \lambda \text{e}^{1 + \lambda} \le 1.$$
+>
+> $\quad$ 特别地,当我们取$\log z \le \sqrt{\log X}$,以及取
+>
+> $$\frac{1}{\lambda} = \frac{1}{2A_0A_1} \frac{\log X}{\log z (\log\log z + 1)},$$
+>
+> $\quad$ 此时(3.4)可以写成
+>
+> $$S(\mathscr{A}; \mathfrak{P}, z) = X W(z) \left( 1 + \theta \text{e}^{- \sqrt{\log X}} \right) + \theta' X^{\frac{1}{2}}.\quad (3.5)$$
+
+回顾我们之前的Eratosthenes-Legendre筛法,在那里我们的$z$只能取$\log\log X$阶,而我们仅仅只做了一次简单的截断(~~虽然计算的过程有点煎熬~~),我们此时的$z$已经可以取到$\log X$的任意幂次了,虽然仍然是$X$的小量,不足以解决任何一个Landau问题(~~事实上目前也没有解决任何一个~~),但已经是一个足够大的突破了.
+
+在本节的最后,我们正式将理论投入使用,那就是Brun如何用他的纯筛法击落(~~并非击落~~)孪生素数猜想.
+
+注意到(这个Anon应该也没问题):
+
+$$|\pi_2(x)| \le S(\{ n(n+2) : n \le x \}; \mathfrak{P}_1, z) + z,$$
+
+而根据[筛法读书笔记(Sieve Methods by Halberstam) -- 筛函数与一些经典筛法例子](https://math-4-anon.top/2024/12/02/notes-about-sieve-methods-3/)的例子4可得到我们此处筛函数的基本结构,于是我们可以有
+
+> **定理7(Brun定理):**
+>
+> $\quad$ 对于孪生素数问题,我们可以得到
+>
+> $$\pi_2(x) \ll x \prod_{2 < p < z} \left( 1 - \frac{2}{p} \right) + z^{24(\log\log z + 1)}.$$
+>
+> $\quad$ 当我们取
+>
+> $$\log z = \frac{1}{25} \frac{\log x}{\log\log x},$$
+>
+> $\quad$ 我们有
+>
+> $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
+>
+> $\quad$ 并由此可以推出所有孪生素数的倒数之和是收敛的.这个推论更详细的证明过程见[围绕Brun定理展开的素数指标求和估计式](https://math-4-anon.top/2025/02/15/Analytical-number-theory-1/).
