@@ -258,7 +258,7 @@ $$|\sigma^{(r)}(n)| \le \binom{\nu(n)}{r},\ \forall n > 1,$$
 
 > **命题6:**
 >
-> $\quad$ 在\Omega_0,\Omega_1和R的条件下,我们有
+> $\quad$ 在$\Omega_0,\Omega_1$和$R$的条件下,我们有
 >
 > $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{(A_0A_1/\lambda) \cdot (\log\log z + 1)} \right) \\& + \theta' z^{(A_0A_1/\lambda) \cdot (\log\log z + 1)}, \quad (3.4)\end{split}$$
 >
@@ -298,4 +298,66 @@ $$|\pi_2(x)| \le S(\{ n(n+2) : n \le x \}; \mathfrak{P}_1, z) + z,$$
 >
 > $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 >
-> $\quad$ 并由此可以推出所有孪生素数的倒数之和是收敛的.这个推论更详细的证明过程见[围绕Brun定理展开的素数指标求和估计式](https://math-4-anon.top/2025/02/15/Analytical-number-theory-1/).
+> $\quad$ 并由此可以推出**所有孪生素数的倒数之和是收敛的**.这个推论更详细的证明过程见[围绕Brun定理展开的素数指标求和估计式](https://math-4-anon.top/2025/02/15/Analytical-number-theory-1/).
+
+#### Brun筛法
+
+Brun筛法与Brun纯筛法虽然只有一字之差,但是前者作为后者的拓展,作用要更大,并且由此能导出筛法基本引理(能加上基本两字的定理都不是什么等闲之辈).但是在此之前,我们需要对一些条件进行一些稍稍地推广.
+
+##### 条件的推广
+
+首先我们便先引入一个十分重要的条件,其可以反映筛法的某种均匀性(an "average" kind,我也不太清楚该怎么更好的表达):
+
+> **定义8:**
+>
+> $\quad$ 我们定义条件$\Omega_2(\kappa)$为
+>
+> <div style="display: flex; align*-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;"> $\displaystyle \sum_{w \le p \le z} \frac{\omega(p) \log p}{p} \le \kappa \log \frac{z}{w} + A_2,\ 2 \le w \le z,$ </span>  <span style="float: right;">$(\Omega_2(\kappa))$</span></div>
+>
+> $\quad$ 其中$\kappa$为一个正的常数,而$A_2$为一个不小于$1$的绝对常数.
+
+而我们先前定义的$\Omega_0$是要比$\Omega_2(\kappa)$更强的条件.而在$\kappa = 1$时,我们称此时的筛法为线性筛法,此时有一些另外的方法可以更高效地得到我们想要的结果.以下我们就来介绍条件$\omega_2(\kappa)$的作用.
+
+$\quad$ 在$\omega(p)$满足$\Omega_2(\kappa)$时,我们可以得到
+
+$$\sum_{p < z} \omega(p) \le (\kappa + A_2) \text{li} z + \frac{2A_2}{\log 2} \le A(2\text{li} z + 3),\quad (4.1)$$
+
+$\quad$ 其中$A = \max{\kappa, A_2}$.而当$\omega(p)$同时$\Omega_1$和$\Omega_2(\kappa)$时,我们还有以下的估计:
+
+$$\sum_{w \le p \le z}g(p) \le \kappa \log \frac{\log z}{\log w} + O\left( \frac{1}{\log w} \right),\quad (4.2)$$
+
+$\quad$ 从而由上式可以得到的是:
+
+$$\frac{W(w)}{W(z)} = O\left( \frac{\log^{\kappa} z}{\log^{\kappa} w} \right),\quad (4.3)$$
+
+$\quad$ 特别地,我们有
+
+$$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.4)$$
+
+而上述(4.1)-(4.4)这几个估计式的证明,都需要用到分部求和公式(这个又要回归到我们之前的博客中去了),$g(p)$与$\frac{\omega(p)}{p}$之间的关系等手段,此处就直接省去阐述了.总的来说,我们将条件$\Omega_0$弱化为$\Omega_2(\kappa)$后,我们的对于筛函数的估计并没有受到太大的影响,例如,我们仍然有以下与(3.4)及其相似的结果成立:
+
+> **命题9:**
+>
+> $\quad$ 在$\Omega_1,\Omega_2(\kappa)$和$R$的条件下,我们有
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{ (\kappa \log\log z + c_0)/\lambda } \right) \\& + \theta' z^{ (\kappa \log\log z + c_0)/\lambda }, \quad (4.5)\end{split}$$
+>
+> $\quad$ 其中$c_0$是与$A_0,\ A_1,\ \kappa$有关的常数,$|\theta|$,$|\theta'| \le 1$,且
+>
+> $$0 < \lambda \text{e}^{1 + \lambda} \le 1.$$
+
+接下来,在对余项的条件$R$进行一定程度的推广.我们有
+
+> **定义10:**
+>
+> $\quad$ 我们定义条件$R_0$为
+>
+> <div style="display: flex; align*-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;"> $\displaystyle |R_d| \le L \left( \frac{X\log X}{d} + 1 \right) {A_0'}^{\nu(d)},\ \mu(d) \neq 0,\ (d, \overline{\mathfrak{P}}) = 1,$ </span>  <span style="float: right;">$(R_0)$</span></div>
+>
+> $\quad$ 其中$L$是不小于$1$的常数数,而$A_0'$也是不小于$1$的绝对常数.
+>
+> $\quad$ 我们还定义条件$R_1(\kappa, \alpha)$为
+>
+> <div style="display: flex; align*-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;"> $\displaystyle \sum_{\substack{ (d, \overline{\mathfrak{P}}) = 1 \\ d < X^{\alpha} \log^{-C_0}X }} \mu^2(d) |R_d| = O_U\left( \frac{X}{\log^{\kappa + U} X} \right),$ </span>  <span style="float: right;">$(R_1(\kappa, \alpha))$</span></div>
+>
+> $\quad$ 其中$U$是不小于$1$的常数,而$C_0$也是正的常数.
