@@ -26,11 +26,11 @@ http://seml04.github.io/tags/Brun-s-Theorem/
 http://seml04.github.io/tags/Number-Theory/
 http://seml04.github.io/tags/Diophantine-Approximation/
 http://seml04.github.io/tags/Continued-Fractions/
+http://seml04.github.io/tags/Algebraic-Number-Theory/
+http://seml04.github.io/tags/Pell-Equation/
 http://seml04.github.io/tags/Sieve-Methods/
 http://seml04.github.io/tags/GPY-Weight-Function/
 http://seml04.github.io/tags/Paper-Reading/
-http://seml04.github.io/tags/Algebraic-Number-Theory/
-http://seml04.github.io/tags/Pell-Equation/
 http://seml04.github.io/tags/Algebraic-Geometry/
 http://seml04.github.io/tags/Riemann-Roch-Theorem/
 http://seml04.github.io/tags/Algorithm/
@@ -43,9 +43,9 @@ http://seml04.github.io/tags/Mangoldt-Function/
 http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/
 http://seml04.github.io/tags/Prime-Twins-Conjecture/
 http://seml04.github.io/tags/Goldbach-s-Conjecture/
-http://seml04.github.io/tags/Gauss-Sum/
 http://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/
 http://seml04.github.io/tags/Sifting-Function/
+http://seml04.github.io/tags/Gauss-Sum/
 http://seml04.github.io/tags/Selberg-s-Sieve/
 http://seml04.github.io/tags/Chen-s-Theorem/
 http://seml04.github.io/tags/Combinatorial-Sieve/

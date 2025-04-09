@@ -236,6 +236,20 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Sieve-Methods/</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -251,20 +265,6 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Paper-Reading/</loc>
-    <lastmod>2025-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
-    <lastmod>2025-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -355,13 +355,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Gauss-Sum/</loc>
-    <lastmod>2025-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -370,6 +363,13 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Sifting-Function/</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Gauss-Sum/</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
