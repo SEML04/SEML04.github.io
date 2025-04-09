@@ -400,9 +400,9 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 >
 > $\quad$ 的实数,那么我们有以下筛函数的上下界估计式:
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \le X W(z) & \left(1 {\color[RGB]{230,51,51} +} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b+1} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+3})\frac{c_1}{\lambda \log z} \right) \right) \\ \\ & + O(z^{{\color[RGB]{230,51,51} 2b}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.4)\end{split}$$
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \le X W(z) & \left(1 {\color[RGB]{230,51,51} +} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b+1} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+3})\frac{c_1}{\lambda \log z} \right) \right) \\\\ & + O(z^{{\color[RGB]{230,51,51} 2b}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.4)\end{split}$$
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left(1 {\color[RGB]{230,51,51} -} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right) \\ \\ & + O(z^{{\color[RGB]{230,51,51} 2b-1}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.5)\end{split}$$
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left(1 {\color[RGB]{230,51,51} -} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right) \\\\ & + O(z^{{\color[RGB]{230,51,51} 2b-1}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.5)\end{split}$$
 >
 > 其中常数$c_1$的表达式为
 >
