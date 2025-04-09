@@ -434,4 +434,4 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 >
 > $\quad$ 其中常数$L, C_0, U$见条件$R_0$与$R_1(\kappa, \alpha)$.
 
-111
+12345
