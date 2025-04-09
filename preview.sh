@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "🚿 清理缓存..."
-hexo clean
 
 echo "⚙️ 重新生成页面..."
 hexo g
