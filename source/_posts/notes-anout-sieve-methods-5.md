@@ -400,13 +400,11 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 >
 > $\quad$ 的实数,那么我们有以下筛函数的上下界估计式:
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \le X W(z) & \left(1 {\color[RGB]{230,51,51} +} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b+1} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+3})\frac{c_1}{\lambda \log z} \right) \right) \\\\ & + O(z^{{\color[RGB]{230,51,51} 2b}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.4)\end{split}$$
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left(1 {\color[RGB]{230,51,51} -} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right) \\\\ & + O(z^{{\color[RGB]{230,51,51} 2b-1}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.5)\end{split}$$
 >
-> 其中常数$c_1$的表达式为
+> $\quad$ 其中常数$c_1$的表达式为
 >
-> $$c_1 = \frac{A_2}{2} \left( 1 + A_1 \left( \kappa + \frac{A_2}{\log 2} right) \right).$$
+> $$c_1 = \frac{A_2}{2} \left( 1 + A_1 \left( \kappa + \frac{A_2}{\log 2} \right) \right).$$
 
 ***注:本文中对上述定理称作定理11,但是在其余文章中会称之为定理2.2,主要是为了翻书会更方便,后文也是同理.***
 
@@ -418,9 +416,9 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 >
 > $\quad$ 在$\Omega_1, \Omega_2(\kappa)$和$R$条件下,对于任意实数$A > 0$,我们有
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) \le B_5 X \prod_{\color[RGB]{230,51,51} p < z} \left( 1 - \frac{\omega(p)}{p} \right), \text{ if } z \le X^A, \quad (4.2.6)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) \le B_5 X \prod_{p < z} \left( 1 - \frac{\omega(p)}{p} \right), \text{ if } z \le X^A, \quad (4.2.6)$$
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) \le B_5 X \prod_{\color[RGB]{230,51,51} p < X} \left( 1 - \frac{\omega(p)}{p} \right), \text{ if } z \ge X^{\frac{1}{A}}, \quad (4.2.7)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) \le B_5 X \prod_{p < X} \left( 1 - \frac{\omega(p)}{p} \right), \text{ if } z \ge X^{\frac{1}{A}}, \quad (4.2.7)$$
 
 而将条件$R$弱化为$R_0$与$R_1(\kappa, \alpha)$后,其并不会改变定理11中主项的估计式,而余项我们也能够给出它的阶,于是我们便能有能力去考虑命题(1,7)了,这无疑是一个巨大的突破.我们将定理称述至于此处:
 
@@ -432,8 +430,8 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 >
 > $\quad$ 而我们有
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \le X W(z) & \left\{ 1 + 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b+1} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+3})\frac{c_1}{\lambda \log z} \right) \right. \\\\ & + O(Lz^{-\alpha u + {\color[RGB]{230,51,51} 2b} + 2.01/(\text{exp}(2\lambda/\kappa)-1)} u^{C_0+1} \log^{C_0 + \kappa +1}z ) \\\\ & + O_U(u^{-\kappa} \log^{-U} X) \Big\}, \quad (4.2.8)\end{split}$$
 >
-> $\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left\{ 1 {\color[RGB]{230,51,51} -} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right. \\\\ & + O(Lz^{-\alpha u + {\color[RGB]{230,51,51} 2b -1 } + 2.01/(\text{exp}(2\lambda/\kappa)-1)} u^{C_0+1} \log^{C_0 + \kappa +1}z ) \\\\ & + O_U(u^{-\kappa} \log^{-U} X) \Big\}. \quad (4.2.9)\end{split}$
 >
 > $\quad$ 其中常数$L, C_0, U$见条件$R_0$与$R_1(\kappa, \alpha)$.
+
+111
