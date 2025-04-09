@@ -416,7 +416,7 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 
 但是定理11太复杂了,怎么办?没关系,我们有简化版!
 
-> **定理12/定理2.2**
+> **定理12/定理2.2:**
 >
 > $\quad$ 在$\Omega_1, \Omega_2(\kappa)$和$R$条件下,对于任意实数$A > 0$,我们有
 >
@@ -443,3 +443,5 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 > $\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left\{ 1 { \color[RGB]{255,51,51} - } 2 \frac{\lambda^{ \color[RGB]{255,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({ \color[RGB]{255,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right. \\\\ & + O(Lz^{-\alpha u + { \color[RGB]{255,51,51} 2b -1 } + 2.01/(\text{exp}(2\lambda/\kappa)-1)} u^{C_0+1} \log^{C_0 + \kappa +1}z ) \\\\ & + O_U(u^{-\kappa} \log^{-U} X) \Big\}. \quad (4.2.9)\end{split}$
 >
 > $\quad$ 其中常数$L, C_0, U$见条件$R_0$与$R_1(\kappa, \alpha)$.
+
+##### 
