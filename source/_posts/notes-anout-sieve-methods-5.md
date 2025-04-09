@@ -444,4 +444,71 @@ $$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r
 >
 > $\quad$ 其中常数$L, C_0, U$见条件$R_0$与$R_1(\kappa, \alpha)$.
 
-##### 
+##### 孪生素数问题的突破
+
+上面我们花了不少功夫(也包括我敲公式和调整hexo格式等大量时间😡)称述了定理11和定理13,如果它没有什么用的话那就未免太伤人心了,但好在这两个定理实实在在能对孪生素数猜想做出巨大的突破.如果我们稍微了解一下Goldbach猜想以及孪生素数猜想的历史突破的话,我们会更加惊讶于Brun筛法的强大作用.
+
+首先我们就考虑筛选
+
+$$\mathscr{A} = \{ n(n+2) : n \le x\},$$
+
+而关于这个集合的筛函数的基本信息在之前也已经了解过了(扎扎实实学过来后才知道当初吃苦确实是有用的了😭),并且很容易验证其满足条件$\Omega_0, \Omega_1, R$,于是我们使用定理11并令$b = 1$,于是有
+
+$$\begin{split}
+    S(\mathscr{A}; \mathfrak{P}_1, z) \ge \frac{1}{2} \prod_{2 < p < z} \left( 1 - \frac{2}{p} \right) \Big\{ 1 - \frac{2\lambda^2 \text{e}^{2\lambda}}{1 - \lambda^2 \text{e}^{2 + 2\lambda}} \text{exp}\left( \frac{4c_1}{\lambda \log z} \right) \\ \\
+    + O\left( \frac{\log^2 z \cdot z^{1 + 2.01/(\text{e}^{\lambda} - 1)}}{x} \right)\Big\}.\quad (4.3.1)
+\end{split}$$
+
+而在(4.3.1)中,我们可以选取合适的$\lambda$,比如可取$\log(1.288) = 0.2531$,使得
+
+$$1 - \frac{2\lambda^2 \text{e}^{2\lambda}}{1 - \lambda^2 \text{e}^{2 + 2\lambda}} > 0,\quad (4.3.2)$$
+
+再假设$z = X^{1/u}$,其实这个式子在定理13中出现了,那么我们要让$u$尽可能小,并且还要使得余项的阶不能超过主项,于是我们可以取到
+
+$$1 + \frac{2.01}{\text{e}^{\lambda} - 1} = 7.9792 < u < 8,\quad (4.3.3)$$
+
+再结合$S(\mathscr{A}; \mathfrak{P}_1, X^{1/8})$的含义,我们便有
+
+> **命题14(7,7):**
+>
+> $\quad$ 存在无穷多个$n$,使得$n$与$n+2$至多表示为$7$的素数的乘积.
+
+而当我们考虑筛选
+
+$$\mathscr{A} = \{ p+2 : p \le x \},$$
+
+并且使用筛集合
+
+$$\mathfrak{P} = \mathfrak{P}_2 = \{ p : p > 2 \},$$
+
+我们可以验证(但并不简单)该筛函数的$\omega(p)$与$R_d$满足$\Omega_1, \Omega_2(1), R_0, R_1(1, 1/2)$,其中$R_1(1, 1/2)$需要由Bombieri-Vinogradov定理得出,但是当我们先承认这些后,并且使用定理13可以得到
+
+$$\begin{split}
+    S(\mathscr{A}; \mathfrak{P}_2, z) \ge (\text{li} x) \prod_{2 < p < z} \left( 1 - \frac{1}{p - 1} \right) \Big\{ 1 - \frac{2\lambda^2 \text{e}^{2\lambda}}{1 - \lambda^2 \text{e}^{2 + 2\lambda}} \text{exp}\left( \frac{8}{\lambda \log z} \right) \\ \\
+    + O(z^{-\frac{1}{2} u + 1 + 2.01/(\text{e}^{\lambda}-1)} u^{U + 14} \log^{U + 15}z ) 
+    + O(u^{-1} \log^{-U} x) \Big\},\quad (4.3.4)
+\end{split}$$
+
+接下来的工作就好办了,那就是继续按照(4.3.2)-(4.3.3)的想法与过程走一轮.于是就是要在$0 < \lambda \text{e}^{\lambda} < 1$的同时还要有
+
+$$1 - \frac{2\lambda^2 \text{e}^{2\lambda}}{1 - \lambda^2 \text{e}^{2 + 2\lambda}} > 0,\quad (4.3.5)$$
+
+由计算机可得$0 < \lambda < 0.2533$,于是在这种情况下,$z = X^{1/u}$,能得到有
+
+$$2 + \frac{4.02}{\text{e}^{2\lambda} - 1} = 8.0942 < u < 9,\quad (4.3.6)$$
+
+因此我们证得
+
+> **命题15(1,8):**
+>
+> $\quad$ 存在无穷多个素数$p$,使得$n+2$至多表示为$8$的素数的乘积.
+
+但是观察(4.3.6)也太可惜了,只要左侧比$8$小一点点,我们就能证明(1,7)了,而我们要证明这一命题的话,那么就得针对我们当前选取的$\mathscr{A}$对定理13的主项进行一点点的改进,事实上,我们可以优化主项系数为
+
+$$1 - 2\lambda^2 \text{e}^{2\lambda} \left( 1 + \frac{16}{3} \frac{2\lambda^2 \text{e}^{2\lambda}}{1 - \lambda^2 \text{e}^{2 + 2\lambda}} \right),\quad (4.3.7)$$
+
+最后,我们便拼尽全力(真要燃尽了)证明得到
+
+> **命题16(1,7):**
+>
+> $\quad$ 存在无穷多个素数$p$,使得$n+2$至多表示为$7$的素数的乘积.
