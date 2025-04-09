@@ -1,5 +1,5 @@
 ---
-title: 筛法的顶峰之一 -- 陈景润定理
+title: 筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理
 mathjax: true
 date: 2025-03-12 15:57:04
 categories:
@@ -37,7 +37,7 @@ tags:
 总之,上面的这些内容我也都要一个一个摘录一遍!但是现在,先解决掉历史遗留问题--陈景润定理.以下主要参考二潘的『哥德巴赫猜想』.<span style="color: rgb(230,51,51)"> 注意:我对二潘书上的一些符号进行了一些调整,使得其主要与Halberstam书上的符号一致. </span>
 
 <center>
-<img src="/image/chen-s-theorem/T1.gif" width="30%">
+<img src="/image/notes-about-sieve-methods-4/T1.gif" width="30%">
 </center>
 
 陈定理对"1+2"的证明是用到了一个很精彩的加权函数,能从定理"1+3"中筛掉所有$p_0+p_1p_2p_3$形式的数,那么自然剩下的就只有$p_0+p_1$或者$p+p_1p_2$形式的数了.因此在这里,对定理"1+3"的一个简要证明也是必要的.而非加权情况下的定理"1+4"也是可以了解以下的.
@@ -585,7 +585,7 @@ GPY的筛法主要是对孪生素数猜想起作用的,其主要想法是对Selb
 但无论是哪个,只能说都是一场硬战了😭😭😭.
 
 <center>
-<img src="/image/chen-s-theorem/T2.gif" width="30%">
+<img src="/image/notes-about-sieve-methods-4/T2.gif" width="30%">
 </center>
 
 #### 参考文献

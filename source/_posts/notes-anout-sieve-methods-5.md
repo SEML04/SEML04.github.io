@@ -39,7 +39,7 @@ $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 那么我们就正式开始组合筛法的旅途了!!!
 
 <center>
-<img src="/image/notes-about-sieve-methods-4/T1.gif" width="30%">
+<img src="/image/notes-about-sieve-methods-5/T1.gif" width="30%">
 </center>
 
 #### 一般的筛法
@@ -56,7 +56,7 @@ $$\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2.$$
 >
 > $\quad$ 那么筛法问题便是估计
 >
-> $$\sum_{n \in \mathbb{Z}} a_n \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} \quad (2.1)$$
+> $$\sum_{n \in \mathbb{Z}} a_n \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} \quad (2.1.1)$$
 >
 > $\quad$ 的最优的上下界.
 
@@ -76,7 +76,7 @@ $$X_d = \sum_{n \in E_d} a_n = g(d)X + r_d,$$
 >
 > $\quad$ 其中$\lambda_d^{+} \in \mathbb{R}$,并且满足
 >
-> $$\nu^{+} \ge \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (2.2)$$
+> $$\nu^{+} \ge \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (2.1.2)$$
 >
 > $\quad$ 类似的,我们也可以定义下界筛为
 >
@@ -84,9 +84,9 @@ $$X_d = \sum_{n \in E_d} a_n = g(d)X + r_d,$$
 >
 > $\quad$ 其中$\lambda_d^{-} \in \mathbb{R}$($\lambda_d^{-}$可以取到负数),并且满足
 >
-> $$\nu^{-} \le \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (2.3)$$
+> $$\nu^{-} \le \mathbf{1}_{n \not\in \bigcup_{p | P} E_p} (n),\ \forall n \in \mathbb{Z}.\quad (2.1.3)$$
 >
-> $\quad$ 于是我们问题1中求(2.1)的最优上下界问题转化为求$\sum_{d \in D} \lambda_d^{+} X_d$的下确界与$\sum_{d \in D} \lambda_d^{-} X_d$的上确界问题.
+> $\quad$ 于是我们问题1中求(2.1.1)的最优上下界问题转化为求$\sum_{d \in D} \lambda_d^{+} X_d$的下确界与$\sum_{d \in D} \lambda_d^{-} X_d$的上确界问题.
 
 当问题1可行的情况下,问题2中的$\lambda_d^{\pm}$是必然存在的,因为有最平凡的情况,也就是$\lambda_d^{+}(n) = 1$以及$\lambda_d^{-}(n) = 0$.而我们很多的筛法工具,实际上就是对$\lambda_d^{\pm}$有一个不同的选取,而**组合筛法**,就是$\lambda_d^{\pm}$只取$\{ -1, 0, 1 \}$情况下对应的筛法理论.
 
@@ -100,25 +100,25 @@ $$\sigma_0(n) := \sum_{d | n} \mu(d),$$
 
 最终我们得到了
 
-$$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{d | P(z)} \mu(d) |\mathscr{A}_d|.\quad (2.4)$$
+$$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{d | P(z)} \mu(d) |\mathscr{A}_d|.\quad (2.2.1)$$
 
 而我们现在将对其进行一定程度的推广,而我们的方法是,对$\sigma_0(n)$进行一定程度的弱化,更方便于我们的估计.于是,我们定义
 
-$$\sigma(n) := \sum_{d | n} \mu(d) \chi(d),\ \sigma(1) = \chi(1) = 1,\quad (2.5)$$
+$$\sigma(n) := \sum_{d | n} \mu(d) \chi(d),\ \sigma(1) = \chi(1) = 1,\quad (2.2.2)$$
 
 其中$\chi(n)$是积性函数,于是由Mobius反演,我们有
 
-$$\mu(d) \chi(d) = \sum_{\delta | d} \mu\left( \frac{d}{\delta} \right) \sigma(\delta),\quad (2.6)$$
+$$\mu(d) \chi(d) = \sum_{\delta | d} \mu\left( \frac{d}{\delta} \right) \sigma(\delta),\quad (2.2.3)$$
 
 并且对于任意$p | n$,我们可以得到有
 
-$$\sigma(n) = \sum_{l | n/p} \mu(l) (\chi(l) - \chi(pl)).\quad (2.7)$$
+$$\sigma(n) = \sum_{l | n/p} \mu(l) (\chi(l) - \chi(pl)).\quad (2.2.4)$$
 
-而(2.7)将为我们组合筛法中$\chi(n)$的结构提出一些至关重要的要求.
+而(2.2.4)将为我们组合筛法中$\chi(n)$的结构提出一些至关重要的要求.
 
-而我们此处利用(2.6)计算$\sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d|$,将其与(2.4)对比,我们便得到有
+而我们此处利用(2.2.3)计算$\sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d|$,将其与(2.2.1)对比,我们便得到有
 
-$$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d| - \sum_{1 < d | P(z)} \sigma(d) S(\mathscr{A_d}; \mathfrak{P}^{(d)}, z),\quad (2.8)$$
+$$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d| - \sum_{1 < d | P(z)} \sigma(d) S(\mathscr{A_d}; \mathfrak{P}^{(d)}, z),\quad (2.2.5)$$
 
 其中$\mathfrak{P}^{(d)} = \{ p : p \in \mathfrak{P}, p \nmid d \}$.
 
@@ -126,25 +126,25 @@ $$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_
 
 $$P_{z_1, z} = \prod_{\substack{p \in \mathfrak{P} \\ z_1 \le p < z}} p = \frac{P(z)}{P(z_1)},\ 2 \le z_1 \le z,$$
 
-接着讲(2.7)代入到(2.8)中,我们最终可以得到以下一些很重要的结论:
+接着讲(2.2.4)代入到(2.2.5)中,我们最终可以得到以下一些很重要的结论:
 
 > **命题3:**
 >
 > $\quad$ 符号含义如上所述,我们可以得到有
 >
-> $$\begin{split} S(\mathscr{A}; \mathfrak{P}, z) = & \displaystyle\sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d| \\ & - \sum_{d | P(z)} \sum_{\substack{ p | P(z) \\ p < q(d) }} \mu(d) (\chi(d) - \chi(pd)) S(\mathscr{A}_{pd}; \mathfrak{P}, {\color[RGB]{230,51,51} p}).\quad (2.9) \end{split}$$
+> $$\begin{split} S(\mathscr{A}; \mathfrak{P}, z) = & \displaystyle\sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d| \\ & - \sum_{d | P(z)} \sum_{\substack{ p | P(z) \\ p < q(d) }} \mu(d) (\chi(d) - \chi(pd)) S(\mathscr{A}_{pd}; \mathfrak{P}, {\color[RGB]{230,51,51} p}).\quad (2.2.6) \end{split}$$
 >
 > $\quad$ 特别地,我们取$\chi(1) = 1,\ \chi(d) = 0\ \forall d > 1$,可以得到
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) = |\mathscr{A}| - \sum_{\substack{p < z \\ p \in \mathfrak{P}}} S(\mathscr{A}_p; \mathfrak{P}, p).\quad (2.10)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) = |\mathscr{A}| - \sum_{\substack{p < z \\ p \in \mathfrak{P}}} S(\mathscr{A}_p; \mathfrak{P}, p).\quad (2.2.7)$$
 >
-> $\quad$ 而在后边的内容中(不在本章),我们基于(2.10)还会证明以下更强的结论:
+> $\quad$ 而在后边的内容中(不在本章),我们基于(2.2.7)还会证明以下更强的结论:
 >
 > $$S(\mathscr{A}; \mathfrak{P}, z) = S(\mathscr{A}; \mathfrak{P}, z_1) - \sum_{\substack{z_1 \le p < z \\ p \in \mathfrak{P}}} S(\mathscr{A}_p; \mathfrak{P}, p),\ 2 \le z_1 \le z.$$
 
 可以发现的是,命题3中的三个结论都是将一个大小为$z$的筛变成有限个大小为$p$的筛,筛的大小一下子降了下来,在某种程度上对于余项的控制也更加有利了.并且其还有另外一个很重要的作用,那就是我们能够由$S(\mathscr{A}_p; \mathfrak{P}, p)$的上界筛得到$S(\mathscr{A}; \mathfrak{P}, z)$的下界筛,而这种方法也是极为一种有效并且简便的方法了.
 
-但是在这里,我们还可以通过一些稍微复杂亿点点的小手段同时得到上下界的估计.而这就是对$\sigma(n)$进行一些限制与要求,现在我们引入满足(2.5)的$\sigma_1$与$\sigma_2$,以下简记为$\sigma_v,\ v = 1, 2$,使得其满足
+但是在这里,我们还可以通过一些稍微复杂亿点点的小手段同时得到上下界的估计.而这就是对$\sigma(n)$进行一些限制与要求,现在我们引入满足(2.2.2)的$\sigma_1$与$\sigma_2$,以下简记为$\sigma_v,\ v = 1, 2$,使得其满足
 
 $$\sigma_2(d) \le \sigma_0(d) \le \sigma_1(d),\ \forall d | P(z),$$
 
@@ -152,11 +152,11 @@ $$\sigma_2(d) \le \sigma_0(d) \le \sigma_1(d),\ \forall d | P(z),$$
 
 $$(-1)^{v-1}\sigma_v(d) \le 0,\ \forall d \ge 1,\ d | P(z),$$
 
-可以发现,上面的式子实际上与Tao中的(2.2)和(2.3)说的也是一回事.
+可以发现,上面的式子实际上与Tao中的(2.1.2)和(2.1.3)说的也是一回事.
 
-紧接着,代入(2.9),我们得到了
+紧接着,代入(2.2.6),我们得到了
 
-$$(-1)^{v-1} \mu(d) (\chi_v(d) - \chi_v(pd)) \ge 0,\quad (2.11)$$
+$$(-1)^{v-1} \mu(d) (\chi_v(d) - \chi_v(pd)) \ge 0,\quad (2.2.8)$$
 
 其中$pd | P(z),\ p < q(d)$,再由上一篇读书笔记中的假设
 
@@ -168,29 +168,29 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 >
 > $\quad$ 我们可以得到筛函数的一个上下界为
 >
-> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|. \quad (2.12) \end{split}$$
+> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|. \quad (2.2.9) \end{split}$$
 >
 > $\quad$ 而在$\Omega_1$条件下,我们可以得到
 >
-> $$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),\quad (2.13)$$
+> $$\sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} = W(z) \left( 1 + \sum_{1 < \delta | P(z)} \sigma_v(\delta) g(\delta) \right),\quad (2.2.10)$$
 >
 > $\quad$ 而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.
 
 于是我们<span style="color: rgb(139,0,255)">现在的目的</span>就是让
 
-$$\sum_{d | P(z)} |\chi_v(d)| |R_d| \quad (2.14)$$
+$$\sum_{d | P(z)} |\chi_v(d)| |R_d| \quad (2.2.11)$$
 
 $\quad$ 充分小的同时,使得
 
-$$\left|\sum_{1 < \delta | P(z)} \sigma_v(\sigma) g(\sigma) \right| \quad (2.15)$$
+$$\left|\sum_{1 < \delta | P(z)} \sigma_v(\sigma) g(\sigma) \right| \quad (2.2.12)$$
 
 $\quad$ 也足够小.
 
 $\quad$ 而且为了得到一个正的下界,我们再要求
 
-$$1 + \sum_{1 < \delta | P(z)} \sigma_2(\delta) g(\delta) > 0. \quad (2.16)$$
+$$1 + \sum_{1 < \delta | P(z)} \sigma_2(\delta) g(\delta) > 0. \quad (2.2.13)$$
 
-而要满足(2.14)-(2.16),尤其是(2.16),是一个相当困难的问题,我们还需要对$\chi_v$提出更多的要求.而当$\chi_v(n)$只能取$\{0, 1\}$时,这种情况下的筛法理论便称之为**组合筛法**.Tao中的$\lambda_d^{\pm}$差不多就是$\mu(d) \chi_v(d)$,因此这两者本质上的内涵与想法是一致的.
+而要满足(2.2.11)-(2.2.13),尤其是(2.2.13),是一个相当困难的问题,我们还需要对$\chi_v$提出更多的要求.而当$\chi_v(n)$只能取$\{0, 1\}$时,这种情况下的筛法理论便称之为**组合筛法**.Tao中的$\lambda_d^{\pm}$差不多就是$\mu(d) \chi_v(d)$,因此这两者本质上的内涵与想法是一致的.
 
 ##### 组合筛法的一些细节要点
 
@@ -200,31 +200,31 @@ $$\mathscr{D}_v = \{ d : d | P(z), d < y_v \},$$
 
 其中$y_v$是未知的.实际上,对于Brun纯筛法而言,我们需要$\mathscr{D}_v$是thin的,用现代筛法的观点来看,我们需要对Eratosthenes-Legendre筛法的权函数--也就是$\sum_{d \in \mathbb{Z}} \mu(d)$,进行截断(*这只是我目前的一点认识,可能不对*).此外,$\chi_v$取值为$1$的数应该得落在$\mathscr{D}_v$,但不要求是整个集合.
 
-此外,若有$pd | P(z),\ p < q(d)$,那么$\chi_v(qd)$与$\chi_v(d)$的取值之间还<span style="color: rgb(230,51,51)">需要满足(2.11)的要求</span>.我们将这些条件总结如下:
+此外,若有$pd | P(z),\ p < q(d)$,那么$\chi_v(qd)$与$\chi_v(d)$的取值之间还<span style="color: rgb(230,51,51)">需要满足(2.2.8)的要求</span>.我们将这些条件总结如下:
 
 > **定义5:**
 >
 > $\quad$ 满足以下条件的$\chi_v$能引导出一个组合筛法:
 >
-> $$\chi_v(1) = 1, \quad (2.17)$$
+> $$\chi_v(1) = 1, \quad (2.3.1)$$
 >
-> $$\chi_v(d) = 1 \text{ or } 0, \text{ if } d | P(z), \quad (2.18)$$
+> $$\chi_v(d) = 1 \text{ or } 0, \text{ if } d | P(z), \quad (2.3.2)$$
 >
-> $$\chi_v(d) = 1 \Rightarrow \chi_v(t) = 1,\ \forall t | d, d | P(z), \quad (2.19)$$
+> $$\chi_v(d) = 1 \Rightarrow \chi_v(t) = 1,\ \forall t | d, d | P(z), \quad (2.3.3)$$
 >
-> $$\chi_v(d) = 1,\ \mu(d) = (-1)^{v} \Rightarrow \chi_v(pt) = 1,\ \forall pt | P(z), p < q(d). \quad (2.20)$$
+> $$\chi_v(d) = 1,\ \mu(d) = (-1)^{v} \Rightarrow \chi_v(pt) = 1,\ \forall pt | P(z), p < q(d). \quad (2.3.4)$$
 >
-> $\quad$ 并且容易验证的是,(2.17)-(2.20)可以浓缩为以下一个条件式:
+> $\quad$ 并且容易验证的是,(2.3.1)-(2.3.4)可以浓缩为以下一个条件式:
 >
-> $$\chi_v(t) - \chi_v(pt) = (-1)^{v-1} \mu(t) \chi_v(t) (1 - \chi_v(pt)).\ \forall pt | P(z), p < q(d). \quad (2.21)$$
+> $$\chi_v(t) - \chi_v(pt) = (-1)^{v-1} \mu(t) \chi_v(t) (1 - \chi_v(pt)).\ \forall pt | P(z), p < q(d). \quad (2.3.5)$$
 
-我们再定义$p^+$为<span style="color: rgb(230,51,51)">p在$\mathfrak{P}$中的下一个素数</span>,然后我们便可以证得比(2.13)更精细的结果,即在$\Omega_1$的条件下,我们有
+我们再定义$p^+$为<span style="color: rgb(230,51,51)">p在$\mathfrak{P}$中的下一个素数</span>,然后我们便可以证得比(2.2.10)更精细的结果,即在$\Omega_1$的条件下,我们有
 
 $$\begin{split}
-    & \sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} =  W(z) + (-1)^{v-1} \sum_{p < z} \frac{\omega(p) W(p)}{p} \sum_{t | P_{p^+, z}} \frac{\chi_v(t)(1 - \chi_v(pt))}{t} \omega(t).\ (2.22)
+    & \sum_{d | P} \mu(d) \chi_v(d) \frac{\omega(d)}{d} =  W(z) + (-1)^{v-1} \sum_{p < z} \frac{\omega(p) W(p)}{p} \sum_{t | P_{p^+, z}} \frac{\chi_v(t)(1 - \chi_v(pt))}{t} \omega(t).\ (2.3.6)
 \end{split}$$
 
-现在,我们对(2.22)中的第二部分至少有一个可以研究的手段了.
+现在,我们对(2.3.6)中的第二部分至少有一个可以研究的手段了.
 
 #### Brun纯筛法
 
@@ -238,7 +238,7 @@ $$\lambda_d := \mathbf{1}_{\nu(d) \le k} \mu(d),$$
 
 $$\mathscr{D}^{(r)} := \{ d : d | P(z), \nu(d) \le r - 1 \},\quad (3.1)$$
 
-而$\chi^{(r)}$是$\mathscr{D}^{(r)}$上的示性函数.并且令$\chi_v = \chi^{(2s + v)}$,可以验证其确实满足组合筛法中(2.21)的条件,于是我们可以得到
+而$\chi^{(r)}$是$\mathscr{D}^{(r)}$上的示性函数.并且令$\chi_v = \chi^{(2s + v)}$,可以验证其确实满足组合筛法中(2.3.5)的条件,于是我们可以得到
 
 $$\sum_{\substack{ d | P(z) \\ \nu(d) \le 2s + 1 }} \mu(d) |\mathscr{A}_d| \le S(\mathscr{A}; \mathfrak{P}, z) \le \sum_{\substack{ d | P(z) \\ \nu(d) \le 2s }} \mu(d) |\mathscr{A}_d|, \quad (3.2)$$
 
@@ -246,7 +246,7 @@ $$\sum_{\substack{ d | P(z) \\ \nu(d) \le 2s + 1 }} \mu(d) |\mathscr{A}_d| \le S
 
 $$S(\mathscr{A}; \mathfrak{P}, z) = \sum_{\substack{ d | P(z) \\ \nu(d) \le r - 1 }} \mu(d) |\mathscr{A}_d| + \theta \sum_{\substack{ d | P(z) \\ \nu(d) = r }} |\mathscr{A}_d|,\ |\theta| \le 1.\quad (3.3)$$
 
-而我们现在需要就(2.12),(2.13)以及(2.22)的形式,对我们选取的$\chi_v$进行进一步的计算.首先就是极具组合风格的
+而我们现在需要就(2.2.9),(2.2.10)以及(2.3.6)的形式,对我们选取的$\chi_v$进行进一步的计算.首先就是极具组合风格的
 
 $$\sigma^{(k)} := \sum_{\substack{ d | n \\ \nu(d) \le k - 1}} \mu(d) = (-1)^{k - 1} \binom{v-1}{k-1},$$
 
@@ -320,27 +320,27 @@ Brun筛法与Brun纯筛法虽然只有一字之差,但是前者作为后者的�
 
 $\quad$ 在$\omega(p)$满足$\Omega_2(\kappa)$时,我们可以得到
 
-$$\sum_{p < z} \omega(p) \le (\kappa + A_2) \text{li} z + \frac{2A_2}{\log 2} \le A(2\text{li} z + 3),\quad (4.1)$$
+$$\sum_{p < z} \omega(p) \le (\kappa + A_2) \text{li} z + \frac{2A_2}{\log 2} \le A(2\text{li} z + 3),\quad (4.1.1)$$
 
 $\quad$ 其中$A = \max{\kappa, A_2}$.而当$\omega(p)$同时$\Omega_1$和$\Omega_2(\kappa)$时,我们还有以下的估计:
 
-$$\sum_{w \le p \le z}g(p) \le \kappa \log \frac{\log z}{\log w} + O\left( \frac{1}{\log w} \right),\quad (4.2)$$
+$$\sum_{w \le p \le z}g(p) \le \kappa \log \frac{\log z}{\log w} + O\left( \frac{1}{\log w} \right),\quad (4.1.2)$$
 
 $\quad$ 从而由上式可以得到的是:
 
-$$\frac{W(w)}{W(z)} = O\left( \frac{\log^{\kappa} z}{\log^{\kappa} w} \right),\quad (4.3)$$
+$$\frac{W(w)}{W(z)} = O\left( \frac{\log^{\kappa} z}{\log^{\kappa} w} \right),\quad (4.1.3)$$
 
 $\quad$ 特别地,我们有
 
-$$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.4)$$
+$$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.1.4)$$
 
-而上述(4.1)-(4.4)这几个估计式的证明,都需要用到分部求和公式(这个又要回归到我们之前的博客中去了),$g(p)$与$\frac{\omega(p)}{p}$之间的关系等手段,此处就直接省去阐述了.总的来说,我们将条件$\Omega_0$弱化为$\Omega_2(\kappa)$后,我们的对于筛函数的估计并没有受到太大的影响,例如,我们仍然有以下与(3.4)及其相似的结果成立:
+而上述(4.1.1)-(4.1.4)这几个估计式的证明,都需要用到分部求和公式(这个又要回归到我们之前的博客中去了),$g(p)$与$\frac{\omega(p)}{p}$之间的关系等手段,此处就直接省去阐述了.总的来说,我们将条件$\Omega_0$弱化为$\Omega_2(\kappa)$后,我们的对于筛函数的估计并没有受到太大的影响,例如,我们仍然有以下与(3.4)及其相似的结果成立:
 
 > **命题9:**
 >
 > $\quad$ 在$\Omega_1,\Omega_2(\kappa)$和$R$的条件下,我们有
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{ (\kappa \log\log z + c_0)/\lambda } \right) \\& + \theta' z^{ (\kappa \log\log z + c_0)/\lambda }, \quad (4.5)\end{split}$$
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{ (\kappa \log\log z + c_0)/\lambda } \right) \\& + \theta' z^{ (\kappa \log\log z + c_0)/\lambda }, \quad (4.1.5)\end{split}$$
 >
 > $\quad$ 其中$c_0$是与$A_0,\ A_1,\ \kappa$有关的常数,$|\theta|$,$|\theta'| \le 1$,且
 >
@@ -361,3 +361,5 @@ $$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.4)$$
 > <div style="display: flex; align*-items: center; justify-content: space-between; width: 100%;">  <span style="margin: 0 auto;"> $\displaystyle \sum_{\substack{ (d, \overline{\mathfrak{P}}) = 1 \\ d < X^{\alpha} \log^{-C_0}X }} \mu^2(d) |R_d| = O_U\left( \frac{X}{\log^{\kappa + U} X} \right),$ </span>  <span style="float: right;">$(R_1(\kappa, \alpha))$</span></div>
 >
 > $\quad$ 其中$U$是不小于$1$的常数,而$C_0$也是正的常数.
+
+##### 
