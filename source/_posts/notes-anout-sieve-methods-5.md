@@ -132,7 +132,7 @@ $$P_{z_1, z} = \prod_{\substack{p \in \mathfrak{P} \\ z_1 \le p < z}} p = \frac{
 >
 > $\quad$ 符号含义如上所述,我们可以得到有
 >
-> $$\begin{split} S(\mathscr{A}; \mathfrak{P}, z) = & \displaystyle\sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d| \\ & - \sum_{d | P(z)} \sum_{\substack{ p | P(z) \\ p < q(d) }} \mu(d) (\chi(d) - \chi(pd)) S(\mathscr{A}_{pd}; \mathfrak{P}, {\color[RGB]{230,51,51} p}).\quad (2.2.6) \end{split}$$
+> $$\begin{split} S(\mathscr{A}; \mathfrak{P}, z) = & \displaystyle\sum_{d | P(z)} \mu(d) \chi(d) |\mathscr{A}_d| \\ \\ & - \sum_{d | P(z)} \sum_{\substack{ p | P(z) \\ p < q(d) }} \mu(d) (\chi(d) - \chi(pd)) S(\mathscr{A}_{pd}; \mathfrak{P}, {\color[RGB]{230,51,51} p}).\quad (2.2.6) \end{split}$$
 >
 > $\quad$ 特别地,我们取$\chi(1) = 1,\ \chi(d) = 0\ \forall d > 1$,可以得到
 >
@@ -168,7 +168,7 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 >
 > $\quad$ 我们可以得到筛函数的一个上下界为
 >
-> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|. \quad (2.2.9) \end{split}$$
+> $$\begin{split}\displaystyle X \sum_{p | P(z)} \mu(d) \chi_2(d) \frac{\omega(d)}{d} - \sum_{d | P(z)} |\chi_2(d)||R_d| \le S(\mathscr{A}; \mathfrak{P}, z) \\ \\ \le X \sum_{p | P(z)} \mu(d) \chi_1(d) \frac{\omega(d)}{d} + \sum_{d | P(z)} |\chi_1(d)||R_d|. \quad (2.2.9) \end{split}$$
 >
 > $\quad$ 而在$\Omega_1$条件下,我们可以得到
 >
@@ -176,7 +176,7 @@ $$|\mathscr{A}_d| = \frac{\omega(d)}{d} X + |R_d|,$$
 >
 > $\quad$ 而其中$W(z)$和$g(z)$的表达式在之前的读书笔记中可以找到.
 
-于是我们<span style="color: rgb(139,0,255)">现在的目的</span>就是让
+$\quad$ 于是我们<span style="color: rgb(139,0,255)">现在的目的</span>就是让
 
 $$\sum_{d | P(z)} |\chi_v(d)| |R_d| \quad (2.2.11)$$
 
@@ -260,7 +260,7 @@ $$|\sigma^{(r)}(n)| \le \binom{\nu(n)}{r},\ \forall n > 1,$$
 >
 > $\quad$ 在$\Omega_0,\Omega_1$和$R$的条件下,我们有
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{(A_0A_1/\lambda) \cdot (\log\log z + 1)} \right) \\& + \theta' z^{(A_0A_1/\lambda) \cdot (\log\log z + 1)}, \quad (3.4)\end{split}$$
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{(A_0A_1/\lambda) \cdot (\log\log z + 1)} \right) \\ \\ & + \theta' z^{(A_0A_1/\lambda) \cdot (\log\log z + 1)}, \quad (3.4)\end{split}$$
 >
 > $\quad$ 其中$A_0,\ A_1$是绝对常数,$|\theta|$,$|\theta'| \le 1$,且
 >
@@ -340,7 +340,7 @@ $$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.1.4)$$
 >
 > $\quad$ 在$\Omega_1,\Omega_2(\kappa)$和$R$的条件下,我们有
 >
-> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{ (\kappa \log\log z + c_0)/\lambda } \right) \\& + \theta' z^{ (\kappa \log\log z + c_0)/\lambda }, \quad (4.1.5)\end{split}$$
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = X W(z) & \left(1 + \theta(\lambda \text{e}^{1+\lambda})^{ (\kappa \log\log z + c_0)/\lambda } \right) \\ \\ & + \theta' z^{ (\kappa \log\log z + c_0)/\lambda }, \quad (4.1.5)\end{split}$$
 >
 > $\quad$ 其中$c_0$是与$A_0,\ A_1,\ \kappa$有关的常数,$|\theta|$,$|\theta'| \le 1$,且
 >
@@ -364,3 +364,76 @@ $$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.1.4)$$
 
 ##### Brun筛法以及主结论
 
+Brun纯筛法是对Eratosthenes-Legendre筛法最简单的改进,但是其作用却是巨大的,因此我们考虑将Brun纯筛法做一些推广.而在Brun纯筛法中,最关键的部分在于(3.1)处对$\mathscr{D}_v$的选取,而(3.1)这样的选取是即为简单的情况,因此在此处是很容易做一些推广的,而推广的这种筛法便称作Brun筛法.
+
+$\quad$ 注:也还有另外的一种很自然的推广方式,也就是从截断的观点来看,在Brun纯筛法中是对$\sum_{d \in \mathbb{Z}} \mu(d)$做截断,变成了
+
+$$\sum_{\substack{d \in \mathbb{Z} \\ \nu(d) \le r}} \mu(d),$$
+
+$\quad$ 因此我们可以考虑对其进行加权,也就是变为
+
+$$\sum_{\substack{d \in \mathbb{Z} \\ \nu(d) \le r}} \mu(d) \alpha_d,$$
+
+$\quad$ 但$\alpha_d$可能不是$\{ -1, 0, 1\}$,于是就不在组合筛法的讨论范畴之内了.
+
+回到我们的Brun筛法,这些在Tao博客中的Proposition 14给出了一种更一般的介绍.由于这个命题实在太长,我也就不进行摘录了(虽然文章的篇幅已经压不住了,但是现在也还是稍微挣扎一下/(ㄒoㄒ)/~~),但是我们可以观察到的是,其最重要的一部分也就是类似于(3.2)的结构.
+
+而我们再回到Halberstam的具体构造中,我们引入一列从$2$到$z$的**实数**(不需要是整数,除了$z_r$)
+
+$$2 = z_r < z_{r-1} < \cdots < z_1 < z_0 = z,\quad (4.2.1)$$
+
+给定正整数$b$,对于所有的$n = 1, \cdots, r$,我们定义$\chi_v^{(r)}$为以下集合的示性函数:
+
+$$\mathscr{D}_v^{(r)} = \{ d : d | P(z), \nu(d) \le 2b - v + 2n - 1 \},\quad (4.2.2)$$
+
+很容易检验,我们上述定义的$\chi_v^{(r)}$是满足(2.3.5),因此可以导出一个类似于命题6中(3.4)这样的筛函数估计式.这里我们省略掉大量计算的细节(都参考Halberstam的教材),需要注意的是我们选取一族特定的$(z_n)$:
+
+$$z_r = 2,\ \log z_n = \text{e}^{-n \Gamma} \log z\ \text{for } n = 1, \cdots, r-1,\quad (4.2.3)$$
+
+其中$\Gamma$是一个合适的正数(也就是要使得$z_{1} < z_0 = z$),最后常数$\lambda$也是和$\Gamma$有关的一个常数,最后我们得到了
+
+> **定理11/定理2.1(Brun筛法主结论):**
+>
+> $\quad$ 在$\Omega_1, \Omega_2(\kappa)$和$R$条件下,令$b$是一个正整数,以及$\lambda$是满足
+>
+> $$0 < \lambda \text{e}^{1 + \lambda} < 1$$
+>
+> $\quad$ 的实数,那么我们有以下筛函数的上下界估计式:
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \le X W(z) & \left(1 {\color[RGB]{230,51,51} +} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b+1} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+3})\frac{c_1}{\lambda \log z} \right) \right) \\ \\ & + O(z^{{\color[RGB]{230,51,51} 2b}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.4)\end{split}$$
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left(1 {\color[RGB]{230,51,51} -} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right) \\ \\ & + O(z^{{\color[RGB]{230,51,51} 2b-1}+(2.01/(\text{exp}(2\lambda/\kappa)-1))}), \quad (4.2.5)\end{split}$$
+>
+> 其中常数$c_1$的表达式为
+>
+> $$c_1 = \frac{A_2}{2} \left( 1 + A_1 \left( \kappa + \frac{A_2}{\log 2} right) \right).$$
+
+***注:本文中对上述定理称作定理11,但是在其余文章中会称之为定理2.2,主要是为了翻书会更方便,后文也是同理.***
+
+在Halberstam书中,P57-P62都是在证明这个定理,并且Brun筛法的概念与要点也都掺杂在这个定理的证明之中,理解这段我之前还花了不少功夫来着的😭.而这个定理的作用也十分强,我们可以用这个来证明(7,7),而这个就留在下一节去讲.
+
+但是定理11太复杂了,怎么办?没关系,我们有简化版!
+
+> **定理12/定理2.2**
+>
+> $\quad$ 在$\Omega_1, \Omega_2(\kappa)$和$R$条件下,对于任意实数$A > 0$,我们有
+>
+> $$S(\mathscr{A}; \mathfrak{P}, z) \le B_5 X \prod_{\color[RGB]{230,51,51} p < z} \left( 1 - \frac{\omega(p)}{p} \right), \text{ if } z \le X^A, \quad (4.2.6)$$
+>
+> $$S(\mathscr{A}; \mathfrak{P}, z) \le B_5 X \prod_{\color[RGB]{230,51,51} p < X} \left( 1 - \frac{\omega(p)}{p} \right), \text{ if } z \ge X^{\frac{1}{A}}, \quad (4.2.7)$$
+
+而将条件$R$弱化为$R_0$与$R_1(\kappa, \alpha)$后,其并不会改变定理11中主项的估计式,而余项我们也能够给出它的阶,于是我们便能有能力去考虑命题(1,7)了,这无疑是一个巨大的突破.我们将定理称述至于此处:
+
+> **定理13/定理2.1':**
+>
+> $\quad$ 在$\Omega_1, \Omega_2(\kappa), R_0, R_1(\kappa, \alpha)$的条件下,以及$b,\lambda,c_1$均与定理11中定义一致,并且记
+>
+> $$u = \frac{\log X}{\log z},$$
+>
+> $\quad$ 而我们有
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \le X W(z) & \left\{ 1 + 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b+1} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+3})\frac{c_1}{\lambda \log z} \right) \right. \\\\ & + O(Lz^{-\alpha u + {\color[RGB]{230,51,51} 2b} + 2.01/(\text{exp}(2\lambda/\kappa)-1)} u^{C_0+1} \log^{C_0 + \kappa +1}z ) \\\\ & + O_U(u^{-\kappa} \log^{-U} X) \Big\}, \quad (4.2.8)\end{split}$$
+>
+> $\begin{split}S(\mathscr{A}; \mathfrak{P}, z) \ge X W(z) & \left\{ 1 {\color[RGB]{230,51,51} -} 2 \frac{\lambda^{\color[RGB]{230,51,51} 2b} \text{e}^{2 \lambda}}{1 - \lambda^2 \text{e}^{2+2\lambda}} \text{exp}\left( ({\color[RGB]{230,51,51} 2b+2})\frac{c_1}{\lambda \log z} \right) \right. \\\\ & + O(Lz^{-\alpha u + {\color[RGB]{230,51,51} 2b -1 } + 2.01/(\text{exp}(2\lambda/\kappa)-1)} u^{C_0+1} \log^{C_0 + \kappa +1}z ) \\\\ & + O_U(u^{-\kappa} \log^{-U} X) \Big\}. \quad (4.2.9)\end{split}$
+>
+> $\quad$ 其中常数$L, C_0, U$见条件$R_0$与$R_1(\kappa, \alpha)$.
