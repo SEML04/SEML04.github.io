@@ -12,16 +12,6 @@ tags:
     - Brun's Sieve
 ---
 
-#### 参考资料
-
-[1] Halberstam, Richert. Sieve Methods[M]. Dover Publications, 2011. P37-P96.
-
-[2] T. Tao. 254A, Notes 4: Some sieve theory[Z]. https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/.
-
-[3] Ege Erdil. Brun’s theorem and sieve theory[Z]. https://www.lesswrong.com/posts/aSYvbztFDdG7LBeRz/brun-s-theorem-and-sieve-theory#The_sieve_of_Eratosthenes.
-
-[4] Motohashi Y. An Overview of the Sieve Method and its History[J]. arXiv preprint math/0505521, 2005.
-
 #### 引言
 
 决定了,还是先花最少的时间,先把Halberstam的第二章速速解决掉.毕竟已经是上个月就已经学习完的内容,并且经过上一篇文章的洗礼,我觉得我对Brun筛法又有了一些新的认识了.~~这次尽量还是压缩一些篇幅,以记录下一些关键要点为主吧~~规划一下内容后感觉已经是奢望了.😰
@@ -346,7 +336,11 @@ $$\frac{1}{W(z)} = O(\log^{\kappa} z).\quad (4.1.4)$$
 >
 > $$0 < \lambda \text{e}^{1 + \lambda} \le 1.$$
 
-接下来,在对余项的条件$R$进行一定程度的推广.我们有
+接下来,在对余项的条件$R$进行一定程度的推广.首先是我们可以将条件$R$稍微放宽至
+
+$$|R_d| \le L\omega(p),$$
+
+对我们所有的结论均没有影响,换句话说,上面的条件和$R$是一样强的.因此我们需要将$R$再放弱一些,而我们确实有
 
 > **定义10:**
 >
@@ -512,3 +506,97 @@ $$1 - 2\lambda^2 \text{e}^{2\lambda} \left( 1 + \frac{16}{3} \frac{2\lambda^2 \t
 > **命题16(1,7):**
 >
 > $\quad$ 存在无穷多个素数$p$,使得$n+2$至多表示为$7$的素数的乘积.
+
+#### 基本引理
+
+在本文的最后一节中,我们从定理11和定理13出发,来引出筛法的基本引理.在Halberstam书中给出的基本引理,可以视作是对(3.5)的推广,也可以视作对定理12的一个可观的改良,而这个引理事实上就是从定理11得到,并且优化掉定理11中的常数$\lambda$.
+
+> **定理17/定理2.5(筛法基本引理):**
+>
+> $\quad$ 在$\Omega_1, \Omega_2(\kappa), R$的条件下,令
+>
+> $$u = \frac{\log X}{\log z} > 1,$$
+>
+> $\quad$ 我们有
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = XW(z)\Big( 1 & + O(\text{exp}(-u(\log u - \log\log 3u - \log \kappa - 2))) \\ \\& + O(\text{exp}(-\sqrt{\log X}))\Big). \quad (5.1)\end{split}$$
+
+而在使用定理11时,我们选取的是
+
+$$b = \left\lfloor \frac{u}{2} - \frac{u}{2\log u} \right\rfloor,\ \lambda = \frac{\text{e}\kappa \log u}{u},$$
+
+而如果在定理13中选取
+
+$$b = \left\lfloor \frac{\alpha}{2} u - \frac{\alpha}{2} \frac{u}{\log u} \right\rfloor,\ \lambda = \frac{\text{e}\kappa}{\alpha} \frac{\log u}{u},$$
+
+我们便能得到弱化条件版本下的筛法基本引理
+
+> **定理18/定理2.5'(弱余项的筛法基本引理):**
+>
+> $\quad$ 在$\Omega_1, \Omega_2(\kappa), R_0, R_1(\kappa, \alpha)$的条件下,令
+>
+> $$u = \frac{\log X}{\log z} > 1,$$
+>
+> $\quad$ 我们有
+>
+> $$\begin{split}S(\mathscr{A}; \mathfrak{P}, z) = XW(z)\Big( 1 & + O(\text{exp}(- \alpha u (\log u - \log\log 3u - \log (\kappa / \alpha) - 2))) \\ \\& + O_U( L\log^{-U} X ) \Big). \quad (5.2)\end{split}$$
+
+在Tao的博客上,也给出了另一种表述下的筛法基本引理(Lemma 17),符号参考本文第二节第一部分.
+
+> **定理19(Tao版本的筛法基本引理):**
+>
+> $\quad$ 令$\kappa > 0, z = X^{1/s}$,对于任意积性函数$g$满足
+>
+> $$0 \le g(p) < 1,\ \forall p \text{ is prime,}$$
+>
+> 以及满足
+>
+> $$V(w) \ll_\kappa \left( \frac{\log z}{\log w} \right)^{\kappa} V(z),\quad (5.3)$$
+>
+> 于是存在在$D = \{ d | P(z) : d \le X \}$上紧支撑的上下界系数$(\lambda_d^{\pm})_{d \in D}$,使得有
+>
+> $$\sum_{d \in D} \lambda_d^{\pm} = V(z)(1 + O_\kappa(\text{e}^{-s})).\quad (5.4)$$
+
+我们令$q = q(x, u)$没有小的素因子,我们称其为拟素数(quasi-primes),严格表述即
+
+$$(q, P(x^{1/u})) = 1,\ \frac{\log q}{\log x} \ll 1,$$
+
+利用定理17,我们可以得到以下的结果.
+
+> **定理20(拟素数定理):**
+>
+> $\quad$ 令$q$为我们如上定义的拟素数,那么我们有以下渐近式结果
+>
+> $$|\{ q : q \le X \}| \sim \left( u \text{e}^{-\gamma} \frac{\log X}{\log x} \right) \pi(X),$$
+>
+> $\quad$ 其中$\gamma$为Euler常数.
+
+上述结果中给出的是一个渐近式,这也体现出了筛法基本引理在处理拟素数方面的巨大作用了.而基本引理也常常作为初步筛选的方法,用于去除一些较小的素数,为更复杂的筛法处理中等大小的素数做准备$^{[2]}$,这就是为什么它能称之为筛法基本引理的原因了吧.
+
+#### 总结
+
+回到引言,"这次尽量还是压缩一些篇幅,以记录下一些关键要点为主吧",那么有没有缩短呢?
+
+我只能说,**如缩**.写这篇文章最终还是达到2.4w左右的字符,以及接近600行的代码.但是我又确实是跳过了非常非常多的证明过程与细节;以及我还跳过了定理2.1和定理2.1'在更多素数问题中的应用,包括第6节,第7节以及第8节后半的应用;除此之外,在看完了Tao的博客后,Rosser-Iwaniec筛法可能相当重要,其甚至可以绕过奇偶性检验,因此目前也就跳过了.
+
+<center><b>很可怕吗?是的很可怕.</b><br></center>
+
+但是,关于组合筛法的要点,以及Brun纯筛法与Brun筛法的构造与应用也还是有记录下来,以及Tao博客中更高的观点也尝试与之结合(虽然结合的很生硬就是了),因此在关键要点方面还是差不多做到了.
+
+最后从筛法理论整体来看,我应该还需要再记录一点点Selberg筛法的构造,只需要构造就行了,真的只要一点点了,不会冲到600行代码了(应该吧(￣▽￣)").以及如果能在记录完Maynard-Tao筛法就更完整了(Ploymath还是pass一下吧,这个得先把Tao的博客先研究研究再说).
+
+弄完筛法部分的内容后,我还有好一些内容可以更新,也有好一些东西需要猛猛学,到时候在慢慢规划了.
+
+<center>
+<img src="/image/notes-about-sieve-methods-5/T2.jpg" width="30%">
+</center>
+
+#### 参考资料
+
+[1] Halberstam, Richert. Sieve Methods[M]. Dover Publications, 2011. P37-P96.
+
+[2] T. Tao. 254A, Notes 4: Some sieve theory[Z]. https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/.
+
+[3] Ege Erdil. Brun’s theorem and sieve theory[Z]. https://www.lesswrong.com/posts/aSYvbztFDdG7LBeRz/brun-s-theorem-and-sieve-theory#The_sieve_of_Eratosthenes.
+
+[4] Motohashi Y. An Overview of the Sieve Method and its History[J]. arXiv preprint math/0505521, 2005.
