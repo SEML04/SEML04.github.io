@@ -271,20 +271,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Algorithm/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Character/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Algebraic-Geometry/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -293,6 +279,20 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Riemann-Roch-Theorem/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Algorithm/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Character/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -320,20 +320,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -355,7 +341,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Gauss-Sum/</loc>
+    <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -384,6 +377,13 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Chen-s-Theorem/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Gauss-Sum/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -427,14 +427,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/categories/%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8/</loc>
+    <loc>http://seml04.github.io/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/</loc>
+    <loc>http://seml04.github.io/categories/%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
