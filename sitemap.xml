@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/2025/04/03/notes-about-sieve-methods-5/</loc>
+    <loc>http://seml04.github.io/2025/03/12/notes-about-sieve-methods-4/</loc>
     
     <lastmod>2025-04-10</lastmod>
     
@@ -20,9 +20,9 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/2025/03/12/notes-about-sieve-methods-4/</loc>
+    <loc>http://seml04.github.io/2025/04/03/notes-about-sieve-methods-5/</loc>
     
-    <lastmod>2025-04-09</lastmod>
+    <lastmod>2025-04-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -222,7 +222,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
+    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -236,14 +236,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
+    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
+    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -271,20 +271,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Algebraic-Geometry/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Riemann-Roch-Theorem/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Algorithm/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -299,21 +285,21 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Algebraic-Geometry/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Riemann-Roch-Theorem/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Algebra/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -334,7 +320,49 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Prime-Twins-Conjecture/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Goldbach-s-Conjecture/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Sifting-Function/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -362,20 +390,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Prime-Twins-Conjecture/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -384,20 +398,6 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Sifting-Function/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
