@@ -12,7 +12,7 @@ tags:
 
 #### 引言
 
-这篇文章,我们将介绍Selberg最简单的上界筛模型,其利用二次型求极值的方法,从而对筛函数求出了一个上界.而Selberg更深刻的应用则可以见[筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理](https://math-4-anon.top/2025/03/12/notes-about-sieve-methods-4/index.html?_sw-precache=65e0ce052d6a97b59355681a4204c7a6).实际上这篇文章就是对Selberg筛法模型的一个补全,否则前后内容之间会有所缺失.
+这篇文章,我们将介绍Selberg最简单的上界筛模型,其利用**二次型求极值**的方法,从而对筛函数求出了一个上界.而Selberg更深刻的应用则可以见[筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理](https://math-4-anon.top/2025/03/12/notes-about-sieve-methods-4/index.html?_sw-precache=65e0ce052d6a97b59355681a4204c7a6).实际上这篇文章就是对Selberg筛法模型的一个补全,否则前后内容之间会有所缺失.
 
 而利用二次型的想法,在其他的地方也有很广泛的应用,其在惜字如金的Serre书中甚至占了特别大的篇幅,而在GPY的论文中也有应用!后者可以见[论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)](https://math-4-anon.top/2025/02/07/GPY-sieve-method-2/index.html?_sw-precache=e8d545eb59b76a66841e75fe0a3c0b2f),而前者我完成筛法部分的内容后也可以慢慢开启!
 
