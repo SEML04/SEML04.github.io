@@ -191,6 +191,27 @@
 
   
   <url>
+    <loc>http://seml04.github.io/tags/Number-Theory/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Continued-Fractions/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Prime-Number-Theorem/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -233,13 +254,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Number-Theory/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -247,21 +261,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Continued-Fractions/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Pell-Equation/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Diophantine-Approximation/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -324,14 +324,14 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Character/</loc>
+    <loc>http://seml04.github.io/tags/Algebra/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Algebra/</loc>
+    <loc>http://seml04.github.io/tags/Character/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -352,20 +352,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Goldbach-s-Conjecture/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Dirichlet-Convolution/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -374,6 +360,20 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Mangoldt-Function/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Goldbach-s-Conjecture/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -401,6 +401,20 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Selberg-s-Sieve/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Chen-s-Theorem/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -415,21 +429,7 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Selberg-s-Sieve/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Quadratic-Forms/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Chen-s-Theorem/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -438,14 +438,14 @@
 
   
   <url>
-    <loc>http://seml04.github.io/categories/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/</loc>
+    <loc>http://seml04.github.io/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://seml04.github.io/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/</loc>
+    <loc>http://seml04.github.io/categories/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
