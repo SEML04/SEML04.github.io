@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://seml04.github.io/2025/04/15/Maynard-sieve-method/</loc>
+    
+    <lastmod>2025-04-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/2025/01/15/GPY-sieve-method/</loc>
     
     <lastmod>2025-04-15</lastmod>
@@ -294,6 +303,20 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Prime-Twins-Conjecture/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Prime-k-Tuples-Conjecture/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Algorithm/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -308,6 +331,13 @@
   </url>
   
   <url>
+    <loc>http://seml04.github.io/tags/Algebra/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://seml04.github.io/tags/Elementary-Number-Theory/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -316,13 +346,6 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Chinese-Remainder-Theorem/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Algebra/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -344,13 +367,6 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Prime-Twins-Conjecture/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -385,20 +401,6 @@
   </url>
   
   <url>
-    <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
-    <lastmod>2025-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://seml04.github.io/tags/Selberg-s-Sieve/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -414,6 +416,20 @@
   
   <url>
     <loc>http://seml04.github.io/tags/Quadratic-Forms/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Combinatorial-Sieve/</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://seml04.github.io/tags/Brun-s-Sieve/</loc>
     <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
