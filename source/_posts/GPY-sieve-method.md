@@ -218,10 +218,103 @@ $$\Lambda_R(n; \mathcal{H}, \ell) = \frac{1}{(k+\ell)!} \sum_{\substack{d | P_\m
 >
 > 假设素数具有分布水平$\vartheta > 1/2$,也就是(1.3)和(1.4)成立,我们可以选择,对于任意$\epsilon > 0$,$R \ll_M N^{\frac{\vartheta}{2} - \epsilon}$,以及$h \le R^\epsilon$.
 
-注:通过重新标记变量,我们可以得到$h_0 \in \mathcal{H}_2 \text{ and } h_0 \not\in \mathcal{H}_1$的情况.
+通过重新标记变量,我们可以得到$h_0 \in \mathcal{H}_2 \text{ and } h_0 \not\in \mathcal{H}_1$的情况.
 
 命题1和2可以通过多种方式得到加强.我们将证明误差项$o_M(1)$可以被一系列低阶项和一个素数定理类型的误差项所取代.此外,我们可以将结果统一为$M$作为$N$和$R$的显函数,同时让$M \to \infty$.这将在后续的论文中得到证明,并用于(1.9)的证明.
+
+## 三、定理1和定理2的证明
+
+在这一节中,我们将应用命题1和命题2和一些Granville和Soundararajan的简单论证,来证明定理1和定理2.
+
+当$\ell \ge 0$,$\mathcal{H}_k = \{ h_1, h_2, \cdots, h_k \}$,$1 \le h_1, h_2, \cdots, h_k \le h \le R$时,根据命题1,取$R \ll N^{\frac{1}{2}}(\log N)^{-B(M)}$和$R,N \to \infty$,有
+
+$$\sum_{n \le N}\Lambda_R(n; \mathcal{H}_k, \ell)^2 \sim \frac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k) N(\log R)^{k+2\ell}. \quad (3.1)$$
+
+而对于任意$h_i \in \mathcal{H}_k$,由命题2可知,对于$R \ll N^{\frac{\vartheta}{2} - \epsilon}$和$R,N \to \infty$,
+
+$$\sum_{n \le N}\Lambda_R(n, \mathcal{H}_k, \ell)^2 \theta(n + h_i) \sim \frac{2}{(k+2\ell+1)!} \dbinom{2\ell+1}{\ell} \mathfrak{S}(\mathcal{H}_k) N(\log R)^{k+2\ell+1}. \quad (3.2)$$
+
+于是取$R = N^{\frac{\vartheta}{2} - \epsilon}$,便可得到:
+
+$$\begin{array}{ll}
+    \mathcal{S} & := \displaystyle\sum_{n=N+1}^{2N} \left( \displaystyle\sum_{i=1}^k \theta(n+h_i)-\log 3N \right)\Lambda_R(n;\mathcal{H}_k,\ell)^2 \\
+    \\
+    & \sim k\dfrac{2}{(k+2\ell+1)!}\dbinom{2\ell+1}{\ell}\mathfrak{S}(\mathcal{H}_k)N(\log R)^{k+2\ell+1} \\
+    \\
+    & \quad -\log 3N \dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell}\mathfrak{S}(\mathcal{H}_k)N(\log R)^{k+2\ell} \\
+    \\
+    & \sim \left( \dfrac{2k}{k+2\ell+1} \dfrac{2\ell+1}{\ell+1} \log R - \log 3N \right)\dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell}\mathfrak{S}(\mathcal{H}_k)N(\log R)^{k+2\ell}.
+\end{array}\quad (3.3)$$
+
+这里我们注意到,如果$S > 0$,则存在一个$n \in [N+1, 2N]$使得在$n+h_1, n+h_2, \cdots, n+h_k$中至少包含有两个素数.而此时应该有
+
+$$\dfrac{k}{k+2\ell+1}\dfrac{2\ell+1}{\ell+1}\vartheta > 1.\quad (3.4)$$
+
+如果$k, l \to \infty$,且$\ell = o(k)$,那么左侧的极限为$2\vartheta$,因此在$\vartheta > 1/2$时,我们可以选取出依赖于$\vartheta$的$k$和$\ell$,使得(3.4)成立.于是这就证明了定理1的第一部分.接下来,假设$\vartheta > 20/21$,我们可以知道的是,取$\ell = 1, k = 7$时可以让(3.4)成立.于是这就证明了定理1的第二部分的稍弱形式,也就是$k = 7$的情况.而$k = 6$的情况则需要一个稍微复杂一些的讨论,而这将在本节的后边会讲到.
+
+而下面的表格就给出了从(3.4)得到的定理1中$C(\vartheta)$的值.对于一个确定的$\vartheta$,它给出了能使得(3.4)成立的最小的$k$和对应的最小的$\ell$.此处$h(k)$是可容许的$k$元组的最短的长度,
+
+它由Engelsma[6]通过穷举搜索$1 \le k \le 305$计算得出,并涵盖了此表和下一张表中除$h(421)$之外的所有值,其中我们从[6]中获取了$h(k)$的这些上界值.
+
+|$\vartheta$|$k$|$\ell$|$h(k)$|
+|----|----|----|----|
+|$1$|$7$|$1$|$20$|
+|$0.95$|$8$|$1$|$26$|
+|$0.90$|$9$|$1$|$30$|
+|$0.85$|$11$|$1$|$36$|
+|$0.80$|$16$|$1$|$60$|
+|$0.75$|$21$|$2$|$84$|
+|$0.70$|$31$|$2$|$140$|
+|$0.65$|$51$|$3$|$252$|
+|$0.60$|$111$|$5$|$634$|
+|$0.55$|$421$|$10$|$2956^*$|
+
+其中$*$表示这个值可能是真实值的一个上界.
+
+而证明定理2的时候,我们需要对$\mathcal{S}$进行修改,我们令:
+
+$$\begin{array}{l}
+    \widetilde{\mathcal{S}} := \displaystyle\sum_{n=N+1}^{2N} \left( \displaystyle\sum_{1 \le h_0 \le h} \theta(n+h_0) - v \log 3N \right) \displaystyle\sum_{\substack{1 \le h_1, h_2, \cdots, h_k \le h \\ \text{distinct}}} \Lambda_R(n; \mathcal{H}_k, \ell)^2,
+\end{array} \quad (3.5)$$
+
+此处$v$是一个正整数.为了估计$\widetilde{\mathcal{S}}$,我们需要用到$h_0 \not\in \mathcal{H}_k$情况下的命题2:
+
+$$\sum_{n \le N} \Lambda_R(n; \mathcal{H}_k, \ell)^2\theta(n+h_0) \sim \frac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k \cup \{ h_0 \}) N (\log R)^{k+2\ell}. \quad (3.6)$$
+
+我们再由Gallagher[10]的一个结果:当$h \to \infty$时,
+
+$$\sum_{\substack{1 \le h_1, h_2, \cdots, h_k \le h \\ \text{distinct}}} \mathfrak{S}(\mathcal{H}_k) \sim h^k. \quad (3.7)$$
+
+取$R = N^{\frac{\vartheta}{2} - \epsilon}$,并且应用(3.1),(3.2),(3.6)和(3.7),我们发现有:
+
+$$\begin{array}{ll}
+    \widetilde{\mathcal{S}} & \sim \displaystyle\sum_{\substack{1 \le h_1, h_2, \cdots, h_k \le h \\ \text{distinct}}} \left( k \dfrac{2}{(k+2\ell+1)!} \dbinom{2\ell+1}{\ell} \mathfrak{S}(\mathcal{H}_k) N (\log R)^{k + 2\ell + 1} \right. \\ 
+    \\
+    & \quad + \displaystyle\sum_{\substack{1 \le h_0 \le h \\ h_0 \neq h_i, 1 \le i \le k}} \dfrac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k \cup \{h_0\}) N (\log R)^{k + 2\ell} \\
+    \\
+    & \quad - \left. v \log 3N \dfrac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k) N (\log R)^{k + 2\ell} \right) \\
+    \\
+    & \sim \left( \dfrac{2k}{k+2\ell+1} \dfrac{2\ell+1}{\ell+1} \log R + h - v \log 3N \right) \dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell} N h^k (\log R)^{k+2\ell}.
+\end{array}\quad (3.8)$$
+
+因此,当$N < n \le 2N$时,若在$(n, n+h]$中至少有$v + 1$个素数,则应该有
+
+$$h > \left( v - \dfrac{2k}{k+2\ell+1}\dfrac{2\ell+1}{\ell+1} \left( \dfrac{\vartheta}{2} - \epsilon \right) \right) \log N, \quad (3.9)$$
+
+于是令$\ell = [\sqrt{k} / 2]$,并且让$k$足够大,则得到有:
+
+$$h > \left( v - 2\vartheta + 4\epsilon + O\left( \dfrac{1}{\sqrt{k}} \right) \right) \log N. \quad (3.10)$$
+
+这就证明了(1.11).而定理2就是$v = 1$且$\vartheta = 1/2$的特殊情况.
 
 ## 翻译结束!
 
 翻译工作到此打住!后续的内容就不再一句一句翻译了,而是以其他的阅读笔记的形式出现!马上进行下一份工作!!!
+
+(2025.4.15)
+
+$\quad$ 唉,由于毕设要求翻译20000字外文字符,或者翻译出5000字中文字符,因此还得接着翻,一翻差不多又干出了三分之一的篇幅,要闹麻了.
+
+$\quad$ 还好我已经在[论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)](https://math-4-anon.top/2025/02/07/GPY-sieve-method-2/index.html?_sw-precache=66f1af1632bb3368d09343ac95fcbbed)把定理1和2的证明都记录了一遍,否则翻译这点内容真的要似了.但这也导致了这两篇文章中的内容现在有了高度的重合,但是在这里我还没有翻译到定理1后半部分的证明部分,因此还好,还是有非重合部分的内容在的.
+
+$\quad$ 但是现在,我的翻译工作应该是真的结束了,20000外文字符吗?不在话下😎.

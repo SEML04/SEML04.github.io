@@ -131,7 +131,7 @@ $$\begin{split}
 >
 > $\quad$ 在$\Omega_1, R$的条件下,我们有
 >
-> $$S(\mathscr{A}; \mathfrak{P}, z) \le \frac{X}{G(z)} + \frac{z^2}{W^3(z)}, \quad (4.6)$$
+> $$S(\mathscr{A}; \mathfrak{P}, z) \le \frac{X}{G(z)} + \frac{z^2}{W^3(z)}. \quad (4.6)$$
 
 #### 总结
 
