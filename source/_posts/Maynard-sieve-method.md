@@ -16,17 +16,29 @@ tags:
 
 如果关注孪生素数猜想的话,我们知道的是,在Goldston,Pintz,Yildirim对admissible k-tuple筛选,得到了一些突破性的成果(这些我在[论文阅读之翻译篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)](https://math-4-anon.top/2025/01/15/GPY-sieve-method/index.html?_sw-precache=5476e5e99aeb83a45fdabbd20df6d9a4)和[论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)](https://math-4-anon.top/2025/02/07/GPY-sieve-method-2/index.html?_sw-precache=1f04d5f0200d9ca0f15c7b8db26977a7)中有简单的记录)之后,张益唐对GPY筛法进行进一步的讨论,最终得到了张益唐定理,引发了数论界对素数有界间隙的探索.
 
-而在这个过程之中,Maynard的工作又发挥了相当大的作用.他引入多重Selberg权函数的概念,对GPY权函数进行了拓展,并且将素元组猜想也向前推进了一大步.后续Polymath的工作也是基于这个之上,在承认Elliott-Halberstam猜想的情况下,Maynard的结果仍然是最优的,而承认广义Elliott-Halberstam猜想后,我们才得到孪生素数间隙上界为6的这个结果.
+而在这个过程之中,Maynard的工作又发挥了相当大的作用.他引入$k$维Selberg权函数的概念,对GPY权函数进行了拓展,并且将素元组猜想也向前推进了一大步.后续Polymath的工作也是基于这个之上,在承认Elliott-Halberstam猜想的情况下,Maynard的结果仍然是最优的,而承认广义Elliott-Halberstam猜想后,我们才得到孪生素数间隙上界为6的这个结果.
 
 因此在本篇文章中,我将(尝试)对{% label Maynard定理 blue %}做一个简单的记录,以及记录一点{% label Maynard-Tao权函数 blue %}的一些想法(因为实际上我还没有全部掌握😭,证明所取函数是最优的这一块我也没有深入学习),而最后,我看能不能简单再记录一下张益唐论文中最重要的一些突破点(组合杀我😭).
 
-Maynard的论文为:[https://arxiv.org/pdf/1311.4600](https://arxiv.org/pdf/1311.4600).张益唐的论文为:[https://www.jstor.org/stable/24522787](https://www.jstor.org/stable/24522787).
+Maynard的论文为:[https://arxiv.org/pdf/1311.4600](https://arxiv.org/pdf/1311.4600).
 
-总之,启动启动!全部启动!不学习永远学不会!
+总之,启动启动!全部启动!不学习永远学不会!<span style="color: rgb(230,51,51)">但注意的是,有一些符号我稍稍做了一点修改,可能和原论文并不一致.</span>
 
 <center>
 <img src="/image/Maynard-sieve-method/T1.jpg" width="30%">
 </center>
+
+#### 参考资料
+
+[1] Maynard J. Small gaps between primes[J]. Annals of mathematics, 2015: 383-413.
+
+[2] Zhang Y. Bounded gaps between primes[J]. Annals of Mathematics, 2014: 1121-1174.
+
+[3] Goldston D A, Pintz J, Yildirim C Y. Primes in tuples I[J]. Annals of Mathematics, 2009: 819-862.
+
+[4] T. Tao. 254A, Notes 4: Some sieve theory[Z]. https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/.
+
+[5] Soundararajan K. The work of James Maynard[J]. Prize LectureS, 2022, 1: 66-80.
 
 #### 成果比较与陈述
 
@@ -97,3 +109,49 @@ $$1 < C_m \cdot \frac{\mathcal{L}_0}{\mathcal{L}},$$
 > $$\liminf_{n} {p_{n+2} - p_n} \le 600.$$
 
 Maynard还证明了,以上定理中的$12$在这种证明框架下已经是最优的了(Polymath似乎也是认可了这一点),但$600$仍然是可以优化的.
+
+#### 构造权函数的基本想法
+
+##### GPY筛法的关键点
+
+<span style="color: rgb(230,51,51)">**GPY筛法的关键想法**</span>是,对于一个admissible tuple$\mathcal{H} = \{ h_1, \cdots, h_k \}$,我们考虑
+
+$$S(N, v) = \sum_{N \le n < 2N} \left(\sum_{i = 1}^k \chi_{\mathfrak{P}}(n + h_i) - v\right) \omega_n, \quad (2.1)$$
+
+其中$\chi_{\mathfrak{P}}(n + h_i) = 1$当且仅当$n + h_i$是素数.于是当对于任意足够大的$N$都有$S(N, \rho) > 0$时,说明存在无穷多个$n$,使得$n+h_i$中至少有$\lfloor \rho + 1 \rfloor$个素数.
+
+##### 多维Selberg权函数
+
+其中$\omega_n$取Selberg $k$-dimensional weights时,(2.1)被称为$k$维筛法问题,此时权函数的表达式为
+
+$$\omega_n = \left( \sum_{\substack{ d < R \\ d | (n+h_1)\cdots(n+h_k) }} \lambda_d \right)^2,\ \lambda_d = \mu(d) (\log R/d)^k. \quad (2.2)$$
+
+##### GPY权函数
+
+而在Goldston,Pintz,Yildirim的论文中,他们对(2.2)中的$\lambda_d$进行改进,令
+
+$$\lambda_d = \mu(d) F(\log R/d), \quad (2.3)$$
+
+并且最终确定,$F(x)$的最优选择为$x^{k + l}$,于是Goldston,Pintz,Yildirim构造了一种新的权函数,也就是GPY权函数,其表达式为
+
+$$\omega_n = \left( \sum_{\substack{ d < R \\ d | (n+h_1)\cdots(n+h_k) }} \mu(d) (\log R/d)^{k+l} \right)^2, \quad (2.3.1)$$
+
+而GPY筛法能解决的问题以及局限性,在前几篇博客中以及本文前文中也都略有介绍,因此不再赘述.
+
+##### Maynard-Tao权函数
+
+而Maynard则考虑了更一般的GPY权函数,也就是令
+
+$$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \lambda_{d_1, \cdots, d_k} \right)^2. \quad (2.4)$$
+
+而考虑这种权函数并不是只有Maynard和Tao最先想到的,Selberg就提出过使用这种权函数的可能性(太伟大了,Selberg!),以及Goldston和Yildirim也考虑过这种情况.
+
+Maynard选取$\lambda_{d_1, \cdots, d_k}$是形如
+
+$$\lambda_{d_1, \cdots, d_k} \approx \prod_{i = 1}^k \mu(d_i) f(d_1, \cdots, d_k), \quad (2.5)$$
+
+因此我们的权函数便变成了
+
+$$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d_1, \cdots, d_k) \right)^2. \quad (2.5.1)$$
+
+于是现在最大的问题就是确定一个最优的$f(x_1, \cdots, x_k)$了,因此这就变成了一个优化问题,而Polymath后面便用变分法在考虑这个问题了$^{[4]}$.
