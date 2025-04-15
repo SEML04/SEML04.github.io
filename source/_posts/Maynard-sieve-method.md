@@ -95,3 +95,5 @@ $$1 < C_m \cdot \frac{\mathcal{L}_0}{\mathcal{L}},$$
 > $$\liminf_{n} (p_{n+1} - p_n) \le 12,$$
 >
 > $$\liminf_{n} {p_{n+2} - p_n} \le 600.$$
+
+Maynard还证明了,以上定理中的$12$在这种证明框架下已经是最优的了(Polymath似乎也是认可了这一点),但$600$仍然是可以优化的.
