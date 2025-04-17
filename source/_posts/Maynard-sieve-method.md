@@ -98,7 +98,7 @@ $$1 < C_m \cdot \frac{\mathcal{L}_0}{\mathcal{L}},$$
 >
 > $$\liminf_{n} (p_{n+1} - p_n) \le 600.$$
 
-张益唐定理依赖于将素数的分布水平(the level of distribution)稍稍推广至$\frac{1}{2}+\epsilon$,从而根据GPY论文中的结论便可以得到有界间隙的证明,而这用到的是Bombieri-Vinogradov定理的一种弱化形式.而定理1.3将仅依赖于Bombieri-Vinogradov定理,并且其证明过程实际上是较为初等的,并没有太多的组合方法.以及我们在有条件的情况下,有
+张益唐定理依赖于将<span style="color: rgb(123,104,238)">素数的分布水平(the level of distribution),也就是$\vartheta$</span>稍稍推广至$\frac{1}{2}+\epsilon$,从而根据GPY论文中的结论便可以得到有界间隙的证明,而这用到的是Bombieri-Vinogradov定理的一种弱化形式.而定理1.3将仅依赖于Bombieri-Vinogradov定理,并且其证明过程实际上是较为初等的,并没有太多的组合方法.以及我们在有条件的情况下,有
 
 > **定理1.4:**
 >
@@ -114,11 +114,11 @@ Maynard还证明了,以上定理中的$12$在这种证明框架下已经是最�
 
 ##### GPY筛法的关键点
 
-<span style="color: rgb(230,51,51)">**GPY筛法的关键想法**</span>是,对于一个admissible tuple$\mathcal{H} = \{ h_1, \cdots, h_k \}$,我们考虑
+<span style="color: rgb(230,51,51)">**GPY筛法的关键想法**</span>是,对于<span style="color: rgb(0, 128, 255)">一个admissible tuple$\mathcal{H} = \{ h_1, \cdots, h_k \}$</span>,我们考虑
 
 $$S(N, v) = \sum_{N \le n < 2N} \left(\sum_{i = 1}^k \chi_{\mathfrak{P}}(n + h_i) - v\right) \omega_n, \quad (2.1)$$
 
-其中$\chi_{\mathfrak{P}}(n + h_i) = 1$当且仅当$n + h_i$是素数.于是当对于任意足够大的$N$都有$S(N, \rho) > 0$时,说明存在无穷多个$n$,使得$n+h_i$中至少有$\lfloor \rho + 1 \rfloor$个素数.
+其中$\chi_{\mathfrak{P}}(n + h_i) = 1$当且仅当$n + h_i$是素数.于是当对于任意足够大的$N$都有$S(N, v) > 0$时,说明存在无穷多个$n$,使得$n+h_i$中至少有$\lfloor v + 1 \rfloor$个素数.
 
 ##### 多维Selberg权函数
 
@@ -154,4 +154,93 @@ $$\lambda_{d_1, \cdots, d_k} \approx \prod_{i = 1}^k \mu(d_i) f(d_1, \cdots, d_k
 
 $$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d_1, \cdots, d_k) \right)^2. \quad (2.5.1)$$
 
-于是现在最大的问题就是确定一个最优的$f(x_1, \cdots, x_k)$了,因此这就变成了一个优化问题,而Polymath后面便用变分法在考虑这个问题了$^{[4]}$.
+而命题4.1中告诉了我们$\lambda_{d_1, \cdots, d_k}$更加具体一些的构造,但是这个命题更强大的作用我们放在后面集中说.
+
+> **命题4.0(<span style="color: rgb(123,104,238)">$\lambda_{d_1, \cdots, d_k}$</span>的结构):**
+>
+> $\quad$ 设$k$为$\mathcal{H}$的大小,素数的分布水平$\vartheta > 0$,则存在常数$\delta > 0$,令<span style="color: rgb(123,104,238)">$R = N^{\vartheta/2 - \delta}$</span>,$W = \prod_{p \le \log\log\log N} p \ll (\log\log N)^2$,且我们记
+>
+> <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)">$\displaystyle\mathcal{R}_k = \left\{ (x_1, \cdots, x_k) \in [0, 1]^{k} : \sum_{i = 1}^{k} x_i \le 1 \right\},$</span><span> $(4.3.1)$ </span></div>
+>
+> $\quad$ 以及$F$是在$\mathcal{R}_k$上紧支撑的一个固定的光滑函数,于是:
+>
+> $\qquad$ 在$(\prod_{i=1}^{k} d_i, W) = 1$时令
+>
+> $$\lambda_{d_1, \cdots, d_k} = \left( \prod_{i=1}^k \mu(d_i)d_i \right) \sum_{\substack{ r_1, \cdots, r_k \\ d_i | r_i,\ \forall i \\ (r_i, W) = 1,\ \forall i }} \frac{\mu(\prod_{i=1}^k r_i)^2}{\prod_{i=1}^k \varphi(r_i)} F\left( \frac{\log r_1}{\log R}, \cdots, \frac{\log r_k}{\log R} \right),$$
+>
+> $\qquad$ 而在$(\prod_{i=1}^{k} d_i, W) \neq 1$时令$\lambda_{d_1, \cdots, d_k} = 0.$
+
+于是现在最大的问题就是确定一个最优的$F(x_1, \cdots, x_k)$了,因此这就变成了一个优化问题,而Polymath后面便用变分法在考虑这个问题了$^{[4]}$.
+
+#### 重要命题
+
+现在我们开始就前面的四个定理进行证明,当然是承认一些命题的前提下.首先我们就来研究刚刚花了大功夫得到的(4.3.1)中的$\lambda_{d_1, \cdots, d_k}$的性质,也就是命题4.1,而这其实也是我最需要承认的一个命题了.但在此之前,我们先定义两个函数,这样就明白命题4.1的作用了.
+
+我们先给定一个固定的剩余类$v_0 \text{ mod W}$,然后定义:
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;">
+    <span style="color: rgb(123,104,238)">
+        $\displaystyle S_1 = \sum_{\substack{ N \le n < 2N \\ n \equiv v_0 \text{ mod } W}} \left( \sum_{d_i | n+h_i,\ \forall i} \lambda_{d_1, \cdots, d_k} \right)^2,$
+    </span>
+    <span>
+        $(4.2)$
+    </span>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;">
+    <span style="color: rgb(123,104,238)">
+        $\displaystyle S_2 = \sum_{\substack{ N \le n < 2N \\ n \equiv v_0 \text{ mod } W}} \left( \sum_{i=1}^{k} \chi_{\mathfrak{P}}(n+h_i) \right) \left( \sum_{d_i | n+h_i,\ \forall i} \lambda_{d_1, \cdots, d_k} \right)^2.$
+    </span>
+    <span>
+        $(4.3)$
+    </span>
+</div>
+
+而接下来的命题则告诉我们$S_1$和$S_2$的估计式.
+
+> **命题4.1**
+>
+> $\quad$ 条件同命题4.0,我们有
+>
+> $$S_1 = \frac{(1+o(1)) \varphi(W)^k N (\log R)^k}{W^{k+1}} I_k(F),$$
+>
+> $$S_2 = \frac{(1+o(1)) \varphi(W)^k N (\log R)^{k+1}}{W^{k+1} \log N} \sum_{m=1}^{k} J_k^{(m)}(F),$$
+>
+> $\quad$ 其中$I_k(F)$和$J_k^{(m)}(F)$都不为$0$,且具体表达式如下:
+>
+> <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)"> $\displaystyle I_k(F) = \int_0^1 \cdots \int_0^1 F(t_1, \cdots, t_k)^2 \text{d}t_1 \cdots \text{d}t_k,$ </span><span> $(4.3.2)$ </span></div>
+>
+> <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)"> $\displaystyle J_k^{(m)} = \int_0^1 \cdots \int_0^1 \left( \int_0^1 F(t_1, \cdots, t_k) \text{d}t_m \right)^2 \text{d}t_1 \cdots \text{d}t_{m-1} \text{d}t_{m+1} \cdots \text{d}t_k. $ </span><span> $(4.3.3)$ </span></div>
+
+于是我们便可以用GPY筛法来进行操作了,并且这一步也是比较直接明了,我们有
+
+> **命题4.2:**
+>
+> $\quad$ 条件同命题4.0,我们记
+>
+> <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)"> $ \displaystyle \mathcal{S}_k = \{ F \in Riemann([0,1]^k) : F \text{在} \mathcal{R}_k \text{上紧支撑,且} I_k(F) \neq 0, J_k^{(m)} \neq 0,\ \forall m \}, $ </span></div>
+>
+> $\quad$ 并且令
+>
+> <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)"> $ \displaystyle M_k = \sup_{F \in \mathcal{S}_k} \frac{\sum_{i=1}^k J_k^{(m)}(F)}{I_k(F)}, \quad r_k = \left\lceil \frac{\vartheta M_k}{2} \right\rceil. $ </span><span> $(4.3.4)$ </span></div>
+>
+> $\quad$ 于是我们可知,存在无穷多个正整数$n$,使得在$n+h_i(1 \le i \le k)$中至少有$r_k$个是素数.特别地,也就是
+>
+> $$\liminf_{n} (p_{n+r_k-1} - p_n) \le \max_{1 \le i,j \le k} (h_i - h_j).$$
+
+而接下来的命题,就是在告诉我们$M_k$的下界.
+
+> **命题4.3:**
+>
+> $\quad$ 设$n \in \mathbb{N}$,且$M_k$与(4.3.4)一致,于是我们有
+>
+> $\quad$ (1) $M_5 > 2,$
+>
+> $\quad$ (2) $M_105 > 4,$
+>
+> $\quad$ (3) 当$k$足够大时,有$M_k > \log k - 2 \log\log k - 2.$
+
+至此,我们最需要的命题都已经准备齐全,而除了命题4.2可以由命题4.1推出,剩下的两个命题我都直接承认,然后利用这三个命题(其实现在只需要命题4.2和命题4.3)来证明我们一开始所陈述的四个定理了.
+
+#### 简要证明
+

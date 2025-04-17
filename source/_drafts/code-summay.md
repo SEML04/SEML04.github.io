@@ -21,10 +21,21 @@
 % markdown改变颜色:
 <span style="color: rgb(230,51,51)"> 最主要的想法 </span>
 
+<div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;">
+  <span style="color: rgb(0,128,255)">
+    $\mathcal{R}_k = \left\{ (x_1, \cdots, x_k) \in [0, 1]^{k} : \sum_{i = 1}^{k} x_i \le 1 \right\},$
+  </span>
+  <span> 
+    $(4.3.1)$ 
+  </span>
+</div>
+
 
 
 % latex改变颜色:
 $${\color{red} x^2 + y^2 = z^2}$$
+
+$${\color[RGB]{230,51,51}[ r_1\log p_1 + \cdots + r_s\log p_s ]}$$
 
 
 
