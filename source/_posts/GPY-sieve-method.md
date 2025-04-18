@@ -13,7 +13,7 @@ tags:
 
 ### 导言
 
-本篇是对Goldston,Pintz,Yildirim的一篇论文*Primes in tuples I*的一部分内容的翻译,阅读后的体会与感悟应该会单独再出一篇博客.而原文的链接可以见:https://arxiv.org/abs/math/0508185.
+本篇是对Goldston,Pintz,Yildirim的一篇论文*Primes in tuples I*的一部分内容的翻译,阅读后的体会与感悟应该会单独再出一篇博客.而原文的链接可以见:https://www.jstor.org/stable/25662161.
 
 GPY的这篇论文刊登在*Annals of Mathematics*,因此该论文的含金量不必我多说.而重要的是,这篇文章为后面对素数间隙分布的研究提供了新的思路与方法,并且在短短几年内,循着该文中提出的4个问题,数学界对该方面的研究得到了重大的突破.因此阅读这篇文章是必要的.
 
@@ -72,9 +72,9 @@ $$\liminf_{n \to \infty}(p_{n+1} - p_n) \le 16,\quad (1.7)$$
 
 > **定理2.** 我们有
 >
-> $$E_1 := \liminf_{n \to \infty}\frac{p_{n+1}-p_n}{\log p_n} = 0.\quad (1.8)$$
+> $$\Delta_1 := \liminf_{n \to \infty}\frac{p_{n+1}-p_n}{\log p_n} = 0.\quad (1.8)$$
 
-关于这个结论的讨论由来已有,我们将简要地介绍一下.不等式$E_1 \le 1$是素数定理的一个平凡的结论.第一个形如$E_1 < 1$的结论是1926年由Hardy和Littlewood[17]证明的,他们在广义Riemann猜想(GRH)的假设下得出$E_1 \le 2/3$.仍然是在GEH假设下,Rankin[25]将结果改进为$E_1 \le \frac{3}{5}$.第一个无条件的估计结果是Erdős[7]于1940年证明的,他使用Brun筛法证明存在有一个可明确计算的常数$c$,使得$E_1 < 1-c$,但Erdős并没有明确给出$c$的值.在1954年,Ricci[26]将Erdős的结论改进为:$E_1 \le 15/16$.在1965年Bombieri和Davenport[2]改进并无条件化了Hardy和Littlewood的方法,用Bombieri-Vinogradov定理替代了GRH,从而得到了$E_1 \le 1/2$.他们还结合Erdős的方法,得到了$E_1 \le 0.4665\cdots$.他们的结果不久被Pilt'ai[24]细化为$E_1 \le 0.4571\cdots$,被Uchiyama[31]细化为$E_1 \le 0.4542\cdots$,而Huxley[19][20]细化至$E_1 \le 0.4425\cdots$,最终于1984年得到$E_1 \le 0.4393\cdots[21]$.在1988年Maier[22]使用他的矩阵方法改进了Huxley的结果为$E_1 \le \textrm{e}^{-\gamma}\cdot 0.4425\cdots = 0.2484\cdots$,其中$\gamma$为Euler常数.Maier方法本身可得到$E_1 \le \textrm{e}^{-\gamma} = 0.5614\cdots$.最近由Goldston和Yildirim[12]的方法,不需要结合其他方法可以得到的结果为$E_1 \le 1/4$.
+关于这个结论的讨论由来已有,我们将简要地介绍一下.不等式$\Delta_1 \le 1$是素数定理的一个平凡的结论.第一个形如$\Delta_1 < 1$的结论是1926年由Hardy和Littlewood[17]证明的,他们在广义Riemann猜想(GRH)的假设下得出$\Delta_1 \le 2/3$.仍然是在GEH假设下,Rankin[25]将结果改进为$\Delta_1 \le \frac{3}{5}$.第一个无条件的估计结果是Erdős[7]于1940年证明的,他使用Brun筛法证明存在有一个可明确计算的常数$c$,使得$\Delta_1 < 1-c$,但Erdős并没有明确给出$c$的值.在1954年,Ricci[26]将Erdős的结论改进为:$\Delta_1 \le 15/16$.在1965年Bombieri和Davenport[2]改进并无条件化了Hardy和Littlewood的方法,用Bombieri-Vinogradov定理替代了GRH,从而得到了$\Delta_1 \le 1/2$.他们还结合Erdős的方法,得到了$\Delta_1 \le 0.4665\cdots$.他们的结果不久被Pilt'ai[24]细化为$\Delta_1 \le 0.4571\cdots$,被Uchiyama[31]细化为$\Delta_1 \le 0.4542\cdots$,而Huxley[19][20]细化至$\Delta_1 \le 0.4425\cdots$,最终于1984年得到$\Delta_1 \le 0.4393\cdots[21]$.在1988年Maier[22]使用他的矩阵方法改进了Huxley的结果为$\Delta_1 \le \textrm{e}^{-\gamma}\cdot 0.4425\cdots = 0.2484\cdots$,其中$\gamma$为Euler常数.Maier方法本身可得到$\Delta_1 \le \textrm{e}^{-\gamma} = 0.5614\cdots$.最近由Goldston和Yildirim[12]的方法,不需要结合其他方法可以得到的结果为$\Delta_1 \le 1/4$.
 
 在本系列的后续一篇论文中,我们将证明一个定量的结果
 
@@ -90,23 +90,23 @@ $$\liminf_{n \to \infty}\frac{p_{n+1} - p_n}{(\log p_n)^{\frac{1}{2}}(\log\log p
 
 **问题4.** 在Ellott-Halberstam猜想的假设下,孪生素数猜想能否用类似的想法证明?
 
-我们方法的局限性在于我们并不能很成功的找出超过两个很接近的素数,这一点也在问题3中指出了.但是,我们能够改进早期的结果,尤其是[12]中的最新结果.对于任意$r \ge 1$,令
+我们方法的局限性在于我们并不能很成功的找出超过两个很接近的素数,这一点也在问题3中指出了.但是,我们能够改进早期的结果,尤其是[12]中的最新结果.对于任意$v \ge 1$,令
 
-$$E_r = \liminf_{n \to \infty} \dfrac{p_{n+r}-p_n}{\log p_n}. \quad (1.10)$$
+$$\Delta_v = \liminf_{n \to \infty} \dfrac{p_{n+r}-p_n}{\log p_n}. \quad (1.10)$$
 
-Bombieri和Davenport[2]证明了$E_r \le r - 1/2$.后来Huxley[19, 20]将这个上界改进为$E_r \le r - 5/8 + o(1/r)$,而Goldston和Yildirim[12]则改进为$E_r \le (\sqrt{r}-1/2)^2$,Maier[22]则将其改进为$E_r \le \text{e}^{-\gamma} (r - 5/8 + o(1/r))$.而在证明定理2的过程中,我们还将证明,在假设素数具有分布水平$\vartheta$时:
+Bombieri和Davenport[2]证明了$\Delta_v \le v - 1/2$.后来Huxley[19, 20]将这个上界改进为$\Delta_v \le v - 5/8 + o(1/v)$,而Goldston和Yildirim[12]则改进为$\Delta_v \le (\sqrt{v}-1/2)^2$,Maier[22]则将其改进为$\Delta_v \le \text{e}^{-\gamma} (v - 5/8 + o(1/v))$.而在证明定理2的过程中,我们还将证明,在假设素数具有分布水平$\vartheta$时:
 
-$$E_r \le \max(r - 2\vartheta, 0), \quad (1.11)$$
+$$\Delta_v \le \max(v - 2\vartheta, 0), \quad (1.11)$$
 
-因此无条件的,我们能够得到有$E_r \le r - 1$.然而,通过一些更复杂的论断,我们将证明以下结论:
+因此无条件的,我们能够得到有$\Delta_v \le v - 1$.然而,通过一些更复杂的论断,我们将证明以下结论:
 
-> **定理3.** 假设素数具有分布水平$\vartheta$.那么对任意$r \ge 2$,
+> **定理3.** 假设素数具有分布水平$\vartheta$.那么对任意$v \ge 2$,
 >
-> $$E_r \le (\sqrt{r} - \sqrt{2\vartheta})^2. \quad (1.12)$$
+> $$\Delta_v \le (\sqrt{v} - \sqrt{2\vartheta})^2. \quad (1.12)$$
 >
 > 特别的,我们得到无条件下,对任意$r \ge 1$,
 >
-> $$E_r \le (\sqrt{r} - 1)^2. \quad (1.13)$$
+> $$\Delta_v \le (\sqrt{v} - 1)^2. \quad (1.13)$$
 
 从(1.11)或(1.12)中,我们可以看到,在Elliott-Halberstam猜想下意味着有
 
@@ -114,7 +114,7 @@ $$E_2 = \liminf_{n \to \infty} \frac{p_{n+2} - p_n}{\log p_n} = 0. \quad (1.14)$
 
 我们注意到,如果我们将本文的思路与Maier的矩阵方法[22]结合起来,我们期望(1.12)可以被一个更强的不等式取代
 
-$$E_r \le \text{e}^{-\gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \quad (1.15)$$
+$$\Delta_v \le \text{e}^{-\gamma}(\sqrt{v} - \sqrt{2\vartheta})^2. \quad (1.15)$$
 
 虽然这是我们关于这个主题系列的第一篇论文,但是还有另外两篇论文与本文互相支撑.第一篇论文[14]是与Motohashi共同撰写的,对定理1和定理2的证明进行了简化.第二篇论文[13]与Graham共同撰写,利用筛法证明了定理1和定理2,并且提供了*几乎素数元组*(*almost prime tuples*)的应用.
 
@@ -158,7 +158,7 @@ $$\Lambda_R(n+h_1)\Lambda_R(n+h_2)\cdots\Lambda_R(n+h_k). \quad (2.7)$$
 
 在[12]中,Goldston和Yildirim应用(2.7)来检测素数之间的小间隙,并证明
 
-$$E_1 = \liminf_{n \to \infty} \left( \frac{p_{n+1} - p_n}{\log p_n} \right) \le \frac{1}{4}.$$
+$$\Delta_1 = \liminf_{n \to \infty} \left( \frac{p_{n+1} - p_n}{\log p_n} \right) \le \frac{1}{4}.$$
 
 在这项工作中,他们意识到,对于某些应用对素元组可能存在有一些更好的近似方法,但是他们设计来的近似方法并不太成功.最近,现在的作者能够得到这样一种近似方法,并能将其应用于素数之间的小间隙问题中.
 

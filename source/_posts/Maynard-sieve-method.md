@@ -76,13 +76,13 @@ $$\liminf_{n} \frac{p_{n+2} - p_n}{\log p_n} = 0.$$
 >
 > $\quad$ 令$m \in \mathbb{N}$,而$r$是与$m$有关的充分大的正整数,令$\mathcal{A} = \{a_1, \cdots, a_r\}$为一列各不相同的整数,再记
 >
-> $$\mathcal{L} = \#\{ \mathcal{H} : \mathcal{H} = \{h_1, \cdots, h_m \} \subset \mathcal{A} \},$$
+> $$\mathcal{L} = \{ \mathcal{H} : \mathcal{H} = \{h_1, \cdots, h_m \} \subset \mathcal{A} \},$$
 >
-> $$\mathcal{L}_0 = \#\{ \mathcal{H} \in \mathcal{L} : \text{ 存在无穷多个} n \text{使得} n+h_i \text{是素数}, \forall h_i \in \mathcal{H} \},$$
+> $$\mathcal{L}_1 = \{ \mathcal{H} \in \mathcal{L} : \text{ 存在无穷多个} n \text{使得} n+h_i \text{是素数}, \forall h_i \in \mathcal{H} \},$$
 >
 > $\quad$ 于是我们有
 >
-> $$\frac{\mathcal{L}_0}{\mathcal{L}} \gg_m 1.$$
+> $$\frac{\#\mathcal{L}_1}{\#\mathcal{L}} \gg_m 1.$$
 
 注意,定理1.2中的$\gg$并不是远大于的意思,而是存在与$m$有关的常数$C_m$,使得
 
@@ -114,7 +114,7 @@ Maynard还证明了,以上定理中的$12$在这种证明框架下已经是最�
 
 ##### GPY筛法的关键点
 
-<span style="color: rgb(230,51,51)">**GPY筛法的关键想法**</span>是,对于<span style="color: rgb(0, 128, 255)">一个admissible tuple$\mathcal{H} = \{ h_1, \cdots, h_k \}$</span>,我们考虑
+<span style="color: rgb(230,51,51)">**GPY筛法的关键想法**</span>是,对于<span style="color: rgb(123,104,238)">一个admissible tuple$\mathcal{H} = \{ h_1, \cdots, h_k \}$</span>,我们考虑
 
 $$S(N, v) = \sum_{N \le n < 2N} \left(\sum_{i = 1}^k \chi_{\mathfrak{P}}(n + h_i) - v\right) \omega_n, \quad (2.1)$$
 
@@ -162,7 +162,7 @@ $$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d
 >
 > <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)">$\displaystyle\mathcal{R}_k = \left\{ (x_1, \cdots, x_k) \in [0, 1]^{k} : \sum_{i = 1}^{k} x_i \le 1 \right\},$</span><span> $(4.3.1)$ </span></div>
 >
-> $\quad$ 以及$F$是在$\mathcal{R}_k$上紧支撑的一个固定的光滑函数,于是:
+> $\quad$ 以及$F$是在$\mathcal{R}_k$上紧支撑的一个固定的<span style="color: rgb(230,51,51)">光滑函数</span>,于是:
 >
 > $\qquad$ 在$(\prod_{i=1}^{k} d_i, W) = 1$时令
 >
@@ -236,7 +236,7 @@ $$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d
 >
 > $\quad$ (1) $M_5 > 2,$
 >
-> $\quad$ (2) $M_105 > 4,$
+> $\quad$ (2) $M_{105} > 4,$
 >
 > $\quad$ (3) 当$k$足够大时,有$M_k > \log k - 2 \log\log k - 2.$
 
@@ -244,3 +244,101 @@ $$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d
 
 #### 简要证明
 
+在承认命题4.1-命题4.3后,其实对于定理1.1-定理1.4的证明都比较简单了,实际上筛法最难的一步就是类似于命题4.1中的这些估计式,但这里我也不再去探究这些问题,因为事实上我也并没有很掌握啦,但是看Tao的博客$^{[4]}$稍微有一些了解.
+
+##### 命题4.2的证明
+
+简要证明:
+
+$\quad$ 注意(2.1)中$S(N, v)$的构造,这里我们便可以令$S = S_2 - v S_1$,而我们现在就想要证明,$S > 0$.
+
+$\quad$ 而在我们的条件中,$R = N^{\varthe/2 - \delta}$,以及根据$M_k$的定义,我们可以选取合适的$F_0 \in \mathcal{S}_k$,使得
+
+$$\sum_{m=1}^{k} J_k^{(m)}(F_0) > (M_k - \delta) I_k(F_0) > 0.$$
+
+$\quad$ 而根据$\mathcal{S}_k$的定义,$F_0$在$\mathcal{R}_k$上Riemann可积的,于是存在一个光滑函数$F_1$使得
+
+$$\sum_{m=1}^{k} J_k^{(m)}(F_1) > (M_k - 2\delta) I_k(F_1) > 0.$$
+
+$\quad$ 此时我们便可以利用命题4.1(需要$F$是连续的)得到$\lambda_{d_1, \cdots, d_k}$,并且有
+
+$$\begin{split}
+    S & = \frac{\varphi(W)^k N (\log R)^k}{W^{k+1}} \left( \frac{\log R}{\log N} \sum_{j=1}^{k} J_k^{(m)}(F_1) - v I_k(F_1) + o(1) \right) \\\\
+    & \ge \frac{\varphi(W)^k N (\log R)^k I_k(F_1)}{W^{k+1}} \left( \left( \frac{\vartheta}{2} - \delta \right) \Big( M_k - 2\delta \Big) - v + o(1) \right). \quad (4.4)
+\end{split}$$
+
+$\quad$ 于是我们可以取足够小的$\delta$使得对于任意足够大的N都有$S > 0$成立.而又有
+
+$$\lfloor v + 1 \rfloor = \left\lceil \frac{\vartheta M_k}{2} \right\rceil,$$
+
+$\quad$ 于是根据(2.1)的讨论便可得知命题4.2成立.<span style="float: right">$\square$</span>
+
+##### 定理1.1的证明
+
+简要证明:
+
+$\quad$ 由Bombieri-Vinogradov定理取$\vartheta = 1/2 - \epsilon$,其中$\epsilon$为任意大于0的数.再根据命题4.3,于是得到
+
+$$\frac{\vartheta M_k}{2} \ge \left( \frac{1}{4} - \frac{\epsilon}{2} \right)(\log k - 2 \log\log k - 2).$$
+
+$\quad$ 于是取$\epsilon = 1/k$,然后取$k \ge Cm^2 \text{e}^{4m}$,其中$C$是一个与$m$和$k$无关的常数,于是得到
+
+$$\frac{\vartheta M_k}{2} > m.$$
+
+$\quad$ 此时我们可以选取$\mathcal{H}$为大于$k$的连续$k$个素数,也就是
+
+$$\mathcal{H} = \{ p_{\pi(k)+1}, \cdots, p_{\pi(k)+k} \},$$
+
+$\quad$ 于是我们便可以的到
+
+$$\liminf_{n} (p_{n+m} - p_n) \ll k\log k \ll m^3\text{e}^{4m}.$$
+
+$\quad$ 至此我们完成了定理1.1的证明.<span style="float: right">$\square$</span>
+
+##### 定理1.2的证明
+
+简要证明:
+
+$\quad$ 根据定理1.1的证明,我们取$k = \lceil Cm^2\text{e}^{4m} \rceil$.于是当$\{h_1, \cdots, h_k\}$是admissible时,则存在子集$\{ h'_1, \cdots, h'_m \} \subset \{h_1, \cdots, h_k\}$,并且满足存在无穷多个$n$使得$n+h'_i \ (1 \le i \le m)$<span style="color: rgb(230,51,51)">都是</span>素数.
+
+$\quad$ 对于$\mathcal{A} = \{ a_1, \cdots, a_r \}$,对于任意$p \le k$,我们<span style="color: rgb(230,51,51)">从$\mathcal{A}$中去掉模$p$后元素最少的这一个剩余类</span>,并记筛后的集合为$\mathcal{L}_2$.这句话很绕,但实际上就是为了得到以下的这个估计:
+
+$$\#\mathcal{L}_2 \ge r\prod_{p \le k} (1 - 1/p) \gg_m r.$$
+
+$\quad$ 进而我们还知道的是,$\mathcal{L}_2$中任意长度为$k$的子集<span style="color: rgb(230,51,51)">一定</span>是admissible的.我们此时再记$s = \#\mathcal{L}_2$,由假设得知$s > k$.
+
+$\quad$ 于是我们可以知道的是
+
+$$\#\mathcal{L}_1 \ge \binom{s}{k} \gg_m r^m.$$
+
+$\quad$ 而我们容易知道的是
+
+$$\#\mathcal{L} = \binom{r}{m} \le r^m.$$
+
+$\quad$ 因此我们便完成了定理1.2的证明.<span style="float: right">$\square$</span>
+
+##### 定理1.3的证明
+
+简要证明:
+
+$\quad$ 由命题4.3,取$k = 105$时有$M_{105} > 4$,并且由Bombieri-Vinogradov定理可知$\vartheta = 1/2 - \epsilon$,其中$\epsilon$为任意大于0的数.
+
+$\quad$ 因此根据命题4.2可知,对于任意的admissible tuple$\mathcal{H} = \{ h_1, \cdots, h_{105} \}$,让$\epsilon$足够小时有
+
+$$\liminf_{n} (p_{n+1} - p_n) \le \max_{1 \le i,j \le 105} (h_i - h_j),$$
+
+$\quad$ 再根据Thomas Engelsma的数据(Goldston,Pintz,Yildirim也用了),可知上式右侧最小为$600$,因此我们便完成了定理1.3的证明.<span style="float: right">$\square$</span>
+
+##### 定理1.4的证明
+
+简要证明:
+
+$\quad$ 在Elliott-Halberstam猜想成立的情况下,于是$\vartheta = 1 - \epsilon$,其中$\epsilon$为任意大于0的数.仍然取$k = 105$,因此当$\epsilon$足够小时,选取定理1.3中的$\mathcal{H}$,有
+
+$$\liminf_{n} (p_{n+2} - p_n) \le 600.$$
+
+$\quad$ 接着我们取$k = 5$和$\mathcal{H} = \{ 0, 2, 6, 8, 12\}$,于是我们便可以得到有
+
+$$\liminf_{n} (p_{n+1} - p_n) \le 12.$$
+
+$\quad$ 因此我们便完成了定理1.4的证明.<span style="float: right">$\square$</span>

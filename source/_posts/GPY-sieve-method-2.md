@@ -15,7 +15,7 @@ tags:
 
 虽然已经翻译了GPY论文的两节,但是最主要的内容并没有翻译,也就是用{% label 命题1 %}和{% label 命题2 %}去证明最重要的{% label 定理1 blue %}和{% label 定理2 blue %},因此这也是不得不细品的一个环节.
 
-原文的链接可以见:https://arxiv.org/abs/math/0508185.
+原文的链接可以见:https://www.jstor.org/stable/25662161.
 
 当然,前面两节的拙劣翻译也可见我的前一篇博客.后续我将看一下命题1和命题2的证明过程,然后更新张益唐的想法与思路,而这一部分应该会更加简略一些.然后补充一下陈定理的博客,现在应该会轻松很多了吧.最后就是Maynard和Polymath的论文部分,当然也是前者为主.
 
@@ -45,7 +45,7 @@ tags:
 
 > **定理2.** 我们有
 >
-> $$E_1 := \liminf_{n \to \infty}\frac{p_{n+1}-p_n}{\log p_n} = 0.\quad (1.8)$$
+> $$\Delta_1 := \liminf_{n \to \infty}\frac{p_{n+1}-p_n}{\log p_n} = 0.\quad (1.8)$$
 
 以上就是本文最最关键的成果.并且其证明方式也与Maynard的证明思路很相似.
 
@@ -103,7 +103,7 @@ $$\dfrac{k}{k+2\ell+1}\dfrac{2\ell+1}{\ell+1}\vartheta > 1.\quad (3.4)$$
 而证明定理2的时候,我们需要对$\mathcal{S}$进行修改,我们令:
 
 $$\begin{array}{l}
-    \widetilde{\mathcal{S}} := \displaystyle\sum_{n=N+1}^{2N} \left( \displaystyle\sum_{1 \le h_0 \le h} \theta(n+h_0) - r\log 3N \right) \displaystyle\sum_{\substack{1 \le h_1, h_2, \cdots, h_k \le h \\ \text{distinct}}} \Lambda_R(n; \mathcal{H}_k, \ell)^2,
+    \widetilde{\mathcal{S}} := \displaystyle\sum_{n=N+1}^{2N} \left( \displaystyle\sum_{1 \le h_0 \le h} \theta(n+h_0) - v \log 3N \right) \displaystyle\sum_{\substack{1 \le h_1, h_2, \cdots, h_k \le h \\ \text{distinct}}} \Lambda_R(n; \mathcal{H}_k, \ell)^2,
 \end{array} \quad (3.5)$$
 
 这时候,我们便需要使用到命题2,然后再利用Gallagher[9]中的一个结果,也就是当$h \to \infty$时有:
@@ -117,22 +117,22 @@ $$\begin{array}{ll}
     \\
     & \quad + \displaystyle\sum_{\substack{1 \le h_0 \le h \\ h_0 \neq h_i, 1 \le i \le k}} \dfrac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k \cup \{h_0\}) N (\log R)^{k + 2\ell} \\
     \\
-    & \quad - \left. r \log 3N \dfrac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k) N (\log R)^{k + 2\ell} \right) \\
+    & \quad - \left. v \log 3N \dfrac{1}{(k+2\ell)!} \dbinom{2\ell}{\ell} \mathfrak{S}(\mathcal{H}_k) N (\log R)^{k + 2\ell} \right) \\
     \\
-    & \sim \left( \dfrac{2k}{k+2\ell+1} \dfrac{2\ell+1}{\ell+1} \log R + h - r \log 3N \right) \dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell} N h^k (\log R)^{k+2\ell}.
+    & \sim \left( \dfrac{2k}{k+2\ell+1} \dfrac{2\ell+1}{\ell+1} \log R + h - v \log 3N \right) \dfrac{1}{(k+2\ell)!}\dbinom{2\ell}{\ell} N h^k (\log R)^{k+2\ell}.
 \end{array}\quad (3.8)$$
 
-其中$\displaystyle\sum_{1 \le h_0 \le h} \theta(n+h_0) - r\log 3N > 0$便是说明在$(n, n+h]$中至少有$r + 1$个素数.此时即为:
+其中$\displaystyle\sum_{1 \le h_0 \le h} \theta(n+h_0) - v \log 3N > 0$便是说明在$(n, n+h]$中至少有$v + 1$个素数.此时即为:
 
-$$h > \left( r - \dfrac{2k}{k+2\ell+1}\dfrac{2\ell+1}{\ell+1} \left( \dfrac{\vartheta}{2} - \epsilon \right) \right) \log N, \quad (3.9)$$
+$$h > \left( v - \dfrac{2k}{k+2\ell+1}\dfrac{2\ell+1}{\ell+1} \left( \dfrac{\vartheta}{2} - \epsilon \right) \right) \log N, \quad (3.9)$$
 
 于是令$\ell = [\sqrt{k} / 2]$,并且让$k$足够大,则得到有:
 
-$$h > \left( r - 2\vartheta + 4\epsilon + O\left( \dfrac{1}{\sqrt{k}} \right) \right) \log N. \quad (3.10)$$
+$$h > \left( v - 2\vartheta + 4\epsilon + O\left( \dfrac{1}{\sqrt{k}} \right) \right) \log N. \quad (3.10)$$
 
 于是得到了:
 
-$$E_r \le \max(r-2\vartheta, 0). \quad (1.11)$$
+$$\Delta_r \le \max(v - 2\vartheta, 0). \quad (1.11)$$
 
 而定理2即是$r = 1, \vartheta = 1/2$的特殊情况.因此我们也{% label 证明完了定理2 red %}.
 
@@ -224,3 +224,11 @@ $$\vartheta > \dfrac{4(8 - \sqrt{19})}{15} = 0.97096... \quad (3.16)$$
 <center>
 <img src="/image/GPY-sieve-method-2/T1.gif" width="30%">
 </center>
+
+(2025.4.18)
+
+$\quad$ 回过头来稍微修改了两个符号的表达,使之与Annals of Mathematics上的版本稍微更一致一些了,以及后续Maynard论文的记录也是稍微统一下符号代表的含义.
+
+$\quad$ 以及之前刚了解时的疑问--"本篇到底哪一块是和筛法联系起来的?"现在我稍微有一些眉目了,其(3.3),(3.5)处的构造,就称作为GPY筛法(在[论文阅读 -- Small gaps between primes (Maynard)](https://math-4-anon.top/2025/04/15/Maynard-sieve-method/index.html?_sw-precache=b223022a2ae6958f0b7400c017ed5670)中稍微有所介绍),而这种筛法是对于admissible tuples进行筛选的,因此与Halberstam的那种对于大集合$\mathcal{A}$的筛法的过程是不一样的.
+
+$\quad$ 但是目前还有一些疑问,那就是在GPY筛法中的这些权函数$\omega_n$,与陈景润筛法中的加权函数$\rho_1$和$\rho_2$(在[筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理](https://math-4-anon.top/2025/03/12/notes-about-sieve-methods-4/index.html?_sw-precache=4f33e123ef7f4af1b06b9129bd7ecb48)也有介绍)之间有没有联系呢?所代表的内涵是不是一致的呢?能不能结合在一块呢?而这些问题我暂时也还没有去研究,如果之后还有机会研究筛法的话再思考思考,但是很有可能毕设之后就是终章了.
