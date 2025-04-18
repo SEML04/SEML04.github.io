@@ -120,9 +120,9 @@ $$E_r \le \text{e}^{-\gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \quad (1.15)$$
 
 本文的结构如下.在第2节中,我们描述了我们的方法与早期工作的关系.我们还陈述了命题1和命题2,他们包含了本文的关键思想.这些命题的形式比[13]和[14]更一般,因此可用在很多应用中.在第3节中,我们使用这些命题证明了定理1和定理2,其证明方法归功于Granville和Soundararajan.在第4节中,我们对第3节中的使用的方法做了进一步的评论.在第5节中,我们证明了两个后续需要的引理.在第6节中,我们证明了命题1的一个特例,但同时也说明了一般情况下的要点.在第7节中,我们开始证明命题1,并将其简化为估计某个围道积分的值.在第8节中,我们将估计在两个命题证明中出现的更一般的围道积分的值.在第9节中,我们证明了命题2.在本文中,我们没有获得在$k$上一致的结果,因此在此处我们假设我们的元组具有固定的长度.但是,对于(1.9)而言,k上一致的结果是需要的,而这些内容将是我们本系列下一篇文章的主题.最后,我们在第10节中证明了定理3.
 
-符号.在下文中,c和C将分别表示经过适当选择后充分小的和充分大的绝对正常数,对于带有上下标的c和C也是同理.我们允许在不同情况下,这些常数可以不同.除非另有说明,否则$o,O,\ll$符号所隐含的常数也是绝对的.如果陈述S为真,则[S]为1,否则[S]为0.符号$\sum^\flat$是对无平方整数求和,而$\sum^'$则表示求和的数是两两互素的.
+符号.在下文中,c和C将分别表示经过适当选择后充分小的和充分大的绝对正常数,对于带有上下标的c和C也是同理.我们允许在不同情况下,这些常数可以不同.除非另有说明,否则$o,O,\ll$符号所隐含的常数也是绝对的.如果陈述S为真,则[S]为1,否则[S]为0.符号$\sum^\flat$是对无平方整数求和,而$\sum^{'}$则表示求和的数是两两互素的.
 
-本文所用的想法是经过多年发展而来的.我们感谢许多人,但无法一一提及.不过我们要感谢A. Balog, E. Bombieri, T. H. Chan, J. B. Conrey, P. Deift, D. Farmer, K. Ford, J. Friedlander, A. Granville, C. Hughes, D. R. Heath-Brown, A. Ledoan, H. L. Montgomery, Sz. Gy. Revesz, P. Sarnak, and K. Soundararajan.
+本文所用的想法是经过多年发展而来的.我们感谢许多人,但无法一一提及.不过我们要感谢A. Balog, E. Bombieri, T. H. Chan, J. B. Conrey, P. Deift, D. Farmer, K. Ford, J. Friedlander, A. Granville, C. Hughes, D. R. Heath-Brown, A. Ledoan, H. L. Montgomery, Sz. Gy. Revesz, P. Sarnak, 和 K. Soundararajan.
 
 ## 二. 近似素元组
 
@@ -130,7 +130,7 @@ $$E_r \le \text{e}^{-\gamma}(\sqrt{r} - \sqrt{2\vartheta})^2. \quad (1.15)$$
 
 $$\mathcal{H} = \{h_1, h_2, \cdots, h_k\},\text{其中} 1 \le h_1, h_2, \cdots, h_k \le h \text{是各不相同的整数}. \quad (2.1)$$
 
-并且令$\nu_p(\mathcal{H})$表示$\mathcal{H}$中元素在模$p$剩余类中所占据的不同剩余类的个数.对于无平方因子的整数$d$,我们可以通过积性将其拓展至$\nu_d{H}$.我们记
+并且令$\nu_p(\mathcal{H})$表示$\mathcal{H}$中元素在模$p$剩余类中所占据的不同剩余类的个数.对于无平方因子的整数$d$,我们可以通过积性将其拓展至$\nu_d(\mathcal{H})$.我们记
 
 $$\mathfrak{S}(\mathcal{H}) := \prod_p \left( 1-\frac{1}{p} \right)^{-k}\left( 1-\frac{\nu_p(\mathcal{H})}{p} \right). \quad (2.2)$$
 
@@ -218,7 +218,7 @@ $$\Lambda_R(n; \mathcal{H}, \ell) = \frac{1}{(k+\ell)!} \sum_{\substack{d | P_\m
 >
 > 假设素数具有分布水平$\vartheta > 1/2$,也就是(1.3)和(1.4)成立,我们可以选择,对于任意$\epsilon > 0$,$R \ll_M N^{\frac{\vartheta}{2} - \epsilon}$,以及$h \le R^\epsilon$.
 
-通过重新标记变量,我们可以得到$h_0 \in \mathcal{H}_2 \text{ and } h_0 \not\in \mathcal{H}_1$的情况.
+通过重新标记变量,我们可以得到$h_0 \in \mathcal{H}_2$且$h_0 \not\in \mathcal{H}_1$的情况.
 
 命题1和2可以通过多种方式得到加强.我们将证明误差项$o_M(1)$可以被一系列低阶项和一个素数定理类型的误差项所取代.此外,我们可以将结果统一为$M$作为$N$和$R$的显函数,同时让$M \to \infty$.这将在后续的论文中得到证明,并用于(1.9)的证明.
 
