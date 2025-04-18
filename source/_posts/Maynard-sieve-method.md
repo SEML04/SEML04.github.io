@@ -1,5 +1,5 @@
 ---
-title: 论文阅读 -- Small gaps between primes (Maynard)
+title: 论文阅读 -- Small gaps between primes (Maynard) & Bounded gaps between primes (Yitang Zhang)
 mathjax: true
 date: 2025-04-15 14:51:06
 categories:
@@ -20,25 +20,13 @@ tags:
 
 因此在本篇文章中,我将(尝试)对{% label Maynard定理 blue %}做一个简单的记录,以及记录一点{% label Maynard-Tao权函数 blue %}的一些想法(因为实际上我还没有全部掌握😭,证明所取函数是最优的这一块我也没有深入学习),而最后,我看能不能简单再记录一下张益唐论文中最重要的一些突破点(组合杀我😭).
 
-Maynard的论文为:[https://arxiv.org/pdf/1311.4600](https://arxiv.org/pdf/1311.4600).
+Maynard的论文为:[https://arxiv.org/pdf/1311.4600](https://arxiv.org/pdf/1311.4600),张益唐的论文为:[https://www.jstor.org/stable/24522787](https://www.jstor.org/stable/24522787).
 
 总之,启动启动!全部启动!不学习永远学不会!<span style="color: rgb(230,51,51)">但注意的是,有一些符号我稍稍做了一点修改,可能和原论文并不一致.</span>
 
 <center>
 <img src="/image/Maynard-sieve-method/T1.jpg" width="30%">
 </center>
-
-#### 参考资料
-
-[1] Maynard J. Small gaps between primes[J]. Annals of mathematics, 2015: 383-413.
-
-[2] Zhang Y. Bounded gaps between primes[J]. Annals of Mathematics, 2014: 1121-1174.
-
-[3] Goldston D A, Pintz J, Yildirim C Y. Primes in tuples I[J]. Annals of Mathematics, 2009: 819-862.
-
-[4] T. Tao. 254A, Notes 4: Some sieve theory[Z]. https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/.
-
-[5] Soundararajan K. The work of James Maynard[J]. Prize LectureS, 2022, 1: 66-80.
 
 #### 成果比较与陈述
 
@@ -158,7 +146,7 @@ $$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d
 
 > **命题4.0(<span style="color: rgb(123,104,238)">$\lambda_{d_1, \cdots, d_k}$</span>的结构):**
 >
-> $\quad$ 设$k$为$\mathcal{H}$的大小,素数的分布水平$\vartheta > 0$,则存在常数$\delta > 0$,令<span style="color: rgb(123,104,238)">$R = N^{\vartheta/2 - \delta}$</span>,$W = \prod_{p \le \log\log\log N} p \ll (\log\log N)^2$,且我们记
+> $\quad$ 设$k$为$\mathcal{H}$的大小,素数的分布水平$\vartheta > 0$,则存在常数$\delta > 0$,令<span style="color: rgb(123,104,238)">$R = N^{\vartheta/2 - \delta}$,$W = \prod_{p \le \log\log\log N} p \ll (\log\log N)^2$</span>,且我们记
 >
 > <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%;"><span style="color: rgb(123,104,238)">$\displaystyle\mathcal{R}_k = \left\{ (x_1, \cdots, x_k) \in [0, 1]^{k} : \sum_{i = 1}^{k} x_i \le 1 \right\},$</span><span> $(4.3.1)$ </span></div>
 >
@@ -248,7 +236,7 @@ $$\omega_n = \left( \sum_{d_i | n+h_i, \ \forall i} \prod_{i = 1}^k \mu(d_i) f(d
 
 ##### 命题4.2的证明
 
-简要证明:
+**简要证明:**
 
 $\quad$ 注意(2.1)中$S(N, v)$的构造,这里我们便可以令$S = S_2 - v S_1$,而我们现在就想要证明,$S > 0$.
 
@@ -275,7 +263,7 @@ $\quad$ 于是根据(2.1)的讨论便可得知命题4.2成立.<span style="float
 
 ##### 定理1.1的证明
 
-简要证明:
+**简要证明:**
 
 $\quad$ 由Bombieri-Vinogradov定理取$\vartheta = 1/2 - \epsilon$,其中$\epsilon$为任意大于0的数.再根据命题4.3,于是得到
 
@@ -297,7 +285,7 @@ $\quad$ 至此我们完成了定理1.1的证明.<span style="float: right">$\squ
 
 ##### 定理1.2的证明
 
-简要证明:
+**简要证明:**
 
 $\quad$ 根据定理1.1的证明,我们取$k = \lceil Cm^2\text{e}^{4m} \rceil$.于是当$\{h_1, \cdots, h_k\}$是admissible时,则存在子集$\{ h'_1, \cdots, h'_m \} \subset \{h_1, \cdots, h_k\}$,并且满足存在无穷多个$n$使得$n+h'_i \ (1 \le i \le m)$<span style="color: rgb(230,51,51)">都是</span>素数.
 
@@ -319,7 +307,7 @@ $\quad$ 因此我们便完成了定理1.2的证明.<span style="float: right">$\
 
 ##### 定理1.3的证明
 
-简要证明:
+**简要证明:**
 
 $\quad$ 由命题4.3,取$k = 105$时有$M_{105} > 4$,并且由Bombieri-Vinogradov定理可知$\vartheta = 1/2 - \epsilon$,其中$\epsilon$为任意大于0的数.
 
@@ -331,7 +319,7 @@ $\quad$ 再根据Thomas Engelsma的数据(Goldston,Pintz,Yildirim也用了),可�
 
 ##### 定理1.4的证明
 
-简要证明:
+**简要证明:**
 
 $\quad$ 在Elliott-Halberstam猜想成立的情况下,于是$\vartheta = 1 - \epsilon$,其中$\epsilon$为任意大于0的数.仍然取$k = 105$,因此当$\epsilon$足够小时,选取定理1.3中的$\mathcal{H}$,有
 
@@ -342,3 +330,77 @@ $\quad$ 接着我们取$k = 5$和$\mathcal{H} = \{ 0, 2, 6, 8, 12\}$,于是我�
 $$\liminf_{n} (p_{n+1} - p_n) \le 12.$$
 
 $\quad$ 因此我们便完成了定理1.4的证明.<span style="float: right">$\square$</span>
+
+#### 张益唐的弱化EH条件
+
+我们重新回顾一下[论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)](https://math-4-anon.top/2025/02/07/GPY-sieve-method-2/index.html?_sw-precache=859ccdfc3405be53c4f1b60f2ed540ff)中的GPY筛法,而如果我们想要得到孪生素数的有界间隙的话,我们就需要素数有着大于$1/2$的分布水平.
+
+于是我们再来重新翻出[筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理](https://math-4-anon.top/2025/03/12/notes-about-sieve-methods-4/index.html?_sw-precache=897261a90ec991eb6ee30d60a2b304ca)中的Bombieri-Vinogradov定理,而Elliott-Halberstam猜想就与之相关,并且我们得到与之相关的<span style="color: rgb(123,104,238)">$EH[\vartheta]$条件--对应于Tao博客$^{(6)}$的conjecture 11</span>.
+
+> **Elliott-Halberstam条件/$EH[\vartheta]$:**
+>
+> $\quad$ 设$x \ge 2$,对$0 < \vartheta < 1$,记
+>
+> $$\begin{split}
+R(D, x) & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \\
+ & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} \left|\pi(y; d, l) - \dfrac{1}{\varphi(d)}\text{li}y \right|,
+\end{split}$$
+>
+> $\quad$ 如果有
+>
+> $$R(x^{\vartheta}, x) \ll x\log^{-A}x,$$
+>
+> $\quad$ 我们称素数有$\vartheta$的分布水平,或者说有$EH(\vartheta)$条件成立.
+
+在GPY筛法的过程中,我们利用本文中的(2.3.1)构造了一个筛函数[3.3],也就是
+
+$$\begin{split}
+    \mathcal{S} & := \sum_{n=N+1}^{2N} \left( \sum_{i=1}^k \theta(n+h_i)-\log 3N \right)\Lambda_R(n;\mathcal{H}_k,\ell)^2 \\\\
+    & = (k\mathcal{L}_1 - \log x \mathcal{L}_2)x + O(x \log^{k+2\ell}x) + O(\mathcal{E}), \quad (a)
+\end{split}$$
+
+其中$\mathcal{L}_1, \mathcal{L}_2$具体的表达式见Goldston,Pintz,Yildirim的论文或者我之前的博客.
+
+此处我再记录一下<span style="color: rgb(123,104,238)">$MPZ(2\varpi)$--对应于Tao博客$^{[6]}的conjecture 12$</span>的形式,然后就差不多结束我们对于张益唐这篇论文的记录(因为后面的组合方法对我来说理解起来还是有点复杂了).
+
+> **Motohashi-Pintz-Zhang条件/$MPZ[\varpi]$:**
+>
+> $\quad$ 记$\theta$为Mangoldt函数(在[围绕Brun定理展开的素数指标求和估计式](https://math-4-anon.top/2025/02/15/Analytical-number-theory-1/index.html?_sw-precache=d161fb73be9de3c4268957627d1a6183)中有更具体的介绍,但是在那边记作$\Lambda$).
+>
+> $\quad$ 紧接着,我们设$\varpi > 0$,令$D = N^{1/4 + \varpi}$,记
+>
+> $$\Delta(\theta; d, c) := \sum_{\substack{N \le x < 2N \\ n \equiv c \text{ mod } d}} \theta(n) - \frac{1}{\varphi(d)} \sum_{\substack{N \le x < 2N \\ (n,d) = 1}} \theta(n),\ (d,c) = 1,$$
+>
+> $\quad$ 如果有
+>
+> $$\sum_{i=1}^{k} \sum_{\substack{d < D^2 \\ d | P(n)}} \sum_{c \in \mathcal{C}_i(d)} |\Delta(\theta; d, c)| = O(x\log^{-A}x),$$
+>
+> $\quad$ 我们称有$MPZ[\varpi]$条件成立.
+
+实际上,我们可以知道的是,$EH\left[ \frac{1}{2} + 2\varpi \right]$条件是可以推出$MPZ[\varpi]$条件的.
+
+而$\mathcal{E}$的具体表达式为
+
+$$\mathcal{E} = \sum_{i=1}^{k} \sum_{d < D^2} |\mu(d)| \tau_3(d) \tau_{k-1}(d) \sum_{c \in \mathcal{C}_i(d)} |\Delta(\theta; d, c)|,$$
+
+在原来的处理中,最大的问题就是$\mathcal{E}$阶的估计需要由$EH(\vartheta)$条件来保证,而我们只有$\vartheta < \frac{1}{2}$的结果.而张益唐便是将GPY筛法成立的条件从$EH[\vartheta]$条件,$\vartheta > \frac{1}{2}$弱化为$MPZ[\varpi]$,并且在$\varpi = \frac{1}{1168}$时,也就相当于$\vartheta < \frac{1}{2} + \frac{2}{1168}$的情况下得到了$\mathcal{E}$阶的估计,从而仍然能得到(a)式,从而由GPY筛法得到素数的有界间隙定理.
+
+#### 总结
+
+总算是把毕设所需要学习的筛法内容都给整理和记录一遍了,但是接下来要干的事还不少,尤其是毕设!毕设!!毕设!!!我得开始弄初稿了,因此更新是停了,但是代码仍然不停!~~不要停下来啊!~~
+
+以及不知道能不能速成代数几何+代数数论+群表示论😭.总之文章更新应该是不会这么频繁了,但是还是要忙好一阵了.
+
+#### 参考资料
+
+[1] Maynard J. Small gaps between primes[J]. Annals of mathematics, 2015: 383-413.
+
+[2] Zhang Y. Bounded gaps between primes[J]. Annals of Mathematics, 2014: 1121-1174.
+
+[3] Goldston D A, Pintz J, Yildirim C Y. Primes in tuples I[J]. Annals of Mathematics, 2009: 819-862.
+
+[4] T. Tao. 254A, Notes 4: Some sieve theory[Z]. https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/.
+
+[5] Soundararajan K. The work of James Maynard[J]. Prize LectureS, 2022, 1: 66-80.
+
+[6] T. Tao. The prime tuples conjecture, sieve theory, and the work of Goldston-Pintz-Yildirim, Motohashi-Pintz, and Zhang[Z]. https://terrytao.wordpress.com/2013/06/03/the-prime-tuples-conjecture-sieve-theory-and-the-work-of-goldston-pintz-yildirim-motohashi-pintz-and-zhang/#more-6728

@@ -69,7 +69,7 @@ $\quad$ 以及该条件下的余项
 $$\begin{split}
     r_d & = \pi(N; d, N) - \frac{1}{\varphi(d)} \text{li}N \\
     \\
-    & = \displaystyle\sum_{\substack{p \le x \\ p \equiv l\ \textrm{mod}\ d}} 1 - \frac{1}{\varphi(d)} \text{li}N \\
+    & = \displaystyle\sum_{\substack{p \le N \\ p \equiv N\ \textrm{mod}\ d}} 1 - \frac{1}{\varphi(d)} \text{li}N \\
     \\
     & = E(N; d, N). \quad (2.2)
 \end{split}$$
@@ -92,7 +92,7 @@ $$\begin{split}
 >
 > $$\begin{split}
 R(D, x) & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} |E(y; d, l)| \\
- & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} \left|\pi(y; d, l) - \dfrac{1}{\varphi(d)}\text{li}x \right|,
+ & = \sum_{d \le D} \max_{y \le x} \max_{(l,d) = 1} \left|\pi(y; d, l) - \dfrac{1}{\varphi(d)}\text{li}y \right|,
 \end{split}$$
 >
 > $\quad$ 于是有
