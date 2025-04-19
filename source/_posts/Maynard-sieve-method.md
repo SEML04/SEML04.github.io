@@ -331,7 +331,7 @@ $$\liminf_{n} (p_{n+1} - p_n) \le 12.$$
 
 $\quad$ 因此我们便完成了定理1.4的证明.<span style="float: right">$\square$</span>
 
-#### 张益唐的弱化EH条件
+#### Motohashi-Pintz-Zhang条件
 
 我们重新回顾一下[论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)](https://math-4-anon.top/2025/02/07/GPY-sieve-method-2/index.html?_sw-precache=859ccdfc3405be53c4f1b60f2ed540ff)中的GPY筛法,而如果我们想要得到孪生素数的有界间隙的话,我们就需要素数有着大于$1/2$的分布水平.
 
