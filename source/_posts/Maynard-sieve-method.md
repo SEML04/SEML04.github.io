@@ -369,9 +369,13 @@ $$\begin{split}
 >
 > $$\Delta(\theta; d, c) := \sum_{\substack{N \le x < 2N \\ n \equiv c \text{ mod } d}} \theta(n) - \frac{1}{\varphi(d)} \sum_{\substack{N \le x < 2N \\ (n,d) = 1}} \theta(n),\ (d,c) = 1,$$
 >
+> $\quad$ 以及令
+>
+> $$\mathcal{C}_i(d) = \{ c : 1 \le c \le d, (c, d) = 1, P(c - h_i) \eqiuv 0 \text{ mod } d \}, \ 1 \le i \le k.$$
+>
 > $\quad$ 紧接着,我们设$\varpi > 0$,令$D = N^{1/4 + \varpi}$,如果有
 >
-> $$\sum_{i=1}^{k} \sum_{\substack{d < D^2 \\ d | P(n)}} \sum_{c \in \mathcal{C}_i(d)} |\Delta(\theta; d, c)| = O(x\log^{-A}x),$$
+> $$\sum_{\substack{d < D^2 \\ d | P(n)}} \sum_{c \in \mathcal{C}_i(d)} |\Delta(\theta; d, c)| = O(x\log^{-A}x),$$
 >
 > $\quad$ 我们称有$MPZ[\varpi]$条件成立.
 
@@ -381,7 +385,7 @@ $$\begin{split}
 
 $$\mathcal{E} = \sum_{i=1}^{k} \sum_{d < D^2} |\mu(d)| \tau_3(d) \tau_{k-1}(d) \sum_{c \in \mathcal{C}_i(d)} |\Delta(\theta; d, c)|,$$
 
-在原来的处理中,最大的问题就是$\mathcal{E}$阶的估计需要由$EH(\vartheta)$条件来保证,而我们只有$\vartheta < \frac{1}{2}$的结果.而张益唐便是将GPY筛法成立的条件从$EH[\vartheta]$条件,$\vartheta > \frac{1}{2}$弱化为$MPZ[\varpi]$,并且在$\varpi = \frac{1}{1168}$时,也就相当于$\vartheta < \frac{1}{2} + \frac{2}{1168}$的情况下得到了$\mathcal{E}$阶的估计,从而仍然能得到(a)式,从而由GPY筛法得到素数的有界间隙定理.
+在原来的处理中,最大的问题就是$\mathcal{E}$阶的估计需要由$EH[\vartheta]$条件来保证,而我们只有$\vartheta < \frac{1}{2}$的结果.而张益唐便是将GPY筛法成立的条件从$EH[\vartheta]$条件,$\vartheta > \frac{1}{2}$弱化为$MPZ[\varpi]$,并且在$\varpi = \frac{1}{1168}$时,也就相当于$\vartheta < \frac{1}{2} + \frac{2}{1168}$的情况下得到了$\mathcal{E}$阶的估计,从而仍然能得到(a)式,从而由GPY筛法得到素数的有界间隙定理.
 
 #### 总结
 
