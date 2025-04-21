@@ -371,7 +371,7 @@ $$\begin{split}
 >
 > $\quad$ 以及令
 >
-> $$\mathcal{C}_i(d) = \{ c : 1 \le c \le d, (c, d) = 1, P(c - h_i) \eqiuv 0 \text{ mod } d \}, \ 1 \le i \le k.$$
+> $$\mathcal{C}_i(d) = \{ c : 1 \le c \le d, (c, d) = 1, P(c - h_i) \equiv 0 \text{ mod } d \}, \ 1 \le i \le k.$$
 >
 > $\quad$ 紧接着,我们设$\varpi > 0$,令$D = N^{1/4 + \varpi}$,如果有
 >
