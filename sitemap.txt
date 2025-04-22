@@ -1,10 +1,10 @@
+http://seml04.github.io/2024/12/02/notes-about-sieve-methods-3/
 http://seml04.github.io/2025/04/15/Maynard-sieve-method/
 http://seml04.github.io/2025/03/12/notes-about-sieve-methods-4/
 http://seml04.github.io/2025/02/07/GPY-sieve-method-2/
 http://seml04.github.io/2025/01/15/GPY-sieve-method/
 http://seml04.github.io/2025/04/14/notes-about-sieve-methods-6/
 http://seml04.github.io/2025/04/03/notes-about-sieve-methods-5/
-http://seml04.github.io/2024/12/02/notes-about-sieve-methods-3/
 http://seml04.github.io/tags/index.html
 http://seml04.github.io/categories/index.html
 http://seml04.github.io/about/index.html
