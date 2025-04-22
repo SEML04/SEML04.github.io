@@ -32,9 +32,9 @@ $A,A_i(\ge 1)$是与$X$和$z$无关的常数
 $B_i,C_i$则会是与$A_i,\kappa,\alpha$(后续会知道的,因为我现在也不知道)相关的常数
 </center>
 
-筛法筛法,当然得有一个被筛集合,以及一个筛子,和描述筛子大小的一个量.因此我们有以下符号来进行描述(数学符号定义属性大爆发):
+筛法筛法,当然得有一个被筛序列,以及一个筛子,和描述筛子大小的一个量.因此我们有以下符号来进行描述(数学符号定义属性大爆发):
 
-> 被筛集合是关于整数的有限集合,即Sifted Sequence,记作$\mathscr{A}$;
+> 被筛序列是关于整数的有限集合,即Sifted Sequence,记作$\mathscr{A}$;
 >
 > 筛集合是关于素数的无限集合,即Sifting Set,记作$\mathfrak{P}$;
 >
@@ -76,7 +76,7 @@ Gauss的这个渐近公式,在本书中直接作为定理使用(虽然这个本�
 
 ##### 想法与符号
 
-接下来就正式进入筛法的内容了(没想到吧,扯了这么久才入题呢😋)!首先便是从被筛集合Sifted Sequence开始,但是很快就会发现,这可以说是本章最难的一块(没想到吧,我也没想到,一个Sifting Sequence是本章的重点笔墨😭).
+接下来就正式进入筛法的内容了(没想到吧,扯了这么久才入题呢😋)!首先便是从被筛序列Sifted Sequence开始,但是很快就会发现,这可以说是本章最难的一块(没想到吧,我也没想到,一个Sifting Sequence是本章的重点笔墨😭).
 
 此处再重新强调一下Sifted Sequence是什么:
 
@@ -495,11 +495,11 @@ $$P(z) := \prod_{\substack{p < z \\ p \in \mathfrak{P}}} p$$
 
 其实Sifting function在很前边就已经出镜过了,即:
 
-$$S(\mathscr{A}; \mathfrak{P}, z) := \{ a : a \in \mathscr{A}, (a, P(z)) = 1 \} \quad (4.2.1.1)$$
+$$S(\mathscr{A}; \mathfrak{P}, z) := |\{ a : a \in \mathscr{A}, (a, P(z)) = 1 \}| \quad (4.2.1.1)$$
 
 同时,在第三节中,已经能够看到$\mathscr{A}_d$的重要性了(有时$|\mathscr{A}|$还得通过$\mathscr{A}_d$来获取信息),因此还有:
 
-$$S(\mathscr{A}_d; \mathfrak{P}, z) := \{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \} \quad (4.2.1.2)$$
+$$S(\mathscr{A}_d; \mathfrak{P}, z) := |\{ a : a \in \mathscr{A}_d, (a, P(z)) = 1 \}| \quad (4.2.1.2)$$
 
 这里将(4.2.2)单独写一行,是为了强调其条件,那就是:
 
