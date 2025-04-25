@@ -333,7 +333,7 @@ $\qquad$ 然后根据(3.1)中一样的讨论,我们便有
 $$\begin{split}
     |\mathscr{A}^{[b]}| & \ge \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \lambda^{(b)}(a) + O(\nu(N)) \\
     \\
-    & = \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \mu^2(a) \lambda^{(b)}(a) + \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 \\ \mu(a)}} \lambda^{(b)}(a) + O(\nu(N)).
+    & = \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 }} \mu^2(a) \lambda^{(b)}(a) + \sum_{\substack{ a \in \mathscr{A},\ (a, N) = 1 \\ (a, P(N^{\frac{1}{v}})) = 1 \\ \mu(a) = 0}} \lambda^{(b)}(a) + O(\nu(N)).
 \end{split}$$
 
 $\qquad$ 接下来我们再来估计第二项的阶.而实际上第二项中即为
