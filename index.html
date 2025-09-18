@@ -1,0 +1,394 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Chihaya Anon的数学小窝!!!</title><meta name="author" content="Chihaya Anon"><meta name="copyright" content="Chihaya Anon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里是Anon的数学小窝 不定时发布Anon的抄书笔记 也有可能是Anon的抄论文笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chihaya Anon的数学小窝!!!">
+<meta property="og:url" content="http://seml04.github.io/index.html">
+<meta property="og:site_name" content="Chihaya Anon的数学小窝!!!">
+<meta property="og:description" content="这里是Anon的数学小窝 不定时发布Anon的抄书笔记 也有可能是Anon的抄论文笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://seml04.github.io/img/anon-big_head.gif">
+<meta property="article:author" content="Chihaya Anon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://seml04.github.io/img/anon-big_head.gif"><link rel="shortcut icon" href="/img/mortis.gif"><link rel="canonical" href="http://seml04.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Chihaya Anon的数学小窝!!!',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2025-09-19 01:43:41'
+}</script><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/font.css"><meta name="google-site-verification" content="YLwhFberPAEMglxPns-Go4KGLq2zNlANxR4h0tQHg50"><meta name="msvalidate.01" content="3B1DDC4139178641D1E60BFC7B8E7A9A"><meta name="google-site-verification" content="-CSWvgzUY__JywozGu_wkw0FKJdwyTT95YvGpNj5Bgw" /><script src="/js/sakura.js"></script><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/bk9.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/anon-big_head.gif" onerror="onerror=null;src='/img/404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-music"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-music"></i><span> 标签</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-video"></i><span> 关于我</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Chihaya Anon的数学小窝!!!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-music"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-music"></i><span> 标签</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-video"></i><span> 关于我</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Chihaya Anon的数学小窝!!!</h1></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/04/15/Maynard-sieve-method/" title="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)"><img class="post-bg" src="/image/card/63.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/04/15/Maynard-sieve-method/" title="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)">论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-15T06:51:06.000Z" title="发表于 2025-04-15 14:51:06">2025-04-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a></span></div><div class="content">引言 如果关注孪生素数猜想的话,我们知道的是,在Goldston,Pintz,Yildirim对admissible k-tuple筛选,得到了一些突破性的成果(这些我在论文阅读之翻译篇 – Primes in tuples I (Goldston, Pintz, Yildirim)和论文阅读之重点提炼篇 – Primes in tuples I (Goldston, Pintz,...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"><img class="post-bg" src="/image/card/42.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界">筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-14T07:28:20.000Z" title="发表于 2025-04-14 15:28:20">2025-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AD%9B%E6%B3%95/">筛法</a></span></div><div class="content">引言 这篇文章,我们将介绍Selberg最简单的上界筛模型,其利用二次型求极值的方法,从而对筛函数求出了一个上界.而Selberg更深刻的应用则可以见筛法读书笔记(哥德巴赫猜想 by 潘承洞) – 加权筛法顶峰之陈景润定理.实际上这篇文章就是对Selberg筛法模型的一个补全,否则前后内容之间会有所缺失. 而利用二次型的想法,在其他的地方也有很广泛的应用,其在惜字如金的Serre书中甚至占了特别大的篇幅,而在GPY的论文中也有应用!后者可以见论文阅读之重点提炼篇 – Primes in tuples I (Goldston, Pintz, Yildirim),而前者我完成筛法部分的内容后也可以慢慢开启! 而正如我上篇文章结尾所说,本篇文章只是一个补充,不会也不能很长,那么现在就正式开启Selberg筛法的旅程! 二次型的构造 Selberg筛法的理论基础来源于下面一个可以直接验证的不等式: S(A;P,z)≤∑a∈A(∑d∣a, d∣P(z)λd)2,(2.1)S(\mathscr{A}; \mathfrak{P}, z) \le \sum_{a \in...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/04/03/notes-about-sieve-methods-5/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想"><img class="post-bg" src="/image/card/19.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/04/03/notes-about-sieve-methods-5/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想">筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-03T12:58:52.000Z" title="发表于 2025-04-03 20:58:52">2025-04-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AD%9B%E6%B3%95/">筛法</a></span></div><div class="content">引言 决定了,还是先花最少的时间,先把Halberstam的第二章速速解决掉.毕竟已经是上个月就已经学习完的内容,并且经过上一篇文章的洗礼,我觉得我对Brun筛法又有了一些新的认识了.这次尽量还是压缩一些篇幅,以记录下一些关键要点为主吧规划一下内容后感觉已经是奢望了.😰 其中对于Brun定理的推论–也就是所有孪生素数的倒数之和是收敛的–这个我已经在围绕Brun定理展开的素数指标求和估计式中已经解释完了,而本章最主要的目的便是,为什么对于π2(x)\pi_2(x)π2​(x)的估计是正确的?即根据Brun’s pure sieve来证明 π2(x)≪xlog⁡2x(log⁡log⁡x)2.\pi_2(x) \ll \frac{x}{\log^2 x} (\log\log x)^2. π2​(x)≪log2xx​(loglogx)2. 其中π2(x)\pi_2(x)π2​(x)的定义就在前面的博客首段就有介绍,以及在筛法的顶峰之一 – 陈景润定理开头提到的,用Brun’s...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/03/12/notes-about-sieve-methods-4/" title="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理"><img class="post-bg" src="/image/card/83.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/12/notes-about-sieve-methods-4/" title="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理">筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-12T07:57:04.000Z" title="发表于 2025-03-12 15:57:04">2025-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AD%9B%E6%B3%95/">筛法</a></span></div><div class="content">引言 在这段时间内,虽然一直没有更新,但是还是干了不少事的.例如,我终于把Halberstam的第二章给看完了!在这一章中我们完成了(7,7)(7, 7)(7,7)以及(1,7)(1, 7)(1,7)的证明,用严谨一点的语言来说就是:  Brun’s pure sieve: \quad 存在无穷个自然数nnn,使得: (n,n+2)=(P7,P7′).(n, n+2) = (\mathscr{P}_7, \mathscr{P}'_7). (n,n+2)=(P7​,P7′​). Brun’s sieve: \quad 存在无穷个素数ppp,使得: p+2=P7.p+2 = \mathscr{P}_7. p+2=P7​. \quad...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/02/15/Analytical-number-theory-1/" title="围绕Brun定理展开的素数指标求和估计式"><img class="post-bg" src="/image/card/24.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="围绕Brun定理展开的素数指标求和估计式"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/15/Analytical-number-theory-1/" title="围绕Brun定理展开的素数指标求和估计式">围绕Brun定理展开的素数指标求和估计式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-15T08:34:04.000Z" title="发表于 2025-02-15 16:34:04">2025-02-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/">解析数论</a></span></div><div class="content">引言 在学习Halberstam的第二章时(没错,我还在第二章😭),在第二节Brun Pure Sieve中,为了关于孪生素数的猜想,我们付出了巨大的贡献,巨大的牺牲,巨大的Carry,最终成功得到了:  π2(x):=∣{p:p≤x,p+2=p′}∣≪xlog⁡2x(log⁡log⁡x)2,(Halberstam 2.19)\pi_2(x) := |\{ p : p \le x, p + 2 = p' \}| \ll \dfrac{x}{\log^2 x} (\log\log x)^2,\quad (\text{Halberstam } 2.19) π2​(x):=∣{p:p≤x,p+2=p′}∣≪log2xx​(loglogx)2,(Halberstam 2.19)  其中ppp和p′p'p′当然都指的是素数,以及在解析数论中,≪\ll≪并不是远远小于的意思,而是Big O Notation的意思,其在论文Variants of the Selberg sieve, and bounded intervals containing many...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/02/07/GPY-sieve-method-2/" title="论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)"><img class="post-bg" src="/image/card/51.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/07/GPY-sieve-method-2/" title="论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)">论文阅读之重点提炼篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-07T15:09:05.000Z" title="发表于 2025-02-07 23:09:05">2025-02-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a></span></div><div class="content">引言 虽然已经翻译了GPY论文的两节,但是最主要的内容并没有翻译,也就是用命题1和命题2去证明最重要的定理1和定理2,因此这也是不得不细品的一个环节. 原文的链接可以见:https://www.jstor.org/stable/25662161. 当然,前面两节的拙劣翻译也可见我的前一篇博客.后续我将看一下命题1和命题2的证明过程,然后更新张益唐的想法与思路,而这一部分应该会更加简略一些.然后补充一下陈定理的博客,现在应该会轻松很多了吧.最后就是Maynard和Polymath的论文部分,当然也是前者为主. 命题和定理 以下是我们需要的命题.而其证明过程我后边再简单看一下好了.  命题1. 令H=H1∪H2\mathcal{H} = \mathcal{H}_1 \cup \mathcal{H}_2H=H1​∪H2​,∣Hi∣=ki|\mathcal{H_i}| = k_i∣Hi​∣=ki​,并且r=∣H1∩H2∣r = |\mathcal{H_1} \cap \mathcal{H_2}|r=∣H1​∩H2​∣.如果R≪N12(log⁡N)−4MR \ll...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/01/15/GPY-sieve-method/" title="论文阅读之翻译篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)"><img class="post-bg" src="/image/card/45.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="论文阅读之翻译篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/01/15/GPY-sieve-method/" title="论文阅读之翻译篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)">论文阅读之翻译篇 -- Primes in tuples I (Goldston, Pintz, Yildirim)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-15T04:04:03.000Z" title="发表于 2025-01-15 12:04:03">2025-01-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a></span></div><div class="content">导言 本篇是对Goldston,Pintz,Yildirim的一篇论文Primes in tuples I的一部分内容的翻译,阅读后的体会与感悟应该会单独再出一篇博客.而原文的链接可以见:https://www.jstor.org/stable/25662161. GPY的这篇论文刊登在Annals of Mathematics,因此该论文的含金量不必我多说.而重要的是,这篇文章为后面对素数间隙分布的研究提供了新的思路与方法,并且在短短几年内,循着该文中提出的4个问题,数学界对该方面的研究得到了重大的突破.因此阅读这篇文章是必要的. 摘要 我们介绍了一种方法,用于证明存在一些彼此之间非常接近的素数.这种方法依赖于算术级数中素数的分布水平.在Elliott-Halberstam猜想成立的假设下,我们证明了存在无穷多组相差16或者更小的素数.即使是在更弱的猜想成立,也意味着存在无穷多组相差有界的素数.而无条件地,我们证明存在有比平均间隙的任意小倍数更接近的连续素数,也就是: lim inf⁡n→∞pn+1−pnlog⁡pn=0.\liminf_{n \to \infty}...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/01/08/k-th-Mangoldt-function/" title="特殊函数之prime tuple的探测器 -- k-th Mangoldt函数"><img class="post-bg" src="/image/card/13.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="特殊函数之prime tuple的探测器 -- k-th Mangoldt函数"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/01/08/k-th-Mangoldt-function/" title="特殊函数之prime tuple的探测器 -- k-th Mangoldt函数">特殊函数之prime tuple的探测器 -- k-th Mangoldt函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-08T09:11:53.000Z" title="发表于 2025-01-08 17:11:53">2025-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/">解析数论</a></span></div><div class="content">引言 期末周快结束了,差不多终于可以看点自己感兴趣的内容了!堆积了好多内容可以更新,但事已至此,也只能慢慢来了.    首先先记录下k-th Mangoldt function的内容,因为它实际上就是在考察对Dirichlet卷积的计算,初等数论的期末考试也有这方面的考题,虽然很简单就是了.因此接下来的内容里,应该主要是计算为主了,这下要狠狠敲公式了. 但是这个函数我也并不是在什么数论习题册上找到的,而是它实实在在地出现在了GPY的论文中,为了限制一个数的素因子个数的函数.并且十分重要的GPY权函数也是从k-th Mangoldt函数出发,最后推导出来的.因此对这个函数的讨论还是有记录价值的. Mangoldt函数经典版 最常见到的Mangoldt函数就是1st Mangoldt函数,用Dirichlet卷积表示出来就是: Λ1(n)=μ(n)∗log⁡(n)=∑d∣nμ(d)log⁡(nd).(1)\Lambda_1(n) = \mu(n) * \log(n) = \sum_{d \mid n} \mu(d) \log\left(\dfrac{n}{d} \right)....</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/01/04/Riemann-Roch-theorem/" title="Riemann-Roch定理的历史历程"><img class="post-bg" src="/image/card/47.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="Riemann-Roch定理的历史历程"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/01/04/Riemann-Roch-theorem/" title="Riemann-Roch定理的历史历程">Riemann-Roch定理的历史历程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-04T07:53:38.000Z" title="发表于 2025-01-04 15:53:38">2025-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/">代数几何</a></span></div><div class="content">引言0 Riemann-Roch定理是代数几何和复分析中一个十分重要的定理,它建立了代数曲线,向量丛和其相关空间之间的深刻联系.并且在后续的时间里,许多数学家也对其进行了重述与推广,进一步丰富了Riemann-Roch定理的深刻内涵. 这个定理也是数学史上一个意义非凡的例子,它同时也展示了一个结论,通过不同的解释方法,能发挥意想不到的巨大作用. Riemann-Roch定理的原始形式 Riemann-Roch定理的发现,最早这篇在可以追溯到1857年Bernhard Riemann发表的一篇论文Theorie der Abel’schen Functionen[1][2]^{[1][2]}[1][2]. 我们都知道,在复平面上,一个有界的全纯函数当且仅当是常值函数,而无界的全纯函数,又可以由其零点及零点处的阶数很容易确定(首项系数顶多差一个常数);与此同时,某些实函数是不能延拓到整个复平面的,例如Logz, z\textrm{Log} z,\...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/12/02/notes-about-sieve-methods-3/" title="筛法读书笔记(Sieve Methods by Halberstam) -- 筛函数与一些经典筛法例子"><img class="post-bg" src="/image/card/15.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- 筛函数与一些经典筛法例子"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/02/notes-about-sieve-methods-3/" title="筛法读书笔记(Sieve Methods by Halberstam) -- 筛函数与一些经典筛法例子">筛法读书笔记(Sieve Methods by Halberstam) -- 筛函数与一些经典筛法例子</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-02T15:54:43.000Z" title="发表于 2024-12-02 23:54:43">2024-12-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AD%9B%E6%B3%95/">筛法</a></span></div><div class="content">引言 稍微花了亿点点的时间,Halberstam的第一章终究还是看完了! 虽然已经在二潘的『哥德巴赫猜想』一书中简单看了Selberg筛法,自以为已经对筛法的思想有所入门.但是在看了Halberstam的第一章后,才发现我有很多忽略掉的细节和动机.而这些内容,也都是作者有意提及,让我突然意识到,竟然还有这种考量! 不愧是『筛法圣经』,收获颇丰!更让我想要把整本书都看完了,虽然现在只看完了1/10(会看完的).而第二章的内容则更是充实,这一章便已经又占去了整本书的1/6更多.可能是组合筛法并没有和后续内容有很多的配合,所以关于组合筛法要说的东西都浓缩在这一章中. 而张益唐关于素数间隙的工作主要便用到了组合筛法以及加权的想法,而细节方面,我后续还会仔细阅读原始论文的.这又是一个大工程了,应该还要翻译与之相关的一篇文献出来,但是以我的英语水平,我争取翻译出完整的句子来😇. 更新这一篇章应该也要一段时间了,虽然说目前还是以介绍符号为主,但是值得学习的内容还真不少.废话少说,直接开冲🤠! 前置(但不简单)的一些知识点 放在最前面的前面,是关于常数的一些默认的规定: ...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/anon-big_head.gif" onerror="this.onerror=null;this.src='/img/404.gif'" alt="avatar"/></div><div class="author-info-name">Chihaya Anon</div><div class="author-info-description">这里是Anon的数学小窝 <br>不定时发布Anon的抄书笔记 <br>也有可能是Anon的抄论文笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/seml04"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/seml04" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:ds2718281828@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记得看教材！记得看教材！记得看教材！记得看论文！记得看论文！记得看论文！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/15/Maynard-sieve-method/" title="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)"><img src="/image/card/63.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)"/></a><div class="content"><a class="title" href="/2025/04/15/Maynard-sieve-method/" title="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)">论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)</a><time datetime="2025-04-15T06:51:06.000Z" title="发表于 2025-04-15 14:51:06">2025-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"><img src="/image/card/42.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"/></a><div class="content"><a class="title" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界">筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界</a><time datetime="2025-04-14T07:28:20.000Z" title="发表于 2025-04-14 15:28:20">2025-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/03/notes-about-sieve-methods-5/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想"><img src="/image/card/19.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想"/></a><div class="content"><a class="title" href="/2025/04/03/notes-about-sieve-methods-5/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想">筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想</a><time datetime="2025-04-03T12:58:52.000Z" title="发表于 2025-04-03 20:58:52">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/12/notes-about-sieve-methods-4/" title="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理"><img src="/image/card/83.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理"/></a><div class="content"><a class="title" href="/2025/03/12/notes-about-sieve-methods-4/" title="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理">筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理</a><time datetime="2025-03-12T07:57:04.000Z" title="发表于 2025-03-12 15:57:04">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/15/Analytical-number-theory-1/" title="围绕Brun定理展开的素数指标求和估计式"><img src="/image/card/24.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="围绕Brun定理展开的素数指标求和估计式"/></a><div class="content"><a class="title" href="/2025/02/15/Analytical-number-theory-1/" title="围绕Brun定理展开的素数指标求和估计式">围绕Brun定理展开的素数指标求和估计式</a><time datetime="2025-02-15T08:34:04.000Z" title="发表于 2025-02-15 16:34:04">2025-02-15</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/"><span class="card-category-list-name">丢番图逼近</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/"><span class="card-category-list-name">代数几何</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%88%9D%E7%AD%89%E6%95%B0%E8%AE%BA/"><span class="card-category-list-name">初等数论</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8/"><span class="card-category-list-name">有趣应用</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AD%9B%E6%B3%95/"><span class="card-category-list-name">筛法</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/"><span class="card-category-list-name">解析数论</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"><span class="card-category-list-name">论文阅读</span><span class="card-category-list-count">3</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Prime-k-Tuples-Conjecture/" style="font-size: 1.1em; color: #999">Prime k-Tuples Conjecture</a> <a href="/tags/Chen-s-Theorem/" style="font-size: 1.1em; color: #999">Chen's Theorem</a> <a href="/tags/Combinatorial-Sieve/" style="font-size: 1.1em; color: #999">Combinatorial Sieve</a> <a href="/tags/Sieve-Methods/" style="font-size: 1.5em; color: #99a9bf">Sieve Methods</a> <a href="/tags/Brun-s-Theorem/" style="font-size: 1.18em; color: #999ca1">Brun's Theorem</a> <a href="/tags/Selberg-s-Sieve/" style="font-size: 1.18em; color: #999ca1">Selberg's Sieve</a> <a href="/tags/Algebraic-Number-Theory/" style="font-size: 1.1em; color: #999">Algebraic Number Theory</a> <a href="/tags/Merten-s-Theorem/" style="font-size: 1.1em; color: #999">Merten's Theorem</a> <a href="/tags/Dirichlet-Convolution/" style="font-size: 1.1em; color: #999">Dirichlet Convolution</a> <a href="/tags/Sifting-Function/" style="font-size: 1.1em; color: #999">Sifting Function</a> <a href="/tags/Quadratic-Forms/" style="font-size: 1.1em; color: #999">Quadratic Forms</a> <a href="/tags/Estimation-Formula/" style="font-size: 1.1em; color: #999">Estimation Formula</a> <a href="/tags/Riemann-Roch-Theorem/" style="font-size: 1.1em; color: #999">Riemann-Roch Theorem</a> <a href="/tags/Goldbach-s-Conjecture/" style="font-size: 1.26em; color: #999fa8">Goldbach's Conjecture</a> <a href="/tags/Paper-Reading/" style="font-size: 1.26em; color: #999fa8">Paper Reading</a> <a href="/tags/Number-Theory/" style="font-size: 1.42em; color: #99a6b7">Number Theory</a> <a href="/tags/Continued-Fractions/" style="font-size: 1.18em; color: #999ca1">Continued Fractions</a> <a href="/tags/GPY-Weight-Function/" style="font-size: 1.18em; color: #999ca1">GPY Weight Function</a> <a href="/tags/Mangoldt-Function/" style="font-size: 1.1em; color: #999">Mangoldt Function</a> <a href="/tags/Algorithm/" style="font-size: 1.18em; color: #999ca1">Algorithm</a> <a href="/tags/Chinese-Remainder-Theorem/" style="font-size: 1.1em; color: #999">Chinese Remainder Theorem</a> <a href="/tags/Analytical-Number-Theory/" style="font-size: 1.18em; color: #999ca1">Analytical Number Theory</a> <a href="/tags/Elementary-Number-Theory/" style="font-size: 1.1em; color: #999">Elementary Number Theory</a> <a href="/tags/Prime-Twins-Conjecture/" style="font-size: 1.34em; color: #99a3b0">Prime Twins Conjecture</a> <a href="/tags/Sieve-of-Erathosthenes-Legendre/" style="font-size: 1.1em; color: #999">Sieve of Erathosthenes-Legendre</a> <a href="/tags/Brun-s-Sieve/" style="font-size: 1.1em; color: #999">Brun's Sieve</a> <a href="/tags/Prime-Number-Theorem/" style="font-size: 1.1em; color: #999">Prime Number Theorem</a> <a href="/tags/Pell-Equation/" style="font-size: 1.1em; color: #999">Pell Equation</a> <a href="/tags/Character/" style="font-size: 1.18em; color: #999ca1">Character</a> <a href="/tags/Chebyshev-s-Function/" style="font-size: 1.1em; color: #999">Chebyshev's Function</a> <a href="/tags/Gauss-Sum/" style="font-size: 1.1em; color: #999">Gauss Sum</a> <a href="/tags/Diophantine-Approximation/" style="font-size: 1.1em; color: #999">Diophantine Approximation</a> <a href="/tags/Algebraic-Geometry/" style="font-size: 1.1em; color: #999">Algebraic Geometry</a> <a href="/tags/Algebra/" style="font-size: 1.1em; color: #999">Algebra</a> <a href="/tags/Schinzel-s-Hypotheses-H-H-N/" style="font-size: 1.1em; color: #999">Schinzel's Hypotheses H & H_N</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/04/">
+          <span class="card-archive-list-date">四月 2025</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">5</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">十月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2024-10-19T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-18T17:43:40.564Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples.js"></script><script defer src="/js/ripples.js"></script><script src="/js/leaves.js"></script><script src="/js/universe.js"></script><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/sakura.js"></script><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><script src="https://blog-static.cnblogs.com/files/izbw/yinghua.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script type="text/javascript" src="/js/crash_cheat.js"></script></body></html>

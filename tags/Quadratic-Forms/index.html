@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>标签: Quadratic Forms | Chihaya Anon的数学小窝!!!</title><meta name="author" content="Chihaya Anon"><meta name="copyright" content="Chihaya Anon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里是Anon的数学小窝 不定时发布Anon的抄书笔记 也有可能是Anon的抄论文笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chihaya Anon的数学小窝!!!">
+<meta property="og:url" content="http://seml04.github.io/tags/Quadratic-Forms/index.html">
+<meta property="og:site_name" content="Chihaya Anon的数学小窝!!!">
+<meta property="og:description" content="这里是Anon的数学小窝 不定时发布Anon的抄书笔记 也有可能是Anon的抄论文笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://seml04.github.io/img/anon-big_head.gif">
+<meta property="article:author" content="Chihaya Anon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://seml04.github.io/img/anon-big_head.gif"><link rel="shortcut icon" href="/img/mortis.gif"><link rel="canonical" href="http://seml04.github.io/tags/Quadratic-Forms/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '标签: Quadratic Forms',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2025-09-19 01:43:41'
+}</script><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/font.css"><meta name="google-site-verification" content="YLwhFberPAEMglxPns-Go4KGLq2zNlANxR4h0tQHg50"><meta name="msvalidate.01" content="3B1DDC4139178641D1E60BFC7B8E7A9A"><meta name="google-site-verification" content="-CSWvgzUY__JywozGu_wkw0FKJdwyTT95YvGpNj5Bgw" /><script src="/js/sakura.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/bk9.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/anon-big_head.gif" onerror="onerror=null;src='/img/404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-music"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-music"></i><span> 标签</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-video"></i><span> 关于我</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Chihaya Anon的数学小窝!!!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-music"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-music"></i><span> 标签</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-video"></i><span> 关于我</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Quadratic Forms</h1></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">标签 - Quadratic Forms</div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"><img src="/image/card/42.jpg" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界" onerror="this.onerror=null;this.src='/img/muzimi.gif'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-04-14T07:28:20.000Z" title="发表于 2025-04-14 15:28:20">2025-04-14</time></div><a class="article-sort-item-title" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界">筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/anon-big_head.gif" onerror="this.onerror=null;this.src='/img/404.gif'" alt="avatar"/></div><div class="author-info-name">Chihaya Anon</div><div class="author-info-description">这里是Anon的数学小窝 <br>不定时发布Anon的抄书笔记 <br>也有可能是Anon的抄论文笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/seml04"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/seml04" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:ds2718281828@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记得看教材！记得看教材！记得看教材！记得看论文！记得看论文！记得看论文！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/15/Maynard-sieve-method/" title="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)"><img src="/image/card/63.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)"/></a><div class="content"><a class="title" href="/2025/04/15/Maynard-sieve-method/" title="论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)">论文阅读 -- Small gaps between primes (Maynard) &amp; Bounded gaps between primes (Yitang Zhang)</a><time datetime="2025-04-15T06:51:06.000Z" title="发表于 2025-04-15 14:51:06">2025-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"><img src="/image/card/42.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界"/></a><div class="content"><a class="title" href="/2025/04/14/notes-about-sieve-methods-6/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界">筛法读书笔记(Sieve Methods by Halberstam) -- Selberg用二次型计算筛函数上界</a><time datetime="2025-04-14T07:28:20.000Z" title="发表于 2025-04-14 15:28:20">2025-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/03/notes-about-sieve-methods-5/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想"><img src="/image/card/19.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想"/></a><div class="content"><a class="title" href="/2025/04/03/notes-about-sieve-methods-5/" title="筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想">筛法读书笔记(Sieve Methods by Halberstam) -- Brun用组合筛法击落(一半)孪生素数猜想</a><time datetime="2025-04-03T12:58:52.000Z" title="发表于 2025-04-03 20:58:52">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/12/notes-about-sieve-methods-4/" title="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理"><img src="/image/card/83.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理"/></a><div class="content"><a class="title" href="/2025/03/12/notes-about-sieve-methods-4/" title="筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理">筛法读书笔记(哥德巴赫猜想 by 潘承洞) -- 加权筛法顶峰之陈景润定理</a><time datetime="2025-03-12T07:57:04.000Z" title="发表于 2025-03-12 15:57:04">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/15/Analytical-number-theory-1/" title="围绕Brun定理展开的素数指标求和估计式"><img src="/image/card/24.jpg" onerror="this.onerror=null;this.src='/img/muzimi.gif'" alt="围绕Brun定理展开的素数指标求和估计式"/></a><div class="content"><a class="title" href="/2025/02/15/Analytical-number-theory-1/" title="围绕Brun定理展开的素数指标求和估计式">围绕Brun定理展开的素数指标求和估计式</a><time datetime="2025-02-15T08:34:04.000Z" title="发表于 2025-02-15 16:34:04">2025-02-15</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/"><span class="card-category-list-name">丢番图逼近</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/"><span class="card-category-list-name">代数几何</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%88%9D%E7%AD%89%E6%95%B0%E8%AE%BA/"><span class="card-category-list-name">初等数论</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8/"><span class="card-category-list-name">有趣应用</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AD%9B%E6%B3%95/"><span class="card-category-list-name">筛法</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/"><span class="card-category-list-name">解析数论</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"><span class="card-category-list-name">论文阅读</span><span class="card-category-list-count">3</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Prime-k-Tuples-Conjecture/" style="font-size: 1.1em; color: #999">Prime k-Tuples Conjecture</a> <a href="/tags/Chen-s-Theorem/" style="font-size: 1.1em; color: #999">Chen's Theorem</a> <a href="/tags/Combinatorial-Sieve/" style="font-size: 1.1em; color: #999">Combinatorial Sieve</a> <a href="/tags/Sieve-Methods/" style="font-size: 1.5em; color: #99a9bf">Sieve Methods</a> <a href="/tags/Brun-s-Theorem/" style="font-size: 1.18em; color: #999ca1">Brun's Theorem</a> <a href="/tags/Selberg-s-Sieve/" style="font-size: 1.18em; color: #999ca1">Selberg's Sieve</a> <a href="/tags/Algebraic-Number-Theory/" style="font-size: 1.1em; color: #999">Algebraic Number Theory</a> <a href="/tags/Merten-s-Theorem/" style="font-size: 1.1em; color: #999">Merten's Theorem</a> <a href="/tags/Dirichlet-Convolution/" style="font-size: 1.1em; color: #999">Dirichlet Convolution</a> <a href="/tags/Sifting-Function/" style="font-size: 1.1em; color: #999">Sifting Function</a> <a href="/tags/Quadratic-Forms/" style="font-size: 1.1em; color: #999">Quadratic Forms</a> <a href="/tags/Estimation-Formula/" style="font-size: 1.1em; color: #999">Estimation Formula</a> <a href="/tags/Riemann-Roch-Theorem/" style="font-size: 1.1em; color: #999">Riemann-Roch Theorem</a> <a href="/tags/Goldbach-s-Conjecture/" style="font-size: 1.26em; color: #999fa8">Goldbach's Conjecture</a> <a href="/tags/Paper-Reading/" style="font-size: 1.26em; color: #999fa8">Paper Reading</a> <a href="/tags/Number-Theory/" style="font-size: 1.42em; color: #99a6b7">Number Theory</a> <a href="/tags/Continued-Fractions/" style="font-size: 1.18em; color: #999ca1">Continued Fractions</a> <a href="/tags/GPY-Weight-Function/" style="font-size: 1.18em; color: #999ca1">GPY Weight Function</a> <a href="/tags/Mangoldt-Function/" style="font-size: 1.1em; color: #999">Mangoldt Function</a> <a href="/tags/Algorithm/" style="font-size: 1.18em; color: #999ca1">Algorithm</a> <a href="/tags/Chinese-Remainder-Theorem/" style="font-size: 1.1em; color: #999">Chinese Remainder Theorem</a> <a href="/tags/Analytical-Number-Theory/" style="font-size: 1.18em; color: #999ca1">Analytical Number Theory</a> <a href="/tags/Elementary-Number-Theory/" style="font-size: 1.1em; color: #999">Elementary Number Theory</a> <a href="/tags/Prime-Twins-Conjecture/" style="font-size: 1.34em; color: #99a3b0">Prime Twins Conjecture</a> <a href="/tags/Sieve-of-Erathosthenes-Legendre/" style="font-size: 1.1em; color: #999">Sieve of Erathosthenes-Legendre</a> <a href="/tags/Brun-s-Sieve/" style="font-size: 1.1em; color: #999">Brun's Sieve</a> <a href="/tags/Prime-Number-Theorem/" style="font-size: 1.1em; color: #999">Prime Number Theorem</a> <a href="/tags/Pell-Equation/" style="font-size: 1.1em; color: #999">Pell Equation</a> <a href="/tags/Character/" style="font-size: 1.18em; color: #999ca1">Character</a> <a href="/tags/Chebyshev-s-Function/" style="font-size: 1.1em; color: #999">Chebyshev's Function</a> <a href="/tags/Gauss-Sum/" style="font-size: 1.1em; color: #999">Gauss Sum</a> <a href="/tags/Diophantine-Approximation/" style="font-size: 1.1em; color: #999">Diophantine Approximation</a> <a href="/tags/Algebraic-Geometry/" style="font-size: 1.1em; color: #999">Algebraic Geometry</a> <a href="/tags/Algebra/" style="font-size: 1.1em; color: #999">Algebra</a> <a href="/tags/Schinzel-s-Hypotheses-H-H-N/" style="font-size: 1.1em; color: #999">Schinzel's Hypotheses H & H_N</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/04/">
+          <span class="card-archive-list-date">四月 2025</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">5</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">十月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2024-10-19T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-18T17:43:40.564Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples.js"></script><script defer src="/js/ripples.js"></script><script src="/js/leaves.js"></script><script src="/js/universe.js"></script><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/sakura.js"></script><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><script src="https://blog-static.cnblogs.com/files/izbw/yinghua.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script type="text/javascript" src="/js/crash_cheat.js"></script></body></html>
