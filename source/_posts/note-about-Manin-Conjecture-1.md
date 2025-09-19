@@ -314,10 +314,10 @@ $\quad$ 因此$p \mid N_{K/\mathbb{Q}}(\alpha)$等价于$\overline{\alpha} = 0$,
 
 $\quad$ 利用(2)和(5),可以得到有
 $$\begin{array}{ll}        
-    N_V(B) & = \frac{1}{2} \sum_{k=1}^{\infty} \mu(k) N(f; k^{-1}B) \\
-    & \sim \frac{1}{2} \sum_{k=1}^{\infty} \mu(k) c_f k^{-(n-d)} B^{n-d} \\
-    & = \frac{1}{2} c_f B^{n-d} \sum_{k=1}^{\infty} \frac{\mu(k)}{k^{n-d}} \\
-    & = \frac{1}{2} c_f B^{n-d} \prod_{p} \left(1 - \frac{1}{p^{n-d}}\right) \\
+    N_V(B) & = \frac{1}{2} \sum_{k=1}^{\infty} \mu(k) N(f; k^{-1}B) \\ \\
+    & \sim \frac{1}{2} \sum_{k=1}^{\infty} \mu(k) c_f k^{-(n-d)} B^{n-d} \\ \\
+    & = \frac{1}{2} c_f B^{n-d} \sum_{k=1}^{\infty} \frac{\mu(k)}{k^{n-d}} \\ \\
+    & = \frac{1}{2} c_f B^{n-d} \prod_{p} \left(1 - \frac{1}{p^{n-d}}\right) \\ \\
     & = \frac{c_f}{2 \zeta(n-d)} B^{n-d}.
 \end{array}$$
 $\quad$ 从而得证.$\square$
