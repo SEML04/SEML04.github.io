@@ -1,5 +1,5 @@
 ---
-title: 算术几何读书笔记(Quantitative Arithmetic of Projective Varieties) -- 数论与几何的深度交叉
+title: 丢番图几何读书笔记(Quantitative Arithmetic of Projective Varieties by Browning) -- 数论与几何的深度交叉
 mathjax: true
 date: 2025-08-31 19:57:58
 categories:
