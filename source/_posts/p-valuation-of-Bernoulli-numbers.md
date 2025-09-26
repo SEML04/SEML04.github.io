@@ -297,17 +297,17 @@ Kellner在论文的第四节中,在假设$\Delta$-Conjecture成立的情况下,�
 >
 > $\quad$ 令$k,m,n,p,r,\omega \in \mathbb{N}$,其中$m$是偶数,$p$是素数且$p-1 \nmid m$,$\omega = k\varphi(p^n)$.于是有
 >
-> $$\begin{align} \sum_{v=0}^{r} \binom{r}{v} (-1)^v (1 - p^{m+v\omega-1}) \hat{B}(m+v\omega) \equiv 0 \mod{p^{nr}}. \tag{carlitz}\label{carlitz} \end{align}$$
+> $$\begin{align} \sum_{v=0}^{r} \binom{r}{v} (-1)^v (1 - p^{m+v\omega-1}) \hat{B}(m+v\omega) \equiv 0 \mod{p^{nr}}. \tag{6}\label{6} \end{align}$$
 
-然后便有下面的推论可以去掉(\ref{carlitz})中的Euler factor:
+然后便有下面的推论可以去掉(\ref{6})中的Euler factor:
 
 > **推论1.1:**
 >
 > $\quad$ 令$(p,l) \in \Psi_n^{\text{irr}}, n \ge 1$,以及$k,m,r,\omega \in \mathbb{N}, r > 1$,且$\omega = k\varphi(p^n)$,对于$j \ge 0$令$m = l + j\varphi(p^n)$,于是有
 >
-> $$\begin{align} \sum_{v=0}^{r} \binom{r}{v} (-1)^v p^{-n} \hat{B}(m+v\omega) \equiv 0 \mod{(p^{m-1}, p^{n(r-1)})}. \tag{carlitz cor}\label{carlitz cor} \end{align}$$
+> $$\begin{align} \sum_{v=0}^{r} \binom{r}{v} (-1)^v p^{-n} \hat{B}(m+v\omega) \equiv 0 \mod{(p^{m-1}, p^{n(r-1)})}. \tag{7}\label{7} \end{align}$$
 
-需要注意的是,(\ref{carlitz cor})中的$\text{mod}{(p^{m-1}, p^{n(r-1)})}$并不是模最大公因子,而是同时满足这两个模式.
+需要注意的是,(\ref{7})中的$\text{mod}{(p^{m-1}, p^{n(r-1)})}$并不是模最大公因子,而是同时满足这两个模式.
 
 > **引理2:**
 >
