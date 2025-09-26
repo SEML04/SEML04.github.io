@@ -139,7 +139,7 @@ $$\frac{t}{e^t-1} = \sum_{n=0}^{\infty} B_n \frac{t!}{n!},$$
 
 ##### 补充一些所需的定义
 
-这里直入{% label 主题 blue %}:<span style="color: green">对一定条件下的irregular prime(对目前发现的所有irregular pair都满足),Bernoulli number的p-valuation是无上界的.</span>证明所需要的一些引理放在最后再抄,主要是一些文章里的突破和逻辑.
+这里直入{% label 主题 blue %}:<span style="color: green">对一定条件下的irregular prime(对目前发现的所有irregular pair都满足),Bernoulli number的p-valuation是无上界的.且其对应的p-adic zeta funciton与一列有关联的irregular pairs又有着紧密的关系.</span>证明所需要的一些引理放在最后再抄,下面主要是记录一些文章里的突破和逻辑.
 
 下面再给出一些定义来更好地描述我们的命题.
 
@@ -231,7 +231,7 @@ $$l = s_1 + (p-1) \sum_{v = 2}^{\infty} s_v p^{v-2} =: s_1 + (p-1) {\color{red}\
 
 事实上,(\ref{delta_p=1})处$\Delta_p = 1$的条件对**目前发现的**所有irregular pair都成立,但是否对于所有的irregular pair都成立仍然是open的,但是Kellner猜想这是对的,于是有
 
-> **猜想(\Delta-Conjecture):**
+> **猜想($\Delta$-Conjecture):**
 >
 > $\quad$ 对于所有的irregular prime $p$,满足下面这些彼此等价的性质:
 >
@@ -261,11 +261,11 @@ $$l = s_1 + (p-1) \sum_{v = 2}^{\infty} s_v p^{v-2} =: s_1 + (p-1) {\color{red}\
 >
 > $\quad$ 令$(p,l) \in \Psi_1^{\text{irr}}$,且$\Delta_{(p,l)} \neq 0$,则p-adic zeta function $\zeta_{p,l}(s)$有一个唯一的零点$s = \chi_{(p,l)}.$
 
-Kellner在论文的第四节中,在假设$\Delta-Conjecture$成立的情况下,利用p-adic zeta function还推出了很多结论,这里只记载一个更强的Kummer congruence.
+Kellner在论文的第四节中,在假设$\Delta$-Conjecture成立的情况下,利用p-adic zeta function还推出了很多结论,这里只记载一个更强的Kummer congruence.
 
 > **定理8(Kummer Congruence Plus):**
 >
-> $\quad$ 假设$\Delta-Conjecture$成立,令$(p,l) \in \Psi_1^{\text{irr}}$,且$\Delta_{(p,l)} \neq 0$,再令$s,t \in \mathbb{Z}_p$,则有
+> $\quad$ 假设$\Delta$-Conjecture成立,令$(p,l) \in \Psi_1^{\text{irr}}$,且$\Delta_{(p,l)} \neq 0$,再令$s,t \in \mathbb{Z}_p$,则有
 >
 > $$|\zeta_{p,l}(s) - \zeta_{p,l}(t)|_p = |p(s-t)|_p.$$
 >
@@ -281,7 +281,7 @@ Kellner在论文的第四节中,在假设$\Delta-Conjecture$成立的情况下,�
 
 > **推论8.1:**
 >
-> $\quad$ 假设$\Delta-Conjecture$成立,令$(p,l) \in \Psi_1^{\text{irr}}$,且$\Delta_{(p,l)} \neq 0$.于是$\zeta_{p,l}(s)$在$s = \chi_{(p,l)}$处有一个唯一的简单零点.进一步地,对于$s \in \mathbb{Z}_p$,有
+> $\quad$ 假设$\Delta$-Conjecture成立,令$(p,l) \in \Psi_1^{\text{irr}}$,且$\Delta_{(p,l)} \neq 0$.于是$\zeta_{p,l}(s)$在$s = \chi_{(p,l)}$处有一个唯一的简单零点.进一步地,对于$s \in \mathbb{Z}_p$,有
 >
 > $$\zeta_{p,l}(s) = p(s - \chi_{(p,l)}) \zeta_{p,l}^*(s),$$
 >
