@@ -39,6 +39,16 @@ $${\color[RGB]{230,51,51}[ r_1\log p_1 + \cdots + r_s\log p_s ]}$$
 
 
 
+% 多行数学公式以及引用!(核心突破 align + tag + label + ref)
+$$\begin{align}
+    B_m & = \sum_{k=0}^m \frac{1}{k+1} \sum_{j=0}^k \binom{k}{j} (-1)^j j^m, \tag{12}\label{12} \\
+    B_m^+ & = \sum_{k=0}^m \frac{1}{k+1} \sum_{j=0}^k \binom{k}{j} (-1)^j (j+1)^m \tag{333} \label{3}
+\end{align}$$
+
+\ref{12} \ref{3}
+
+
+
 % 多行数学公式:
 $$\begin{split}
     \log(n!) & = \displaystyle\sum_{p \le n}\sum_{k = 1}^{K(p)} \left\lfloor \dfrac{n}{p^k} \right\rfloor \log p \\ 

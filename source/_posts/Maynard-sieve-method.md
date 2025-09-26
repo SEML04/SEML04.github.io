@@ -409,4 +409,4 @@ $$\mathcal{E} = \sum_{i=1}^{k} \sum_{d < D^2} |\mu(d)| \tau_3(d) \tau_{k-1}(d) \
 
 [5] Soundararajan K. The work of James Maynard[J]. Prize LectureS, 2022, 1: 66-80.
 
-[6] T. Tao. The prime tuples conjecture, sieve theory, and the work of Goldston-Pintz-Yildirim, Motohashi-Pintz, and Zhang[Z]. https://terrytao.wordpress.com/2013/06/03/the-prime-tuples-conjecture-sieve-theory-and-the-work-of-goldston-pintz-yildirim-motohashi-pintz-and-zhang/#more-6728
+[6] T. Tao. The prime tuples conjecture, sieve theory, and the work of Goldston-Pintz-Yildirim, Motohashi-Pintz, and Zhang[Z]. https://terrytao.wordpress.com/2013/06/03/the-prime-tuples-conjecture-sieve-theory-and-the-work-of-goldston-pintz-yildirim-motohashi-pintz-and-zhang/#more-6728.
