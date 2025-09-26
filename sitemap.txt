@@ -1,5 +1,6 @@
-http://seml04.github.io/2025/08/31/note-about-Manin-Conjecture-1/
+http://seml04.github.io/2025/09/25/p-valuation-of-Bernoulli-numbers/
 http://seml04.github.io/2025/04/15/Maynard-sieve-method/
+http://seml04.github.io/2025/08/31/note-about-Manin-Conjecture-1/
 http://seml04.github.io/2025/01/04/Riemann-Roch-theorem/
 http://seml04.github.io/tags/index.html
 http://seml04.github.io/categories/index.html
@@ -59,6 +60,9 @@ http://seml04.github.io/tags/Gauss-Sum/
 http://seml04.github.io/tags/Combinatorial-Sieve/
 http://seml04.github.io/tags/Brun-s-Sieve/
 http://seml04.github.io/tags/Chen-s-Theorem/
+http://seml04.github.io/tags/Bernoulli-Numbers/
+http://seml04.github.io/tags/p-adic-Zeta-Function/
+http://seml04.github.io/tags/Kummer-Congruence/
 http://seml04.github.io/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/
 http://seml04.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/
 http://seml04.github.io/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/
