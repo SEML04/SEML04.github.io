@@ -913,7 +913,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
