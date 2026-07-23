@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/2025/01/08/k-th-Mangoldt-function/</loc>
+    <loc>https://seml04.github.io/2024/11/01/notes-about-sieve-methods-1/</loc>
     
     <lastmod>2025-09-18</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/2024/11/01/notes-about-sieve-methods-1/</loc>
+    <loc>https://seml04.github.io/2025/01/08/k-th-Mangoldt-function/</loc>
     
     <lastmod>2025-09-18</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/2024/10/25/Diophantine-2/</loc>
+    <loc>https://seml04.github.io/2024/10/22/Diophantine-1/</loc>
     
     <lastmod>2025-09-18</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/2024/10/22/Diophantine-1/</loc>
+    <loc>https://seml04.github.io/2024/10/25/Diophantine-2/</loc>
     
     <lastmod>2025-09-18</lastmod>
     
@@ -267,7 +267,7 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
+    <loc>https://seml04.github.io/tags/Diophantine-Approximation/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -275,6 +275,13 @@
   
   <url>
     <loc>https://seml04.github.io/tags/Continued-Fractions/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Algebraic-Number-Theory/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -309,21 +316,14 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Diophantine-Approximation/</loc>
+    <loc>https://seml04.github.io/tags/Algebraic-Geometry/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Prime-Twins-Conjecture/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://seml04.github.io/tags/Prime-k-Tuples-Conjecture/</loc>
+    <loc>https://seml04.github.io/tags/Riemann-Roch-Theorem/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -344,14 +344,14 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Algebraic-Geometry/</loc>
+    <loc>https://seml04.github.io/tags/Prime-Twins-Conjecture/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Riemann-Roch-Theorem/</loc>
+    <loc>https://seml04.github.io/tags/Prime-k-Tuples-Conjecture/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -379,14 +379,14 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Dirichlet-Convolution/</loc>
+    <loc>https://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Mangoldt-Function/</loc>
+    <loc>https://seml04.github.io/tags/Goldbach-s-Conjecture/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -421,21 +421,35 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/tags/Schinzel-s-Hypotheses-H-H-N/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://seml04.github.io/tags/Goldbach-s-Conjecture/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://seml04.github.io/tags/Gauss-Sum/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Sifting-Function/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Dirichlet-Convolution/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Mangoldt-Function/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -464,20 +478,6 @@
   
   <url>
     <loc>https://seml04.github.io/tags/Brun-s-Sieve/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://seml04.github.io/tags/Sieve-of-Erathosthenes-Legendre/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://seml04.github.io/tags/Sifting-Function/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -535,14 +535,14 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/categories/%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8/</loc>
+    <loc>https://seml04.github.io/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://seml04.github.io/categories/%E4%BB%A3%E6%95%B0%E5%87%A0%E4%BD%95/</loc>
+    <loc>https://seml04.github.io/categories/%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -556,14 +556,14 @@
   </url>
   
   <url>
-    <loc>https://seml04.github.io/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E5%87%A0%E4%BD%95/</loc>
+    <loc>https://seml04.github.io/categories/%E7%AD%9B%E6%B3%95/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://seml04.github.io/categories/%E7%AD%9B%E6%B3%95/</loc>
+    <loc>https://seml04.github.io/categories/%E4%B8%A2%E7%95%AA%E5%9B%BE%E5%87%A0%E4%BD%95/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
