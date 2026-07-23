@@ -21,6 +21,7 @@ menu:
   List||fas fa-list:
     分类: /categories/ || fas fa-music
     标签: /tags/ || fas fa-music
+    学术交流: /seminars/ || fas fa-calendar-alt
     关于我: /about/ || fas fa-video
     
 
@@ -386,7 +387,11 @@ aside:
       link: https://github.com/seml04
   card_announcement:
     enable: true
-    content: 记得看教材！记得看教材！记得看教材！记得看论文！记得看论文！记得看论文！
+    content: >-
+      学术交流清单生成日期：2026-07-23<br>
+      未开始活动：3 个<br>
+      有录课记录链接：16 个<br>
+      <a href="/seminars/">查看清单</a>
   card_recent_post:
     enable: true
     # If set 0 will show all
