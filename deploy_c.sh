@@ -2,7 +2,7 @@
 
 echo "📦 提交源文件到 GitHub..."
 git add .
-git commit -m "update post"
+git commit -m "$(date +'%d/%m/%y')"
 git push origin source
 
 echo "⚙️ 生成静态网页..."
