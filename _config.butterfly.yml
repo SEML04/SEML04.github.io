@@ -389,8 +389,8 @@ aside:
     enable: true
     content: >-
       学术交流清单生成日期：2026-07-23<br>
-      未开始活动：3 个<br>
-      有录课记录链接：16 个<br>
+      未开始活动：9 个<br>
+      有录课记录链接：17 个<br>
       <a href="/seminars/">查看清单</a>
   card_recent_post:
     enable: true
