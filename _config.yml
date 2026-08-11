@@ -18,7 +18,7 @@ categories: blog
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://seml04.github.io
 
-# permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:title/
 
 # permalink: post/:abbrlink.html # post为自定义前缀
 # abbrlink:
@@ -26,10 +26,9 @@ url: https://seml04.github.io
  	  #rep: hex     #进制： dec(default) and hex
 
 
-# permalink_defaults:
-# pretty_urls:
-#   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-#   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+pretty_urls:
+  trailing_index: false # Remove trailing 'index.html' from permalinks
+  trailing_html: false # Remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
