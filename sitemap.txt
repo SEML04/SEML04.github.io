@@ -1,11 +1,11 @@
-https://seml04.github.io/seminars/index.html
+https://seml04.github.io/seminars/
 https://seml04.github.io/2025/09/25/p-valuation-of-Bernoulli-numbers/
 https://seml04.github.io/2025/04/15/Maynard-sieve-method/
 https://seml04.github.io/2025/08/31/note-about-Manin-Conjecture-1/
 https://seml04.github.io/2025/01/04/Riemann-Roch-theorem/
-https://seml04.github.io/tags/index.html
-https://seml04.github.io/categories/index.html
-https://seml04.github.io/about/index.html
+https://seml04.github.io/tags/
+https://seml04.github.io/categories/
+https://seml04.github.io/about/
 https://seml04.github.io/2025/03/12/notes-about-sieve-methods-4/
 https://seml04.github.io/2025/04/03/notes-about-sieve-methods-5/
 https://seml04.github.io/2025/04/14/notes-about-sieve-methods-6/
