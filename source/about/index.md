@@ -1,5 +1,5 @@
 ---
-title: about
+title: about me
 date: 2025-02-05 19:26:58
 comments: false
 ---
@@ -12,7 +12,7 @@ Chihaya Anon desu!请多关照!!!
 
 这里是Anon的数学小窝,时不时更新一些学到的数学内容.
 
-本人研究方向应该是算术几何以及解析数论方向(?还没入学,因此我也不知道🤷‍♂️)
+本人研究方向是算术几何以及解析数论方向. 总之, 我喜欢数数(确信).
 
 <center>
 <img src="/about/972.jpg" width="33%">
