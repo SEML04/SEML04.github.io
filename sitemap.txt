@@ -1,5 +1,5 @@
-https://seml04.github.io/about/
 https://seml04.github.io/seminars/
+https://seml04.github.io/about/
 https://seml04.github.io/2025/09/25/p-valuation-of-Bernoulli-numbers/
 https://seml04.github.io/2025/04/15/Maynard-sieve-method/
 https://seml04.github.io/2025/08/31/note-about-Manin-Conjecture-1/
