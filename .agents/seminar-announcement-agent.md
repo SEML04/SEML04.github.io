@@ -14,7 +14,7 @@ Upcoming items are refreshed from the newest collection file. Recorded resources
 ## Inputs
 
 - Source directory: `seminar_collection/`
-- Source file rule: use the most recently modified `*.txt` file, for example `seminar_collection_072326.txt`.
+- Source file rule: use the most recently modified `*.txt` file, for example `seminar_collection_260929.txt`.
 - Site page: `source/seminars/index.md`
 - Homepage announcement config: `_config.butterfly.yml`, under `aside.card_announcement.content`.
 - Navigation config: `_config.butterfly.yml`, under `menu`.

@@ -1,0 +1,385 @@
+数学学术交流综合清单（算术几何 / 代数几何 / 数论 / AI4Math 方向）
+生成日期：2026-09-29
+
+说明：
+- 本文件综合国内会议、暑期学校、研讨班，AI4Math 相关学术交流，以及国外线上学术交流与已有录像资源。
+- 第一部分为国内会议、暑期学校、研讨班；第二部分为国外线上学术交流与已有录像资源。
+- 长期监控网址统一保留在 seminar_source_sites.txt。
+
+============================================================
+第一部分：国内会议 / 暑期学校 / 研讨班
+============================================================
+
+研究方向依据：
+- 研究重点为算术几何，优先关注有理点/积分点、丢番图逼近、Vojta/Schmidt、p-adic Hodge、Shimura varieties、模形式、Galois 表示及代数几何。
+- AI4Math 只收录与数学研究直接相关的活动：形式化数学、Lean/Isabelle/Rocq、自动定理证明、自动形式化、数学发现及 AI 辅助数论/代数几何。
+- 本轮覆盖 2026-09-29 至 2026-12-28；已结束活动仅在能提供录像、讲义或未来活动线索时保留。
+
+排序规则：
+1. 研究匹配度：算术几何、数论、代数几何、p-adic/非阿基米德、Shimura、motives/K-theory 优先。
+2. 可参加性：正在进行、开放注册、北京/国内可达、提供 Zoom 或面向研究生者优先。
+3. 时间紧迫性：即将截止或近期开始的活动置前。
+4. 未由主办方确认的报名、旁听、录像或线上方式统一标为“需确认”。
+
+一、最高优先级：建议立即关注/报名
+
+1. Workshop on Motives, K-theory and related topics
+- 时间：2026-09-27 至 2026-10-03（正在进行）。
+- 地点/形式：天元数学国际交流中心；具体会场及旁听方式需确认。
+- 主办/召集人：付保华（中国科学院数学与系统科学研究院）、胡文传（四川大学）、曹晋（北京科技大学）。
+- 方向匹配：高。Motives、K-theory 与代数几何、算术几何和上同调理论直接相关。
+- 可参加性：官网列有项目，但未见公开旁听说明；如在附近，建议立即联系中心确认。
+- 来源：
+  https://tianyuan.amss.ac.cn/aac/
+
+2. 复旦 2026 p-adic 几何研讨会
+- 时间：2026-10-09 至 2026-10-11。
+- 地点/形式：上海数学中心 Gu Lecture Hall，线下；未公布线上方式。
+- 主办：复旦大学、上海数学中心。
+- 方向匹配：极高。报告涉及 Shimura variety 局部模型、p-adic 几何及相关算术几何问题。
+- 可参加性：官网已公布报告人，但日程仍为 TBA，未见公开注册入口；旁听/报名需联系组织者确认。
+- 报告人：Ian Gleason、Pol van Hoften、Yongquan Hu、Naoki Imai、Andreas Mihatsch、Yong Suk Moon、Zicheng Qian、Xu Shen、Yousheng Shi、Haining Wang。
+- 来源：
+  https://www.fudan-nt.cn/events/fudan2026-p-adic.html
+
+3. YMSC Mini Course: Moduli spaces and modular forms
+- 时间：2026-10-08 至 2026-11-24，每周二、四 13:30-15:05。
+- 地点/形式：清华大学双清综合楼 A 座 C654，官网明确为线下。
+- 主讲：Gerard van der Geer（University of Amsterdam）。
+- 方向匹配：极高。以模空间几何研究 Siegel 模形式、主极化阿贝尔簇及曲线模空间。
+- 可参加性：面向研究生，官网提供报名表。
+- 来源：
+  https://ymsc.tsinghua.edu.cn/info/1050/5254.htm
+
+4. YMSC Mini Course: Transcendental Number Theory
+- 时间：2026-10-12 至 2026-12-14，每周一 13:00-16:00。
+- 地点/形式：清华大学双清综合楼 A 座 B725；Zoom Meeting ID 687 513 9542，Passcode: YMSC。
+- 主讲：Mahesh Kakde（Indian Institute of Science）。
+- 方向匹配：高。内容含 Lindemann-Weierstrass、Baker、Waldschmidt-Masser、Schanuel 猜想及与 Iwasawa theory 的联系。
+- 可参加性：面向本科生和研究生，官网提供报名表并公布 Zoom。
+- 来源：
+  https://ymsc.tsinghua.edu.cn/en/info/1050/4087.htm
+
+5. Arithmetic Geometry in Hangzhou
+- 时间：2026-11-02 至 2026-11-06；2026-10-31 至 11-01 有面向博士生的 geometric Siegel-Weil formula mini-course。
+- 地点/形式：浙江大学数学科学学院，杭州，线下。
+- 主办/组织者：Pol van Hoften、Andreas Mihatsch、Yousheng Shi。
+- 方向匹配：极高。主题集中于 Shimura varieties、p-adic geometry、automorphic representation theory。
+- 可参加性：原注册截止为 2026-08-31，已过期；旁听、候补或材料获取需联系组织者确认。
+- 备注：报告人包括 Laurent Fargues、Michael Rapoport、Liang Xiao、Wei Zhang 等。
+- 来源：
+  https://polvanhoften2.github.io/AAGHZ2026.html
+
+6. YMSC Mini Course: Ribet's method
+- 时间：2026-11-17 至 2027-01-19，每周二 13:00-16:00。
+- 地点/形式：清华大学双清综合楼 A 座 B725；Zoom Meeting ID 687 513 9542，Passcode: YMSC。
+- 主讲：Mahesh Kakde（Indian Institute of Science）。
+- 方向匹配：极高。涵盖 Ribet 方法、类群、Galois 表示扩张、Selmer groups 与 Equivariant Tamagawa Number Conjecture。
+- 可参加性：面向本科生和研究生，官网提供报名表。
+- 来源：
+  https://ymsc.tsinghua.edu.cn/info/1050/5327.htm
+
+7. BIMSA 代数几何讨论班（2026 秋季）
+- 时间：10月15日 Julien Grivaux；10月22日李培根；10月29日 David Nadler；11月5日 Spencer Tamagni；12月10日 Hülya Argüz。
+- 地点/形式：BIMSA A6-101/A7-201，并提供 Zoom；单场时间、会议号以官网为准。
+- 主办：Artan Sheshmani、Nanjun Yang、Beihui Yuan。
+- 方向匹配：高。覆盖 derived/motivic geometry、Hodge 与 p-adic Hodge、algebraic cycles、moduli、Shimura varieties 等。
+- 可参加性：北京线下加 Zoom；当前多数题目仍为 TBA，建议每周复核。
+- 来源：
+  https://www.bimsa.cn/zh-CN/research_detail/agseminar.html?s=%2F%2Fresearch_detail%2Fagseminar.html
+
+二、北京及线上常态研讨班：建议每周跟踪
+
+8. BIMSA Number Theory Lunch Seminar
+- 时间：2026-10-15 Sebastien Palcoux；2026-10-22 Xiuwu Zhu，均为 12:15-13:00。
+- 地点/形式：BIMSA A4-1，线下，无线上信息。
+- 方向匹配：中高。面向数论团队交流，强调基础概念、应用或计算内容，适合研究生了解邻近方向。
+- 可参加性：页面说明对数论感兴趣者均可参加；题目仍为 TBA。
+- 来源：
+  https://www.bimsa.cn/research_detail/ntlunch.html
+
+9. 复旦数论讨论班
+- 时间：2026-10-16 林中一攀；11月20日 吴沛航；11月27日 赵启弦，均为 16:00-17:00。
+- 地点/形式：SCMS；10月16日地点待定，11月场次为 SCMS 102；未公布线上方式。
+- 主办：复旦数学学院、上海数学中心、上海数学与交叉学科研究院联合讨论班。
+- 方向匹配：高。长期覆盖解析数论、代数数论、算术几何和自守形式。
+- 可参加性：题目多为 TBA，旁听规则需按单场确认。
+- 来源：
+  https://www.fudan-nt.cn/seminar/seminar.html
+
+10. MCM p-adic Langlands Program Seminar
+- 时间：常态周五；官网当前可核实的最近一场为 2026-09-18，后续秋季安排尚未发布。
+- 地点/形式：晨兴数学中心 MCM110，线下。
+- 主办：丁一文、胡勇泉、肖梁。
+- 方向匹配：极高。聚焦 p-adic Langlands、局部 Galois 表示、变形环和 Drinfeld tower。
+- 可参加性：暂无新场次，建议每周查看；不要把历史条目误当作未来活动。
+- 来源：
+  https://www.mcm.ac.cn/events/seminars/202409/t20240902_1094584.html
+
+11. 北京大学数学学院/BICMR 学术活动入口
+- 时间：常态更新；截至 2026-09-29，会议列表最新高相关条目为 9月18日 p-adic Hodge theory workshop，暂未检索到 10月后的新算术几何会议。
+- 地点/形式：北京大学，具体活动逐条确认。
+- 方向匹配：高。建议持续监控代数几何、数论、p-adic Hodge、AI4Math 和形式化数学关键词。
+- 来源：
+  https://math.pku.edu.cn/kxyj/xzky/index.htm
+  https://math.pku.edu.cn/kxyj/xsbg/tlb/index.htm
+
+三、已结束但高度相关：建议保留为未来会议来源
+
+12. Intercity Seminar on Arakelov Geometry 2026
+- 时间：2026-09-14 至 2026-09-25（已结束）。
+- 地点/形式：杭州；mini-courses 加 research conference。
+- 方向匹配：极高。连接 Arakelov、丢番图、非阿基米德/热带几何与 motives。
+- 备注：保留官网以跟踪讲义、后续届次和组织者网络。
+- 来源：
+  https://intercityarakelov2026.wordpress.com/
+
+13. 复旦数论讨论班：Formalization of non-Archimedean functional analysis
+- 时间：2026-09-18（已结束）。
+- 报告人：袁轶君（西湖大学）。
+- 方向匹配：高。以 Lean 4 形式化非阿基米德泛函分析，包括球完备性、C_p、Hahn-Banach 与球完备化。
+- AI4Math 标签：Lean 4、formalized mathematics、非阿基米德数学；适合作为国内“算术几何 × 形式化”报告线索。
+- 来源：
+  https://www.fudan-nt.cn/seminar/seminar.html
+
+14. AI × Math Symposium 2026
+- 时间：2026-08-27 至 2026-08-28（已结束）。
+- 地点/形式：北京大学。
+- 方向匹配：中高。涵盖 Mathematics for AI 与 AI for Mathematics。
+- AI4Math 标签：数学发现、Lean 4、自动形式化、数学大模型；保留为未来国内同类活动来源。
+- 来源：
+  https://math.pku.edu.cn/kxyj/xzky/172704.htm
+
+四、相关但优先级较低/需按兴趣筛选
+
+15. YMSC Mini Course: Birational geometry of foliations
+- 时间：2026-09-23，以及 2026-10-23 至 2026-12-23，每周三、五 9:30-11:00。
+- 地点/形式：清华大学双清综合楼 A 座 B725，线下。
+- 主讲：Paolo Cascini（Imperial College London）。
+- 方向匹配：中高。双有理几何、叶状结构、MMP 与 canonical bundle formula；和算术几何不是直接主线。
+- 可参加性：面向本科生和研究生，官网提供报名表。
+- 来源：
+  https://ymsc.tsinghua.edu.cn/en/info/1050/4081.htm
+
+16. 天元中心：群表示与相关数学问题研讨会
+- 时间：2026-10-04 至 2026-10-10。
+- 地点/形式：天元数学国际交流中心；报名/旁听方式需确认。
+- 方向匹配：中。表示论与自守形式、Langlands 背景有关，但不一定直接涉及算术几何。
+- 来源：
+  https://tianyuan.amss.ac.cn/ztyt/index.html
+
+17. 天元中心：Operad 理论及其相关课题国际研讨会
+- 时间：2026-10-11 至 2026-10-17。
+- 地点/形式：天元数学国际交流中心；报名/旁听方式需确认。
+- 方向匹配：中低。偏代数、拓扑与范畴背景，按个人兴趣筛选。
+- 来源：
+  https://tianyuan.amss.ac.cn/ztyt/index.html
+
+五、建议的自动化检索关键词
+
+国内优先：
+- site:ymsc.tsinghua.edu.cn 2026 modular forms Ribet number theory
+- site:bimsa.cn 2026 algebraic geometry seminar Shimura p-adic Hodge
+- site:fudan-nt.cn 2026 p-adic geometry number theory seminar
+- site:mcm.ac.cn 2026 p-adic Langlands seminar
+- site:math.pku.edu.cn 2026 算术几何 数论 p-adic Hodge
+- site:tianyuan.amss.ac.cn 2026 motives K-theory 数论 代数几何
+- "Arithmetic Geometry in Hangzhou" 2026
+
+AI4Math：
+- formalized arithmetic geometry Lean 2026
+- AI number theory seminar Lean theorem proving
+- autoformalization modular forms p-adic geometry
+- AI for the working mathematician 2026
+
+六、建议的执行节奏
+
+- 本周：立即确认天元 Motives/K-theory 旁听；决定是否参加复旦 p-adic workshop；如考虑出境，9月30日前处理哥本哈根会议注册。
+- 每周：检查 YMSC 课程/讨论班、BIMSA AG、复旦数论、MCM p-adic Langlands、Number Theory Web Seminar。
+- 每两周：检查北大/BICMR、AMSS、SCMS、天元中心及 Arithmetic Geometry in Hangzhou 更新。
+- 每月：检查 AI4Math、Lean、formalization、autoformalization、mathematical reasoning、LMFDB 关键词。
+
+============================================================
+第二部分：国外线上学术交流 / 已有录像资源
+============================================================
+
+方向定位：
+- 优先可线上参加、可回看、或题目直接贴合 arithmetic geometry / number theory / algebraic geometry 的资源。
+- AI4Math 仅在明确涉及数学证明、形式化、证明助手、数学发现或数论/几何数据时列入。
+- 海外线下活动单列，并明确是否存在在线参加方式；不把“页面可访问”误写为“可在线参加”。
+
+一、最高优先级：仍适合线上参加或长期跟踪
+
+1. Arithmetic Geometry and Higher Algebra
+- 类型：国际会议（线下）。
+- 时间：2026-11-09 至 2026-11-13，University of Copenhagen。
+- 相关度：极高。报告人包括 Hélène Esnault、Laurent Fargues、Peter Scholze、Moritz Kerz、Michael Hopkins 等，主题连接算术几何、高等代数、K-theory 和 p-adic 几何。
+- 参加方式：注册截止 2026-09-30；这是本轮最紧迫的海外报名节点。线上方式未公布，需确认。
+- 网址：
+  https://www.math.ku.dk/english/calendar/events/arithmetic-geometry-and-higher-algebra/
+
+2. Number Theory Web Seminar
+- 类型：全球线上数论讨论班。
+- 相关度：极高。2026 秋季从 10月1日持续至 12月17日；报告人包括 Fernando Xuancheng Shao、Julia Stadlmann、Myrto Mavraki、Yunqing Tang、Bjorn Poonen 等。
+- 参加方式：免费注册后通过邮件接收 Zoom 链接。
+- 录像：官网 Previous Talks/YouTube 提供往期录像。
+- 中国时区提醒：10月1日至22日多为北京时间周四 23:00；10月29日起多为周五 00:00。
+- 网址：
+  https://www.ntwebseminar.org/home
+  https://www.ntwebseminar.org/previous-talks
+
+3. AI for the working mathematician（ICMS workshop）
+- 类型：AI4Math 工作坊，提供线上直播。
+- 时间：2026-12-14 至 2026-12-16。
+- 相关度：高。明确涉及 theorem proving、Lean 自动形式化、猜想生成、数学数据和 elliptic curve murmurations。
+- 参加方式：线下名额已满，但官网仍提供在线报名；线上为 Zoom 报告直播，部分工作组仅限线下。
+- AI4Math 标签：数学推理、自动形式化、定理证明、数学发现。
+- 网址：
+  https://icms.ac.uk/activities/workshop/ai-workingmathematician/
+
+4. AI for the Working Mathematician Seminar
+- 类型：线上 AI4Math 系列讨论班。
+- 相关度：高。9月30日 Harold Williams “An Informal Introduction to Formal Proofs”；10月14日 Lauren Williams “Mathematicians putting AI to the test”；后续延续至 12月。
+- 参加方式：ResearchSeminars 页面跟踪单场安排；具体 Zoom/邮件列表需按页面确认。
+- 中国时区提醒：页面时间多为 20:30 或 21:30 UTC，对中国为次日 04:30 或 05:30。
+- 网址：
+  https://researchseminars.org/seminar/AI-for-the-working-mathematician
+
+5. AI, Combinatorics and Number Theory Seminar
+- 类型：线上 AI × 数论/组合讨论班。
+- 相关度：高。明确讨论 AI 在数论和组合中的负责任使用，鼓励学生和新参与者提问。
+- 参加方式：每两周周二 18:00-19:00 UTC（11月起页面列为 19:00 UTC）；需联系组织者加入邮件列表获得 Zoom。
+- 近期场次：10月13日 Seewoo Lee、10月27日 Katherine Stange、11月10日 David Roe、11月24日 Andrew Sutherland；题目多为 TBA。
+- 中国时区提醒：通常为北京时间次日 02:00 或 03:00。
+- 网址：
+  https://master.researchseminars.org/seminar/AI-CoNT
+
+6. Joint PU/IAS Arithmetic Geometry Seminar
+- 类型：Princeton/IAS 算术几何讨论班，主要线下。
+- 相关度：极高。10月12日 Haoyang Guo、10月19日 Lucas Mason-Brown、10月26日 Ivan Loseu；11月2日 Daniel Li-Huerta、11月16日 Gyujin Oh、11月23日 Federico Scavia。
+- 参加方式：页面未统一提供远程入口；如需线上参加须逐场确认。
+- 中国时区提醒：美国东部时间周一 15:30，通常为北京时间次日凌晨。
+- 网址：
+  https://www.math.princeton.edu/events/seminars/joint-puias-arithmetic-geometry-seminar
+
+7. Joint PU/IAS Number Theory Seminar
+- 类型：Princeton/IAS 数论讨论班，主要线下。
+- 相关度：高。10月1日 “The Beilinson-Bloch-Kato conjecture for polarized motives”；10月15日相对迹公式；10月29日 Preston Wake。
+- 参加方式：页面未统一提供远程入口，需逐场确认。
+- 网址：
+  https://www.math.princeton.edu/events/seminars/joint-puias-number-theory
+
+二、高质量录像库：适合系统补课
+
+8. Amos Turchet: Algebraic exceptional sets on surfaces of log general type
+- 类型：Number Theory Web Seminar 录像。
+- 相关度：极高。直接讨论 Lang 与 Vojta 猜想中的 exceptional sets，以及对数一般型曲面上的有理点/积分点退化问题。
+- 录像：2026-09-24 报告已在 Previous Talks 页面提供 YouTube 入口。
+- 网址：
+  https://www.ntwebseminar.org/previous-talks
+
+9. AIM: AI and number theory
+- 类型：AI4Math/数论工作坊资料库。
+- 相关度：高。聚焦利用 AI 改进数论定理界与算法，并形成问题清单和 Lean benchmarks。
+- 录像：官网提供 workshop videos、problem list 和 Lean benchmark 链接。
+- 网址：
+  https://aimath.org/pastworkshops/aint26.html
+
+10. Workshop on AI and Theorem Provers in Mathematics (AITPM)
+- 类型：形式化数学与 AI 录像资源。
+- 相关度：高。报告涵盖 Fermat 形式化、AI 与 Isabelle、Lean、AI 证明自动化及 IUT 形式化。
+- 录像：官网提供完整 YouTube playlist。
+- 网址：
+  https://aitpm.github.io/
+
+11. SLMath / MSRI Video Archive
+- 类型：高质量数学录像库。
+- 相关度：高。适合检索 arithmetic geometry、Diophantine geometry、motivic homotopy、algebraic cycles、Shimura 和 L-values。
+- 备注：2026 秋季有 Motivic Homotopy Theory 项目和 10月19日至23日专题周，可关注后续录像。
+- 网址：
+  https://library.slmath.org/video_list.html
+  https://library.slmath.org/vidsearch.html
+  https://www.slmath.org/programs/384
+
+12. Institute for Advanced Study Video Lectures / Events
+- 类型：IAS 视频和事件入口。
+- 相关度：高。适合跟踪 Joint PU/IAS Arithmetic Geometry 及过往 Hodge、Shimura、p-adic 和代数几何报告。
+- 网址：
+  https://www.ias.edu/videos
+  https://www.ias.edu/events-by-series
+
+13. BIRS Workshop Videos
+- 类型：专题工作坊录像库。
+- 相关度：高。可按 arithmetic geometry、number theory、algebraic geometry 检索整周项目。
+- 网址：
+  https://www.birs.ca/
+
+三、大学讨论班录像/页面：按主题筛选
+
+14. MIT Number Theory Seminar
+- 类型：大学数论讨论班。
+- 相关度：高；MIT 页面说明 2026 秋季常规时间为周二，具体日程转至 ResearchSeminars。
+- 参加方式：主要线下；可加入邮件列表获取通知，线上方式需逐场确认。
+- 网址：
+  https://math.mit.edu/nt/nts.html
+
+15. MIT STAGE
+- 类型：面向研究生的代数几何与数论学习讨论班。
+- 相关度：高。2026 春季主题为 descent obstruction；秋季主题/日程暂未核实。
+- 参加方式：主要线下；页面提供邮件列表和历史安排。
+- 网址：
+  https://math.mit.edu/nt/stage.html
+  https://stable.researchseminars.org/seminar/STAGE
+
+16. VaNTAGe
+- 类型：数论与算术几何开放猜想线上讨论班。
+- 相关度：极高，但本轮未从页面可靠确认 2026 年 10月至12月的新场次。
+- 参加方式：保留长期监控；Zoom 通常在报告前一晚发布并通过邮件列表发送。
+- 网址：
+  https://researchseminars.org/seminar/vantage
+  https://stable.researchseminars.org/seminar/vantage
+
+17. ResearchSeminars.org
+- 类型：全球数学讨论班聚合站。
+- 相关度：高。可筛选 arithmetic geometry、number theory、algebraic geometry、formalization、AI for mathematics。
+- 参加方式：按各 seminar 页面获取 Zoom、外部主页或邮件列表；聚合页信息需回到主办方页面复核。
+- 网址：
+  https://researchseminars.org/
+  https://master.researchseminars.org/
+
+四、推荐检索关键词
+
+算术几何/数论：
+- arithmetic geometry October November December 2026 seminar online
+- p-adic geometry Shimura varieties 2026 conference
+- rational integral points Vojta seminar 2026
+- modular forms Galois representations Ribet method 2026
+- Number Theory Web Seminar 2026 upcoming
+
+AI4Math：
+- AI for the working mathematician 2026 online
+- AI number theory seminar Lean benchmark
+- formalized arithmetic geometry Lean
+- autoformalization theorem proving modular forms
+- AI mathematical discovery elliptic curves
+
+五、建议优先级
+
+第一梯队（立即处理）：
+- 复旦 2026 p-adic 几何研讨会
+- YMSC Moduli spaces and modular forms
+- YMSC Transcendental Number Theory
+- Arithmetic Geometry and Higher Algebra（9月30日注册截止）
+- Number Theory Web Seminar
+
+第二梯队（提前安排）：
+- Arithmetic Geometry in Hangzhou
+- YMSC Ribet's method
+- BIMSA 代数几何讨论班
+- ICMS AI for the working mathematician（在线）
+
+第三梯队（每周跟踪/录像）：
+- 复旦数论讨论班、MCM p-adic Langlands、北大/BICMR
+- Joint PU/IAS Arithmetic Geometry 与 Number Theory
+- AI-CoNT、AI for the Working Mathematician Seminar
+- AIM AI and number theory、AITPM、SLMath、IAS、BIRS

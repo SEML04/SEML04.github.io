@@ -198,6 +198,7 @@ cover:
     - /image/card/92.jpg
     - /image/card/93.jpg
     - /image/card/94.jpg
+    - /image/card/95.jpg
     # - xxx.jpg
 
 # Replace Broken Images
@@ -388,9 +389,9 @@ aside:
   card_announcement:
     enable: true
     content: >-
-      学术交流清单生成日期：2026-09-03<br>
-      未开始活动：19 个<br>
-      有录课记录链接：19 个<br>
+      学术交流清单生成日期：2026-09-29<br>
+      未开始活动：16 个<br>
+      有录课记录链接：21 个<br>
       <a href="/seminars/">查看清单</a>
   card_recent_post:
     enable: true
