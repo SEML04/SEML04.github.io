@@ -1253,7 +1253,7 @@ CDN:
     # giscus:
     # instantpage:
     # instantsearch:
-    # katex:
+    katex: https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css
     # katex_copytex:
     # lazyload:
     # local_search:
