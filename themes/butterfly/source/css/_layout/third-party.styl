@@ -146,6 +146,12 @@ if hexo-config('math.use')
     &:not([display])
       display: inline-grid !important
 
+      // Preserve the SVG vertical-align offset used for the formula baseline.
+      &[jax='SVG']
+        display: inline !important
+        overflow: visible
+        padding-bottom: 0
+
   mjx-assistive-mml
     right: 0
     bottom: 0

@@ -12,7 +12,7 @@ tags:
 
 #### 写在开始之前
 
-距离上一篇推文, 已经是一年多了.
+距离上一篇博客更新, 已经是一年多了.
 
 但这一年里, 发生的事也是相当多, 首当其冲的就是AI对数学研究方式的冲击了. 这里我也不再多加赘述, 毕竟未来发展如何也说不好🤔. 但对我这种基础不牢但是奇思妙想很多的人来说, 或许还是个机遇.
 
@@ -20,10 +20,26 @@ tags:
 
 为了能够去认识和理解更多的知识和内容, 有一个比较扎实的代数几何基础还是必不可少的. 因此现在我将进入古法数学阶段了🤗, 将慢慢手搓代数几何的习题了. 
 
-我将主要用于训练的教材是: <span style="color: red">Görtz和Wedhorn的两本小红书</span>. 此外Hortshorne也可能会练一练(毕竟小红书上主要对应的是其2,3章内容, 但第4,5章内容也很值得一练的). 借推文的形式逼自己多学一点点~
+主要用于练习的教材是: <span style="color: red">Görtz和Wedhorn的两本小红书</span>上的习题. 此外Hortshorne也可能会练一练(毕竟小红书上主要对应的是其2,3章内容, 但第4,5章内容也很值得一练的). 借博客的形式逼自己多学一点点~
 
 <center>
 <img src="/image/exercises-in-AG-1/T1.png" width="50%">
 
 既然被通缉了, 拍个照先吧!
 </center>
+
+#### Exercises
+
+Remark: 下面内容来源于Görtz和Wedborn的 *Algebraic Geometry I: Schemes* 的Chapter 1 -- Prevarieties. 尽可能的将所有习题都过一遍, 但肯定有写错的和不会的, 仅供我个人学习和记录🙇.
+
+##### Exercise 1.1. (Hilbert's basis theorem)
+
+> Let $A$ be a noetherian ring. Show that the polynomial ring $A[T]$ is again noetherian.
+
+<div style="border: 1px solid #888; padding: 12px 12px 4px; border-radius: 6px;">
+
+证明:
+$\quad$ 1
+
+</div>
+

@@ -32,6 +32,18 @@
 
 
 
+% 让文字周围有边框的四种处理方式
+> 这里是文字
+
+`这里是文字`
+
+$$\boxed{a+b}$$
+
+<div style="border: 1px solid #888; padding: 12px; border-radius: 6px;">
+这里是文字, $a+b$
+</div>
+
+
 % latex改变颜色:
 $${\color{red} x^2 + y^2 = z^2}$$
 
