@@ -4942,6 +4942,11 @@ mjx-container[display] {
 mjx-container:not([display]) {
   display: inline-grid !important;
 }
+mjx-container:not([display])[jax='SVG'] {
+  display: inline !important;
+  overflow: visible;
+  padding-bottom: 0;
+}
 mjx-assistive-mml {
   right: 0;
   bottom: 0;
