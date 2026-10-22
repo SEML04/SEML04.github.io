@@ -107,7 +107,7 @@ $\quad$ 1
 <div style="border: 1px solid #888; padding: 12px 12px 4px; border-radius: 6px;">
 
 证明:
-$\quad$ 1 
+$\quad$ 1
 
 </div>
 
