@@ -1,4 +1,3 @@
-https://seml04.github.io/2026/10/19/exercises-in-AG-1/
 https://seml04.github.io/2025/02/15/Analytical-number-theory-1/
 https://seml04.github.io/2024/11/06/algorithm-1/
 https://seml04.github.io/2025/09/25/p-valuation-of-Bernoulli-numbers/
@@ -24,8 +23,6 @@ https://seml04.github.io/2024/10/22/Diophantine-1/
 https://seml04.github.io/2024/10/25/Diophantine-2/
 https://seml04.github.io/
 https://seml04.github.io/tags/Algebraic-Geometry/
-https://seml04.github.io/tags/Exercise/
-https://seml04.github.io/tags/Gortz-Wedborn/
 https://seml04.github.io/tags/Prime-Number-Theorem/
 https://seml04.github.io/tags/Analytical-Number-Theory/
 https://seml04.github.io/tags/Estimation-Formula/
