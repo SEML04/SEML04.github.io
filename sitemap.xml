@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://seml04.github.io/2026/10/19/exercises-in-AG-1/</loc>
+    
+    <lastmod>2026-10-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://seml04.github.io/2025/02/15/Analytical-number-theory-1/</loc>
     
     <lastmod>2026-10-20</lastmod>
@@ -219,6 +228,20 @@
   
   <url>
     <loc>https://seml04.github.io/tags/Algebraic-Geometry/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Exercise/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://seml04.github.io/tags/Gortz-Wedborn/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
